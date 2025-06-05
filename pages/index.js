@@ -9,6 +9,7 @@ import Testimonials from "../components/ui/Testimonials";
 import ToolKit from "../components/ui/ToolKit";
 import CaseStudies from "../components/ui/CaseStudies";
 import Help from "../components/ui/Help";
+import About from "../components/ui/About";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <meta name='robots' content='index' />
       </Head>
       <Hero />
+      <About/>
       {/* <LogoGrid /> */}
       <GradientWrapper>
         <Features />

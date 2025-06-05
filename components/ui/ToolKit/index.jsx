@@ -126,9 +126,13 @@ const ToolKit = () => {
 
     return (
         <SectionWrapper>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 px-12 tracking-wide font-[Montserrat]">
-                Technologies
-            </h2>
+             
+                        <h2 className="ml-16 text-gray-800 text-2xl font-semibold sm:text-3xl font-[Montserrat]">
+                            Technologies
+                        </h2> 
+                    
+                   
+            
             <div id="toolkit" className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8 flex flex-col md:flex-row gap-10">
                 {/* Left side: States */}
                 
