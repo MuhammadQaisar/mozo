@@ -2,6 +2,7 @@ import Head from "next/head";
 import Input from "../components/ui/Input";
 import Button from "../components/ui/Button";
 import Checkbox from "../components/ui/Checkbox";
+import Link from "next/link";
 
 export default function GetStarted() {
   const servicesItems = [
@@ -26,13 +27,13 @@ export default function GetStarted() {
               <p className='mt-3'>
                 We are here to help. Get in touch with sales our press team and
                 let us know how we can help, or shoot us an email on{" "}
-                <a
+                <Link
                   href='mailto:team@mozotechnologies.com'
                   target='_blank'
                   rel='noreferrer'
                   className='text-indigo-600 hover:text-indigo-400 font-medium duration-150'>
                   team@mozotechnologies.com.
-                </a>
+                </Link>
               </p>
             </div>
             <div className='flex-1 mt-12 sm:max-w-lg lg:max-w-md lg:mt-0'>
