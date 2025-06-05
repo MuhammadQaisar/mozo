@@ -21,16 +21,16 @@ export default function Home() {
       <Hero />
       <About/>
       {/* <LogoGrid /> */}
-      <GradientWrapper>
+      {/* <GradientWrapper> */}
         <Features />
         
-      </GradientWrapper>
+      {/* </GradientWrapper> */}
       <ToolKit />
       <CTA />
       {/* <CaseStudies/> */}
-      <GradientWrapper>
+      {/* <GradientWrapper> */}
         <Testimonials />
-      </GradientWrapper>
+      {/* </GradientWrapper> */}
       <FooterCTA />
       <Help />
     </>

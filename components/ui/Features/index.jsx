@@ -122,13 +122,13 @@ const Features = () => {
                 }
                 `}
             </style>
-            <div id="features" className="custom-screen text-gray-600">
+            <div  className="custom-screen text-gray-600">
                 <div className="w-full flex flex-col lg:flex-row items-start justify-center gap-8">
                     {/* Left side: Title and description */}
                     <div className="flex-1 w-full max-w-xl mx-auto space-y-6 sm:text-left mb-8 lg:mb-0">
-                        <h2 className="text-gray-800 text-2xl font-semibold sm:text-3xl font-[Montserrat]">
-                            Services
-                        </h2>
+                        <h2 id="features" className="scroll-mt-24 text-gray-800 text-2xl font-semibold sm:text-3xl font-[Montserrat]">
+  Services
+</h2>
                         <p className="font-[Montserrat] text-sm sm:text-base">
                             Mozo Technologies provides a wide range of scalable solutions to various sectors and is making a mark in the ever-evolving digital landscape.
                         </p>

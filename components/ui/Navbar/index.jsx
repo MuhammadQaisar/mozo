@@ -34,7 +34,8 @@ const Navbar = () => {
     return (
         <header>
             <nav className={`bg-white w-full fixed top-0 left-0 z-30 md:text-sm ${state ? "h-full" : ""}`}>
-                <div className="custom-screen items-center mx-auto md:flex">
+                <div className="custom-screen items-center mx-auto md:flex 
+                ">
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
                         <Brand />
                         <div className="md:hidden">

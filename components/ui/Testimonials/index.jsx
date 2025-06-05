@@ -59,11 +59,14 @@ const Testimonials = () => {
 
     return (
         <SectionWrapper className="pb-0">
-            <div id="testimonials" className="max-w-screen-xl mx-auto px-4 md:px-8">
+            <div className="max-w-screen-xl mx-auto px-4 md:px-8">
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-10">
                     {/* Left: Testimonial Content */}
                     <div className="flex-1">
-                        <h2 className="text-gray-800 text-3xl font-semibold mb-8">
+                        <h2
+                            id="testimonials"
+                            className="scroll-mt-24 text-gray-800 text-3xl font-semibold mb-8"
+                        >
                             {testimonials[current].company}
                         </h2>
                         <div className="mb-4 font-bold text-lg text-gray-700">FEEDBACK SUMMARY</div>

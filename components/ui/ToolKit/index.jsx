@@ -59,12 +59,6 @@ const toolkitData = {
         { icon: express, name: "Express" },
         { icon: woocommerce, name: "Woo Commerce"},
         { icon: typescript, name: "TypeScript" },
-
-        
-
-
-
-        
     ],
     "Cloud/DevOps": [
         { icon: aws, name: "AWS" },
@@ -79,8 +73,6 @@ const toolkitData = {
         { icon: nginx, name: "Nginx" },
         { icon: apache, name: "Apache" },    
         { icon: google, name: "Google Cloud" }
-
-
     ],
     "Data Science": [
         { icon: python, name: "Python" },
@@ -92,10 +84,6 @@ const toolkitData = {
         { icon: mysql, name: "MySQL" },
         { icon: mongo, name: "MongoDB" },
         { icon: django, name: "Django" },
-
-        
-        
-           
     ],
     "Digital Marketing": [
         { icon: googleAds, name: "Google Ads" },
@@ -105,12 +93,8 @@ const toolkitData = {
         { icon: meta, name: "Meta" },
         { icon: hubspot, name: "HubSpot" },
         { icon: googleanalytics, name: "Google Analytics" },
-
-      
     ]
 }
-
-// ...existing imports and toolkitData...
 
 const states = [
     "Web Development",
@@ -121,21 +105,19 @@ const states = [
 
 const ToolKit = () => {
     const [selected, setSelected] = useState(states[0]);
-
     const icons = toolkitData[selected];
 
     return (
         <SectionWrapper>
-             
-                        <h2 className="ml-16 text-gray-800 text-2xl font-semibold sm:text-3xl font-[Montserrat]">
-                            Technologies
-                        </h2> 
-                    
-                   
-            
-            <div id="toolkit" className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8 flex flex-col md:flex-row gap-10">
+            {/* Heading with id and scroll-mt-24 for navbar offset */}
+            <h2
+                id="toolkit"
+                className="scroll-mt-24 ml-16 text-gray-800 text-2xl font-semibold sm:text-3xl font-[Montserrat]"
+            >
+                Technologies
+            </h2>
+            <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8 flex flex-col md:flex-row gap-10">
                 {/* Left side: States */}
-                
                 <div className="md:w-1/4 flex md:flex-col gap-2 justify-center mb-8 md:mb-0">
                     {states.map((state) => (
                         <button
@@ -157,7 +139,6 @@ const ToolKit = () => {
                         </button>
                     ))}
                 </div>
-
                 {/* Right side: Toolkit icons grid only, open grid lines */}
                 <div className="md:w-3/4">
                     <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-px bg-gray-200 rounded-2xl overflow-hidden">
