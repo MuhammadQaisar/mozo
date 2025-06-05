@@ -1,3 +1,4 @@
+import Link from "next/link";
 const Hero = () => (
   <section className="mt-10 relative flex flex-col items-center justify-center min-h-[80vh]  px-4 py-20 overflow-hidden">
     {/* Grid lines background */}
@@ -27,12 +28,12 @@ const Hero = () => (
     <p className="text-lg md:text-2xl text-gray-700 text-center max-w-2xl mb-8 z-20">
       Turn your sales playbook and unstructured data into pipeline visibility, risk insights, and winning behaviors.
     </p>
-    <a
+    <Link
       href="/get-started"
       className="inline-block px-4 py-2 rounded-full bg-[#F06A6A] text-white text-md shadow-lg hover:bg-black-600 transition-colors duration-300 hover:shadow-xl z-20"
     >
       Book a demo
-    </a>
+    </Link>
 
     {/* Decorative SVG strip at the boundary of gradient and grid lines */}
     <div
