@@ -10,9 +10,10 @@ const Navbar = () => {
     const { events } = useRouter();
 
     const navigation = [
+        { title: "About", path: "#about" },
         { title: "Services", path: "#features" },
         { title: "Technologies", path: "#toolkit" },
-        { title: "Case Studies", path: "#casestudies" },
+        // { title: "Case Studies", path: "#casestudies" },
         { title: "Testimonials", path: "#testimonials" },
     ]
 

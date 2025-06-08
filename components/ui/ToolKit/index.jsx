@@ -45,6 +45,15 @@ import hubspot from "../../../public/icons/hubspot.svg"
 import googleanalytics from "../../../public/icons/googleanalytics.svg"
 import { useState } from "react"
 
+/**
+ * Defines the toolkit data for different technology domains.
+ * 
+ * Each key represents a technology domain (Web Development, Cloud/DevOps, 
+ * Data Science, Digital Marketing), and contains an array of technology 
+ * icons and names used in the ToolKit component.
+ * 
+ * @type {Object.<string, Array<{icon: string, name: string}>>}
+ */
 const toolkitData = {
     "Web Development": [
         { icon: wordpress, name: "WordPress" },
@@ -118,14 +127,15 @@ const ToolKit = () => {
             </h2>
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8 flex flex-col md:flex-row gap-10">
                 {/* Left side: States */}
-                <div className="md:w-1/4 flex md:flex-col gap-2 justify-center mb-8 md:mb-0">
+                <div className="md:w-1/4 flex md:flex-col gap-2 justify-center mb-8 md:mb-0 ml-8">
                     {states.map((state) => (
                         <button
                             key={state}
                             onClick={() => setSelected(state)}
                             className={`
+                                px-4 py-3 text-left
                                 ${selected === state
-                                    ? "text-gray-800 border-b-2 border-gray-300"
+                                    ? "text-gray-800"
                                     : "text-gray-400 font-normal"
                                 }`}
                             style={{
@@ -135,17 +145,20 @@ const ToolKit = () => {
                                 marginBottom: "0.25em"
                             }}
                         >
-                            {state}
+                            <span 
+                                className={`inline-block ${selected === state ? 'border-b-2 border-gray-300' : ''}`}
+                            >
+                                {state}
+                            </span>
                         </button>
                     ))}
-                </div>
-                {/* Right side: Toolkit icons grid only, open grid lines */}
+                </div>                {/* Right side: Toolkit icons grid only, open grid lines */}
                 <div className="md:w-3/4">
-                    <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-px bg-gray-200 rounded-2xl overflow-hidden">
+                    <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2">
                         {icons.map((item, idx) => (
                             <div
                                 key={idx}
-                                className="flex flex-col items-center justify-center aspect-square bg-white group transition"
+                                className="flex flex-col items-center justify-center aspect-square group transition p-2"
                                 style={{
                                     border: "none"
                                 }}
@@ -155,16 +168,14 @@ const ToolKit = () => {
                                     alt={item.name || "toolkit icon"}
                                     width={48}
                                     height={48}
-                                    className="transition duration-300 grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100"
+                                    className="transition duration-300 grayscale opacity-80 group-hover:opacity-100"
                                 />
-                                <span className="mt-2 text-xs text-gray-700 font-medium text-center">
+                                <span className="mt-1 text-xs text-gray-900 font-medium text-center">
                                     {item.name}
                                 </span>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </div>
+                    </div>                </div>            </div>
         </SectionWrapper>
     );
 };

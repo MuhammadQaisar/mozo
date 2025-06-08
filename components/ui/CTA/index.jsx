@@ -16,13 +16,9 @@ const CTA = () => {
                 <div className="flex-shrink-0 mt-6 md:mt-0">
                     <NavLink
                         href="/get-started"
-                        className="block font-medium text-sm text-white transition duration-200 md:inline tracking-widest uppercase px-6 py-3 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F06A6A] active:bg-[#F06A6A] active:shadow-lg"
-    style={{ backgroundColor: '#F06A6A' }}
+                        className="block font-medium text-sm text-white transition duration-200 md:inline tracking-widest px-8 py-4 rounded-lg shadow-md bg-[#F06A6A] hover:bg-white hover:text-black hover:border hover:border-[#F06A6A] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F06A6A] active:bg-[#F06A6A] active:shadow-lg"
                     >
-                        CONTACT US
-                        {/* <span className="ml-4 flex items-center justify-left bg-white text-black rounded-xl w-10 h-10">
-                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"/></svg>
-                        </span> */}
+                        Contact Us
                     </NavLink>
                 </div>
             </div>

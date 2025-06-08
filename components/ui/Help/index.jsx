@@ -40,15 +40,9 @@ const Help = () => {
                             type="submit"
                             className="flex items-center mt-2"
                         >
-                            <span className="block font-medium text-sm text-white transition duration-200 md:inline tracking-widest uppercase px-6 py-3 rounded-lg shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F06A6A] active:bg-[#F06A6A] active:shadow-lg"
-    style={{ backgroundColor: '#F06A6A' }}>
-                                Submit Now
+                            <span className="block font-medium text-sm text-white transition duration-200 md:inline tracking-widest px-6 py-3 rounded-lg shadow-md bg-[#F06A6A] hover:bg-black hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F06A6A] active:bg-[#F06A6A] active:shadow-lg">
+                                Submit
                             </span>
-                            {/* <span className="ml-[-12px] flex items-center justify-center bg-white text-black rounded-xl w-12 h-12 border border-[#E52333]">
-                                <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M9 6l6 6-6 6" />
-                                </svg>
-                            </span> */}
                         </button>
                     </form>
                 </div>
