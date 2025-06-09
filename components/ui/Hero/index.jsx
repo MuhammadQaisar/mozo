@@ -1,4 +1,16 @@
 import Link from "next/link";
+/**
+ * Hero section component for the landing page.
+ * 
+ * Renders a visually engaging hero section with:
+ * - Grid line background
+ * - Decorative background circles
+ * - Headline with strategic AI messaging
+ * - Subheadline describing product value proposition
+ * - Call-to-action button for booking a demo
+ * 
+ * @returns {JSX.Element} Hero section with branding and call-to-action
+ */
 const Hero = () => (
   <section className="mt-10 relative flex flex-col items-center justify-center min-h-[80vh]  px-4 py-20 overflow-hidden">
     {/* Grid lines background */}
