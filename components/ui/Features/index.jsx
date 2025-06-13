@@ -93,6 +93,28 @@ const TickIcon = () => (
     </svg>
 );
 
+/**
+ * Features component renders a dynamic services section with interactive feature cards.
+ * 
+ * @component
+ * @description Displays a grid of service cards with interactive selection functionality
+ * - Splits features into two rows
+ * - Allows selecting and highlighting a specific service
+ * - Shows detailed service information based on selected card
+ * 
+ * @returns {JSX.Element} Rendered Features section with service cards and details
+ */
+/**
+ * Features component renders an interactive services section with dynamic feature cards.
+ * 
+ * @component
+ * @description Displays a grid of service cards with interactive selection functionality
+ * - Splits features into two rows of service cards
+ * - Allows selecting and highlighting a specific service
+ * - Shows detailed service information for the selected card
+ * 
+ * @returns {JSX.Element} Rendered Features section with service cards and detailed service information
+ */
 const Features = () => {
     // Default to Web development card (index 0)
     const [activeIdx, setActiveIdx] = useState(0);
@@ -106,19 +128,24 @@ const Features = () => {
             <style>
                 {`
                 .tilt-hover {
-                    transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s, color 0.25s;
+                    transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s, color 0.25s, border-radius 0.25s;
                 }
                 .tilt-hover:hover {
                     transform: perspective(600px) rotateY(8deg) scale(1.04);
                     color: #F06A6A !important;
+                    border-radius: 8px !important;
                     box-shadow: 0 8px 24px 0 rgba(240,106,106,0.10);
                 }
                 .tilt-hover:hover svg {
                     color: #F06A6A !important;
                     stroke: #F06A6A !important;
                 }
+                .tilt-hover:hover span {
+                    color: #F06A6A !important;
+                }
                 .active-card {
                     color: #F06A6A !important;
+                    border-radius: 8px !important;
                     box-shadow: 0 4px 12px 0 rgba(240,106,106,0.15);
                 }
                 .active-card svg {
@@ -127,8 +154,7 @@ const Features = () => {
                 }
                 .active-card span {
                     color: #F06A6A !important;
-                }
-                `}
+                }                `}
             </style>
             <div  className="custom-screen text-gray-600">
                 <div className="w-full flex flex-col lg:flex-row items-start justify-center gap-8">
@@ -194,25 +220,24 @@ const Features = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Right side: Title & Description - removed background and styling */}
-                    <div className="lg:mt-40 flex-1 w-full max-w-md mx-auto space-y-6">
-                        <h3 className="text-xl font-semibold mb-4 text-gray-800 font-[Montserrat]">
+                    {/* Right side: Title & Description - with black background and radius */}
+                    <div className="lg:mt-10 flex-1 w-full max-w-md mx-auto space-y-6 rounded-lg p-6">
+                        <h3 className="text-xl font-semibold mb-4 text-black font-[Montserrat]">
                             {features[activeIdx].title}
                         </h3>
-                        <p className="font-[Montserrat] text-base text-gray-600 mb-4">
+                        <p className="font-[Montserrat] text-base text-gray-900 mb-4">
                             {features[activeIdx].description}
                         </p>
-                        <h4 className="text-lg font-semibold text-gray-800 mb-2 font-[Montserrat]">Primary Benefits</h4>
+                        <h4 className="text-lg font-semibold text-black mb-2 font-[Montserrat]">Primary Benefits</h4>
                         <ul className="space-y-2">
                             {features[activeIdx].benefits && features[activeIdx].benefits.map((benefit, i) => (
-                                <li key={i} className="flex items-start text-gray-700 text-base font-[Montserrat]">
+                                <li key={i} className="flex items-start text-gray-900 text-base font-[Montserrat]">
                                     <TickIcon />
                                     <span>{benefit}</span>
                                 </li>
                             ))}
                         </ul>
-                    </div>
-                </div>
+                    </div>                </div>
             </div>
         </SectionWrapper>
     );

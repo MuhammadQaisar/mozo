@@ -2,7 +2,7 @@ import React from "react";
 
 const features = [
     {
-        title: "Innovative Solutions",
+        title: "Innovation",
         desc: "From groundbreaking strategies to cutting-edge technologies, our innovative solutions redefine possibilities and drive your success in the digital landscape.",
         icon: (
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#FFFFFF]">
@@ -14,7 +14,7 @@ const features = [
         ),
     },
     {
-        title: "Progressive Strategies",
+        title: "Strategy",
         desc: "Embrace the future with our forward-thinking approach, where progressive strategies pave the way for your sustained growth and competitiveness in an ever-evolving digital world.",
         icon: (
             <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#FFFFFF]">
@@ -28,7 +28,7 @@ const features = [
         ),
     },
     {
-        title: "Better Outcomes",
+        title: "Outcome",
         desc: "Unlock unparalleled results with our tailored solutions, where innovation and expertise converge to drive superior outcomes and propel your business towards unprecedented success.",
         icon: (
             <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#FFFFFF]">
@@ -114,7 +114,7 @@ const About = () => (
                 {features.map((f, i) => (
                     <div
                         key={i}
-                        className="bg-white rounded-3xl border border-gray-200 p-8 shadow-sm flex flex-col h-full transition hover:shadow-lg"
+                        className="bg-white rounded-3xl border border-gray-200 p-8 shadow-sm flex flex-col h-full transition "
                     >
                         <div className="flex items-center justify-between mb-6">
                             <div className="text-2xl md:text-3xl font-extrabold font-montserrat text-black">

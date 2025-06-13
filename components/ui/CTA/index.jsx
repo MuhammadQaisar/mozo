@@ -16,7 +16,7 @@ const CTA = () => {
                 <div className="flex-shrink-0 mt-6 md:mt-0">
                     <NavLink
                         href="/get-started"
-                        className="block font-medium text-sm text-white transition duration-200 md:inline tracking-widest px-8 py-4 rounded-lg shadow-md bg-[#F06A6A] hover:bg-white hover:text-black hover:border hover:border-[#F06A6A] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F06A6A] active:bg-[#F06A6A] active:shadow-lg"
+                        className="block font-large text-sm text-white transition duration-200 md:inline tracking-widest px-8 py-4 rounded-lg shadow-md bg-[#F06A6A] hover:bg-white hover:text-black hover:border hover:border-[#F06A6A] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#F06A6A] active:bg-[#F06A6A] active:shadow-lg"
                     >
                         Contact Us
                     </NavLink>

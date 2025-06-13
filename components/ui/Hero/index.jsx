@@ -42,7 +42,7 @@ const Hero = () => (
     </p>
     <Link
       href="/get-started"
-      className="inline-block px-4 py-2 rounded-full bg-[#F06A6A] text-white text-md shadow-lg hover:bg-black-600 transition-colors duration-300 hover:shadow-xl z-20"
+      className="inline-block px-4 py-2 rounded-full bg-[#F06A6A] text-white text-md shadow-lg hover:bg-black transition-colors duration-300 hover:shadow-xl z-20"
     >
       Book a demo
     </Link>
