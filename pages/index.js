@@ -10,6 +10,7 @@ import ToolKit from "../components/ui/ToolKit";
 import CaseStudies from "../components/ui/CaseStudies";
 import Help from "../components/ui/Help";
 import About from "../components/ui/About";
+import Footer from "../components/ui/Footer";
 
 
 export default function Home() {
@@ -20,19 +21,21 @@ export default function Home() {
       </Head>
       <Hero />
       <About/>
+      <Testimonials />
       {/* <LogoGrid /> */}
       {/* <GradientWrapper> */}
         <Features />
         
       {/* </GradientWrapper> */}
+        <CTA />
       <ToolKit />
-      <CTA />
-      {/* <CaseStudies/> */}
+      <CaseStudies/>
       {/* <GradientWrapper> */}
-        <Testimonials />
+        
       {/* </GradientWrapper> */}
-      <FooterCTA />
+      {/* <FooterCTA /> */}
       <Help />
+      
     </>
   );
 }

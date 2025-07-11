@@ -5,27 +5,29 @@ import Brand from '../Brand'
 import NavLink from '../NavLink'
 
 const Navbar = () => {
-
-    const [state, setState] = useState(false) 
+    const [state, setState] = useState(false)
     const { events } = useRouter();
 
+    // Updated navigation to match screenshot order and items
     const navigation = [
         { title: "About", path: "#about" },
         { title: "Services", path: "#features" },
-        { title: "Technologies", path: "#toolkit" },
-        // { title: "Case Studies", path: "#casestudies" },
-        { title: "Testimonials", path: "#testimonials" },
+        { title: "How it works", path: "#howitworks" },
+        { title: "FAQ's", path: "#faqs" },
     ]
 
     useEffect(() => {
-        // Close the navbar menu when navigate
         const handleState = () => {
             document.body.classList.remove("overflow-hidden")
             setState(false)
         }
-        events.on("routeChangeStart", () => handleState());
-        events.on("hashChangeStart", () => handleState());
-    }, [])
+        events.on("routeChangeStart", handleState);
+        events.on("hashChangeStart", handleState);
+        return () => {
+            events.off("routeChangeStart", handleState);
+            events.off("hashChangeStart", handleState);
+        }
+    }, [events])
 
     const handleNavMenu = () => {
         setState(!state)
@@ -34,61 +36,73 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav className={`bg-white w-full fixed top-0 left-0 z-30 md:text-sm ${state ? "h-full" : ""}`}>
-                <div className="custom-screen items-center mx-auto md:flex 
-                ">
-                    <div className="flex items-center justify-between py-3 md:py-5 md:block">
+            <nav className={`bg-white w-full fixed top-0 left-0 z-30 shadow-sm`}>
+                <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+                    {/* Brand */}
+                    <div className="flex items-center">
                         <Brand />
-                        <div className="md:hidden">
-                            <button role="button" aria-label="Open the menu" className="text-gray-500 hover:text-gray-800"
-                                onClick={handleNavMenu}
-                            >
-                                {
-                                    state ? (
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                                        </svg>
-                                    ) : (
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                        </svg>
-                                    )
-                                }
-                            </button>
-                        </div>
                     </div>
-                    <div className={`flex-1 pb-3 mt-8 md:pb-0 md:mt-0 md:block ${state ? "" : "hidden"}`}>
-                        <ul className="text-[#000000] justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0 md:font-medium uppercase md:text-md tracking-widest">
-                            {
-                                navigation.map((item, idx) => {
-                                    return (
-                                        <li key={idx} className="duration-150 hover:text-[#F06A6A]">
-                                            <Link
-                                                href={item.path}
-                                                className="block"
-                                            >
-                                                {item.title}
-                                            </Link>
-                                        </li>
-                                    )
-                                })
-                            }
+                    {/* Desktop Nav */}
+                    <div className="hidden md:flex items-center space-x-8">
+                        <ul className="flex items-center space-x-6 text-black font-medium text-base">
+                            {navigation.map((item, idx) => (
+                                <li key={idx} className="hover:text-[#F06A6A] transition-colors duration-150">
+                                    <Link href={item.path} className="block">
+                                        {item.title}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                        <NavLink
+                            href="/get-started"
+                            className="ml-8 px-7 py-3 rounded bg-[#F06A6A] text-white font-bold shadow-md hover:bg-[#e65c5c] transition"
+                            style={{ minWidth: 160, textAlign: "center" }}
+                        >
+                            GET IN TOUCH
+                        </NavLink>
+                    </div>
+                    {/* Mobile Hamburger */}
+                    <div className="md:hidden flex items-center">
+                        <button
+                            role="button"
+                            aria-label="Open the menu"
+                            className="text-gray-700 hover:text-[#F06A6A] focus:outline-none"
+                            onClick={handleNavMenu}
+                        >
+                            {state ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                                </svg>
+                            ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
+                </div>
+                {/* Mobile Nav */}
+                {state && (
+                    <div className="md:hidden bg-white shadow-lg px-6 pb-6">
+                        <ul className="flex flex-col space-y-4 text-black font-medium text-base mt-4">
+                            {navigation.map((item, idx) => (
+                                <li key={idx} className="hover:text-[#F06A6A] transition-colors duration-150">
+                                    <Link href={item.path} className="block py-2">
+                                        {item.title}
+                                    </Link>
+                                </li>
+                            ))}
                             <li>
-                               <NavLink
-    href="/get-started"
-    className="block font-medium text-sm text-white transition duration-200 md:inline"
-    style={{ backgroundColor: '#000000' }}
-    onMouseOver={e => e.currentTarget.style.backgroundColor = '#e65c5c'}
-    onMouseOut={e => e.currentTarget.style.backgroundColor = '#000000'}
-    onMouseDown={e => e.currentTarget.style.backgroundColor = '#c94d4d'}
-    onMouseUp={e => e.currentTarget.style.backgroundColor = '#e65c5c'}
->
-    Get In Touch
-</NavLink>
+                                <NavLink
+                                    href="/get-started"
+                                    className="w-full block px-7 py-3 rounded bg-[#F06A6A] text-white font-bold shadow-md hover:bg-[#e65c5c] transition text-center"
+                                >
+                                    GET IN TOUCH
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
-                </div>
+                )}
             </nav>
         </header>
     )

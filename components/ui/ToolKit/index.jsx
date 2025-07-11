@@ -112,70 +112,65 @@ const states = [
     "Digital Marketing"
 ];
 
+const steps = [
+    {
+        title: "Step 1) Fill out the form",
+        body: "Let us know your needs and goals. Our simple form takes just a minute to complete."
+    },
+    {
+        title: "Step 2) Respond to our Email",
+        body: "We’ll reach out quickly with a tailored plan and next steps for your project."
+    },
+    {
+        title: "Step 3) Sit back and relax",
+        body: "Our team gets to work while you focus on your business. We’ll keep you updated every step."
+    }
+];
+
 const ToolKit = () => {
     const [selected, setSelected] = useState(states[0]);
     const icons = toolkitData[selected];
 
     return (
-        <SectionWrapper>
-            {/* Heading with id and scroll-mt-24 for navbar offset */}
-            <h2
-                id="toolkit"
-                className="scroll-mt-24 ml-16 text-gray-800 text-2xl font-semibold sm:text-3xl font-[Montserrat]"
-            >
-                Technologies
+        <SectionWrapper id="howitworks" className="bg-[#F4F4F4] py-16 px-2 md:px-8">
+            {/* Heading */}
+            <h2 className="text-black text-3xl md:text-4xl font-bold text-center mb-12 font-[Montserrat]">
+                How it works?
             </h2>
-            <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8 flex flex-col md:flex-row gap-10">
-                {/* Left side: States */}
-                <div className="md:w-1/4 flex md:flex-col gap-2 justify-center mb-8 md:mb-0 ml-8">
-                    {states.map((state) => (
-                        <button
-                            key={state}
-                            onClick={() => setSelected(state)}
-                            className={`
-                                px-4 py-3 text-left
-                                ${selected === state
-                                    ? "text-gray-800"
-                                    : "text-gray-400 font-normal"
-                                }`}
-                            style={{
-                                outline: "none",
-                                boxShadow: "none",
-                                borderRadius: 0,
-                                marginBottom: "0.25em"
-                            }}
-                        >
-                            <span 
-                                className={`inline-block ${selected === state ? 'border-b-2 border-gray-300' : ''}`}
-                            >
-                                {state}
-                            </span>
-                        </button>
-                    ))}
-                </div>                {/* Right side: Toolkit icons grid only, open grid lines */}
-                <div className="md:w-3/4">
-                    <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-2">
-                        {icons.map((item, idx) => (
-                            <div
-                                key={idx}
-                                className="flex flex-col items-center justify-center aspect-square group transition p-2"
-                                style={{
-                                    border: "none"
-                                }}
-                            >
-                                <Image
-                                    src={item.icon}
-                                    alt={item.name || "toolkit icon"}
-                                    width={48}
-                                    height={48}
-                                    className="transition duration-300 grayscale opacity-80 group-hover:opacity-100"
-                                />
-                                <span className="mt-1 text-xs text-gray-900 font-medium text-center">
-                                    {item.name}
-                                </span>
-                            </div>
-                        ))}
-                    </div>                </div>            </div>
+            {/* Steps */}
+            <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 mb-12">
+                {steps.map((step, idx) => (
+                    <div
+                        key={idx}
+                        className="relative bg-white border border-black rounded-xl flex-1 flex flex-col justify-center items-center py-12 px-8 min-w-[260px] text-center transition-transform duration-300 hover:-translate-y-2 shadow-[0_8px_32px_0_rgba(240,106,106,0.15),0_1.5px_6px_0_rgba(0,0,0,0.08)] hover:shadow-[0_16px_48px_0_rgba(240,106,106,0.25),0_3px_12px_0_rgba(0,0,0,0.12)]"
+                    >
+                        <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-[#F06A6A] text-white text-xl font-bold shadow-md border-4 border-[#F4F4F4]">
+                            {idx + 1}
+                        </div>
+                        <div className="mt-8 text-lg md:text-xl font-bold mb-2 text-black">{step.title}</div>
+                        <div className="text-base text-gray-700">{step.body}</div>
+                    </div>
+                ))}
+            </div>
+            {/* Subheading and description */}
+            <div className="text-center mb-8">
+                <div className="text-xl md:text-2xl font-bold mb-2 font-[Montserrat] text-black">
+                    Scale your business faster with proven strategies
+                </div>
+                <div className="text-sm md:text-base text-gray-700 max-w-2xl mx-auto">
+                    Whether you need help developing your first MVP, proceeding from concept to financing, building a website or digital product, or scaling your business, we’ve got you covered. Get in touch and we’ll show you how we can help you reach your business goals.
+                </div>
+            </div>
+            {/* CTA Button */}
+            <div className="flex justify-center">
+                <a
+                    href="#contact"
+                    className="bg-[#F06A6A] hover:bg-[#e65c5c] text-white font-semibold rounded-md px-10 py-4 text-base shadow-lg transition text-center"
+                    style={{ minWidth: 220 }}
+                >
+                    GET IN TOUCH
+                </a>
+            </div>
         </SectionWrapper>
     );
 };

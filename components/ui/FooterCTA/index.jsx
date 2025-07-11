@@ -3,7 +3,7 @@ import NavLink from "../NavLink"
 
 const FooterCTA = () => (
     <SectionWrapper>
-        <div className="custom-screen my-8 mx-40 " >
+        <div className="custom-screen my-8 mx-40" style={{ backgroundColor: "#fff", borderRadius: "1rem" }}>
             <div className="max-w-2xl mx-auto text-center py-12 ">
                 <h2 className="text-black text-3xl font-semibold sm:text-4xl">
                     Get started with us today
