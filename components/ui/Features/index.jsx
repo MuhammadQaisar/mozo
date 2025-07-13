@@ -1,21 +1,58 @@
 import { useState } from "react";
 import SectionWrapper from "../../SectionWrapper";
-
-// Example icons for AI/ML row (replace with your own SVGs or images as needed)
 import python from "../../../public/icons/python.svg";
 import tensorflow from "../../../public/icons/tensorflow.svg";
 import kaggle from "../../../public/icons/kaggle.svg";
 import openai from "../../../public/icons/openai.svg";
 import numpy from "../../../public/icons/numpy.svg";
-
+import shopify from "../../../public/icons/shopify.svg";
+import wordpress from "../../../public/icons/wordpress.svg";
+import nextjs from "../../../public/icons/nextjs.svg";
+import tailwind from "../../../public/icons/tailwind.svg";
+import nodejs from "../../../public/icons/nodejs.svg";
+import vercel from "../../../public/icons/vercel.svg";
+import figma from "../../../public/icons/figma.svg";
+import terraform from "../../../public/icons/terraform.svg";
+import aws from "../../../public/icons/aws.svg";
+import azure from "../../../public/icons/azure.svg";
+import docker from "../../../public/icons/docker.svg";
+import kubernetes from "../../../public/icons/kubernetes.svg";
+import googleAds from "../../../public/icons/google-ads.svg";
+import facebook from "../../../public/icons/facebook.svg";
+import mailchimp from "../../../public/icons/mailchimp.svg";
+import seo from "../../../public/icons/seo.svg";
+import keras from "../../../public/icons/keras.svg";
+import apache from "../../../public/icons/apache.svg";
+import mongo from "../../../public/icons/mongo.svg";
+import mysql from "../../../public/icons/mysql.svg";
+import php from "../../../public/icons/php.svg";
+import talend from "../../../public/icons/talend.svg";
+import pgsql from "../../../public/icons/pgsql.svg";
+import woocommerce from "../../../public/icons/woocommerce.svg";
+import grafana from "../../../public/icons/grafana.svg";
+import prometheus from "../../../public/icons/prometheus.svg";
+import typescript from "../../../public/icons/typescript.svg";
+import java from "../../../public/icons/java.svg";
+import jenkins from "../../../public/icons/jenkins.svg";
+import express from "../../../public/icons/express.svg";
+import dotnet from "../../../public/icons/dotnet.svg";
+import gitlab from "../../../public/icons/gitlab.svg";
+import nginx from "../../../public/icons/nginx.svg";
+import ansible from "../../../public/icons/ansible.svg";
+import framer from "../../../public/icons/framer.svg";
+import google from "../../../public/icons/google.svg";
+import ruby from "../../../public/icons/ruby.svg";
+import django from "../../../public/icons/django.svg";
+import meta from "../../../public/icons/meta.svg";
+import hubspot from "../../../public/icons/hubspot.svg";
+import googleanalytics from "../../../public/icons/googleanalytics.svg";
+import reactjs from "../../../public/icons/reactjs.svg";
 import Image from "next/image";
 
 const features = [
     {
         icon: (
-            <svg className="w-8 h-8 text-[#F06A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17.25L6 21m0 0l-3.75-3.75M6 21V3m12 0l3.75 3.75M18 3l-3.75 3.75M18 3v18" />
-            </svg>
+           <img src="/icons/ai.svg" alt="" />
         ),
         title: "AI/ML",
         description: "We offer full-scale support for any size business. From building the foundations with a high-converting site with ongoing SEO for traffic growth, to doing CRO for established brands looking to accelerate on hyperdrive.",
@@ -25,59 +62,83 @@ const features = [
             "AI Strategy and Consulting",
             "AI Strategy an",
         ],
-        icons: [numpy, python, tensorflow, openai, kaggle],
+        icons: [numpy, python, tensorflow, openai, kaggle, shopify, wordpress, nextjs, tailwind, nodejs, vercel, figma, terraform, aws, azure, docker, kubernetes],
+        heading: "Data & Artificial intelligence",
     },
     {
         icon: (
-            <svg className="w-8 h-8 text-[#F06A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 20l9-5-9-5-9 5 9 5zm0-10V4m0 0L3 9m9-5l9 5" />
-            </svg>
+            <img src="/icons/chart.svg" alt="" />
         ),
         title: "Digital Marketing",
-        description: "",
-        benefits: [],
+        description: "Grow your brand with targeted campaigns, social media management, and analytics-driven strategies.",
+        benefits: [
+            "Social Media Marketing",
+            "Google Ads & PPC",
+            "Email Campaigns",
+            "Analytics & Reporting",
+        ],
+        icons: [googleanalytics, facebook, googleAds, mailchimp, seo, reactjs, framer, hubspot, meta],
+        heading: "Digital Marketing",
     },
     {
         icon: (
-            <svg className="w-8 h-8 text-[#F06A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" strokeWidth="2" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h8" />
-            </svg>
+           <img src="/icons/cloud-icon.svg" alt="" />
         ),
-        title: "SEO",
-        description: "",
-        benefits: [],
+        title: "CloudOps",
+        description: "Boost your visibility and organic traffic with proven SEO strategies and ongoing optimization.",
+        benefits: [
+            "On-page SEO",
+            "Technical SEO",
+            "Content Optimization",
+            "Link Building",
+        ],
+        icons: [aws, azure, terraform, vercel, figma, docker, kubernetes, gitlab, nginx, ansible, framer, google, ruby, django, meta, hubspot, googleanalytics, reactjs],
+        heading: "CloudOps",
     },
     {
         icon: (
-            <svg className="w-8 h-8 text-[#F06A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
-            </svg>
+           <img src="/icons/web-icon.svg" alt="" />
         ),
         title: "Web Development",
-        description: "",
-        benefits: [],
+        description: "Custom websites, e-commerce, and web apps built for performance, scalability, and conversion.",
+        benefits: [
+            "Custom Websites",
+            "E-commerce Solutions",
+            "Web Applications",
+            "Performance Optimization",
+        ],
+        icons: [reactjs, nextjs, tailwind, nodejs, vercel, figma,shopify, wordpress,mongo,mysql,php,talend,pgsql,woocommerce,grafana,prometheus,typescript,java,jenkins,express,dotnet,gitlab,nginx,ansible,framer,google,ruby,django,meta,hubspot,googleanalytics],
+        heading: "Web Development",
     },
     {
         icon: (
-            <svg className="w-8 h-8 text-[#F06A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 20l9-5-9-5-9 5 9 5zm0-10V4m0 0L3 9m9-5l9 5" />
-            </svg>
-        ),
-        title: "Digital Marketing",
-        description: "",
-        benefits: [],
-    },
-    {
-        icon: (
-            <svg className="w-8 h-8 text-[#F06A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" strokeWidth="2" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h8" />
-            </svg>
+            <img src="/icons/ui.svg" alt="" />
         ),
         title: "UI/UX",
-        description: "",
-        benefits: [],
+        description: "Designs that delight users and drive engagement, from wireframes to polished interfaces.",
+        benefits: [
+            "Wireframing",
+            "Prototyping",
+            "UI Design",
+            "UX Research",
+        ],
+        icons: [figma, reactjs, nextjs, tailwind, nodejs, vercel, figma,shopify, wordpress,mongo,mysql,php,talend,pgsql,woocommerce,grafana,prometheus,typescript,java,jenkins,express,dotnet,gitlab,nginx,ansible,framer,google,ruby,django,meta,hubspot,googleanalytics],
+        heading: "UI/UX",
+    },
+    {
+        icon: (
+           <img src="/icons/devops-icon.svg" alt="" />
+        ),
+        title: "DevOps",
+        description: "Automate, monitor, and optimize your infrastructure and deployment pipelines for reliability and scalability.",
+        benefits: [
+            "CI/CD Implementation",
+            "Cloud Infrastructure",
+            "Monitoring & Logging",
+            "Automation & Scripting",
+        ],
+        icons: [aws, azure, docker, kubernetes, terraform, apache, mongo, mysql, php, talend, pgsql, woocommerce, grafana, prometheus, typescript, java, jenkins, express, dotnet, gitlab, nginx, ansible],
+        heading: "DevOps & Cloud",
     },
 ];
 
@@ -92,6 +153,8 @@ const aiIcons = [
 const Features = () => {
     const [activeIdx, setActiveIdx] = useState(0);
 
+    const activeFeature = features[activeIdx];
+
     return (
         <SectionWrapper>
             <div className="bg-white py-10 px-2 md:px-8">
@@ -104,71 +167,47 @@ const Features = () => {
                 </p>
                 {/* Main grid */}
                 <div className="flex flex-col lg:flex-row justify-center items-start gap-8 w-full">
-                    {/* Left: Service cards */}
+                    {/* Left: Service cards as states */}
                     <div className="flex flex-col gap-4 w-full max-w-lg mx-auto">
-                        {/* First row */}
-                        <div className="flex gap-4">
-                            {features.slice(0, 3).map((item, idx) => (
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            {features.map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className={`flex flex-col items-center justify-center flex-1 h-28 rounded-xl border border-gray-200 bg-gray-100 shadow-md cursor-pointer transition-all ${
-                                        activeIdx === idx ? "ring-2 ring-[#F06A6A] bg-white" : ""
-                                    }`}
+                                    className={`flex flex-col items-center justify-center h-28 rounded-xl shadow-md cursor-pointer transition-all
+                                        ${activeIdx === idx ? "bg-black" : "bg-gray-100"}
+                                    `}
                                     onClick={() => setActiveIdx(idx)}
                                 >
-                                    <span className="mb-1">{item.icon}</span>
-                                    <span className="font-semibold text-base text-black">{item.title}</span>
-                                </div>
-                            ))}
-                        </div>
-                        {/* Second row */}
-                        <div className="flex gap-4">
-                            {features.slice(3, 6).map((item, idx) => (
-                                <div
-                                    key={idx + 3}
-                                    className={`flex flex-col items-center justify-center flex-1 h-28 rounded-xl border border-gray-200 bg-gray-100 shadow-md cursor-pointer transition-all ${
-                                        activeIdx === idx + 3 ? "ring-2 ring-[#F06A6A] bg-white" : ""
-                                    }`}
-                                    onClick={() => setActiveIdx(idx + 3)}
-                                >
-                                    <span className="mb-1">{item.icon}</span>
-                                    <span className="font-semibold text-base text-black">{item.title}</span>
+                                    <span className={`mb-1 ${activeIdx === idx ? "text-white" : ""}`}>{item.icon}</span>
+                                    <span className={`font-semibold text-base ${activeIdx === idx ? "text-white" : "text-black"}`}>{item.title}</span>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    {/* Right: Details */}
+                    {/* Right: Details change on state/card click */}
                     <div className="flex-1 flex flex-col items-center lg:items-start mt-8 lg:mt-0">
                         <h3 className="text-lg md:text-xl font-bold text-black mb-2 text-center lg:text-left font-[Montserrat]">
-                            Data &amp; Artificial intelligence
+                            {activeFeature.heading}
                         </h3>
                         <p className="text-black text-center lg:text-left mb-2 font-[Montserrat]">
-                            We offer full-scale support for any size business. From building the foundations with a high-converting site with ongoing SEO for traffic growth, to doing CRO for established brands looking to accelerate on hyperdrive.
+                            {activeFeature.description}
                         </p>
                         <div className="flex flex-wrap gap-x-8 gap-y-2 justify-center lg:justify-start mb-4">
-                            <span className="flex items-center text-black font-bold text-base">
-                                <svg className="w-5 h-5 text-[#F06A6A] mr-2" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /></svg>
-                                AI Strategy and Consulting
-                            </span>
-                            <span className="flex items-center text-black font-bold text-base">
-                                <svg className="w-5 h-5 text-[#F06A6A] mr-2" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /></svg>
-                                ML Modeling
-                            </span>
-                            <span className="flex items-center text-black font-bold text-base">
-                                <svg className="w-5 h-5 text-[#F06A6A] mr-2" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /></svg>
-                                AI Strategy and Consulting
-                            </span>
-                            <span className="flex items-center text-black font-bold text-base">
-                                <svg className="w-5 h-5 text-[#F06A6A] mr-2" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /></svg>
-                                AI Strategy an
-                            </span>
-                        </div>
-                        {/* AI/ML icons */}
-                        <div className="flex flex-wrap gap-6 justify-center lg:justify-start mb-6">
-                            {aiIcons.map((icon, idx) => (
-                                <Image key={idx} src={icon.src} alt={icon.alt} width={60} height={60} />
+                            {activeFeature.benefits.map((benefit, idx) => (
+                                <span key={idx} className="flex items-center text-black font-bold text-base">
+                                    <svg className="w-5 h-5 text-[#F06A6A] mr-2" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /></svg>
+                                    {benefit}
+                                </span>
                             ))}
                         </div>
+                        {/* AI/ML icons only for AI/ML card */}
+                        {activeFeature.icons && activeFeature.icons.length > 0 && (
+    <div className="flex flex-wrap gap-6 justify-center lg:justify-start mb-6">
+        {activeFeature.icons.map((icon, idx) => (
+            <Image key={idx} src={icon} alt={`icon-${idx}`} width={40} height={40} />
+        ))}
+    </div>
+)}
                         <button className="bg-black text-white font-semibold rounded-md px-8 py-4 text-base shadow-md hover:bg-gray-900 transition mx-auto lg:mx-0 block">
                             EXPLORE OUR SERVICES
                         </button>

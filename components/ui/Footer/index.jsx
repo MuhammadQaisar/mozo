@@ -43,23 +43,23 @@ const navLinks = [
 ];
 
 const Footer = () => (
-    <footer className="bg-black text-white pt-0">
+    <footer className="bg-black text-white pt-0 font-[Montserrat]">
         <div className="max-w-7xl mx-auto px-6 pb-2">
-            <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 pt-24">
+            <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 pt-20">
                 {/* Logo and Brand */}
                 <div className="flex flex-col items-center md:items-start">
                     <div className="flex items-center mb-2">
-                        <img src="/logos/mozo.svg" alt="Mozo Logo" className="h-12 mr-3" />
-                        <div>
-                            <span className="text-3xl font-bold tracking-tight text-white">MOZO</span>
-                            <div className="text-xs tracking-widest text-[#F06A6A] font-semibold">TECHNOLOGIES</div>
-                        </div>
+                        <img src="/footer-logo.svg" alt="Mozo Logo" className="h-12 mr-3 drop-shadow-lg" />
                     </div>
                 </div>
                 {/* Navigation */}
                 <div className="flex flex-col items-center md:items-start gap-2">
                     {navLinks.map((item, idx) => (
-                        <Link key={idx} href={item.path} className="text-white hover:text-[#F06A6A] text-sm font-normal transition">
+                        <Link
+                            key={idx}
+                            href={item.path}
+                            className="text-white hover:text-[#F06A6A] text-lg font-semibold transition"
+                        >
                             {item.title}
                         </Link>
                     ))}
@@ -75,14 +75,16 @@ const Footer = () => (
                 </div>
             </div>
             <hr className="border-gray-700 my-8" />
-            <div className="flex flex-col md:flex-row justify-between items-center">
-                <p className="text-gray-400 text-xs mb-4 md:mb-0">© 2025 Mozo Technologies. All rights reserved.</p>
-                <div className="flex items-center gap-x-6">
-                    {socialInfo.map((item, idx) => (
-                        <a key={idx} href={item.href} aria-label="social media" target="_blank" rel="noreferrer">
-                            {item.icon}
-                        </a>
-                    ))}
+            <div className="flex flex-col md:flex-row justify-between items-center w-full">
+                <p className="text-gray-400 text-sm text-center md:text-left w-full md:w-auto mb-4 md:mb-0 font-medium">
+                    © 2025 Mozo Technologies. All rights reserved.
+                </p>
+                <div className="flex gap-4">
+                    {/* Keep previous social icons */}
+                    <img src="/face.svg" alt="Facebook" className="w-6 h-6 hover:opacity-80 transition" />
+                    <img src="/linkedin.svg" alt="LinkedIn" className="w-6 h-6 hover:opacity-80 transition" />
+                    <img src="/x.svg" alt="X" className="w-6 h-6 hover:opacity-80 transition" />
+                    <img src="/insta.svg" alt="Instagram" className="w-6 h-6 hover:opacity-80 transition" />
                 </div>
             </div>
         </div>

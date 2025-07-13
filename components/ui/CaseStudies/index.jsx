@@ -2,12 +2,11 @@ import React, { useState } from "react"
 
 
 const faqs = [
-    { question: "Question #1", answer: "Answer for question 1." },
-    { question: "Question #2", answer: "Answer for question 2." },
-    { question: "Question #3", answer: "Answer for question 3." },
-    { question: "Question #4", answer: "Answer for question 4." },
-    { question: "Question #5", answer: "Answer for question 5." },
-    { question: "Question #6", answer: "Answer for question 6." },
+    { question: "How is MOZO Technologies different from Upwork?", answer: "Answer for question 1." },
+    { question: "What are the benefits of hiring developers through MOZO?", answer: "Answer for question 2." },
+    { question: "What if I’m not satisfied with my new hire?", answer: "Answer for question 3." },
+    { question: "Does Teamo take on project-based work?", answer: "Answer for question 4." },
+    { question: "Is MOZO a software agency?", answer: "Answer for question 5." },
 ];
 
 const CaseStudies = () => {
@@ -15,30 +14,33 @@ const CaseStudies = () => {
 
     return (
         <section className="flex justify-center items-center py-16 font-[Montserrat] bg-white">
-            <div className="w-full max-w-2xl border border-[#3B3663] rounded-lg p-0 md:p-0 bg-white">
-                <h2 className="text-2xl md:text-3xl font-bold text-[#3B3663] text-center mb-2 mt-4">
+            <div className="w-full max-w-3xl mx-auto">
+                <h2 className="text-lg md:text-xl font-bold text-black mb-6 text-center px-2 md:px-0">
                     Frequently Asked Questions
                 </h2>
-                <div>
+                <div className="bg-white">
                     {faqs.map((faq, idx) => (
-                        <div key={idx} className="border-b border-[#3B3663] last:border-b-0">
+                        <div key={idx} className="border-b border-[#D3D3E3] last:border-b-0">
                             <button
-                                className="w-full flex items-center justify-between py-4 px-4 text-left focus:outline-none"
+                                className="w-full flex items-center justify-between py-4 px-2 md:px-0 text-left focus:outline-none"
                                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
                             >
-                                <span className="font-semibold text-[#3B3663]">{faq.question}</span>
-                                <svg
-                                    className={`w-5 h-5 text-[#3B3663] transition-transform duration-200 ${openIdx === idx ? "rotate-90" : ""}`}
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path d="M9 6l6 6-6 6" />
-                                </svg>
+                                <span className="text-black text-base md:text-lg font-normal">
+                                    {faq.question}
+                                </span>
+                                <span className="flex items-center justify-center">
+                                    <svg
+                                        className="w-7 h-7"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <circle cx="12" cy="12" r="12" fill="#000"/>
+                                        <path d="M12 8v8M8 12h8" stroke="#F06A6A" strokeWidth="2" strokeLinecap="round"/>
+                                    </svg>
+                                </span>
                             </button>
                             {openIdx === idx && (
-                                <div className="px-4 pb-4 text-[#3B3663] text-sm">
+                                <div className="px-2 md:px-0 pb-4 text-black text-sm">
                                     {faq.answer}
                                 </div>
                             )}
