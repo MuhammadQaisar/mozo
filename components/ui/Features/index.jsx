@@ -47,6 +47,7 @@ import meta from "../../../public/icons/meta.svg";
 import hubspot from "../../../public/icons/hubspot.svg";
 import googleanalytics from "../../../public/icons/googleanalytics.svg";
 import reactjs from "../../../public/icons/reactjs.svg";
+import instagram from "../../../public/icons/instagram.svg";
 import Image from "next/image";
 
 const features = [
@@ -55,14 +56,14 @@ const features = [
            <img src="/icons/ai.svg" alt="" />
         ),
         title: "AI/ML",
-        description: "We offer full-scale support for any size business. From building the foundations with a high-converting site with ongoing SEO for traffic growth, to doing CRO for established brands looking to accelerate on hyperdrive.",
+        description: "We offer full-scale support for any size business. From building the foundations with a high-converting site with ongoing SEO for traffic growth, to doing CRO for established brands looking to accelerate on hyperdrive. Unlock the power of artificial intelligence and machine learning to automate, analyze, and innovate your business processes.",
         benefits: [
             "AI Strategy and Consulting",
             "ML Modeling",
             "AI Strategy and Consulting",
             "AI Strategy an",
         ],
-        icons: [numpy, python, tensorflow, openai, kaggle, shopify, wordpress, nextjs, tailwind, nodejs, vercel, figma, terraform, aws, azure, docker, kubernetes],
+        icons: [numpy, python, tensorflow, openai, kaggle],
         heading: "Data & Artificial intelligence",
     },
     {
@@ -70,14 +71,14 @@ const features = [
             <img src="/icons/chart.svg" alt="" />
         ),
         title: "Digital Marketing",
-        description: "Grow your brand with targeted campaigns, social media management, and analytics-driven strategies.",
+        description: "Grow your brand with targeted campaigns, social media management, and analytics-driven strategies. Maximize your reach and engagement with creative content and data-backed marketing solutions.",
         benefits: [
             "Social Media Marketing",
             "Google Ads & PPC",
             "Email Campaigns",
             "Analytics & Reporting",
         ],
-        icons: [googleanalytics, facebook, googleAds, mailchimp, seo, reactjs, framer, hubspot, meta],
+        icons: [googleanalytics, facebook, googleAds, mailchimp, seo, reactjs, framer, hubspot, meta,instagram],
         heading: "Digital Marketing",
     },
     {
@@ -85,7 +86,7 @@ const features = [
            <img src="/icons/cloud-icon.svg" alt="" />
         ),
         title: "CloudOps",
-        description: "Boost your visibility and organic traffic with proven SEO strategies and ongoing optimization.",
+        description: "Boost your visibility and organic traffic with proven SEO strategies and ongoing optimization. Scale your infrastructure and operations with secure, reliable, and cost-effective cloud solutions.",
         benefits: [
             "On-page SEO",
             "Technical SEO",
@@ -100,14 +101,14 @@ const features = [
            <img src="/icons/web-icon.svg" alt="" />
         ),
         title: "Web Development",
-        description: "Custom websites, e-commerce, and web apps built for performance, scalability, and conversion.",
+        description: "Custom websites, e-commerce, and web apps built for performance, scalability, and conversion. Empower your business with modern, responsive, and secure web solutions tailored to your needs.",
         benefits: [
             "Custom Websites",
             "E-commerce Solutions",
             "Web Applications",
             "Performance Optimization",
         ],
-        icons: [reactjs, nextjs, tailwind, nodejs, vercel, figma,shopify, wordpress,mongo,mysql,php,talend,pgsql,woocommerce,grafana,prometheus,typescript,java,jenkins,express,dotnet,gitlab,nginx,ansible,framer,google,ruby,django,meta,hubspot,googleanalytics],
+        icons: [reactjs, nextjs, tailwind, nodejs, vercel,shopify, wordpress,mongo,mysql,php,pgsql,woocommerce,typescript,java,express,dotnet,gitlab],
         heading: "Web Development",
     },
     {
@@ -115,14 +116,14 @@ const features = [
             <img src="/icons/ui.svg" alt="" />
         ),
         title: "UI/UX",
-        description: "Designs that delight users and drive engagement, from wireframes to polished interfaces.",
+        description: "Designs that delight users and drive engagement, from wireframes to polished interfaces. Create intuitive and visually stunning experiences that keep your customers coming back.",
         benefits: [
             "Wireframing",
             "Prototyping",
             "UI Design",
             "UX Research",
         ],
-        icons: [figma, reactjs, nextjs, tailwind, nodejs, vercel, figma,shopify, wordpress,mongo,mysql,php,talend,pgsql,woocommerce,grafana,prometheus,typescript,java,jenkins,express,dotnet,gitlab,nginx,ansible,framer,google,ruby,django,meta,hubspot,googleanalytics],
+        icons: [reactjs, nextjs, tailwind, nodejs, vercel,shopify, wordpress,mongo,mysql,php,pgsql,woocommerce,typescript,java,express,dotnet,ruby,django,meta,hubspot,googleanalytics],
         heading: "UI/UX",
     },
     {
@@ -130,7 +131,7 @@ const features = [
            <img src="/icons/devops-icon.svg" alt="" />
         ),
         title: "DevOps",
-        description: "Automate, monitor, and optimize your infrastructure and deployment pipelines for reliability and scalability.",
+        description: "Automate, monitor, and optimize your infrastructure and deployment pipelines for reliability and scalability. Accelerate your development lifecycle with robust CI/CD, cloud, and automation practices.",
         benefits: [
             "CI/CD Implementation",
             "Cloud Infrastructure",
@@ -159,12 +160,12 @@ const Features = () => {
         <SectionWrapper>
             <div className="bg-white py-10 px-2 md:px-8">
                 {/* Title and description */}
-                <h2 className="text-black text-3xl md:text-4xl font-bold text-center mb-2 font-[Montserrat]">
+                <h2 className="text-black text-3xl md:text-4xl font-bold text-left mb-8 pt-2 font-[Montserrat]">
                     What we Offer?
                 </h2>
-                <p className="text-black text-center max-w-2xl mx-auto mb-10 font-[Montserrat]">
+                {/* <p className="text-black text-left max-w-2xl mx-auto mb-10 font-[Montserrat]">
                     We offer full-scale support for any size business. From building the foundations with a high-converting site with ongoing SEO for traffic growth, to doing CRO for established brands looking to accelerate on hyperdrive.
-                </p>
+                </p> */}
                 {/* Main grid */}
                 <div className="flex flex-col lg:flex-row justify-center items-start gap-8 w-full">
                     {/* Left: Service cards as states */}
@@ -185,17 +186,17 @@ const Features = () => {
                         </div>
                     </div>
                     {/* Right: Details change on state/card click */}
-                    <div className="flex-1 flex flex-col items-center lg:items-start mt-8 lg:mt-0">
+                    <div className="flex-1 flex flex-col items-center lg:items-start mt-8 lg:mt-0 gap-x-8 gap-y-4">
                         <h3 className="text-lg md:text-xl font-bold text-black mb-2 text-center lg:text-left font-[Montserrat]">
                             {activeFeature.heading}
                         </h3>
-                        <p className="text-black text-center lg:text-left mb-2 font-[Montserrat]">
+                        <p className="text-gray-500 text-center lg:text-left mb-2 font-[Montserrat] leading-loose text-lg">
                             {activeFeature.description}
                         </p>
-                        <div className="flex flex-wrap gap-x-8 gap-y-2 justify-center lg:justify-start mb-4">
+                        <div className="flex flex-wrap gap-x-8 gap-y-3 justify-center lg:justify-start mb-4">
                             {activeFeature.benefits.map((benefit, idx) => (
                                 <span key={idx} className="flex items-center text-black font-bold text-base">
-                                    <svg className="w-5 h-5 text-[#F06A6A] mr-2" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" /></svg>
+                                    <img src="/icons/arrow-right.svg" alt="" height={16} width={16} className="mr-3" />
                                     {benefit}
                                 </span>
                             ))}
@@ -204,13 +205,13 @@ const Features = () => {
                         {activeFeature.icons && activeFeature.icons.length > 0 && (
     <div className="flex flex-wrap gap-6 justify-center lg:justify-start mb-6">
         {activeFeature.icons.map((icon, idx) => (
-            <Image key={idx} src={icon} alt={`icon-${idx}`} width={40} height={40} />
+            <Image key={idx} src={icon} alt={`icon-${idx}`} width={30} height={30} />
         ))}
     </div>
 )}
-                        <button className="bg-black text-white font-semibold rounded-md px-8 py-4 text-base shadow-md hover:bg-gray-900 transition mx-auto lg:mx-0 block">
+                        {/* <button className="bg-black text-white font-semibold rounded-md px-8 py-4 text-base shadow-md hover:bg-gray-900 transition mx-auto lg:mx-0 block">
                             EXPLORE OUR SERVICES
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </div>

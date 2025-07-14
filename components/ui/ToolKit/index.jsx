@@ -114,15 +114,15 @@ const states = [
 
 const steps = [
     {
-        title: "Step 1) Fill out the form",
+        title: "Fill out the form",
         body: "Let us know your needs and goals. Our simple form takes just a minute to complete."
     },
     {
-        title: "Step 2) Respond to our Email",
+        title: "Respond to our Email",
         body: "We’ll reach out quickly with a tailored plan and next steps for your project."
     },
     {
-        title: "Step 3) Sit back and relax",
+        title: "Sit back and relax",
         body: "Our team gets to work while you focus on your business. We’ll keep you updated every step."
     }
 ];
@@ -142,7 +142,7 @@ const ToolKit = () => {
                 {steps.map((step, idx) => (
                     <div
                         key={idx}
-                        className="relative bg-white border border-black rounded-xl flex-1 flex flex-col justify-center items-center py-12 px-8 min-w-[260px] text-center transition-transform duration-300 hover:-translate-y-2 shadow-[0_8px_32px_0_rgba(240,106,106,0.15),0_1.5px_6px_0_rgba(0,0,0,0.08)] hover:shadow-[0_16px_48px_0_rgba(240,106,106,0.25),0_3px_12px_0_rgba(0,0,0,0.12)]"
+                        className="relative bg-white rounded-xl flex-1 flex flex-col justify-center items-center py-12 px-8 min-w-[260px] text-center transition-transform duration-300 hover:-translate-y-2 shadow-[0_8px_32px_0_rgba(240,106,106,0.15),0_1.5px_6px_0_rgba(0,0,0,0.08)] hover:shadow-[0_16px_48px_0_rgba(240,106,106,0.25),0_3px_12px_0_rgba(0,0,0,0.12)]"
                     >
                         <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex items-center justify-center w-12 h-12 rounded-full bg-[#F06A6A] text-white text-xl font-bold shadow-md border-4 border-[#F4F4F4]">
                             {idx + 1}

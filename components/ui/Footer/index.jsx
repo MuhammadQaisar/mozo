@@ -74,12 +74,12 @@ const Footer = () => (
                     </Link>
                 </div>
             </div>
-            <hr className="border-gray-700 my-8" />
+            <hr className="border-gray-700 my-4" />
             <div className="flex flex-col md:flex-row justify-between items-center w-full">
                 <p className="text-gray-400 text-sm text-center md:text-left w-full md:w-auto mb-4 md:mb-0 font-medium">
                     © 2025 Mozo Technologies. All rights reserved.
                 </p>
-                <div className="flex gap-4">
+                <div className="flex gap-3 mt-0">
                     {/* Keep previous social icons */}
                     <img src="/face.svg" alt="Facebook" className="w-6 h-6 hover:opacity-80 transition" />
                     <img src="/linkedin.svg" alt="LinkedIn" className="w-6 h-6 hover:opacity-80 transition" />
