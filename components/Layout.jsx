@@ -3,6 +3,8 @@ import Footer from "./ui/Footer"
 import Navbar from "./ui/Navbar"
 import { montserrat } from "./ui/font"
 import { useEffect } from "react"
+import Help from "./ui/Help"
+
 
 const Layout = ({ children }) => {
     useEffect(() => {

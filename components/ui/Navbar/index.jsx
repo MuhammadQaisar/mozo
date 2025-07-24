@@ -4,17 +4,19 @@ import { useEffect, useState } from 'react'
 import Brand from '../Brand'
 import NavLink from '../NavLink'
 
+// Navigation data
+const navigation = [
+    { title: "About", path: "#about" },
+    { title: "Services", path: "#features" },
+    { title: "How it works", path: "#howitworks" },
+    { title: "FAQ's", path: "#faqs" },
+]
+
 const Navbar = () => {
     const [state, setState] = useState(false)
-    const { events } = useRouter();
-
-    // Updated navigation to match screenshot order and items
-    const navigation = [
-        { title: "About", path: "#about" },
-        { title: "Services", path: "#features" },
-        { title: "How it works", path: "#howitworks" },
-        { title: "FAQ's", path: "#faqs" },
-    ]
+    const [isScrolled, setIsScrolled] = useState(false)
+    const [activeNav, setActiveNav] = useState("")
+    const { events, asPath } = useRouter();
 
     useEffect(() => {
         const handleState = () => {
@@ -23,11 +25,61 @@ const Navbar = () => {
         }
         events.on("routeChangeStart", handleState);
         events.on("hashChangeStart", handleState);
+
+        // Set initial active nav based on hash
+        const initialHash = asPath.split('#')[1]
+        if (initialHash) {
+            setActiveNav('#' + initialHash)
+        }
         return () => {
             events.off("routeChangeStart", handleState);
             events.off("hashChangeStart", handleState);
         }
     }, [events])
+
+    // Effect for handling navbar background on scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Effect for tracking active section on scroll
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveNav(`#${entry.target.id}`);
+                    }
+                });
+            },
+            {
+                rootMargin: "-50% 0px -50% 0px",
+                threshold: 0,
+            }
+        );
+
+        navigation.forEach((item) => {
+            const section = document.querySelector(item.path);
+            if (section) observer.observe(section);
+        });
+
+        return () => {
+            navigation.forEach((item) => {
+                const section = document.querySelector(item.path);
+                if (section) observer.unobserve(section);
+            });
+        };
+    }, []);
 
     const handleNavMenu = () => {
         setState(!state)
@@ -36,18 +88,28 @@ const Navbar = () => {
 
     return (
         <header>
-            <nav className={`bg-white w-full fixed top-0 left-0 z-30 shadow-sm`}>
-                <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+            <nav
+                className={`w-full fixed top-0 left-0 z-30 transition-all duration-300 ${isScrolled || state ? 'bg-white shadow-sm' : 'bg-transparent'}`}
+            >
+                <div
+                    className={`max-w-7xl mx-auto flex items-center justify-between px-6 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}
+                >
                     {/* Brand */}
                     <div className="flex items-center">
                         <Brand />
                     </div>
                     {/* Desktop Nav */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div
+                        className={`hidden md:flex items-center space-x-8 transition-transform duration-300 ease-out ${isScrolled ? '-translate-y-1' : 'translate-y-0'}`}
+                    >
                         <ul className="flex items-center space-x-6 text-black font-medium text-base">
                             {navigation.map((item, idx) => (
-                                <li key={idx} className="hover:text-[#F06A6A] transition-colors duration-150">
-                                    <Link href={item.path} className="block">
+                                <li
+                                    key={idx}
+                                    className={`transition-colors duration-150 ${activeNav === item.path ? 'text-[#F06A6A] font-semibold' : 'hover:text-[#F06A6A]'
+                                        }`}
+                                >
+                                    <Link href={asPath === '/get-started' ? `/${item.path}` : item.path} className="block focus:outline-none focus:ring-0">
                                         {item.title}
                                     </Link>
                                 </li>
@@ -55,8 +117,7 @@ const Navbar = () => {
                         </ul>
                         <NavLink
                             href="/get-started"
-                            className="ml-8 px-7 py-3 rounded bg-[#F06A6A] text-white font-bold shadow-md hover:bg-[#e65c5c] transition"
-                            style={{ minWidth: 160, textAlign: "center" }}
+                            className="ml-8 px-6 py-2.5 rounded-md font-semibold text-white bg-gradient-to-r from-[#F06A6A] to-red-500 shadow-md hover:shadow-lg hover:from-[#e65c5c] hover:to-red-600 transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-center"
                         >
                             GET IN TOUCH
                         </NavLink>
@@ -86,8 +147,12 @@ const Navbar = () => {
                     <div className="md:hidden bg-white shadow-lg px-6 pb-6">
                         <ul className="flex flex-col space-y-4 text-black font-medium text-base mt-4">
                             {navigation.map((item, idx) => (
-                                <li key={idx} className="hover:text-[#F06A6A] transition-colors duration-150">
-                                    <Link href={item.path} className="block py-2">
+                                <li
+                                    key={idx}
+                                    className={`transition-colors duration-150 ${activeNav === item.path ? 'text-[#F06A6A] font-semibold' : 'hover:text-[#F06A6A]'
+                                        }`}
+                                >
+                                    <Link href={asPath === '/get-started' ? `/${item.path}` : item.path} className="block focus:outline-none focus:ring-0">
                                         {item.title}
                                     </Link>
                                 </li>
@@ -95,7 +160,7 @@ const Navbar = () => {
                             <li>
                                 <NavLink
                                     href="/get-started"
-                                    className="w-full block px-7 py-3 rounded bg-[#F06A6A] text-white font-bold shadow-md hover:bg-[#e65c5c] transition text-center"
+                                    className="w-full block px-6 py-3 rounded-md font-semibold text-white bg-gradient-to-r from-[#F06A6A] to-red-500 shadow-md hover:shadow-lg hover:from-[#e65c5c] hover:to-red-600 transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-center"
                                 >
                                     GET IN TOUCH
                                 </NavLink>

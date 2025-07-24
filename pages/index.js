@@ -7,10 +7,8 @@ import Hero from "../components/ui/Hero";
 import LogoGrid from "../components/ui/LogoGrid";
 import Testimonials from "../components/ui/Testimonials";
 import ToolKit from "../components/ui/ToolKit";
-import CaseStudies from "../components/ui/CaseStudies";
-import Help from "../components/ui/Help";
+import FAQs from "../components/ui/FAQs";
 import About from "../components/ui/About";
-import Footer from "../components/ui/Footer";
 
 
 export default function Home() {
@@ -29,12 +27,11 @@ export default function Home() {
       {/* </GradientWrapper> */}
         <CTA />
       <ToolKit />
-      <CaseStudies/>
-      {/* <GradientWrapper> */}
+      <FAQs/>
+            {/* <GradientWrapper> */}
         
       {/* </GradientWrapper> */}
       {/* <FooterCTA /> */}
-      <Help />
       
     </>
   );

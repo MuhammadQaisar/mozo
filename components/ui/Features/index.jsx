@@ -49,11 +49,12 @@ import googleanalytics from "../../../public/icons/googleanalytics.svg";
 import reactjs from "../../../public/icons/reactjs.svg";
 import instagram from "../../../public/icons/instagram.svg";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const features = [
     {
         icon: (
-           <img src="/icons/ai.svg" alt="" />
+           <img src="/icons/Group.svg" width={64} height={64} alt="" />
         ),
         title: "AI/ML",
         description: "We offer full-scale support for any size business. From building the foundations with a high-converting site with ongoing SEO for traffic growth, to doing CRO for established brands looking to accelerate on hyperdrive. Unlock the power of artificial intelligence and machine learning to automate, analyze, and innovate your business processes.",
@@ -68,7 +69,7 @@ const features = [
     },
     {
         icon: (
-            <img src="/icons/chart.svg" alt="" />
+            <img src="/icons/Frame.svg" alt="" />
         ),
         title: "Digital Marketing",
         description: "Grow your brand with targeted campaigns, social media management, and analytics-driven strategies. Maximize your reach and engagement with creative content and data-backed marketing solutions.",
@@ -83,7 +84,7 @@ const features = [
     },
     {
         icon: (
-           <img src="/icons/cloud-icon.svg" alt="" />
+           <img src="/icons/cloudcomputing.svg" alt="" />
         ),
         title: "CloudOps",
         description: "Boost your visibility and organic traffic with proven SEO strategies and ongoing optimization. Scale your infrastructure and operations with secure, reliable, and cost-effective cloud solutions.",
@@ -98,7 +99,7 @@ const features = [
     },
     {
         icon: (
-           <img src="/icons/web-icon.svg" alt="" />
+           <img src="/icons/web.svg" alt="" />
         ),
         title: "Web Development",
         description: "Custom websites, e-commerce, and web apps built for performance, scalability, and conversion. Empower your business with modern, responsive, and secure web solutions tailored to your needs.",
@@ -113,7 +114,7 @@ const features = [
     },
     {
         icon: (
-            <img src="/icons/ui.svg" alt="" />
+            <img src="/icons/uiux.svg" alt="" />
         ),
         title: "UI/UX",
         description: "Designs that delight users and drive engagement, from wireframes to polished interfaces. Create intuitive and visually stunning experiences that keep your customers coming back.",
@@ -128,7 +129,7 @@ const features = [
     },
     {
         icon: (
-           <img src="/icons/devops-icon.svg" alt="" />
+           <img src="/icons/devOps.svg" alt="" />
         ),
         title: "DevOps",
         description: "Automate, monitor, and optimize your infrastructure and deployment pipelines for reliability and scalability. Accelerate your development lifecycle with robust CI/CD, cloud, and automation practices.",
@@ -143,75 +144,69 @@ const features = [
     },
 ];
 
-const aiIcons = [
-    { src: numpy, alt: "Neural Net" },
-    { src: python, alt: "Python" },
-    { src: tensorflow, alt: "TensorFlow" },
-    { src: openai, alt: "OpenAI" },
-    { src: kaggle, alt: "Kaggle" },
-];
-
 const Features = () => {
     const [activeIdx, setActiveIdx] = useState(0);
 
     const activeFeature = features[activeIdx];
 
     return (
-        <SectionWrapper>
-            <div className="bg-white py-10 px-2 md:px-8">
+        <SectionWrapper id="features" className="py-16 px-4 md:px-8 bg-gray-50">
+            <div className="max-w-7xl mx-auto">
                 {/* Title and description */}
-                <h2 className="text-black text-3xl md:text-4xl font-bold text-left mb-8 pt-2 font-[Montserrat]">
-                    What we Offer?
+                <h2 className="text-gray-900 text-4xl md:text-5xl font-extrabold text-center mb-12 leading-tight">
+                    What We Offer
                 </h2>
-                {/* <p className="text-black text-left max-w-2xl mx-auto mb-10 font-[Montserrat]">
-                    We offer full-scale support for any size business. From building the foundations with a high-converting site with ongoing SEO for traffic growth, to doing CRO for established brands looking to accelerate on hyperdrive.
-                </p> */}
+
                 {/* Main grid */}
-                <div className="flex flex-col lg:flex-row justify-center items-start gap-8 w-full">
+                <div className="flex flex-col lg:flex-row justify-center items-start gap-12 w-full">
                     {/* Left: Service cards as states */}
-                    <div className="flex flex-col gap-4 w-full max-w-lg mx-auto">
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div className="flex flex-col gap-4 w-full lg:w-1/3">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
                             {features.map((item, idx) => (
-                                <div
+                                <motion.div
                                     key={idx}
-                                    className={`flex flex-col items-center justify-center h-28 rounded-xl shadow-md cursor-pointer transition-all
-                                        ${activeIdx === idx ? "bg-black" : "bg-gray-100"}
+                                    className={`flex flex-col items-center justify-center h-32 rounded-xl shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-105
+                                        ${activeIdx === idx ? "bg-gradient-to-br from-[#F06A6A] to-red-500 text-white" : "bg-white text-gray-800 hover:bg-gray-100"}
                                     `}
                                     onClick={() => setActiveIdx(idx)}
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.3, delay: idx * 0.1 }}
                                 >
-                                    <span className={`mb-1 ${activeIdx === idx ? "text-white" : ""}`}>{item.icon}</span>
-                                    <span className={`font-semibold text-base ${activeIdx === idx ? "text-white" : "text-black"}`}>{item.title}</span>
-                                </div>
+                                    <span className="mb-2 text-3xl">{item.icon}</span>
+                                    <span className="font-semibold text-base text-center px-2">{item.title}</span>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
                     {/* Right: Details change on state/card click */}
-                    <div className="flex-1 flex flex-col items-center lg:items-start mt-8 lg:mt-0 gap-x-8 gap-y-4">
-                        <h3 className="text-lg md:text-xl font-bold text-black mb-2 text-center lg:text-left font-[Montserrat]">
+                    <div className="flex-1 flex flex-col items-center lg:items-start mt-8 lg:mt-0 p-6 bg-white rounded-xl shadow-lg">
+                        <h3 className="text-3xl font-bold text-gray-900 mb-4 text-center lg:text-left">
                             {activeFeature.heading}
                         </h3>
-                        <p className="text-gray-500 text-center lg:text-left mb-2 font-[Montserrat] leading-loose text-lg">
+                        <p className="text-gray-600 text-lg mb-6 text-center lg:text-left leading-relaxed">
                             {activeFeature.description}
                         </p>
-                        <div className="flex flex-wrap gap-x-8 gap-y-3 justify-center lg:justify-start mb-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-6 w-full">
                             {activeFeature.benefits.map((benefit, idx) => (
-                                <span key={idx} className="flex items-center text-black font-bold text-base">
-                                    <img src="/icons/arrow-right.svg" alt="" height={16} width={16} className="mr-3" />
+                                <span key={idx} className="flex items-center text-gray-800 font-medium text-base">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-[#F06A6A] mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                    </svg>
                                     {benefit}
                                 </span>
                             ))}
                         </div>
-                        {/* AI/ML icons only for AI/ML card */}
+                        {/* Icons for technologies */}
                         {activeFeature.icons && activeFeature.icons.length > 0 && (
-    <div className="flex flex-wrap gap-6 justify-center lg:justify-start mb-6">
-        {activeFeature.icons.map((icon, idx) => (
-            <Image key={idx} src={icon} alt={`icon-${idx}`} width={30} height={30} />
-        ))}
-    </div>
-)}
-                        {/* <button className="bg-black text-white font-semibold rounded-md px-8 py-4 text-base shadow-md hover:bg-gray-900 transition mx-auto lg:mx-0 block">
-                            EXPLORE OUR SERVICES
-                        </button> */}
+                            <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-4">
+                                {activeFeature.icons.map((icon, idx) => (
+                                    <Image key={idx} src={icon} alt={`icon-${idx}`} width={40} height={40} className="filter grayscale hover:grayscale-0 transition-all duration-300" />
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

@@ -277,12 +277,7 @@ html {
     }
 }
 
-/* Clean focus states */
-button:focus,
-a:focus {
-    outline: 2px solid #F06A6A;
-    outline-offset: 2px;
-}
+
 
 /* Optimize animation for different devices */
 @media (max-width: 640px) {

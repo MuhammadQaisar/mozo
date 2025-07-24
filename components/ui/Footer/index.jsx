@@ -1,91 +1,92 @@
 import Link from "next/link";
-
-const socialInfo = [
-    {
-        icon: (
-            <svg className="w-6 h-6 hover:text-[#F06A6A] duration-150" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22.46 6c-.77.35-1.6.59-2.47.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.99C7.69 9.13 4.07 7.38 1.64 4.7c-.37.64-.58 1.39-.58 2.19 0 1.51.77 2.85 1.94 3.63a4.28 4.28 0 0 1-1.94-.54v.05c0 2.11 1.5 3.87 3.5 4.27-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.7 2.11 2.94 3.97 2.97A8.6 8.6 0 0 1 2 19.54a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19 0-.37-.01-.56A8.7 8.7 0 0 0 24 4.59a8.5 8.5 0 0 1-2.54.7z"/>
-            </svg>
-        ),
-        href: "#"
-    },
-    {
-        icon: (
-            <svg className="w-6 h-6 hover:text-[#F06A6A] duration-150" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.6 8.06 8.19 8.93v-6.32h-2.47v-2.61h2.47v-2c0-2.44 1.46-3.78 3.7-3.78 1.07 0 2.19.19 2.19.19v2.41h-1.23c-1.21 0-1.59.75-1.59 1.52v1.66h2.71l-.43 2.61h-2.28v6.32c4.59-.87 8.19-4.52 8.19-8.93 0-5.5-4.46-9.96-9.96-9.96z"/>
-            </svg>
-        ),
-        href: "#"
-    },
-    {
-        icon: (
-            <svg className="w-6 h-6 hover:text-[#F06A6A] duration-150" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19.5 3h-15A1.5 1.5 0 0 0 3 4.5v15A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 19.5 3zm-9.75 15H6.25V10.5h3.5V18zm-1.75-8.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm12.25 8.25h-3.5v-4.25c0-1.01-.02-2.31-1.41-2.31-1.41 0-1.63 1.1-1.63 2.23V18h-3.5V10.5h3.36v1.03h.05c.47-.89 1.62-1.83 3.34-1.83 3.57 0 4.23 2.35 4.23 5.41V18z"/>
-            </svg>
-        ),
-        href: "#"
-    },
-    {
-        icon: (
-            <svg className="w-6 h-6 hover:text-[#F06A6A] duration-150" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M19.998 3H3.002A2.003 2.003 0 0 0 1 5.002v13.996A2.003 2.003 0 0 0 3.002 21h16.996A2.003 2.003 0 0 0 22 18.998V5.002A2.003 2.003 0 0 0 19.998 3zm-8.998 14.5v-7l6 3.5-6 3.5z"/>
-            </svg>
-        ),
-        href: "#"
-    }
-];
-
-const navLinks = [
-    { title: "About", path: "#about" },
-    { title: "Services", path: "#features" },
-    { title: "How it works", path: "#howitworks" },
-    { title: "FAQ's", path: "#faqs" },
-];
+import Image from "next/image";
 
 const Footer = () => (
-    <footer className="bg-black text-white pt-0 font-[Montserrat]">
-        <div className="max-w-7xl mx-auto px-6 pb-2">
-            <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 pt-20">
-                {/* Logo and Brand */}
-                <div className="flex flex-col items-center md:items-start">
-                    <div className="flex items-center mb-2">
-                        <img src="/footer-logo.svg" alt="Mozo Logo" className="h-12 mr-3 drop-shadow-lg" />
+    <footer className="mt-5 pt-md-0 pt-5" id="last-section">
+        <div className="container pt-md-5 contaner_width mx-auto px-4">
+            {/* Headline Section */}
+            <div className="text-center mb-12">
+                <Image className="img-fluid foter_text_img mx-auto" src="https://islootech.com/wp-content/themes/Islootech/css/img/Let’s Talk.png" alt="Let's Talk" width={400} height={100} />
+                <h1 className="text-uppercase text-black text-4xl font-bold mt-4">
+                    Create Something Amazing<br />Together
+                </h1>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t pt-8">
+                {/* Column 1: Logo and Contact Info */}
+                <div className="flex flex-col items-start">
+                    <Link href="#" className="navbar-brand text-decoration-none pe-md-4 mb-4 focus:outline-none">
+                        <Image className="img-fluid footer_logo" src="/Mozo-logo.svg" alt="Mozo Logo" width={150} height={50} />
+                    </Link>
+                    <Link href="#" className="main_p text-decoration-none d-inline-block mb-2 text-black font-[Inter] focus:outline-none">
+                        Sarai Kharbuza, Opposite to E-16, GT<br />Road, Islamabad, Pakistan.
+                    </Link>
+                    <Link href="tel:+923095287562" className="main_p text-decoration-none d-inline-block mb-2 text-black font-[Inter]">+92 309 5287562</Link>
+                    <Link href="mailto:support@islootech.com" className="main_p text-decoration-none d-inline-block mb-2 text-black font-[Inter]">support@islootech.com</Link>
+                </div>
+
+                {/* Column 2: Newsletter */}
+                <div className="flex flex-col items-start">
+                    <h3 className="text-black text-lg font-semibold mb-4">Join our newsletter</h3>
+                    <div className="flex w-full mb-6">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            className="flex-grow p-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-black"
+                        />
+                        <button className="p-3 bg-gray-200 rounded-r-md hover:bg-gray-300 transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+                                <path d="M11.5 0C11.5 0.742 12.233 1.85 12.975 2.78C13.929 3.98 15.069 5.027 16.376 5.826C17.356 6.425 18.544 7 19.5 7M19.5 7C18.544 7 17.355 7.575 16.376 8.174C15.069 8.974 13.929 10.021 12.975 11.219C12.233 12.15 11.5 13.26 11.5 14M19.5 7L0 7" stroke="black" strokeWidth="2"></path>
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                {/* Navigation */}
-                <div className="flex flex-col items-center md:items-start gap-2">
-                    {navLinks.map((item, idx) => (
-                        <Link
-                            key={idx}
-                            href={item.path}
-                            className="text-white hover:text-[#F06A6A] text-lg font-semibold transition"
-                        >
-                            {item.title}
-                        </Link>
-                    ))}
-                </div>
-                {/* CTA Button */}
-                <div className="flex flex-col items-center md:items-end w-full md:w-auto">
-                    <Link
-                        href="/get-started"
-                        className="bg-[#F06A6A] hover:bg-[#e65c5c] text-white font-semibold rounded-md px-8 py-4 text-base shadow-md transition mb-2"
-                    >
-                        BOOK A FREE DEMO
-                    </Link>
+
+                {/* Column 3: Social Icons */}
+                <div className="flex flex-col items-start">
+                    <h3 className="text-black text-lg font-semibold mb-4">Follow Us</h3>
+                    <ul className="flex flex-col space-y-4">
+                        <li>
+                            <Link href="https://pk.linkedin.com/company/isloo-tech-it" target="_blank" className="text-decoration-none text-black flex items-center">
+                                <div className="p-2 border border-red-500 rounded-full mr-3">
+                                    <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} />
+                                </div>
+                                <span className="text-sm">Linkedin</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="https://www.facebook.com/islootech.it/" target="_blank" className="text-decoration-none text-black flex items-center">
+                                <div className="p-2 border border-red-500 rounded-full mr-3">
+                                    <Image src="/icons/facebook.svg" alt="Facebook" width={24} height={24} />
+                                </div>
+                                <span className="text-sm">Facebook</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="https://www.instagram.com/islootech.it/" target="_blank" className="text-decoration-none text-black flex items-center">
+                                <div className="p-2 border border-red-500 rounded-full mr-3">
+                                    <Image src="/icons/instagram.svg" alt="Instagram" width={24} height={24} />
+                                </div>
+                                <span className="text-sm">Instagram</span>
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <hr className="border-gray-700 my-4" />
-            <div className="flex flex-col md:flex-row justify-between items-center w-full">
-                <p className="text-gray-400 text-sm text-center md:text-left w-full md:w-auto mb-4 md:mb-0 font-medium">
-                    © 2025 Mozo Technologies. All rights reserved.
-                </p>
-                <div className="flex gap-3 mt-0">
-                    {/* Keep previous social icons */}
-                    <img src="/face.svg" alt="Facebook" className="w-6 h-6 hover:opacity-80 transition" />
-                    <img src="/linkedin.svg" alt="LinkedIn" className="w-6 h-6 hover:opacity-80 transition" />
-                    <img src="/x.svg" alt="X" className="w-6 h-6 hover:opacity-80 transition" />
-                    <img src="/insta.svg" alt="Instagram" className="w-6 h-6 hover:opacity-80 transition" />
-                </div>
+
+            {/* Get a Quote Button (centered below columns) */}
+            <div className="flex justify-center items-center mt-20">
+                <Link href="#exampleModalToggleContact" data-bs-toggle="modal" role="button" className="relative w-32 h-32 rounded-full bg-gradient-to-r from-red-500 to-orange-500 flex flex-col items-center justify-center shadow-lg group text-center p-2">
+                        <span className="text-white text-xs font-bold uppercase leading-tight">GET A<br/>QUOTE</span>
+                        <svg className="mt-1 w-4 h-4 text-white transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </Link>
+            </div>
+
+            {/* Copyright */}
+            <div className="col-md-12 border-t mt-md-4 py-4 text-center">
+                <p className="main_p text-black m-0">Copyright © {new Date().getFullYear()} ISLOO TECH - All Rights Reserved</p>
             </div>
         </div>
     </footer>
