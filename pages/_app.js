@@ -1,10 +1,13 @@
 import Layout from "../components/Layout";
 import "../styles/globals.css";
+import { montserrat } from "../components/ui/font";
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <main className={`${montserrat.className}`}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </main>
   );
 }

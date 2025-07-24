@@ -1,86 +1,72 @@
-import React from "react";
-import { motion } from "framer-motion";
-import SectionWrapper from "../../../components/SectionWrapper";
 
-// Simplified feature icons using brand colors
-const features = [
-    {
-        title: "Innovation",
-        desc: "We leverage cutting-edge technologies and forward-thinking strategies to build solutions that redefine possibilities and drive your success.",
-        icon: (
-            <div className="relative flex items-center justify-center w-16 h-16 bg-rose-100 rounded-full">
-                <svg className="w-8 h-8 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-            </div>
-        ),
+import React from 'react';
+import { motion } from 'framer-motion';
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.3,
+      duration: 0.6,
+      ease: 'easeOut',
     },
-    {
-        title: "Strategy",
-        desc: "Our progressive strategies pave the way for sustained growth and competitiveness, ensuring your business is ready for the future.",
-        icon: (
-            <div className="relative flex items-center justify-center w-16 h-16 bg-rose-100 rounded-full">
-                <svg className="w-8 h-8 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-            </div>
-        ),
-    },
-    {
-        title: "Outcome",
-        desc: "We deliver tailored solutions that drive superior outcomes. Our focus is on propelling your business forward with measurable results.",
-        icon: (
-            <div className="relative flex items-center justify-center w-16 h-16 bg-rose-100 rounded-full">
-                <svg className="w-8 h-8 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                </svg>
-            </div>
-        ),
-    },
-];
+  }),
+};
 
 const About = () => {
-    return (
-        <SectionWrapper id="about" className="py-20 lg:py-28 bg-white">
-            <motion.div
-                className="container mx-auto px-4"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.8 }}
-            >
-                {/* Headline and Sub-headline */}
-                <div className="text-center max-w-3xl mx-auto mb-14">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                        Your Partner in Digital Innovation
-                    </h2>
-                    <p className="text-lg text-gray-600">
-                        We are a passionate team of developers, designers, and strategists dedicated to building the future. We provide the tools and expertise you need to succeed in the digital age.
-                    </p>
-                </div>
+  const aboutContent = [
+    {
+      title: 'Our Founding Story',
+      description:
+        'Founded in 2023 by a team of experienced engineers, Mozo Technologies was born from a shared vision: to make robust and secure IT solutions accessible to startups and businesses of all sizes. We noticed a critical gap in the market – while large corporations had the resources for comprehensive IT security, smaller companies were often left vulnerable.',
+    },
+    {
+      title: 'Our Mission',
+      description:
+        'Our mission is to bridge that gap. We believe that every business, regardless of its size or industry, deserves the peace of mind that comes with a secure and reliable IT infrastructure. We specialize in creating tailored IT solutions that are not only secure but also scalable and easy to manage.',
+    },
+    {
+      title: 'Our Clients',
+      description:
+        'Today, we are proud to serve a diverse range of clients across the fintech, healthcare, and e-commerce sectors. Our commitment to excellence and our passion for technology have made us a trusted partner for businesses looking to navigate the complexities of the digital world.',
+    },
+  ];
 
-                {/* Features Section */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    {features.map((feature, index) => (
-                        <motion.div
-                            key={index}
-                            className="text-center p-6 rounded-lg shadow-lg bg-white border border-gray-100"
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            whileHover={{ scale: 1.03, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
-                        >
-                            <div className="flex justify-center mb-5">
-                                {feature.icon}
-                            </div>
-                            <h3 className="text-2xl font-bold text-gray-800 mb-2">{feature.title}</h3>
-                            <p className="text-gray-600">{feature.desc}</p>
-                        </motion.div>
-                    ))}
-                </div>
+  return (
+    <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl">
+            About Mozo Technologies
+          </h2>
+          <p className="mt-4 text-lg text-gray-600">
+            Simplifying Secure IT for a Complex World
+          </p>
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 gap-12 sm:mt-20 md:grid-cols-3">
+          {aboutContent.map((item, i) => (
+            <motion.div
+              key={i}
+              className="overflow-hidden bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2"
+              custom={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              variants={cardVariants}
+            >
+              <div className="p-8">
+                <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+                <p className="mt-4 text-base text-gray-700 leading-relaxed">{item.description}</p>
+              </div>
             </motion.div>
-        </SectionWrapper>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default About;

@@ -7,7 +7,7 @@ const Footer = () => (
             {/* Headline Section */}
             <div className="text-center mb-12">
                 <Image className="img-fluid foter_text_img mx-auto" src="https://islootech.com/wp-content/themes/Islootech/css/img/Let’s Talk.png" alt="Let's Talk" width={400} height={100} />
-                <h1 className="text-uppercase text-black text-4xl font-bold mt-4">
+                <h1 className="text-uppercase text-black text-3xl font-normal mt-4">
                     Create Something Amazing<br />Together
                 </h1>
             </div>
@@ -22,19 +22,19 @@ const Footer = () => (
                         Sarai Kharbuza, Opposite to E-16, GT<br />Road, Islamabad, Pakistan.
                     </Link>
                     <Link href="tel:+923095287562" className="main_p text-decoration-none d-inline-block mb-2 text-black font-[Inter]">+92 309 5287562</Link>
-                    <Link href="mailto:support@islootech.com" className="main_p text-decoration-none d-inline-block mb-2 text-black font-[Inter]">support@islootech.com</Link>
+                    <Link href="mailto:support@mozotech.com" className="main_p text-decoration-none d-inline-block mb-2 text-black font-[Inter]">support@mozotech.com</Link>
                 </div>
 
                 {/* Column 2: Newsletter */}
-                <div className="flex flex-col items-start">
-                    <h3 className="text-black text-lg font-semibold mb-4">Join our newsletter</h3>
-                    <div className="flex w-full mb-6">
+                <div class="flex flex-col items-center">
+                    <h3 class="text-black text-lg font-semibold mb-4">Join our newsletter</h3>
+                    <div class="flex w-full mb-6">
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className="flex-grow p-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-black"
+                            class="flex-grow p-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-black"
                         />
-                        <button className="p-3 bg-gray-200 rounded-r-md hover:bg-gray-300 transition-colors duration-200">
+                        <button class="p-3 bg-gray-200 rounded-r-md hover:bg-gray-300 transition-colors duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
                                 <path d="M11.5 0C11.5 0.742 12.233 1.85 12.975 2.78C13.929 3.98 15.069 5.027 16.376 5.826C17.356 6.425 18.544 7 19.5 7M19.5 7C18.544 7 17.355 7.575 16.376 8.174C15.069 8.974 13.929 10.021 12.975 11.219C12.233 12.15 11.5 13.26 11.5 14M19.5 7L0 7" stroke="black" strokeWidth="2"></path>
                             </svg>
@@ -43,7 +43,7 @@ const Footer = () => (
                 </div>
 
                 {/* Column 3: Social Icons */}
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-start md:ml-40">
                     <h3 className="text-black text-lg font-semibold mb-4">Follow Us</h3>
                     <ul className="flex flex-col space-y-4">
                         <li>
@@ -75,9 +75,9 @@ const Footer = () => (
             </div>
 
             {/* Get a Quote Button (centered below columns) */}
-            <div className="flex justify-center items-center mt-20">
-                <Link href="#exampleModalToggleContact" data-bs-toggle="modal" role="button" className="relative w-32 h-32 rounded-full bg-gradient-to-r from-red-500 to-orange-500 flex flex-col items-center justify-center shadow-lg group text-center p-2">
-                        <span className="text-white text-xs font-bold uppercase leading-tight">GET A<br/>QUOTE</span>
+            <div className="flex justify-center items-center mt-20 mb-8">
+                <Link href="#exampleModalToggleContact" data-bs-toggle="modal" role="button" className="relative w-32 h-32 rounded-full bg-[#F06A6A] flex flex-col items-center justify-center shadow-lg group text-center p-2">
+                        <span className="text-white text-xs font-bold uppercase leading-tight">GET A QUOTE</span>
                         <svg className="mt-1 w-4 h-4 text-white transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
@@ -86,7 +86,7 @@ const Footer = () => (
 
             {/* Copyright */}
             <div className="col-md-12 border-t mt-md-4 py-4 text-center">
-                <p className="main_p text-black m-0">Copyright © {new Date().getFullYear()} ISLOO TECH - All Rights Reserved</p>
+                <p className="main_p text-black m-0">Copyright © {new Date().getFullYear()} Mozo Technologies - All Rights Reserved</p>
             </div>
         </div>
     </footer>

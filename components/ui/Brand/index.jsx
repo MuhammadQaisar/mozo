@@ -1,12 +1,13 @@
 import Link from "next/link";
 
 const Brand = () => (
-    <Link href="/" className="focus:outline-none focus:ring-0">
+    <Link href="/">
         <img
             src="/Mozo-logo.svg"
-            width={170}
-            height={70}
-            alt="Blinder logo"
+            width={150}
+            height={60}
+            alt="Mozo Technologies logo"
+           
         />
     </Link>
 )
