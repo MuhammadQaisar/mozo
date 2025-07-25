@@ -8,7 +8,7 @@ import NavLink from '../NavLink'
 const navigation = [
     { title: "About", path: "#about" },
     { title: "Services", path: "#features" },
-    { title: "How it works", path: "#howitworks" },
+    { title: "How it works", path: "#how-it-works" },
     { title: "FAQ's", path: "#faqs" },
 ]
 
@@ -26,11 +26,8 @@ const Navbar = () => {
         events.on("routeChangeStart", handleState);
         events.on("hashChangeStart", handleState);
 
-        // Set initial active nav based on hash
-        const initialHash = asPath.split('#')[1]
-        if (initialHash) {
-            setActiveNav('#' + initialHash)
-        }
+        // Do not set initial active nav based on hash to prevent any link from being active on initial load
+        // The active state will be set by the IntersectionObserver when a section is scrolled into view.
         return () => {
             events.off("routeChangeStart", handleState);
             events.off("hashChangeStart", handleState);
@@ -92,7 +89,7 @@ const Navbar = () => {
                 className={`w-full fixed top-0 left-0 z-30 transition-all duration-300 ${isScrolled || state ? 'bg-white shadow-sm' : 'bg-transparent'}`}
             >
                 <div
-                    className={`max-w-7xl mx-auto flex items-center justify-between px-6 transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}
+                    className={`max-w-7xl mx-auto flex items-center justify-between px-6 py-3 transition-all duration-300 ${isScrolled ? 'md:py-2' : 'md:py-4'}`}
                 >
                     {/* Brand */}
                     <div className="flex items-center">
@@ -109,7 +106,7 @@ const Navbar = () => {
                                     className={`transition-colors duration-150 ${activeNav === item.path ? 'text-[#F06A6A] font-semibold' : 'hover:text-[#F06A6A]'
                                         }`}
                                 >
-                                    <Link href={asPath === '/get-started' ? `/${item.path}` : item.path} className="block focus:outline-none focus:ring-0">
+                                    <Link href={asPath === '/get-started' ? `/${item.path}` : item.path} className="block focus:outline-none focus:ring-0" onClick={() => setActiveNav(item.path)}>
                                         {item.title}
                                     </Link>
                                 </li>
@@ -152,7 +149,7 @@ const Navbar = () => {
                                     className={`transition-colors duration-150 ${activeNav === item.path ? 'text-[#F06A6A] font-semibold' : 'hover:text-[#F06A6A]'
                                         }`}
                                 >
-                                    <Link href={asPath === '/get-started' ? `/${item.path}` : item.path} className="block focus:outline-none focus:ring-0">
+                                    <Link href={asPath === '/get-started' ? `/${item.path}` : item.path} className="block focus:outline-none focus:ring-0" onClick={() => setActiveNav(item.path)}>
                                         {item.title}
                                     </Link>
                                 </li>

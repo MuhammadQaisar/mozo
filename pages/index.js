@@ -9,6 +9,7 @@ import Testimonials from "../components/ui/Testimonials";
 import ToolKit from "../components/ui/ToolKit";
 import FAQs from "../components/ui/FAQs";
 import About from "../components/ui/About";
+import HowItWorks from "../components/ui/HowItWorks";
 
 
 export default function Home() {
@@ -26,7 +27,7 @@ export default function Home() {
         
       {/* </GradientWrapper> */}
         <CTA />
-      <ToolKit />
+      <HowItWorks />
       <FAQs/>
             {/* <GradientWrapper> */}
         

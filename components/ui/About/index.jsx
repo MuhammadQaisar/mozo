@@ -35,13 +35,13 @@ const About = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
+    <section id="about" className="py-12 bg-gray-50 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl">
+          <h2 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-gray-900">
             About Mozo Technologies
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-base sm:text-lg text-gray-600">
             Simplifying Secure IT for a Complex World
           </p>
         </div>
@@ -57,9 +57,9 @@ const About = () => {
               viewport={{ once: true, amount: 0.5 }}
               variants={cardVariants}
             >
-              <div className="p-8">
-                <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
-                <p className="mt-4 text-base text-gray-700 leading-relaxed">{item.description}</p>
+              <div className="p-8 px-4 sm:px-8">
+                <h3 className="text-xl font-semibold text-gray-900 text-center">{item.title}</h3>
+                <p className="mt-4 text-base text-gray-700 leading-relaxed text-center">{item.description}</p>
               </div>
             </motion.div>
           ))}

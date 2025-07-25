@@ -15,10 +15,10 @@ const LogoGrid = () => {
     return (
         <div>
             <div className="custom-screen">
-                           <h2 className="text-2xl font-bold py-12 text-gray-800 mb-4 px-12 tracking-wide font-[Montserrat]">
+                           <h2 className="text-2xl font-bold py-12 text-gray-800 mb-4 px-4 sm:px-6 lg:px-8 tracking-wide font-[Montserrat]">
                         Our Clients
                     </h2>
-                <ul className="flex gap-x-10 gap-y-6 flex-wrap items-center justify-center md:gap-x-16 mt-6">
+                <ul className="flex gap-x-6 gap-y-4 flex-wrap items-center justify-center md:gap-x-10 lg:gap-x-16 mt-6">
                     {logos.map((item, idx) => (
                         <li key={idx}>
                             <div className="flex items-center justify-center w-28 h-12">

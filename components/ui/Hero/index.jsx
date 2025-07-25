@@ -39,12 +39,10 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-white w-full">
       {/* Animated Gradient Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-50 to-gray-100"></div>
-        <div className="absolute top-[-20%] left-[-10%] w-[40rem] h-[40rem] bg-gradient-to-br from-[#F06A6A]/20 to-transparent rounded-full filter blur-3xl animate-blob"></div>
-        <div className="absolute bottom-[-20%] right-[-10%] w-[40rem] h-[40rem] bg-gradient-to-tl from-[#F06A6A]/10 to-transparent rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
       </div>
 
       {/* Particle Animation */}
@@ -79,7 +77,7 @@ const Hero = () => {
             },
           },
         }}
-        className="relative z-10 max-w-5xl mx-auto text-center px-6 py-20"
+        className="relative z-10 text-center py-20"
       >
         <motion.h1
           variants={{
@@ -120,13 +118,13 @@ const Hero = () => {
         >
           <Link
             href="/get-started"
-            className="bg-gradient-to-r from-[#F06A6A] to-red-600 text-white font-semibold rounded-lg px-8 py-4 text-lg shadow-lg hover:shadow-xl hover:shadow-red-500/40 transform hover:scale-105 transition-all duration-300 ease-in-out animate-pulse-button"
+            className="bg-gradient-to-r from-[#F06A6A] to-red-600 text-white font-semibold rounded-lg px-6 py-3 text-base md:px-8 md:py-4 md:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out animate-pulse-button"
           >
             Get Started
           </Link>
           <Link
             href="#features"
-            className="bg-gradient-to-r from-gray-50 to-gray-200 text-black font-semibold rounded-lg px-8 py-4 text-lg shadow-lg border border-gray-300 hover:from-gray-100 hover:to-gray-300 transform hover:scale-105 transition-all duration-300 ease-in-out"
+            className="bg-gradient-to-r from-gray-50 to-gray-200 text-black font-semibold rounded-lg px-6 py-3 text-base md:px-8 md:py-4 md:text-lg shadow-lg border border-gray-300 hover:from-gray-100 hover:to-gray-300 transform hover:scale-105 transition-all duration-300 ease-in-out"
           >
             Explore Services
           </Link>
@@ -144,9 +142,9 @@ const Hero = () => {
             TRUSTED BY THE WORLD'S BEST COMPANIES
           </p>
           <div className="relative overflow-hidden py-4 [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
-            <div className="flex animate-slide space-x-12">
+            <div className="flex animate-slide space-x-8 md:space-x-12">
               {[...trustedByLogos, ...trustedByLogos].map((logo, index) => (
-                <div key={index} className="flex-shrink-0 flex items-center justify-center h-8 w-28">
+                <div key={index} className="flex-shrink-0 flex items-center justify-center h-6 w-24 md:h-8 md:w-28">
                 <Image
                   src={logo.src}
                   alt={logo.alt}
@@ -163,23 +161,6 @@ const Hero = () => {
 
       {/* Custom CSS for animations */}
       <style jsx>{`
-        @keyframes blob {
-          0% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
-        }
-        .animate-blob {
-          animation: blob 8s ease-in-out infinite;
-        }
         @keyframes fade-in-down {
           0% {
             opacity: 0;

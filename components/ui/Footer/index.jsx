@@ -3,11 +3,11 @@ import Image from "next/image";
 
 const Footer = () => (
     <footer className="mt-5 pt-md-0 pt-5" id="last-section">
-        <div className="container pt-md-5 contaner_width mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             {/* Headline Section */}
             <div className="text-center mb-12">
                 <Image className="img-fluid foter_text_img mx-auto" src="https://islootech.com/wp-content/themes/Islootech/css/img/Let’s Talk.png" alt="Let's Talk" width={400} height={100} />
-                <h1 className="text-uppercase text-black text-3xl font-normal mt-4">
+                <h1 className="text-uppercase text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal mt-4">
                     Create Something Amazing<br />Together
                 </h1>
             </div>
@@ -43,7 +43,7 @@ const Footer = () => (
                 </div>
 
                 {/* Column 3: Social Icons */}
-                <div className="flex flex-col items-start md:ml-40">
+                <div className="flex flex-col items-center sm:items-start lg:ml-40">
                     <h3 className="text-black text-lg font-semibold mb-4">Follow Us</h3>
                     <ul className="flex flex-col space-y-4">
                         <li>
@@ -76,7 +76,7 @@ const Footer = () => (
 
             {/* Get a Quote Button (centered below columns) */}
             <div className="flex justify-center items-center mt-20 mb-8">
-                <Link href="#exampleModalToggleContact" data-bs-toggle="modal" role="button" className="relative w-32 h-32 rounded-full bg-[#F06A6A] flex flex-col items-center justify-center shadow-lg group text-center p-2">
+                <Link href="#exampleModalToggleContact" data-bs-toggle="modal" role="button" className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-[#F06A6A] flex flex-col items-center justify-center shadow-lg group text-center p-2">
                         <span className="text-white text-xs font-bold uppercase leading-tight">GET A QUOTE</span>
                         <svg className="mt-1 w-4 h-4 text-white transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

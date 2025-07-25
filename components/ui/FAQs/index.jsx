@@ -13,13 +13,13 @@ const FAQs = () => {
     const [openIdx, setOpenIdx] = useState(null);
 
     return (
-        <SectionWrapper id="faqs" className="py-20 mb-60 bg-gradient-to-br from-gray-50 to-white">
+        <SectionWrapper id="faqs" className="py-20 mb-20 md:mb-40 bg-gradient-to-br from-gray-50 to-white">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl font-montserrat leading-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 font-montserrat leading-tight">
                         Frequently Asked Questions
                     </h2>
-                    <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                    <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
                         Find answers to the most common questions about our services.
                     </p>
                 </div>
