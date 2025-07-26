@@ -78,7 +78,7 @@ const features = [
             "AI Strategy and Consulting",
             "ML Modeling",
             "AI Strategy and Consulting",
-            "AI Strategy an",
+            "AI Strategy and",
         ],
         icons: [pytorch,keras,spark,jupyter,numpy,kafka,openai, kaggle, python, tensorflow,pandas,cassandra],
         heading: "Data & Artificial intelligence",
