@@ -52,8 +52,8 @@ import kafka from "../../../public/icons/kafka.svg";
 import spark from "../../../public/icons/spark.svg";
 import pytorch from "../../../public/icons/pytorch.svg";
 import jupyter from "../../../public/icons/jupyter.svg";
-import linux from "../../../public/icons/linux.svg";
-import ubuntu from "../../../public/icons/ubuntu.svg";
+// import linux from "../../../public/icons/linux.svg";
+// import ubuntu from "../../../public/icons/ubuntu.svg";
 import digitalocean from "../../../public/icons/digitalocean.svg";
 import pandas from "../../../public/icons/pandas.svg";
 import semrush from "../../../public/icons/semrush.png";
@@ -110,7 +110,7 @@ const features = [
             "Content Optimization",
             "Link Building",
         ],
-        icons: [aws, azure, terraform, docker, kubernetes, gitlab, nginx, ansible, google,digitalocean, ubuntu, linux,FileZilla],
+        icons: [aws, azure, terraform, docker, kubernetes, gitlab, nginx, ansible, google,digitalocean,FileZilla],
         heading: "CloudOps",
     },
     {
