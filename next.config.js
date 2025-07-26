@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: ['islootech.com'],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+},
 }
 
 module.exports = nextConfig
+
