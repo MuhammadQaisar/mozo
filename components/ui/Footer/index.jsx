@@ -26,15 +26,15 @@ const Footer = () => (
                 </div>
 
                 {/* Column 2: Newsletter */}
-                <div class="flex flex-col items-center">
-                    <h3 class="text-black text-lg font-semibold mb-4">Join our newsletter</h3>
-                    <div class="flex w-full mb-6">
+                <div className="flex flex-col items-center">
+                    <h3 className="text-black text-lg font-semibold mb-4">Join our newsletter</h3>
+                    <div className="flex w-full mb-6">
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            class="flex-grow p-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-black"
+                            className="flex-grow p-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-black"
                         />
-                        <button class="p-3 bg-gray-200 rounded-r-md hover:bg-gray-300 transition-colors duration-200">
+                        <button className="p-3 bg-gray-200 rounded-r-md hover:bg-gray-300 transition-colors duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
                                 <path d="M11.5 0C11.5 0.742 12.233 1.85 12.975 2.78C13.929 3.98 15.069 5.027 16.376 5.826C17.356 6.425 18.544 7 19.5 7M19.5 7C18.544 7 17.355 7.575 16.376 8.174C15.069 8.974 13.929 10.021 12.975 11.219C12.233 12.15 11.5 13.26 11.5 14M19.5 7L0 7" stroke="black" strokeWidth="2"></path>
                             </svg>
