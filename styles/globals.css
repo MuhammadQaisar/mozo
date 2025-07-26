@@ -20,18 +20,148 @@ body {
 }
 
 /* Enhanced responsive container with device-specific breakpoints */
+.container-responsive {
+    @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 100%;
+}
+
+@media (min-width: 640px) {
+    .container-responsive {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-responsive {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-responsive {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container-responsive {
+        max-width: 1280px;
+    }
+}
 
 /* Device-specific responsive classes */
+.mobile-only {
+    @apply block sm:hidden;
+}
+
+.tablet-only {
+    @apply hidden sm:block lg:hidden;
+}
+
+.desktop-only {
+    @apply hidden lg:block;
+}
+
+.mobile-tablet {
+    @apply block lg:hidden;
+}
+
+.tablet-desktop {
+    @apply hidden sm:block;
+}
 
 /* Responsive typography system */
+.text-responsive-xs {
+    @apply text-xs sm:text-sm md:text-base;
+}
+
+.text-responsive-sm {
+    @apply text-sm sm:text-base md:text-lg;
+}
+
+.text-responsive-base {
+    @apply text-base sm:text-lg md:text-xl;
+}
+
+.text-responsive-lg {
+    @apply text-lg sm:text-xl md:text-2xl;
+}
+
+.text-responsive-xl {
+    @apply text-xl sm:text-2xl md:text-3xl;
+}
+
+.text-responsive-2xl {
+    @apply text-2xl sm:text-3xl md:text-4xl;
+}
+
+.text-responsive-3xl {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+}
+
+.text-responsive-hero {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+}
 
 /* Responsive spacing system */
+.space-responsive-x {
+    @apply space-x-2 sm:space-x-4 md:space-x-6;
+}
+
+.space-responsive-y {
+    @apply space-y-2 sm:space-y-4 md:space-y-6;
+}
+
+.gap-responsive {
+    @apply gap-2 sm:gap-4 md:gap-6;
+}
 
 /* Responsive padding system */
+.p-responsive {
+    @apply p-4 sm:p-6 md:p-8 lg:p-12;
+}
+
+.px-responsive {
+    @apply px-4 sm:px-6 md:px-8 lg:px-12;
+}
+
+.py-responsive {
+    @apply py-4 sm:py-6 md:py-8 lg:py-12;
+}
+
+.py-responsive-section {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+}
 
 /* Responsive grid layouts */
+.grid-responsive-1-2 {
+    @apply grid grid-cols-1 md:grid-cols-2;
+}
+
+.grid-responsive-1-2-3 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.grid-responsive-1-2-4 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4;
+}
+
+.grid-responsive-auto {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+}
 
 /* Responsive flexbox layouts */
+.flex-responsive-col-row {
+    @apply flex flex-col sm:flex-row;
+}
+
+.flex-responsive-center {
+    @apply flex flex-col sm:flex-row items-center justify-center;
+}
+
+.flex-responsive-between {
+    @apply flex flex-col sm:flex-row items-center justify-between;
+}
 
 /* Enhanced gradient border with responsive sizing */
 .gradient-border {
@@ -188,15 +318,91 @@ html {
     background-color: transparent;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .text-8xl { 
-        font-size: 4rem; 
+/* Enhanced responsive adjustments */
+@media (max-width: 475px) {
+    .text-8xl {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    .text-7xl {
+        font-size: 2.25rem;
+        line-height: 1.1;
+    }
+    .text-6xl {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+    .text-5xl {
+        font-size: 1.875rem;
+        line-height: 1.1;
+    }
+    .text-4xl {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    /* Mobile-specific hero adjustments */
+    .hero-mobile-padding {
+        @apply px-4 py-8;
+    }
+    
+    .hero-mobile-text {
+        @apply text-2xl leading-tight;
+    }
+}
+
+@media (min-width: 476px) and (max-width: 640px) {
+    .text-8xl {
+        font-size: 3rem;
+        line-height: 1.1;
+    }
+    .text-7xl {
+        font-size: 2.75rem;
+        line-height: 1.1;
+    }
+    .text-6xl {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .text-8xl {
+        font-size: 3.5rem;
         line-height: 1;
     }
-    .text-7xl { 
-        font-size: 3.5rem; 
+    .text-7xl {
+        font-size: 3.25rem;
         line-height: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile button optimizations */
+    .btn-mobile-full {
+        @apply w-full min-h-[48px] flex items-center justify-center;
+    }
+    
+    /* Mobile spacing optimizations */
+    .mobile-spacing-tight {
+        @apply space-y-3;
+    }
+    
+    .mobile-spacing-normal {
+        @apply space-y-4;
+    }
+    
+    .mobile-spacing-loose {
+        @apply space-y-6;
+    }
+    
+    /* Mobile text optimizations */
+    .mobile-text-center {
+        @apply text-center;
+    }
+    
+    .mobile-leading-tight {
+        line-height: 1.2;
     }
 }
 
@@ -218,13 +424,34 @@ html {
 /* Touch device optimizations */
 @media (hover: none) and (pointer: coarse) {
     .touch-optimized {
-        min-height: 44px;
-        min-width: 44px;
+        min-height: 48px;
+        min-width: 48px;
         padding: 12px;
     }
     
     .hover\:scale-105:hover {
         transform: none;
+    }
+    
+    /* Disable hover effects on touch devices */
+    .hover\:shadow-lg:hover,
+    .hover\:shadow-xl:hover {
+        box-shadow: none;
+    }
+    
+    /* Increase touch targets */
+    .touch-target {
+        @apply min-h-[48px] min-w-[48px] flex items-center justify-center;
+    }
+    
+    /* Better button spacing for touch */
+    .touch-button-spacing {
+        @apply space-y-3 space-x-0;
+    }
+    
+    /* Touch-friendly navigation */
+    .touch-nav {
+        @apply py-4 px-6;
     }
 }
 
@@ -239,6 +466,63 @@ html {
 @media (orientation: landscape) and (max-height: 500px) {
     .landscape-compact {
         @apply py-2;
+    }
+    
+    .landscape-hero {
+        @apply min-h-[80vh] py-8;
+    }
+    
+    .landscape-text-compact {
+        @apply text-2xl sm:text-3xl md:text-4xl;
+    }
+}
+
+/* Portrait orientation optimizations */
+@media (orientation: portrait) {
+    .portrait-hero {
+        @apply min-h-screen;
+    }
+    
+    .portrait-spacing {
+        @apply py-12 sm:py-16 md:py-20;
+    }
+}
+
+/* Very small screens (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    .xs-text-sm {
+        font-size: 0.75rem;
+    }
+    
+    .xs-text-base {
+        font-size: 0.875rem;
+    }
+    
+    .xs-text-lg {
+        font-size: 1rem;
+    }
+    
+    .xs-px-2 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .xs-py-2 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+/* Large screens optimizations */
+@media (min-width: 1920px) {
+    .xl-container {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+    
+    .xl-text-hero {
+        font-size: 5rem;
+        line-height: 1;
     }
 }
 

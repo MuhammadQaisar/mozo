@@ -5,7 +5,7 @@ const Footer = () => (
     <footer className="mt-5 pt-md-0 pt-5" id="last-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             {/* Headline Section */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-8">
                 <Image className="img-fluid foter_text_img mx-auto" src="https://islootech.com/wp-content/themes/Islootech/css/img/Let’s Talk.png" alt="Let's Talk" width={400} height={100} />
                 <h1 className="text-uppercase text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal mt-4">
                     Create Something Amazing<br />Together
@@ -45,29 +45,29 @@ const Footer = () => (
                 {/* Column 3: Social Icons */}
                 <div className="flex flex-col items-center sm:items-start lg:ml-40">
                     <h3 className="text-black text-lg font-semibold mb-4">Follow Us</h3>
-                    <ul className="flex flex-col space-y-4">
+                    <ul className="flex flex-row justify-center space-x-4 sm:flex-col sm:space-x-0 sm:space-y-4">
                         <li>
                             <Link href="https://pk.linkedin.com/company/isloo-tech-it" target="_blank" className="text-decoration-none text-black flex items-center">
-                                <div className="p-2 border border-red-500 rounded-full mr-3">
-                                    <Image src="/linkedin.svg" alt="LinkedIn" width={24} height={24} />
+                                <div className="p-3 sm:p-2 border border-red-500 rounded-full mr-3">
+                                    <Image src="/linkedin.svg" alt="LinkedIn" width={40} height={40} className="w-10 h-10 sm:w-8 sm:h-8" />
                                 </div>
-                                <span className="text-sm">Linkedin</span>
+                                <span className="text-sm sm:inline hidden">Linkedin</span>
                             </Link>
                         </li>
                         <li>
                             <Link href="https://www.facebook.com/islootech.it/" target="_blank" className="text-decoration-none text-black flex items-center">
-                                <div className="p-2 border border-red-500 rounded-full mr-3">
-                                    <Image src="/icons/facebook.svg" alt="Facebook" width={24} height={24} />
+                                <div className="p-3 sm:p-2 border border-red-500 rounded-full mr-3">
+                                    <Image src="/icons/facebook.svg" alt="Facebook" width={40} height={40} className="w-10 h-10 sm:w-8 sm:h-8" />
                                 </div>
-                                <span className="text-sm">Facebook</span>
+                                <span className="text-sm sm:inline hidden">Facebook</span>
                             </Link>
                         </li>
                         <li>
                             <Link href="https://www.instagram.com/islootech.it/" target="_blank" className="text-decoration-none text-black flex items-center">
-                                <div className="p-2 border border-red-500 rounded-full mr-3">
-                                    <Image src="/icons/instagram.svg" alt="Instagram" width={24} height={24} />
+                                <div className="p-3 sm:p-2 border border-red-500 rounded-full mr-3">
+                                    <Image src="/icons/instagram.svg" alt="Instagram" width={40} height={40} className="w-10 h-10 sm:w-8 sm:h-8" />
                                 </div>
-                                <span className="text-sm">Instagram</span>
+                                <span className="text-sm sm:inline hidden">Instagram</span>
                             </Link>
                         </li>
                     </ul>
@@ -75,7 +75,7 @@ const Footer = () => (
             </div>
 
             {/* Get a Quote Button (centered below columns) */}
-            <div className="flex justify-center items-center mt-20 mb-8">
+            <div className="flex justify-center items-center mt-12 mb-6">
                 <Link href="#exampleModalToggleContact" data-bs-toggle="modal" role="button" className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-[#F06A6A] flex flex-col items-center justify-center shadow-lg group text-center p-2">
                         <span className="text-white text-xs font-bold uppercase leading-tight">GET A QUOTE</span>
                         <svg className="mt-1 w-4 h-4 text-white transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
