@@ -199,7 +199,7 @@ const Features = () => {
                             transition={{ duration: 0.6, ease: "easeOut" }}
                         >
                             {features.map((item, idx) => (
-                                <div
+                                <motion.div
                                     key={idx}
                                     className={`flex flex-col items-center justify-center h-32 rounded-xl shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-105
                                         ${activeIdx === idx ? "bg-gradient-to-br from-[#F06A6A] to-red-500 text-white" : "bg-white text-gray-800 hover:bg-gray-100"}
@@ -213,7 +213,7 @@ const Features = () => {
                                 >
                                     <span className="mb-2 text-3xl">{item.icon}</span>
                                     <span className="font-semibold text-base text-center px-2">{item.title}</span>
-                                </div>
+                                </motion.div>
                             ))}
                         </motion.div>
                     </div>
