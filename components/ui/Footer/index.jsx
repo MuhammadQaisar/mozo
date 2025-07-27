@@ -5,45 +5,17 @@ const Footer = () => (
     <footer className="mt-5 pt-md-0 pt-5" id="last-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             {/* Headline Section */}
-            <div className="text-center mb-8">
+            {/* <div className="text-center mb-8">
                 <Image className="img-fluid foter_text_img mx-auto" src="https://islootech.com/wp-content/themes/Islootech/css/img/Let’s Talk.png" alt="Let's Talk" width={400} height={100} />
                 <h1 className="text-uppercase text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal mt-4">
                     Create Something Amazing<br />Together
                 </h1>
-            </div>
+            </div> */}
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t pt-8">
-                {/* Column 1: Logo and Contact Info */}
-                <div className="flex flex-col items-start">
-                    <Link href="#" className="navbar-brand text-decoration-none pe-md-4 mb-4 focus:outline-none">
-                        <Image className="img-fluid footer_logo" src="/Mozo-logo.svg" alt="Mozo Logo" width={150} height={50} />
-                    </Link>
-                    <Link href="#" className="main_p text-decoration-none d-inline-block mb-2 text-black font-[Inter] focus:outline-none">
-                        Sarai Kharbuza, Opposite to E-16, GT<br />Road, Islamabad, Pakistan.
-                    </Link>
-                    <Link href="tel:+923095287562" className="main_p text-decoration-none d-inline-block mb-2 text-black font-[Inter]">+92 309 5287562</Link>
-                    <Link href="mailto:support@mozotech.com" className="main_p text-decoration-none d-inline-block mb-2 text-black font-[Inter]">support@mozotech.com</Link>
-                </div>
-
-                {/* Column 2: Newsletter */}
-                <div className="flex flex-col items-center">
-                    <h3 className="text-black text-lg font-semibold mb-4">Join our newsletter</h3>
-                    <div className="flex w-full mb-6">
-                        <input
-                            type="email"
-                            placeholder="Enter your email"
-                            className="flex-grow p-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-black"
-                        />
-                        <button className="p-3 bg-gray-200 rounded-r-md hover:bg-gray-300 transition-colors duration-200">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
-                                <path d="M11.5 0C11.5 0.742 12.233 1.85 12.975 2.78C13.929 3.98 15.069 5.027 16.376 5.826C17.356 6.425 18.544 7 19.5 7M19.5 7C18.544 7 17.355 7.575 16.376 8.174C15.069 8.974 13.929 10.021 12.975 11.219C12.233 12.15 11.5 13.26 11.5 14M19.5 7L0 7" stroke="black" strokeWidth="2"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                {/* Column 3: Social Icons */}
-                <div className="flex flex-col items-center sm:items-start lg:ml-40">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 border-t pt-12">
+                
+                 {/* Column 1: Social Icons */}
+                <div className="flex flex-col items-center sm:items-start px-4 lg:px-6">
                     <h3 className="text-black text-lg font-semibold mb-4">Follow Us</h3>
                     <ul className="flex flex-row justify-center space-x-4 sm:flex-col sm:space-x-0 sm:space-y-4">
                         <li>
@@ -72,6 +44,80 @@ const Footer = () => (
                         </li>
                     </ul>
                 </div>
+               
+
+                {/* Column 2: Newsletter */}
+                <div className="flex flex-col items-start px-4 lg:px-8">
+                    <h3 className="text-black text-lg font-semibold mb-6">Join our newsletter</h3>
+                    <div className="flex w-full max-w-sm mb-4">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            className="flex-grow p-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-black text-sm"
+                        />
+                        <button className="p-3 bg-gray-200 rounded-r-md hover:bg-gray-300 transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 20 14" fill="none">
+                                <path d="M11.5 0C11.5 0.742 12.233 1.85 12.975 2.78C13.929 3.98 15.069 5.027 16.376 5.826C17.356 6.425 18.544 7 19.5 7M19.5 7C18.544 7 17.355 7.575 16.376 8.174C15.069 8.974 13.929 10.021 12.975 11.219C12.233 12.15 11.5 13.26 11.5 14M19.5 7L0 7" stroke="black" strokeWidth="2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <p className="text-gray-600 text-xs font-[Inter] leading-relaxed">Stay updated with our latest news and offers.</p>
+                </div>
+
+                {/* Column 3: Navigation Links */}
+                <div className="flex flex-col items-center px-4 lg:px-8">
+                    <h3 className="text-black text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul className="space-y-4 text-center">
+                        <li>
+                            <a href="#hero" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#features" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                                Features
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#testimonials" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                                Testimonials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#how-it-works" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                                How It Works
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#faqs" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                                FAQs
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+               {/* Column 4: Logo and Contact Info */}
+                 <div className="flex flex-col items-start px-4 lg:px-8">
+                     <Link href="#" className="navbar-brand text-decoration-none mb-6 focus:outline-none">
+                         <Image className="img-fluid footer_logo" src="/Mozo-logo.svg" alt="Mozo Logo" width={150} height={50} />
+                     </Link>
+                     <div className="space-y-3">
+                         <div className="text-gray-700 text-sm font-[Inter] leading-relaxed">
+                             Sarai Kharbuza, Opposite to E-16, GT<br />Road, Islamabad, Pakistan.
+                         </div>
+                         <Link href="tel:+923095287562" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] block">
+                             +92 309 5287562
+                         </Link>
+                         <Link href="mailto:support@mozotech.com" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] block">
+                             support@mozotech.com
+                         </Link>
+                     </div>
+                 </div>
             </div>
 
             {/* Get a Quote Button (centered below columns) */}

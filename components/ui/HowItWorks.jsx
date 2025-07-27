@@ -79,10 +79,10 @@ const HowItWorks = () => {
                     transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
                     className={`w-16 h-16 mx-auto mb-8 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg border-4 border-white relative z-20 ${
                       index === 0
-                        ? 'bg-blue-500'
+                        ? 'bg-black'
                         : index === 1
-                        ? 'bg-blue-500'
-                        : 'bg-green-400'
+                        ? 'bg-black'
+                        : 'bg-[#F06A6A]'
                     }`}
                   >
                     {step.number}
