@@ -71,7 +71,7 @@ const Layout = ({ children }) => {
         <>
             <Head>
                 <title>Mozo Technologies</title>
-                <meta name='description' content='Mozo Technologies making it simple for you to build and grow your SaaS applications, or any business idea' />
+                <meta name="description" content="Mozo Technologies empowers businesses worldwide with cutting‑edge IT services in Data & AI, Web Development, UI/UX, CloudOps, Digital Marketing and DevOps." />
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
                 <link rel='icon' href='/favicon.ico' />
             </Head>

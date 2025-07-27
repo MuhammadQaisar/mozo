@@ -47,9 +47,9 @@ const Footer = () => (
                
 
                 {/* Column 2: Newsletter */}
-                <div className="flex flex-col items-start px-4 lg:px-8">
-                    <h3 className="text-black text-lg font-semibold mb-6">Join our newsletter</h3>
-                    <div className="flex w-full max-w-sm mb-4">
+                <div className="flex flex-col items-center lg:items-start px-4 lg:px-8">
+                    <h3 className="text-black text-lg font-semibold mb-6 text-center lg:text-left">Join our newsletter</h3>
+                    <div className="flex w-full max-w-sm mb-4 mx-auto lg:mx-0">
                         <input
                             type="email"
                             placeholder="Enter your email"
@@ -61,13 +61,13 @@ const Footer = () => (
                             </svg>
                         </button>
                     </div>
-                    <p className="text-gray-600 text-xs font-[Inter] leading-relaxed">Stay updated with our latest news and offers.</p>
+                    <p className="text-gray-600 text-xs font-[Inter] leading-relaxed text-center lg:text-left">Stay updated with our latest news and offers.</p>
                 </div>
 
                 {/* Column 3: Navigation Links */}
                 <div className="flex flex-col items-center px-4 lg:px-8">
                     <h3 className="text-black text-lg font-semibold mb-6">Quick Links</h3>
-                    <ul className="space-y-4 text-center">
+                    <ul className="space-y-4 text-left">
                         <li>
                             <a href="#hero" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
                                 Home
@@ -80,7 +80,7 @@ const Footer = () => (
                         </li>
                         <li>
                             <a href="#features" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
-                                Features
+                                Services
                             </a>
                         </li>
                         <li>
@@ -102,16 +102,16 @@ const Footer = () => (
                 </div>
 
                {/* Column 4: Logo and Contact Info */}
-                 <div className="flex flex-col items-start px-4 lg:px-8">
-                     <Link href="#" className="navbar-brand text-decoration-none mb-6 focus:outline-none">
+                 <div className="flex flex-col items-center lg:items-start px-4 lg:px-8">
+                     <Link href="#" className="navbar-brand text-decoration-none mb-6 focus:outline-none mx-auto lg:mx-0">
                          <Image className="img-fluid footer_logo" src="/Mozo-logo.svg" alt="Mozo Logo" width={150} height={50} />
                      </Link>
-                     <div className="space-y-3">
+                     <div className="space-y-3 text-center lg:text-left">
                          <div className="text-gray-700 text-sm font-[Inter] leading-relaxed">
                              Sarai Kharbuza, Opposite to E-16, GT<br />Road, Islamabad, Pakistan.
                          </div>
                          <Link href="tel:+923095287562" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] block">
-                             +92 309 5287562
+                             +92 301 0153774
                          </Link>
                          <Link href="mailto:support@mozotech.com" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] block">
                              support@mozotech.com
