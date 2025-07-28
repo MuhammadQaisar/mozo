@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mozotechnologies.com/sitemap.xml
+
+# Disallow crawling of API routes
+Disallow: /api/
+
+# Disallow crawling of admin or private areas (if any)
+Disallow: /admin/
+Disallow: /_next/
+
+# Allow crawling of important pages
+Allow: /
+Allow: /get-started
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

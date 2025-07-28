@@ -86,7 +86,74 @@ export default function GetStarted() {
   return (
     <>
       <Head>
-        <title>Contact our team - Mozo Technologies</title>
+        <title>Contact Our Team - Get Started with Mozo Technologies | IT Services Consultation</title>
+        <meta name="description" content="Ready to transform your business? Contact Mozo Technologies for expert IT services consultation. Get started with Data & AI, Web Development, UI/UX, CloudOps, Digital Marketing, and DevOps solutions." />
+        <meta name="keywords" content="contact Mozo Technologies, IT consultation, get started, business transformation, technology consultation, IT services quote, project consultation" />
+        <meta name='robots' content='index, follow' />
+        
+        {/* Open Graph for Contact Page */}
+        <meta property="og:title" content="Contact Our Team - Get Started with Mozo Technologies | IT Services Consultation" />
+        <meta property="og:description" content="Ready to transform your business? Contact Mozo Technologies for expert IT services consultation. Get started with Data & AI, Web Development, UI/UX, CloudOps, Digital Marketing, and DevOps solutions." />
+        <meta property="og:url" content="https://mozotechnologies.com/get-started" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter Card for Contact Page */}
+        <meta name="twitter:title" content="Contact Our Team - Get Started with Mozo Technologies | IT Services Consultation" />
+        <meta name="twitter:description" content="Ready to transform your business? Contact Mozo Technologies for expert IT services consultation. Get started with Data & AI, Web Development, UI/UX, CloudOps, Digital Marketing, and DevOps solutions." />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://mozotechnologies.com/get-started" />
+        
+        {/* Structured Data for Contact Page */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ContactPage",
+              "name": "Contact Mozo Technologies",
+              "description": "Ready to transform your business? Contact Mozo Technologies for expert IT services consultation.",
+              "url": "https://mozotechnologies.com/get-started",
+              "mainEntity": {
+                "@type": "Organization",
+                "name": "Mozo Technologies",
+                "contactPoint": [
+                  {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-555-000-0000",
+                    "contactType": "customer service",
+                    "email": "team@mozotechnologies.com",
+                    "availableLanguage": "English",
+                    "hoursAvailable": {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      "opens": "08:00",
+                      "closes": "17:00"
+                    }
+                  }
+                ],
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Sarai Kharbuza, Opposite to E-16, GT Road",
+                  "addressLocality": "Islamabad",
+                  "addressCountry": "Pakistan"
+                }
+              },
+              "potentialAction": {
+                "@type": "CommunicateAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://mozotechnologies.com/get-started",
+                  "inLanguage": "en-US",
+                  "actionPlatform": [
+                    "http://schema.org/DesktopWebPlatform",
+                    "http://schema.org/MobileWebPlatform"
+                  ]
+                }
+              }
+            })
+          }}
+        />
       </Head>
       <div className="min-h-screen bg-white py-8 px-2 sm:px-4 font-[Montserrat] pt-20">
         <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-4 sm:p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">

@@ -1,0 +1,27 @@
+{
+  "name": "Mozo Technologies",
+  "short_name": "Mozo Tech",
+  "description": "Mozo Technologies empowers businesses worldwide with cutting‑edge IT services in Data & AI, Web Development, UI/UX, CloudOps, Digital Marketing and DevOps.",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/Mozo-logo.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/Mozo-logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#7c3aed",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary"
+}
