@@ -38,10 +38,9 @@ const HowItWorks = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
-            Get your digital solutions
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F06A6A] to-black mt-2">
-              delivered seamlessly
+          <h2 className="text-4xl md:text-4xl font-bold text-black mb-6">
+                      <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F06A6A] to-black mt-2">
+              How It Works
             </span>
           </h2>
           <p className="text-lg text-[#F06A6A] font-medium">
@@ -53,55 +52,49 @@ const HowItWorks = () => {
         <div className="relative max-w-5xl mx-auto">
           {/* Steps Container */}
           <div className="relative">
-            {/* Connection Line */}
-            <div className="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-gray-300 z-0"
-                 style={{
-                   left: 'calc(16.67% + 2rem)',
-                   right: 'calc(16.67% + 2rem)',
-                   width: 'calc(66.67% - 4rem)'
-                 }}>
-            </div>
 
             {/* Steps Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
               {steps.map((step, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="text-center relative"
+                  className="relative h-full"
                 >
-                  {/* Numbered Circle */}
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
-                    className={`w-16 h-16 mx-auto mb-8 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg border-4 border-white relative z-20 ${
-                      index === 0
-                        ? 'bg-black'
-                        : index === 1
-                        ? 'bg-black'
-                        : 'bg-[#F06A6A]'
-                    }`}
-                  >
-                    {step.number}
-                  </motion.div>
+                  {/* Card Container */}
+                  <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 hover:border-gray-200 relative overflow-hidden group h-full flex flex-col">
+                    {/* Background Gradient Accent */}
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#F06A6A] to-red-600"></div>
+                    
+                    {/* Large Prominent Number */}
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
+                      className="text-center mb-6 pt-4"
+                    >
+                      <div className="w-14 h-14 mx-auto bg-gradient-to-br from-[#F06A6A] to-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-xl border-3 border-white">
+                        {step.number}
+                      </div>
+                    </motion.div>
 
-                  {/* Step Content */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 + 0.5 }}
-                    className="px-4"
-                  >
-                    <h3 className="text-2xl font-bold text-black mb-4">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </motion.div>
+                    {/* Step Content */}
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.6, delay: index * 0.2 + 0.5 }}
+                      className="text-center flex-grow flex flex-col"
+                    >
+                      <h3 className="text-xl font-bold text-gray-900 mb-4 whitespace-nowrap">
+                        {step.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-6 font-normal flex-grow">
+                        {step.description}
+                      </p>
+                    </motion.div>
+                  </div>
                 </motion.div>
               ))}
             </div>

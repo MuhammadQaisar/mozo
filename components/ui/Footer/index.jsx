@@ -12,11 +12,11 @@ const Footer = () => (
                 </h1>
             </div> */}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 border-t pt-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 border-t border-gray-200 pt-12 mb-8">
                 
                  {/* Column 1: Social Icons */}
                 <div className="flex flex-col items-center sm:items-start px-4 lg:px-6">
-                    <h3 className="text-black text-lg font-semibold mb-4">Follow Us</h3>
+                    <h3 className="text-black text-lg font-normal mb-4">Follow Us</h3>
                     <ul className="flex flex-row justify-center space-x-4 sm:flex-col sm:space-x-0 sm:space-y-4">
                         <li>
                             <Link href="https://pk.linkedin.com/company/isloo-tech-it" target="_blank" className="text-decoration-none text-black flex items-center">
@@ -48,12 +48,12 @@ const Footer = () => (
 
                 {/* Column 2: Newsletter */}
                 <div className="flex flex-col items-center lg:items-start px-4 lg:px-8">
-                    <h3 className="text-black text-lg font-semibold mb-6 text-center lg:text-left">Join our newsletter</h3>
+                    <h3 className="text-black text-lg font-normal mb-6 text-center lg:text-left">Join our newsletter</h3>
                     <div className="flex w-full max-w-sm mb-4 mx-auto lg:mx-0">
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className="flex-grow p-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-black text-sm"
+                            className="flex-grow p-3 border border-gray-300 rounded-l-md focus:outline-none text-black text-sm"
                         />
                         <button className="p-3 bg-gray-200 rounded-r-md hover:bg-gray-300 transition-colors duration-200">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" viewBox="0 0 20 14" fill="none">
@@ -61,12 +61,11 @@ const Footer = () => (
                             </svg>
                         </button>
                     </div>
-                    <p className="text-gray-600 text-xs font-[Inter] leading-relaxed text-center lg:text-left">Stay updated with our latest news and offers.</p>
                 </div>
 
                 {/* Column 3: Navigation Links */}
                 <div className="flex flex-col items-center px-4 lg:px-8">
-                    <h3 className="text-black text-lg font-semibold mb-6">Quick Links</h3>
+                    <h3 className="text-black text-lg font-normal mb-6">Quick Links</h3>
                     <ul className="space-y-4 text-left">
                         <li>
                             <a href="#hero" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
@@ -83,11 +82,11 @@ const Footer = () => (
                                 Services
                             </a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="#testimonials" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
                                 Testimonials
                             </a>
-                        </li>
+                        </li> */}
                         <li>
                             <a href="#how-it-works" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
                                 How It Works
@@ -95,7 +94,7 @@ const Footer = () => (
                         </li>
                         <li>
                             <a href="#faqs" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
-                                FAQs
+                                FAQ's
                             </a>
                         </li>
                     </ul>
@@ -108,7 +107,7 @@ const Footer = () => (
                      </Link>
                      <div className="space-y-3 text-center lg:text-left">
                          <div className="text-gray-700 text-sm font-[Inter] leading-relaxed">
-                             Sarai Kharbuza, Opposite to E-16, GT<br />Road, Islamabad, Pakistan.
+                             Sarai Kharbuza, Opposite to E-16, GT Road, Islamabad, Pakistan.
                          </div>
                          <Link href="tel:+923095287562" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] block">
                              +92 301 0153774
@@ -120,7 +119,7 @@ const Footer = () => (
                  </div>
             </div>
 
-            {/* Get a Quote Button (centered below columns) */}
+            {/* Get a Quote Button (centered below columns)
             <div className="flex justify-center items-center mt-12 mb-6">
                 <Link href="#exampleModalToggleContact" data-bs-toggle="modal" role="button" className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-[#F06A6A] flex flex-col items-center justify-center shadow-lg group text-center p-2">
                         <span className="text-white text-xs font-bold uppercase leading-tight">GET A QUOTE</span>
@@ -128,10 +127,10 @@ const Footer = () => (
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
                     </Link>
-            </div>
+            </div> */}
 
             {/* Copyright */}
-            <div className="col-md-12 border-t mt-md-4 py-4 text-center">
+            <div className="col-md-12 border-t border-gray-200 mt-md-4 py-4 text-center">
                 <p className="main_p text-black m-0">Copyright © {new Date().getFullYear()} Mozo Technologies - All Rights Reserved</p>
             </div>
         </div>

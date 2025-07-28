@@ -184,7 +184,9 @@ const Features = () => {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     className="text-gray-900 text-4xl md:text-4xl font-bold text-center mb-12 leading-tight"
                 >
-                    What We Offer
+                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F06A6A] to-black mt-2">
+              Services
+            </span>
                 </motion.h2>
 
                 {/* Main grid */}
