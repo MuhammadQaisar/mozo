@@ -10,6 +10,7 @@ import ToolKit from "../components/ui/ToolKit";
 import FAQs from "../components/ui/FAQs";
 import About from "../components/ui/About";
 import HowItWorks from "../components/ui/HowItWorks";
+import Contact from "../components/ui/Contact";
 
 
 export default function Home() {
@@ -95,6 +96,7 @@ export default function Home() {
         <CTA />
       <HowItWorks />
       <FAQs/>
+      <Contact />
             {/* <GradientWrapper> */}
         
       {/* </GradientWrapper> */}

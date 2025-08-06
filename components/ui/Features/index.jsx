@@ -220,7 +220,7 @@ const Features = () => {
                         </motion.div>
                     </div>
                     {/* Right: Details change on state/card click */}
-                    <div
+                    <motion.div
                         key={activeIdx} // Key change to re-trigger animation on activeIdx change
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -259,7 +259,7 @@ const Features = () => {
                                 })}
                             </div>
                         )}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </SectionWrapper>

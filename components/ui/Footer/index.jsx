@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { montserrat } from "../font";
 
 const Footer = () => (
     <footer className="mt-5 pt-md-0 pt-5" id="last-section">
@@ -64,36 +65,36 @@ const Footer = () => (
                 </div>
 
                 {/* Column 3: Navigation Links */}
-                <div className="flex flex-col items-center px-4 lg:px-8">
+                <div className={`flex flex-col items-center px-4 lg:px-8 ${montserrat.className}`}>
                     <h3 className="text-black text-lg font-normal mb-6">Quick Links</h3>
                     <ul className="space-y-4 text-left">
                         <li>
-                            <a href="#hero" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                            <a href="#hero" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm cursor-pointer block">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="#about" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                            <a href="#about" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm cursor-pointer block">
                                 About
                             </a>
                         </li>
                         <li>
-                            <a href="#features" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                            <a href="#features" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm cursor-pointer block">
                                 Services
                             </a>
                         </li>
                         {/* <li>
-                            <a href="#testimonials" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                            <a href="#testimonials" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm cursor-pointer block">
                                 Testimonials
                             </a>
                         </li> */}
                         <li>
-                            <a href="#how-it-works" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                            <a href="#how-it-works" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm cursor-pointer block">
                                 How It Works
                             </a>
                         </li>
                         <li>
-                            <a href="#faqs" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] cursor-pointer block">
+                            <a href="#faqs" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm cursor-pointer block">
                                 FAQ's
                             </a>
                         </li>
@@ -101,18 +102,18 @@ const Footer = () => (
                 </div>
 
                {/* Column 4: Logo and Contact Info */}
-                 <div className="flex flex-col items-center lg:items-start px-4 lg:px-8">
+                 <div className={`flex flex-col items-center lg:items-start px-4 lg:px-8 ${montserrat.className}`}>
                      <Link href="#" className="navbar-brand text-decoration-none mb-6 focus:outline-none mx-auto lg:mx-0">
                          <Image className="img-fluid footer_logo" src="/Mozo-logo.svg" alt="Mozo Logo" width={150} height={50} />
                      </Link>
                      <div className="space-y-3 text-center lg:text-left">
-                         <div className="text-gray-700 text-sm font-[Inter] leading-relaxed">
+                         <div className="text-gray-700 text-sm leading-relaxed">
                              Sarai Kharbuza, Opposite to E-16, GT Road, Islamabad, Pakistan.
                          </div>
-                         <Link href="tel:+923095287562" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] block">
+                         <Link href="tel:+923095287562" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm block">
                              +92 301 0153774
                          </Link>
-                         <Link href="mailto:support@mozotech.com" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm font-[Inter] block">
+                         <Link href="mailto:support@mozotech.com" className="text-gray-700 hover:text-[#F06A6A] transition-colors duration-200 text-sm block">
                              support@mozotech.com
                          </Link>
                      </div>
