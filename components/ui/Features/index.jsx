@@ -1,5 +1,7 @@
 import { useState } from "react";
 import SectionWrapper from "../../SectionWrapper";
+import { motion, AnimatePresence } from "framer-motion";
+import { montserrat } from "../font";
 import python from "../../../public/icons/python.svg";
 import tensorflow from "../../../public/icons/tensorflow.svg";
 import kaggle from "../../../public/icons/kaggle.svg";
@@ -52,8 +54,6 @@ import kafka from "../../../public/icons/kafka.svg";
 import spark from "../../../public/icons/spark.svg";
 import pytorch from "../../../public/icons/pytorch.svg";
 import jupyter from "../../../public/icons/jupyter.svg";
-// import linux from "../../../public/icons/linux.svg";
-// import ubuntu from "../../../public/icons/ubuntu.svg";
 import digitalocean from "../../../public/icons/digitalocean.svg";
 import pandas from "../../../public/icons/pandas.svg";
 import semrush from "../../../public/icons/semrush.png";
@@ -65,7 +65,6 @@ import sketch from "../../../public/icons/sketch.svg";
 import cassandra from "../../../public/icons/cassandra.svg";
 import FileZilla from "../../../public/icons/FileZilla.svg";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const features = [
     {
@@ -73,195 +72,346 @@ const features = [
            <Image src="/icons/Group.svg" width={64} height={64} alt="AI/ML Icon" />
         ),
         title: "AI/ML",
-        description: "We offer full-scale support for any size business. From building the foundations with a high-converting site with ongoing SEO for traffic growth, to doing CRO for established brands looking to accelerate on hyperdrive. Unlock the power of artificial intelligence and machine learning to automate, analyze, and innovate your business processes.",
+        subtitle: "Artificial Intelligence & Machine Learning",
+        description: "Harness the power of artificial intelligence and machine learning to automate processes, gain insights from data, and create intelligent solutions that adapt and learn from user behavior.",
         benefits: [
-            "AI Strategy and Consulting",
-            "ML Modeling",
-            "AI Strategy and Consulting",
-            "AI Strategy and Consulting",
+            "Predictive Analytics & Forecasting",
+            "Natural Language Processing",
+            "Computer Vision & Image Recognition",
+            "Automated Decision Making",
         ],
-        icons: [pytorch,keras,spark,jupyter,numpy,kafka,openai, kaggle, python, tensorflow,pandas,cassandra],
-        heading: "Data & Artificial intelligence",
+        icons: [pytorch, keras, spark, jupyter, numpy, kafka, openai, kaggle, python, tensorflow, pandas, cassandra],
+        heading: "Data & Artificial Intelligence",
+        color: "from-blue-500 to-purple-600"
     },
     {
         icon: (
             <Image src="/icons/Frame.svg" width={64} height={64} alt="Digital Marketing Icon" />
         ),
         title: "Digital Marketing",
-        description: "Grow your brand with targeted campaigns, social media management, and analytics-driven strategies. Maximize your reach and engagement with creative content and data-backed marketing solutions.",
+        subtitle: "Growth-Driven Marketing Solutions",
+        description: "Accelerate your business growth with data-driven marketing strategies, targeted campaigns, and comprehensive analytics that deliver measurable results and maximize ROI.",
         benefits: [
-            "Social Media Marketing",
-            "Google Ads & PPC",
-            "Email Campaigns",
-            "Analytics & Reporting",
+            "Social Media Marketing & Management",
+            "Search Engine Optimization (SEO)",
+            "Pay-Per-Click Advertising (PPC)",
+            "Email Marketing & Automation",
         ],
-        icons: [semrush, Ahrefs,googleanalytics, hubspot, mailchimp, meta,googleAds,],
+        icons: [semrush, Ahrefs, googleanalytics, hubspot, mailchimp, meta, googleAds, instagram],
         heading: "Digital Marketing",
+        color: "from-pink-500 to-red-600"
     },
     {
         icon: (
            <Image src="/icons/cloudcomputing.svg" width={64} height={64} alt="CloudOps Icon" />
         ),
         title: "CloudOps",
-        description: "Boost your visibility and organic traffic with proven SEO strategies and ongoing optimization. Scale your infrastructure and operations with secure, reliable, and cost-effective cloud solutions.",
+        subtitle: "Cloud Infrastructure & Operations",
+        description: "Scale your infrastructure seamlessly with secure, reliable, and cost-effective cloud solutions. We optimize performance, ensure high availability, and manage your cloud operations.",
         benefits: [
-            "On-page SEO",
-            "Technical SEO",
-            "Content Optimization",
-            "Link Building",
+            "Cloud Migration & Architecture",
+            "Infrastructure as Code (IaC)",
+            "Monitoring & Performance Optimization",
+            "Security & Compliance Management",
         ],
-        icons: [aws, azure, terraform, docker, kubernetes, gitlab, nginx, ansible, google,digitalocean,FileZilla],
+        icons: [aws, azure, terraform, docker, kubernetes, gitlab, nginx, ansible, google, digitalocean, FileZilla],
         heading: "CloudOps",
+        color: "from-cyan-500 to-blue-600"
     },
     {
         icon: (
            <Image src="/icons/web.svg" width={64} height={64} alt="Web Development Icon" />
         ),
         title: "Web Development",
-        description: "Custom websites, e-commerce, and web apps built for performance, scalability, and conversion. Empower your business with modern, responsive, and secure web solutions tailored to your needs.",
+        subtitle: "Modern Web Applications",
+        description: "Create powerful, responsive, and scalable web applications using the latest technologies. From simple websites to complex enterprise solutions, we deliver exceptional digital experiences.",
         benefits: [
-            "Custom Websites",
+            "Custom Web Applications",
             "E-commerce Solutions",
-            "Web Applications",
-            "Performance Optimization",
+            "Progressive Web Apps (PWA)",
+            "API Development & Integration",
         ],
-        icons: [reactjs, nextjs, tailwind, nodejs, vercel,shopify, wordpress,mongo,mysql,php,pgsql,woocommerce,typescript,java,express,dotnet,gitlab],
+        icons: [reactjs, nextjs, tailwind, nodejs, vercel, shopify, wordpress, mongo, mysql, php, pgsql, woocommerce, typescript, java, express, dotnet, gitlab],
         heading: "Web Development",
+        color: "from-green-500 to-emerald-600"
     },
     {
         icon: (
             <Image src="/icons/uiux.svg" width={64} height={64} alt="UI/UX Icon" />
         ),
-        title: "UI/UX",
-        description: "Designs that delight users and drive engagement, from wireframes to polished interfaces. Create intuitive and visually stunning experiences that keep your customers coming back.",
+        title: "UI/UX Design",
+        subtitle: "User-Centered Design",
+        description: "Design intuitive and visually stunning user experiences that delight your customers and drive engagement. Our design process focuses on usability, accessibility, and conversion optimization.",
         benefits: [
-            "Wireframing",
-            "Prototyping",
-            "UI Design",
-            "UX Research",
+            "User Research & Testing",
+            "Wireframing & Prototyping",
+            "Visual Design & Branding",
+            "Usability & Accessibility Audits",
         ],
-        icons: [figma, framer, Ae, adobexd,miro, sketch],
-        heading: "UI/UX",
+        icons: [figma, framer, Ae, adobexd, miro, sketch],
+        heading: "UI/UX Design",
+        color: "from-purple-500 to-pink-600"
     },
     {
         icon: (
            <Image src="/icons/devOps.svg" width={64} height={64} alt="DevOps Icon" />
         ),
         title: "DevOps",
-        description: "Automate, monitor, and optimize your infrastructure and deployment pipelines for reliability and scalability. Accelerate your development lifecycle with robust CI/CD, cloud, and automation practices.",
+        subtitle: "Development & Operations",
+        description: "Streamline your development lifecycle with robust CI/CD pipelines, automated testing, and infrastructure management. Accelerate deployment while maintaining quality and reliability.",
         benefits: [
-            "CI/CD Implementation",
-            "Cloud Infrastructure",
-            "Monitoring & Logging",
-            "Automation & Scripting",
+            "Continuous Integration/Deployment",
+            "Infrastructure Automation",
+            "Monitoring & Logging Solutions",
+            "Security & Compliance Integration",
         ],
         icons: [aws, azure, docker, kubernetes, terraform, apache, grafana, prometheus, typescript, java, jenkins, gitlab, nginx, ansible],
-        heading: "DevOps & Cloud",
+        heading: "DevOps & Cloud Engineering",
+        color: "from-orange-500 to-red-600"
     },
 ];
 
 const Features = () => {
     const [activeIdx, setActiveIdx] = useState(0);
-
     const activeFeature = features[activeIdx];
 
-    return (
-        <SectionWrapper id="features" className="py-16 px-4 md:px-8 bg-gray-50"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
-            }}
-        >
-            <div className="max-w-7xl mx-auto">
-                {/* Title and description */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="text-gray-900 text-4xl md:text-4xl font-bold text-center mb-12 leading-tight"
-                >
-                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F06A6A] to-black mt-2">
-              Services
-            </span>
-                </motion.h2>
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.2,
+            },
+        },
+    };
 
-                {/* Main grid */}
-                <div className="flex flex-col lg:flex-row justify-center items-start gap-12 w-full">
-                    {/* Left: Service cards as states */}
-                    <div className="flex flex-col gap-4 w-full lg:w-1/3">
-                        <motion.div
-                            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4"
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.5 }}
-                            transition={{ duration: 0.6, ease: "easeOut" }}
-                        >
+    const cardVariants = {
+        hidden: { opacity: 0, y: 30, scale: 0.95 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: {
+                duration: 0.5,
+                ease: "easeOut",
+            },
+        },
+    };
+
+    return (
+        <SectionWrapper 
+            id="features" 
+            className={`py-20 lg:py-28 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
+        >
+            {/* Background Elements */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-20 left-10 w-72 h-72 bg-[#F06A6A]/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-10 w-96 h-96 bg-black/3 rounded-full blur-3xl"></div>
+                <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
+            </div>
+
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Enhanced Section Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-20"
+                >
+                    <div className="inline-flex items-center px-4 py-2 bg-[#F06A6A]/10 rounded-full mb-6">
+                        <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
+                        <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">Our Services</span>
+                    </div>
+
+                   <h2 className="text-center text-4xl md:text-5xl font-bold mb-10 text-[#18181e] leading-tight">
+			Comprehensive <br className="md:hidden" /> Digital Solutions
+		</h2>
+
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        From AI-powered applications to scalable cloud infrastructure, we deliver end-to-end solutions that drive innovation and growth.
+                    </p>
+                </motion.div>
+
+                {/* Enhanced Service Selection and Details */}
+                <div className="grid grid-cols-1 xl:grid-cols-5 gap-8 lg:gap-12">
+                    {/* Service Cards */}
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                        className="xl:col-span-2"
+                    >
+                        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-4">
                             {features.map((item, idx) => (
                                 <motion.div
                                     key={idx}
-                                    className={`flex flex-col items-center justify-center h-32 rounded-xl shadow-lg cursor-pointer transition-all duration-300 transform hover:scale-105
-                                        ${activeIdx === idx ? "bg-gradient-to-br from-[#F06A6A] to-red-500 text-white" : "bg-white text-gray-800 hover:bg-gray-100"}
-                                    `}
-                                    onClick={() => setActiveIdx(idx)}
-                                    whileHover={{ scale: 1.05 }}
+                                    variants={cardVariants}
+                                    whileHover={{ scale: 1.05, y: -5 }}
                                     whileTap={{ scale: 0.95 }}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.3, delay: idx * 0.1 }}
+                                    onClick={() => setActiveIdx(idx)}
+                                    className={`group cursor-pointer transition-all duration-300 ${
+                                        activeIdx === idx ? 'scale-105' : ''
+                                    }`}
                                 >
-                                    <span className="mb-2 text-3xl">{item.icon}</span>
-                                    <span className="font-semibold text-base text-center px-2">{item.title}</span>
+                                    <div className={`relative h-40 rounded-2xl p-6 shadow-lg border transition-all duration-300 overflow-hidden ${
+                                        activeIdx === idx 
+                                            ? 'bg-[#000000] text-white border-[#000000] shadow-2xl' 
+                                            : 'bg-white/80 backdrop-blur-sm text-gray-800 border-gray-200 hover:border-[#F06A6A]/30 hover:shadow-xl'
+                                    }`}>
+                                        {/* Background Pattern */}
+                                        <div className={`absolute inset-0 opacity-10 ${
+                                            activeIdx === idx ? 'bg-white' : 'bg-[#F06A6A]'
+                                        } bg-grid-pattern`}></div>
+                                        
+                                        <div className="relative z-10 flex flex-col items-center text-center h-full">
+                                            <div className="mb-3 transform group-hover:scale-110 transition-transform duration-300">
+                                                {item.icon}
+                                            </div>
+                                            <h3 className="font-bold text-sm leading-tight">{item.title}</h3>
+                                        </div>
+
+                                        {/* Active Indicator */}
+                                        {activeIdx === idx && (
+                                            <motion.div
+                                                layoutId="activeIndicator"
+                                                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full"
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                transition={{ duration: 0.3 }}
+                                            />
+                                        )}
+                                    </div>
                                 </motion.div>
                             ))}
-                        </motion.div>
-                    </div>
-                    {/* Right: Details change on state/card click */}
-                    <motion.div
-                        key={activeIdx} // Key change to re-trigger animation on activeIdx change
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="flex-1 flex flex-col items-center lg:items-start mt-8 lg:mt-0 p-6 bg-white rounded-xl shadow-lg"
-                    >
-                        <h3 className="text-3xl font-bold text-gray-900 mb-4 text-center lg:text-left">
-                            {activeFeature.heading}
-                        </h3>
-                        <p className="text-gray-600 text-lg mb-6 text-center lg:text-left leading-relaxed">
-                            {activeFeature.description}
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 mb-6 w-full">
-                            {activeFeature.benefits.map((benefit, idx) => (
-                                <span key={idx} className="flex items-center text-gray-800 font-medium text-base">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[#F06A6A] mr-2 flex-shrink-0">
-                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
-                                    </svg>
-                                    {benefit}
-                                </span>
-                            ))}
                         </div>
-                        {/* Icons for technologies */}
-                        {activeFeature.icons && activeFeature.icons.length > 0 && (
-                            <div className="flex flex-wrap gap-4 justify-center lg:justify-start mt-4">
-                                {activeFeature.icons.map((icon, idx) => {
-                                    let iconWidth = 40;
-                                    let iconHeight = 40;
-                                    if (icon === semrush || icon === Ahrefs) {
-                                        iconWidth = 64;
-                                        iconHeight = 64;
-                                    }
-                                    return (
-                                        <Image key={idx} src={icon} alt={`icon-${idx}`} width={iconWidth} height={iconHeight} className="transition-all duration-300" />
-                                    );
-                                })}
-                            </div>
-                        )}
                     </motion.div>
+
+                    {/* Service Details */}
+                    <div className="xl:col-span-3">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={activeIdx}
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -20 }}
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                                className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-10 shadow-lg border border-gray-100 h-full"
+                            >
+                                {/* Service Header */}
+                                <div className="mb-8">
+                                    <div className="flex items-center mb-4">
+                                      
+                                        <div>
+                                            <h3 className="text-3xl font-bold text-gray-900 mb-1">
+                                                {activeFeature.heading}
+                                            </h3>
+                                            <p className="text-[#F06A6A] font-medium">{activeFeature.subtitle}</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <p className="text-gray-600 text-lg leading-relaxed">
+                                        {activeFeature.description}
+                                    </p>
+                                </div>
+
+                                {/* Benefits */}
+                                <div className="mb-8">
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Services:</h4>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        {activeFeature.benefits.map((benefit, idx) => (
+                                            <motion.div
+                                                key={idx}
+                                                initial={{ opacity: 0, x: -10 }}
+                                                animate={{ opacity: 1, x: 0 }}
+                                                transition={{ duration: 0.3, delay: idx * 0.1 }}
+                                                className="flex items-center text-gray-700"
+                                            >
+                                                <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#F06A6A] to-red-500 flex items-center justify-center mr-3 flex-shrink-0">
+                                                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                                <span className="font-medium">{benefit}</span>
+                                            </motion.div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Technology Stack */}
+                                {activeFeature.icons && activeFeature.icons.length > 0 && (
+                                    <div>
+                                        <h4 className="text-lg font-semibold text-gray-900 mb-4">Technologies We Use:</h4>
+                                        <div className="flex flex-wrap gap-3">
+                                            {activeFeature.icons.map((icon, idx) => {
+                                                let iconWidth = 40;
+                                                let iconHeight = 40;
+                                                if (icon === semrush || icon === Ahrefs) {
+                                                    iconWidth = 48;
+                                                    iconHeight = 48;
+                                                }
+                                                return (
+                                                    <motion.div
+                                                        key={idx}
+                                                        initial={{ opacity: 0, scale: 0.8 }}
+                                                        animate={{ opacity: 1, scale: 1 }}
+                                                        transition={{ duration: 0.3, delay: idx * 0.05 }}
+                                                        whileHover={{ scale: 1.1 }}
+                                                        className="p-3 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300 border border-gray-100"
+                                                    >
+                                                        <Image 
+                                                            src={icon} 
+                                                            alt={`Technology ${idx}`} 
+                                                            width={iconWidth} 
+                                                            height={iconHeight} 
+                                                            className="object-contain"
+                                                        />
+                                                    </motion.div>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* CTA */}
+                                <div className="mt-8 pt-6 border-t border-gray-100">
+                                    <motion.a
+                                        href="#contact"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#F06A6A] to-red-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                                    >
+                                        Get Started with {activeFeature.title}
+                                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                        </svg>
+                                    </motion.a>
+                                </div>
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
                 </div>
             </div>
+
+            {/* Enhanced Custom Styles */}
+            <style jsx>{`
+                @keyframes gradient-x {
+                    0%, 100% { background-size: 200% 200%; background-position: left center; }
+                    50% { background-size: 200% 200%; background-position: right center; }
+                }
+                .animate-gradient-x {
+                    animation: gradient-x 3s ease infinite;
+                }
+
+                .bg-grid-pattern {
+                    background-image: 
+                        linear-gradient(rgba(240, 106, 106, 0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(240, 106, 106, 0.1) 1px, transparent 1px);
+                    background-size: 20px 20px;
+                }
+            `}</style>
         </SectionWrapper>
     );
 };
