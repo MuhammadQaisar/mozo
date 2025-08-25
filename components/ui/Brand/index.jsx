@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { montserrat } from "../font";
 
 /**
  * Brand Component
@@ -8,12 +9,14 @@ import Image from "next/image";
  */
 const Brand = () => (
     <Link href="/">
-        <Image
-            src="/Mozo-logo.svg"
-            width={180} // Increased width for better visibility
-            height={72} // Increased height for better visibility
-            alt="Mozo Technologies logo"
-        />
+        <div className="flex items-center">
+            <Image
+                src="/Mozo-logo.svg"
+                width={150} // Increased width for better visibility
+                height={100} // Increased height for better visibility
+                alt="Mozo Technologies logo"
+            />
+        </div>
     </Link>
 );
 

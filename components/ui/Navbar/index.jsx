@@ -8,11 +8,11 @@ import { montserrat } from '../font';
 
 // Navigation data for the Navbar
 const navigation = [
-    { title: "About", path: "#about" },
-    { title: "Services", path: "#features" },
-    { title: "How it works", path: "#how-it-works" },
-    { title: "FAQ's", path: "#faqs" },
-    { title: "Contact", path: "#contact" },
+    { title: "Home", path: "/" },
+    { title: "About", path: "/about" },
+    { title: "Services", path: "/services" },
+    { title: "Blogs", path: "/blogs" },
+    { title: "Contact", path: "/contact-us" },
 ];
 
 const Navbar = () => {
@@ -64,13 +64,14 @@ const Navbar = () => {
             }
         );
 
-        navigation.forEach((item) => {
+        // Only observe sections for hash links
+        navigation.filter(item => item.path.startsWith('#')).forEach((item) => {
             const section = document.querySelector(item.path);
             if (section) observer.observe(section);
         });
 
         return () => {
-            navigation.forEach((item) => {
+            navigation.filter(item => item.path.startsWith('#')).forEach((item) => {
                 const section = document.querySelector(item.path);
                 if (section) observer.unobserve(section);
             });
@@ -84,13 +85,10 @@ const Navbar = () => {
 
     return (
         <header className={montserrat.className}>
-            <motion.nav
-                initial={{ y: -100 }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+            <nav
                 className={`w-full fixed top-0 left-0 z-50 transition-all duration-500 ease-out ${
                     isScrolled || isMobileMenuOpen 
-                        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100' 
+                        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
                         : 'bg-transparent'
                 }`}
             >
@@ -118,11 +116,19 @@ const Navbar = () => {
                                     <Link 
                                         href={asPath === '/get-started' ? `/${item.path}` : item.path}
                                         className={`relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 group ${
-                                            activeNavLink === item.path 
+                                            (item.path.startsWith('#') && activeNavLink === item.path) || (!item.path.startsWith('#') && asPath === item.path)
                                                 ? 'text-[#F06A6A] bg-[#F06A6A]/10' 
                                                 : 'text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50'
                                         }`}
-                                        onClick={() => setActiveNavLink(item.path)}
+                                        onClick={() => {
+                                            if (!item.path.startsWith('#')) {
+                                                // For direct page links, set activeNavLink based on current path
+                                                setActiveNavLink(item.path);
+                                            } else {
+                                                // For hash links, keep existing behavior
+                                                setActiveNavLink(item.path);
+                                            }
+                                        }}
                                     >
                                         {item.title}
                                         {/* Active indicator */}
@@ -192,64 +198,46 @@ const Navbar = () => {
                 </div>
 
                 {/* Enhanced Mobile Navigation Menu */}
-                <AnimatePresence>
-                    {isMobileMenuOpen && (
-                        <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-100"
-                        >
-                            <div className="px-4 sm:px-6 py-6 space-y-4">
-                                {navigation.map((item, idx) => (
-                                    <motion.div
-                                        key={idx}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 0.3, delay: idx * 0.1 }}
-                                    >
-                                        <Link
-                                            href={asPath === '/get-started' ? `/${item.path}` : item.path}
-                                            className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                                                activeNavLink === item.path
-                                                    ? 'text-[#F06A6A] bg-[#F06A6A]/10'
-                                                    : 'text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50'
-                                            }`}
-                                            onClick={() => {
-                                                setActiveNavLink(item.path);
-                                                setIsMobileMenuOpen(false);
-                                                document.body.classList.remove("overflow-hidden");
-                                            }}
-                                        >
-                                            {item.title}
-                                        </Link>
-                                    </motion.div>
-                                ))}
-                                
-                                {/* Mobile CTA Button */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.3, delay: navigation.length * 0.1 }}
-                                    className="pt-4"
-                                >
-                                    <NavLink
-                                        href="/get-started"
-                                        className="block w-full px-6 py-4 bg-gradient-to-r from-[#F06A6A] to-red-500 text-white font-semibold rounded-xl shadow-lg text-center transition-all duration-300 hover:shadow-xl"
+                {isMobileMenuOpen && (
+                    <div className="lg:hidden bg-white/95 backdrop-blur-md">
+                        <div className="px-4 sm:px-6 py-6 space-y-4">
+                            {navigation.map((item, idx) => (
+                                <div key={idx}>
+                                    <Link
+                                        href={asPath === '/get-started' ? `/${item.path}` : item.path}
+                                        className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                                            activeNavLink === item.path
+                                                ? 'text-[#F06A6A] bg-[#F06A6A]/10'
+                                                : 'text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50'
+                                        }`}
                                         onClick={() => {
+                                            setActiveNavLink(item.path);
                                             setIsMobileMenuOpen(false);
                                             document.body.classList.remove("overflow-hidden");
                                         }}
                                     >
-                                        Get Started Today
-                                    </NavLink>
-                                </motion.div>
+                                        {item.title}
+                                    </Link>
+                                </div>
+                            ))}
+                            
+                            {/* Mobile CTA Button */}
+                            <div className="pt-4">
+                                <NavLink
+                                    href="/get-started"
+                                    className="block w-full px-6 py-4 bg-gradient-to-r from-[#F06A6A] to-red-500 text-white font-semibold rounded-xl shadow-lg text-center transition-all duration-300 hover:shadow-xl"
+                                    onClick={() => {
+                                        setIsMobileMenuOpen(false);
+                                        document.body.classList.remove("overflow-hidden");
+                                    }}
+                                >
+                                    Get Started Today
+                                </NavLink>
                             </div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </motion.nav>
+                        </div>
+                    </div>
+                )}
+            </nav>
         </header>
     );
 };

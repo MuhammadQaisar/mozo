@@ -101,7 +101,7 @@ const Footer = () => {
                             <div className="mb-8">
                                 <Link href="#" className="inline-block mb-6">
                                     <Image 
-                                        src="/Mozo-logo.svg" 
+                                        src="/Mozo-favicon.svg" 
                                         alt="Mozo Technologies" 
                                         width={180} 
                                         height={60}
