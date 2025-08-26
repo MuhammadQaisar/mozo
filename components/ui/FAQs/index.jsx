@@ -97,15 +97,12 @@ const FAQs = () => {
                 >
                     <div className="inline-flex items-center px-4 py-2 bg-[#F06A6A]/10 rounded-full mb-6">
                         <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
-                        <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">FAQ</span>
+                        <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">FAQ's</span>
                     </div>
 
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                        <span className="block">Frequently Asked</span>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F06A6A] via-red-500 to-[#F06A6A] animate-gradient-x">
-                            Questions
-                        </span>
-                    </h2>
+                    <h2 className="text-center text-4xl md:text-5xl font-semi-bold mb-10 text-[#18181e] leading-tight">
+			 Frequently Asked <br className="md:hidden" /> Questions     
+		</h2>
 
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Got questions? We've got answers. Here are the most common questions our clients ask about our services and process.
@@ -166,7 +163,7 @@ const FAQs = () => {
                                             </div>
                                             
                                             {/* Question */}
-                                            <h3 className="text-lg lg:text-xl font-semibold text-gray-900 group-hover:text-[#F06A6A] transition-colors duration-300">
+                                            <h3 className="text-lg lg:text-xl font-semi-bold text-gray-900 group-hover:text-[#F06A6A] transition-colors duration-300">
                                                 {faq.question}
                                             </h3>
                                         </div>

@@ -171,14 +171,14 @@ const Hero = () => {
           {/* Get Started Button */}
           <Link
             href="/get-started"
-            className="w-full sm:w-auto bg-gradient-to-r from-[#F06A6A] to-red-600 text-white font-semibold rounded-lg px-4 py-3 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out animate-pulse-button min-h-[48px] flex items-center justify-center max-w-xs sm:max-w-none"
+            className="w-full sm:w-auto bg-gradient-to-r from-[#F06A6A] to-red-600 text-white font-semi-bold rounded-lg px-4 py-3 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out animate-pulse-button min-h-[48px] flex items-center justify-center max-w-xs sm:max-w-none"
           >
             Get Started
           </Link>
           {/* Explore Services Button */}
           <Link
             href="#features"
-            className="w-full sm:w-auto bg-gradient-to-r from-gray-50 to-gray-200 text-black font-semibold rounded-lg px-4 py-3 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg shadow-lg border border-gray-300 hover:from-gray-100 hover:to-gray-300 transform hover:scale-105 transition-all duration-300 ease-in-out min-h-[48px] flex items-center justify-center max-w-xs sm:max-w-none"
+            className="w-full sm:w-auto bg-gradient-to-r from-gray-50 to-gray-200 text-black font-semi-bold rounded-lg px-4 py-3 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-4 md:text-lg shadow-lg border border-gray-300 hover:from-gray-100 hover:to-gray-300 transform hover:scale-105 transition-all duration-300 ease-in-out min-h-[48px] flex items-center justify-center max-w-xs sm:max-w-none"
           >
             Explore Services
           </Link>
@@ -193,7 +193,7 @@ const Hero = () => {
           className="w-full max-w-4xl mx-auto px-4 sm:px-0"
         >
           <p className="text-xs sm:text-sm text-gray-500 font-medium mb-4 sm:mb-6 text-center">
-            Accredited & Trusted By
+            We Are Partners With
           </p>
           {/* Logo Carousel/Slider */}
           <div className="relative overflow-hidden py-2 sm:py-4 [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">

@@ -225,7 +225,7 @@ const Features = () => {
                         <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">Our Services</span>
                     </div>
 
-                   <h2 className="text-center text-4xl md:text-5xl font-bold mb-10 text-[#18181e] leading-tight">
+                   <h2 className="text-center text-4xl md:text-5xl font-semi-bold mb-10 text-[#18181e] leading-tight">
 			Comprehensive <br className="md:hidden" /> Digital Solutions
 		</h2>
 

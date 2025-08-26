@@ -124,31 +124,15 @@ const HowItWorks = () => {
             <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
             <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">Our Process</span>
           </div>
-
-         <h2 className="text-center text-4xl md:text-5xl font-bold mb-10 text-[#18181e] leading-tight">
-			How We <br className="md:hidden" /> Work Together
-      
+ <h2 className="text-center text-4xl md:text-5xl font-semi-bold mb-10 text-[#18181e] leading-tight">
+			 How we  <br className="md:hidden" /> works together      
 		</h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
             Our proven 3-step process ensures your project is delivered on time, within budget, and exceeds your expectations.
           </p>
 
-          {/* Quick Stats */}
-          <div className="flex flex-wrap justify-center gap-8 text-center">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-100">
-              <div className="text-2xl font-bold text-[#F06A6A]">2-8 weeks</div>
-              <div className="text-sm text-gray-600">Average Delivery</div>
-            </div>
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-100">
-              <div className="text-2xl font-bold text-[#F06A6A]">100%</div>
-              <div className="text-sm text-gray-600">Success Rate</div>
-            </div>
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-100">
-              <div className="text-2xl font-bold text-[#F06A6A]">24/7</div>
-              <div className="text-sm text-gray-600">Support</div>
-            </div>
-          </div>
+         
         </motion.div>
 
         {/* Enhanced Steps Timeline */}
@@ -174,7 +158,7 @@ const HowItWorks = () => {
                 {/* Step Card */}
                 <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl hover:border-[#F06A6A]/30 transition-all duration-500 h-full flex flex-col relative overflow-hidden">
                   {/* Card Accent */}
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#F06A6A] to-red-500"></div>
+                  <div className="absolute top-0 left-0 w-full h-1"></div>
                   
                   {/* Hover Effect Background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#F06A6A]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

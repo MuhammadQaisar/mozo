@@ -49,7 +49,7 @@ const About = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> {/* Centered content container with responsive horizontal padding */}
         {/* Section Header: Title and Subtitle */}
         <div className="text-center"> {/* Center-aligns the text within this div */}
-          <h2 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-gray-900"> {/* Responsive font sizes for the main title */}
+          <h2 className="text-3xl sm:text-4xl xl:text-5xl font-semi-bold text-gray-900"> {/* Responsive font sizes for the main title */}
              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F06A6A] to-black mt-2">
               About Mozo Technologies
             </span>

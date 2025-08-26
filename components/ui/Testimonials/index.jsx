@@ -84,9 +84,10 @@ const Testimonials = () => {
                             </svg>
                             <span className="text-[#F06A6A] font-medium text-sm">Client Testimonials</span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                            What Our <span className="bg-gradient-to-r from-[#F06A6A] via-[#F06A6A] to-[#F06A6A] bg-clip-text text-transparent">Clients Say</span>
-                        </h2>
+                       
+                          <h2 className="text-center text-4xl md:text-5xl font-semi-bold mb-10 text-[#18181e] leading-tight">
+			 What Our  <br className="md:hidden" /> Clients Say
+		</h2>
                         <p className="text-black text-lg max-w-2xl mx-auto">
                             Don't just take our word for it. Here's what industry leaders say about working with us.
                         </p>
@@ -102,7 +103,7 @@ const Testimonials = () => {
                             className="relative bg-white rounded-3xl shadow-xl border border-slate-200/50 overflow-hidden"
                         >
                             {/* Gradient accent */}
-                            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F06A6A] via-[#F06A6A] to-[#F06A6A]"></div>
+                            <div className="absolute top-0 left-0 right-0 h-1"></div>
                             
                             <div className="p-8 lg:p-12">
                                 <div className="flex flex-col lg:flex-row items-start gap-8">

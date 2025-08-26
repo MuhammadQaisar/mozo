@@ -12,8 +12,8 @@ const Brand = () => (
         <div className="flex items-center">
             <Image
                 src="/Mozo-logo.svg"
-                width={150} // Increased width for better visibility
-                height={100} // Increased height for better visibility
+                width={170} // Increased width for better visibility
+                height={170} // Increased height for better visibility
                 alt="Mozo Technologies logo"
             />
         </div>

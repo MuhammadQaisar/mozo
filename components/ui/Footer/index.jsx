@@ -123,7 +123,7 @@ const Footer = () => {
                                         </div>
                                         <div>
                                             <p className="text-gray-300 text-sm leading-relaxed">
-                                                Sarai Kharbuza, Opposite to E-16,<br />
+                                                Sarai Kharbuza, Opposite to E-16,
                                                 GT Road, Islamabad, Pakistan
                                             </p>
                                         </div>
