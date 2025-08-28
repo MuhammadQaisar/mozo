@@ -193,7 +193,7 @@ const Hero = () => {
           className="w-full max-w-4xl mx-auto px-4 sm:px-0"
         >
           <p className="text-xs sm:text-sm text-gray-500 font-medium mb-4 sm:mb-6 text-center">
-            We Are Partners With
+            Our Core Expertise
           </p>
           {/* Logo Carousel/Slider */}
           <div className="relative overflow-hidden py-2 sm:py-4 [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">

@@ -8,12 +8,12 @@ const Footer = () => {
 
     // Enhanced navigation links with descriptions
     const navigationLinks = [
-        { title: "Home", path: "#hero", description: "Back to top" },
-        { title: "About", path: "#about", description: "Our story" },
-        { title: "Services", path: "#features", description: "What we offer" },
-        { title: "Process", path: "#how-it-works", description: "How we work" },
-        { title: "FAQ", path: "#faqs", description: "Common questions" },
-        { title: "Contact", path: "#contact", description: "Get in touch" }
+        { title: "Home", path: "#hero" },
+        { title: "About", path: "#about"},
+        { title: "Services", path: "#features"},
+        { title: "Process", path: "#how-it-works"},
+        { title: "FAQ", path: "#faqs"},
+        { title: "Contact", path: "#contact"}
     ];
 
     // Social media links
@@ -98,106 +98,55 @@ const Footer = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-16">
                         {/* Company Info */}
                         <motion.div variants={itemVariants} className="lg:col-span-1">
-                            <div className="mb-8">
-                                <Link href="#" className="inline-block mb-6">
-                                    <Image 
-                                        src="/Mozo-favicon.svg" 
-                                        alt="Mozo Technologies" 
-                                        width={180} 
-                                        height={60}
-                                        className="h-12 w-auto"
+                            <div className="mb-8 flex flex-col items-center text-center">
+                                {/* Modern Logo Box */}
+                                <div className="bg-[#05202C] rounded-2xl p-4 mb-4 shadow-lg flex flex-col items-center">
+                                    <Image
+                                        src="/footer-logo.svg"
+                                        alt="Mozo Technologies"
+                                        width={150}
+                                        height={150}
+                                        className="mb-2"
                                     />
-                                </Link>
-                                <p className="text-gray-300 leading-relaxed mb-6">
-                                    Transforming businesses through innovative technology solutions. 
-                                    We're your trusted partner in digital transformation.
-                                </p>
-                                
-                                {/* Contact Info */}
-                                <div className="space-y-4">
-                                    <div className="flex items-start">
-                                        <div className="w-6 h-6 rounded-full bg-[#F06A6A]/20 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                                            <svg className="w-3 h-3 text-[#F06A6A]" fill="currentColor" viewBox="0 0 20 20">
-                                                <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <p className="text-gray-300 text-sm leading-relaxed">
-                                                Sarai Kharbuza, Opposite to E-16,
-                                                GT Road, Islamabad, Pakistan
-                                            </p>
-                                        </div>
-                                    </div>
                                     
-                                    <div className="flex items-center">
-                                        <div className="w-6 h-6 rounded-full bg-[#F06A6A]/20 flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg className="w-3 h-3 text-[#F06A6A]" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                                            </svg>
-                                        </div>
-                                        <Link 
-                                            href="tel:+923010153774" 
-                                            className="text-gray-300 hover:text-[#F06A6A] transition-colors duration-300 text-sm"
-                                        >
-                                            +92 301 0153774
-                                        </Link>
-                                    </div>
-                                    
-                                    <div className="flex items-center">
-                                        <div className="w-6 h-6 rounded-full bg-[#F06A6A]/20 flex items-center justify-center mr-3 flex-shrink-0">
-                                            <svg className="w-3 h-3 text-[#F06A6A]" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                                            </svg>
-                                        </div>
-                                        <Link 
-                                            href="mailto:support@mozotech.com" 
-                                            className="text-gray-300 hover:text-[#F06A6A] transition-colors duration-300 text-sm"
-                                        >
-                                            support@mozotech.com
-                                        </Link>
-                                    </div>
                                 </div>
+                                {/* Tagline */}
+                                <p className="text-[#F06A6A] text-lg font-light italic mb-2">
+                                    Empowering Growth<br />With Digital Excellence
+                                </p>
+                                {/* Divider */}
+                                <hr className="border-[#F06A6A] w-16 my-4 mx-auto" />
                             </div>
                         </motion.div>
 
-                        {/* Quick Links */}
+                        {/* Services */}
                         <motion.div variants={itemVariants} className="lg:col-span-1">
-                            <h3 className="text-lg font-semibold text-white mb-6">Quick Links</h3>
-                            <ul className="space-y-3">
-                                {navigationLinks.map((link, index) => (
+                            <h3 className="text-lg font-semibold text-white mb-6">Our Services</h3>
+                            <ul className="space-y-1">
+                                {services.map((service, index) => (
                                     <li key={index}>
                                         <Link
-                                            href={link.path}
-                                            className="group flex items-center text-gray-300 hover:text-[#F06A6A] transition-colors duration-300"
+                                            href="#features"
+                                            className="text-white font-sans text-[17px] leading-relaxed font-light"
                                         >
-                                            <svg className="w-4 h-4 mr-3 text-[#F06A6A]/50 group-hover:text-[#F06A6A] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                                            </svg>
-                                            <div>
-                                                <div className="font-medium">{link.title}</div>
-                                                <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                                                    {link.description}
-                                                </div>
-                                            </div>
+                                            {service}
                                         </Link>
                                     </li>
                                 ))}
                             </ul>
                         </motion.div>
 
-                        {/* Services */}
+                        {/* Quick Links */}
                         <motion.div variants={itemVariants} className="lg:col-span-1">
-                            <h3 className="text-lg font-semibold text-white mb-6">Our Services</h3>
-                            <ul className="space-y-3">
-                                {services.map((service, index) => (
+                            <h3 className="text-lg font-bold text-white mb-6 leading-relaxed">Quick Links</h3>
+                            <ul className="space-y-1">
+                                {navigationLinks.map((link, index) => (
                                     <li key={index}>
                                         <Link
-                                            href="#features"
-                                            className="group flex items-center text-gray-300 hover:text-[#F06A6A] transition-colors duration-300"
+                                            href={link.path}
+                                            className="text-white font-sans text-[17px] leading-relaxed font-light"
                                         >
-                                            <div className="w-2 h-2 rounded-full bg-[#F06A6A]/50 group-hover:bg-[#F06A6A] transition-colors duration-300 mr-3 flex-shrink-0"></div>
-                                            <span className="text-sm">{service}</span>
+                                            {link.title}
                                         </Link>
                                     </li>
                                 ))}
@@ -206,7 +155,7 @@ const Footer = () => {
 
                         {/* Newsletter & Social */}
                         <motion.div variants={itemVariants} className="lg:col-span-1">
-                            <h3 className="text-lg font-semibold text-white mb-6">Stay Connected</h3>
+                            {/* <h3 className="text-lg font-semibold text-white mb-6">Stay Connected</h3> */}
                             
                             {/* Newsletter */}
                             <div className="mb-8">
@@ -237,14 +186,14 @@ const Footer = () => {
                                             href={social.href}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className={`group w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center hover:bg-[#F06A6A] hover:border-[#F06A6A] transition-all duration-300 ${social.color}`}
+                                            // className={`group w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center hover:bg-[#F06A6A] hover:border-[#F06A6A] transition-all duration-300 ${social.color}`}
                                         >
                                             <Image
                                                 src={social.icon}
                                                 alt={social.name}
-                                                width={20}
-                                                height={20}
-                                                className="w-5 h-5 group-hover:scale-110 transition-transform duration-300"
+                                                width={32}
+                                                height={32}
+                                                className="w-8 h-8 group-hover:scale-110 transition-transform duration-300"
                                             />
                                         </Link>
                                     ))}
