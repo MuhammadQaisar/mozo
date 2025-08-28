@@ -24,7 +24,7 @@ const AboutPage = () => (
 
     {/* Introduction Section */}
     <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#000000] mb-12">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#000000] mb-12 mt-20">
         Empowering Your Digital Dreams
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -101,9 +101,6 @@ const AboutPage = () => (
       </div>
     </section>
 
-    <div className="text-2xl">
-      Our Mission
-    </div>
 
     <TailoredSolution />
     <MeetTheTeam />

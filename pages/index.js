@@ -86,7 +86,6 @@ export default function Home() {
         />
       </Head>
       <Hero />
-      <About/>
       <Testimonials />
       {/* <LogoGrid /> */}
       {/* <GradientWrapper> */}

@@ -11,7 +11,7 @@ const teamMembers = [
   {
     name: "Danial Gohar",
     role: "Co-Founder",
-    image: "/images/team/dummy2.jpg",
+    image: "/danial-gohar.jpg",
     linkedin: "#",
     bio: "I have worked in a range of capacities across dynamic roles helping tech start ups visualize and attain their goals. My background has revolved around devOps, fullstack software development and project management. Currently, I am leading software design and development of niche software applications as a co-founder at Teamo.",
   },

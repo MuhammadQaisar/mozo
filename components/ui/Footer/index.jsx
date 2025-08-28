@@ -268,23 +268,10 @@ const Footer = () => {
                                 <p className="text-gray-400 text-sm">
                                     © {currentYear} Mozo Technologies. All rights reserved.
                                 </p>
-                                <p className="text-gray-500 text-xs mt-1">
-                                    Crafted with ❤️ in Pakistan
-                                </p>
+                              
                             </div>
                             
-                            <div className="flex items-center space-x-6 text-sm">
-                                <Link href="/privacy" className="text-gray-400 hover:text-[#F06A6A] transition-colors duration-300">
-                                    Privacy Policy
-                                </Link>
-                                <Link href="/terms" className="text-gray-400 hover:text-[#F06A6A] transition-colors duration-300">
-                                    Terms of Service
-                                </Link>
-                                <div className="flex items-center text-gray-400">
-                                    <div className="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></div>
-                                    <span className="text-xs">All systems operational</span>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                 </motion.div>
