@@ -298,21 +298,7 @@ const Hero = () => {
           animation: pulse-button 2.5s ease-in-out infinite;
         }
 
-        /* Futuristic Grid Pattern */
-        .bg-grid-pattern {
-          background-image:
-            linear-gradient(rgba(240, 106, 106, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-          background-size: 50px 50px;
-        }
         
-        @keyframes grid-move {
-          0% { transform: translate(0, 0); }
-          100% { transform: translate(50px, 50px); }
-        }
-        .animate-grid-move {
-          animation: grid-move 20s linear infinite;
-        }
 
         /* Floating Geometric Animations */
         @keyframes float-slow {

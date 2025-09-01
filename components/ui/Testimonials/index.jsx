@@ -3,16 +3,6 @@ import { useState } from "react";
 import { montserrat } from "../font";
 
 const testimonials = [
-     {
-        logo: "/logos/taus.jpg",
-        company: "Taus Enterprises",
-        summary: "The team at Mozo Technologies delivered a robust, scalable solution that perfectly aligned with our business goals. Their attention to detail and commitment to quality is unmatched.",
-        avatar: "/tahir-sir.jpg",
-        name: "Tahir Mehmood",
-        title: "CEO & Founder",
-        rating: 5,
-        project: "Enterprise Web App"
-    },
     {
         logo: "/logos/alkassib.png",
         company: "ALKASSIB",
@@ -23,12 +13,23 @@ const testimonials = [
         rating: 5,
         project: "AI Automation System"
     },
+     {
+        logo: "/logos/taus.jpg",
+        company: "Taus Enterprises",
+        summary: "The team at Mozo Technologies delivered a robust, scalable solution that perfectly aligned with our business goals. Their attention to detail and commitment to quality is unmatched.",
+        avatar: "/Tim.jpeg",
+        name: "Tim",
+        title: "CEO & Founder",
+        rating: 5,
+        project: "Enterprise Web App"
+    },
+    
    
     {
         logo: "/logos/muxilite.jpg",
         company: "MUXILITE",
         summary: "Mozo Technologies transformed our digital presence with their innovative approach. Their team delivered exceptional results that exceeded our expectations, boosting our conversion rates by 300%.",
-        avatar: "/rashida.png",
+        avatar: "/rashida.jpeg",
         name: "Rashida",
         title: "Founder & CEO",
         rating: 5,
@@ -47,8 +48,8 @@ const Testimonials = () => {
     };
 
     return (
-        <SectionWrapper className={`py-20 ${montserrat.className}`}>
-            <div className="max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <SectionWrapper className={`py-10 ${montserrat.className}`}>
+            <div className="max-w-3xl mx-auto flex flex-col items-center justify-center relative">
                 {/* Logo */}
                 <img
                     src={testimonials[activeTestimonial].logo}
@@ -56,24 +57,24 @@ const Testimonials = () => {
                     className="h-14 mb-14 object-contain"
                 />
                 {/* Testimonial */}
-                <blockquote className="text-center text-2xl md:text-xl font-semi-bold text-[#18181e] mb-8 leading-relaxed">
+                <blockquote className="text-center text-2xl md:text-xl font-semi-bold text-[#18181e] mb-12 leading-relaxed">
                     “{testimonials[activeTestimonial].summary}”
                 </blockquote>
                 {/* Author */}
-                <div className="flex flex-col items-center mb-8">
+                <div className="flex flex-col items-center mb-12">
                     <img
                         src={testimonials[activeTestimonial].avatar}
                         alt={testimonials[activeTestimonial].name}
-                        className="w-16 h-16 rounded-full object-cover mb-2"
+                        className="w-16 h-16 rounded-full object-cover mb-4"
                     />
                     <div className="text-[#18181e] font-semi-bold text-base">
                         {testimonials[activeTestimonial].name} . {testimonials[activeTestimonial].title}
                     </div>
                 </div>
-                {/* Next Button */}
+                {/* Next Button - moved to the right side */}
                 <button
                     onClick={handleNext}
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-[#F06A6A]/10 hover:bg-[#F06A6A]/20 transition-colors shadow"
+                    className="flex items-center justify-center w-12 h-12 rounded-full bg-[#F06A6A]/10 hover:bg-[#F06A6A]/20 transition-colors shadow absolute right-0 top-1/2 -translate-y-1/2 -mr-20"
                     aria-label="Next testimonial"
                 >
                     <svg

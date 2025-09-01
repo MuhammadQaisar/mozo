@@ -14,7 +14,7 @@ const HowItWorks = () => {
     {
       number: 1,
       icon: "🔍",
-      title: 'Discovery & Strategy',
+      // title: 'Discovery & Strategy',
       subtitle: 'Understanding Your Vision',
       description: 'We begin with a comprehensive discovery session to understand your business goals, target audience, and project requirements. Our team conducts thorough research and creates a strategic roadmap tailored to your specific needs.',
       duration: '1-2 weeks',
@@ -23,7 +23,7 @@ const HowItWorks = () => {
     {
       number: 2,
       icon: "⚡",
-      title: 'Design & Development',
+      // title: 'Design & Development',
       subtitle: 'Bringing Ideas to Life',
       description: 'Our expert team designs and develops your solution using cutting-edge technologies and industry best practices. We maintain constant communication and provide regular updates throughout the development process.',
       duration: '2-6 weeks',
@@ -32,8 +32,8 @@ const HowItWorks = () => {
     {
       number: 3,
       icon: "🚀",
-      title: 'Launch & Optimize',
-      subtitle: 'Going Live Successfully',
+      // title: 'Launch & Optimize',
+      subtitle: 'Time to Market',
       description: 'We deploy your project with thorough testing and provide comprehensive training. Our team offers ongoing support, monitoring, and optimization to ensure peak performance and continued success.',
       duration: '1 week',
       deliverables: ['Deployment', 'Training', 'Ongoing Support']
@@ -120,13 +120,25 @@ const HowItWorks = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center px-4 py-2 bg-[#F06A6A]/10 rounded-full mb-6">
-            <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
-            <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">Our Process</span>
-          </div>
- <h2 className="text-center text-4xl md:text-5xl font-semi-bold mb-10 text-[#18181e] leading-tight">
-			 How we  <br className="md:hidden" /> works together      
-		</h2>
+          <div className="inline-flex items-center px-4 py-2 bg-[#000000] rounded-full mb-6">
+                        <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
+                        <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">Our Process</span>
+                    </div>
+           <h2 
+                 style={{
+    fontFamily: 'Geist, Arial, sans-serif',
+    letterSpacing: '-.02em',
+    fontSize: '54px',
+    fontWeight: '540',
+    lineHeight: '1.1em',
+    color: '#141b1d',
+    marginBottom: '20px',
+    
+}}
+                 >
+		A simple, effective process to bring your ideas to life
+
+	</h2> 
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
             Our proven 3-step process ensures your project is delivered on time, within budget, and exceeds your expectations.
@@ -172,7 +184,17 @@ const HowItWorks = () => {
                       <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#F06A6A] transition-colors duration-300">
                         {step.title}
                       </h3>
-                      <p className="text-[#F06A6A] font-medium mb-4">{step.subtitle}</p>
+                      <p 
+                      style={{
+    fontFamily: 'Geist, Arial, sans-serif',
+    letterSpacing: '-.02em',
+    fontSize: '22px',
+    fontWeight: '540',
+    lineHeight: '1.1em',
+    color: '#203436ef',
+    marginBottom: '10px',
+  }}
+                      >{step.subtitle}</p>
                       <p className="text-gray-600 leading-relaxed text-base">
                         {step.description}
                       </p>
@@ -222,40 +244,7 @@ const HowItWorks = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-20"
         >
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-lg border border-gray-100 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Ready to Get Started?
-            </h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto text-lg">
-              Let's discuss your project and create a customized plan that fits your timeline and budget.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href="/get-started"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#F06A6A] to-red-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  Start Your Project
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </motion.div>
-              
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href="#contact"
-                  className="inline-flex items-center px-8 py-4 bg-white text-[#F06A6A] font-semibold rounded-2xl border-2 border-[#F06A6A] hover:bg-[#F06A6A] hover:text-white transition-all duration-300"
-                >
-                  Schedule a Call
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </Link>
-              </motion.div>
-            </div>
-          </div>
+         
         </motion.div>
 
         {/* Core Competencies Section */}
@@ -272,12 +261,7 @@ const HowItWorks = () => {
           animation: gradient-x 3s ease infinite;
         }
 
-        .bg-grid-pattern {
-          background-image: 
-            linear-gradient(rgba(240, 106, 106, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(240, 106, 106, 0.03) 1px, transparent 1px);
-          background-size: 60px 60px;
-        }
+        
       `}</style>
     </section>
   );

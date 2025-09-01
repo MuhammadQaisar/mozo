@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SectionWrapper from "../../SectionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
-import { montserrat } from "../font";
+import { montserrat, inter } from "../font";
 import python from "../../../public/icons/python.svg";
 import tensorflow from "../../../public/icons/tensorflow.svg";
 import kaggle from "../../../public/icons/kaggle.svg";
@@ -65,6 +65,7 @@ import sketch from "../../../public/icons/sketch.svg";
 import cassandra from "../../../public/icons/cassandra.svg";
 import FileZilla from "../../../public/icons/FileZilla.svg";
 import Image from "next/image";
+import { b } from "framer-motion/client";
 
 const features = [
     {
@@ -81,7 +82,7 @@ const features = [
             "Automated Decision Making",
         ],
         icons: [pytorch, keras, spark, jupyter, numpy, kafka, openai, kaggle, python, tensorflow, pandas, cassandra],
-        heading: "Data & Artificial Intelligence",
+        heading: "Artificial Intelligence",
         color: "from-blue-500 to-purple-600"
     },
     {
@@ -202,7 +203,7 @@ const Features = () => {
     return (
         <SectionWrapper 
             id="features" 
-            className={`py-20 lg:py-28 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
+            className={`py-10 lg:py-14 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
         >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -220,16 +221,26 @@ const Features = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-20"
                 >
-                    <div className="inline-flex items-center px-4 py-2 bg-[#F06A6A]/10 rounded-full mb-6">
+                   <div className="inline-flex items-center px-4 py-2 bg-[#000000] rounded-full mb-6">
                         <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
                         <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">Our Services</span>
                     </div>
 
-                   <h2 className="text-center text-4xl md:text-5xl font-semi-bold mb-10 text-[#18181e] leading-tight">
-			Comprehensive <br className="md:hidden" /> Digital Solutions
-		</h2>
+                 <h2 
+                 style={{
+    fontFamily: 'Geist, Arial, sans-serif',
+    letterSpacing: '-.02em',
+    fontSize: '54px',
+    fontWeight: '540',
+    lineHeight: '1.1em',
+    color: '#141b1d'
+}}
+                 >
+		What solution do you need
 
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+	</h2> 
+
+                    <p className="mt-6 text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
                         From AI-powered applications to scalable cloud infrastructure, we deliver end-to-end solutions that drive innovation and growth.
                     </p>
                 </motion.div>
@@ -305,9 +316,19 @@ const Features = () => {
                                     <div className="flex items-center mb-4">
                                       
                                         <div>
-                                            <h3 className="text-3xl font-bold text-gray-900 mb-1">
+                                            <h6 
+                                             style={{
+    fontFamily: 'Geist, Arial, sans-serif',
+    letterSpacing: '-.02em',
+    fontSize: '40px',
+    fontWeight: '540',
+    lineHeight: '1.1em',
+    color: '#141b1d'
+}}
+                                            
+                                            >
                                                 {activeFeature.heading}
-                                            </h3>
+                                            </h6>
                                             <p className="text-[#F06A6A] font-medium">{activeFeature.subtitle}</p>
                                         </div>
                                     </div>
@@ -405,12 +426,7 @@ const Features = () => {
                     animation: gradient-x 3s ease infinite;
                 }
 
-                .bg-grid-pattern {
-                    background-image: 
-                        linear-gradient(rgba(240, 106, 106, 0.1) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(240, 106, 106, 0.1) 1px, transparent 1px);
-                    background-size: 20px 20px;
-                }
+                
             `}</style>
         </SectionWrapper>
     );

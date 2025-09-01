@@ -19,7 +19,7 @@ const CTA = () => {
                 className="relative overflow-hidden rounded-3xl shadow-2xl p-6 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-0"
                 style={{
                     background:
-                        "linear-gradient(135deg, #F06A6A 0%, #f7cac9 60%, #000000 100%)",
+                        "linear-gradient(135deg, #F06A6A 0%, #97302eff 60%, #1a1818ff 100%)",
                 }}
             >
                 {/* Content Area: Contains headline and description */}

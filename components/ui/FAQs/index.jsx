@@ -111,15 +111,25 @@ const FAQs = () => {
 				<div
 					className="text-center mb-16"
 				>
-					<div className="inline-flex items-center px-4 py-2 bg-[#F06A6A]/10 rounded-full mb-6">
+					<div className="inline-flex items-center px-4 py-2 bg-[#000000] rounded-full mb-6">
 						<span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
 						<span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">FAQ's</span>
 					</div>
+ <h2 
+                 style={{
+    fontFamily: 'Geist, Arial, sans-serif',
+    letterSpacing: '-.02em',
+    fontSize: '54px',
+    fontWeight: '540',
+    lineHeight: '1.1em',
+    color: '#141b1d',
+    marginBottom: '20px',
+    
+}}
+                 >
+		Frequently Asked Questions
 
-					<h2 className="text-center text-4xl md:text-5xl font-semi-bold mb-10 text-[#18181e] leading-tight">
-			 Frequently Asked <br className="md:hidden" /> Questions     
-		</h2>
-
+	</h2> 
 					<p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
 						Got questions? We've got answers. Here are the most common questions our clients ask about our services and process.
 					</p>
@@ -165,7 +175,15 @@ const FAQs = () => {
 										</div>
 										
 										{/* Question */}
-										<h3 className="text-lg lg:text-xl font-semibold text-gray-900 group-hover:text-[#F06A6A] transition-colors duration-300">
+										<h3 style={{
+    fontFamily: 'Geist, Arial, sans-serif',
+    letterSpacing: '-.02em',
+    fontSize: '22px',
+    fontWeight: '540',
+    lineHeight: '1.1em',
+    color: '#203436ef'
+	
+}}>
 											{faq.question}
 										</h3>
 									</div>
@@ -228,15 +246,7 @@ const FAQs = () => {
 							Can't find the answer you're looking for? Our team is here to help. Get in touch and we'll get back to you within 24 hours.
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">
-							<a
-								href="#contact"
-								className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#F06A6A] to-red-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
-							>
-								Contact Us
-								<svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-								</svg>
-							</a>
+							
 							<a
 								href="/get-started"
 								className="inline-flex items-center px-8 py-4 bg-white text-[#F06A6A] font-semibold rounded-2xl border-2 border-[#F06A6A] hover:bg-[#F06A6A] hover:text-white transition-all duration-300"
