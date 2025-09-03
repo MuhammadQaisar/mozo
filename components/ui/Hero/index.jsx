@@ -14,9 +14,14 @@ const Hero = () => {
     { src: "/icons/python.svg", alt: "Python" },
     { src: "/icons/nodejs.svg", alt: "Node.js" },
     { src: "/icons/angular.svg", alt: "Angular" },
-    // { src: "/icons/vue.svg", alt: "Vue" },
+    { src: "/icons/kubernetes.svg", alt: "Kubernetes" },
     { src: "/icons/figma.svg", alt: "Figma" },
     { src: "/icons/sketch.svg", alt: "Sketch" },
+    { src: "/icons/docker.svg", alt: "Docker" },
+    { src: "/icons/mongo.svg", alt: "MongoDB" },
+    { src: "/icons/mysql.svg", alt: "MySQL" }, 
+    { src: "/icons/pgsql.svg", alt: "PostgreSQL" },
+    { src: "/icons/jenkins.svg", alt: "Jenkins" },
   ];
 
   const sphereRef = useRef(null);
@@ -44,10 +49,10 @@ const Hero = () => {
         const rotatedX = x * Math.cos(angle) - z * Math.sin(angle);
         const rotatedZ = x * Math.sin(angle) + z * Math.cos(angle);
 
-        const scale = (rotatedZ + radius) / (2 * radius);
+        const scale = Math.max(0.5, (rotatedZ + radius) / (2 * radius));
 
         icon.style.transform = `translate3d(${centerX + rotatedX}px, ${centerY + y}px, 0) scale(${scale})`;
-        icon.style.opacity = scale;
+        icon.style.opacity = Math.max(0.5, scale);
         icon.style.zIndex = Math.round(scale * 100);
       }
       requestAnimationFrame(animate);
