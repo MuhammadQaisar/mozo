@@ -40,7 +40,7 @@ const About = () => {
     {
       title: 'Our Clients',
       description:
-        'Today, we are proud to serve a diverse range of clients across the fintech, healthcare, and e-commerce sectors. Our commitment to excellence and our passion for technology have made us a trusted partner for businesses looking to navigate the complexities of the digital world.',
+        'Today, we are proud to serve to serve a diverse range of clients across the fintech, healthcare, and e-commerce sectors. Our commitment to excellence and our passion for technology have made us a trusted partner for businesses looking to navigate the complexities of the digital world.',
     },
   ];
 
@@ -49,12 +49,12 @@ const About = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> {/* Centered content container with responsive horizontal padding */}
         {/* Section Header: Title and Subtitle */}
         <div className="text-center"> {/* Center-aligns the text within this div */}
-          <h2 className="text-3xl sm:text-4xl xl:text-5xl font-semi-bold text-gray-900"> {/* Responsive font sizes for the main title */}
+          <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold text-gray-900"> {/* Responsive font sizes for the main title */}
              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#F06A6A] to-black mt-2">
               About Mozo Technologies
             </span>
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-gray-600"> {/* Responsive font sizes for the subtitle */}
+          </h1>
+          <p className="mt-4 text-base sm:text-lg font-normal text-gray-600"> {/* Responsive font sizes for the subtitle */}
             Simplifying Secure IT for a Complex World
           </p>
         </div>
@@ -72,8 +72,8 @@ const About = () => {
               variants={cardVariants} // Applies the defined animation variants
             >
               <div className="p-8 px-4 sm:px-8"> {/* Inner padding for card content */}
-                <h3 className="text-xl font-semibold text-gray-900 text-center">{item.title}</h3> {/* Card title */}
-                <p className="mt-4 text-base text-gray-700 leading-relaxed text-center">{item.description}</p> {/* Card description */}
+                <h2 className="text-xl font-bold text-gray-900 text-center">{item.title}</h2> {/* Card title */}
+                <p className="mt-4 text-base text-gray-700 text-center">{item.description}</p> {/* Card description */}
               </div>
             </motion.div>
           ))}

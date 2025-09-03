@@ -48,7 +48,7 @@ const Testimonials = () => {
     };
 
     return (
-        <SectionWrapper className={`py-10 ${montserrat.className}`}>
+        <SectionWrapper className={`pb-10 ${montserrat.className}`}>
             <div className="max-w-3xl mx-auto flex flex-col items-center justify-center relative">
                 {/* Logo */}
                 <img

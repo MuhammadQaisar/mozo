@@ -1,9 +1,7 @@
-import { motion } from "framer-motion";
-
 const SectionWrapper = ({ children, ...props }) => (
-    <motion.section {...props} className={`py-12 sm:py-16 md:py-20 ${props.className || ""}`}>
+    <section {...props} className={`py-8 sm:py-12 md:py-16 ${props.className || ""}`}>
         {children}
-    </motion.section>
+    </section>
 )
 
 export default SectionWrapper

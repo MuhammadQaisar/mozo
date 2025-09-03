@@ -120,22 +120,11 @@ const HowItWorks = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center px-4 py-2 bg-[#000000] rounded-full mb-6">
+          <div className="inline-flex items-center px-4 py-2 bg-[##1f2937] rounded-full mb-10">
                         <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
                         <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">Our Process</span>
                     </div>
-           <h2 
-                 style={{
-    fontFamily: 'Geist, Arial, sans-serif',
-    letterSpacing: '-.02em',
-    fontSize: '54px',
-    fontWeight: '540',
-    lineHeight: '1.1em',
-    color: '#141b1d',
-    marginBottom: '20px',
-    
-}}
-                 >
+           <h2 className="text-4xl font-extrabold text-gray-800 mb-5">
 		A simple, effective process to bring your ideas to life
 
 	</h2> 
@@ -182,19 +171,8 @@ const HowItWorks = () => {
                     {/* Step Content */}
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#F06A6A] transition-colors duration-300">
-                        {step.title}
+                        {step.subtitle}
                       </h3>
-                      <p 
-                      style={{
-    fontFamily: 'Geist, Arial, sans-serif',
-    letterSpacing: '-.02em',
-    fontSize: '22px',
-    fontWeight: '540',
-    lineHeight: '1.1em',
-    color: '#203436ef',
-    marginBottom: '10px',
-  }}
-                      >{step.subtitle}</p>
                       <p className="text-gray-600 leading-relaxed text-base">
                         {step.description}
                       </p>

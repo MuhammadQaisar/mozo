@@ -111,22 +111,11 @@ const FAQs = () => {
 				<div
 					className="text-center mb-16"
 				>
-					<div className="inline-flex items-center px-4 py-2 bg-[#000000] rounded-full mb-6">
+					<div className="inline-flex items-center px-4 py-2 bg-[#1f2937] rounded-full mb-10">
 						<span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
 						<span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">FAQ's</span>
 					</div>
- <h2 
-                 style={{
-    fontFamily: 'Geist, Arial, sans-serif',
-    letterSpacing: '-.02em',
-    fontSize: '54px',
-    fontWeight: '540',
-    lineHeight: '1.1em',
-    color: '#141b1d',
-    marginBottom: '20px',
-    
-}}
-                 >
+ <h2 className="text-4xl font-extrabold text-gray-800 mb-5">
 		Frequently Asked Questions
 
 	</h2> 
@@ -239,7 +228,7 @@ const FAQs = () => {
 					className="text-center mt-16"
 				>
 					<div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-gray-100 max-w-4xl mx-auto">
-						<h3 className="text-2xl font-bold text-gray-900 mb-4">
+						<h3 className="text-2xl font-bold text-[#1f2937] mb-4">
 							Still Have Questions?
 						</h3>
 						<p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -249,7 +238,7 @@ const FAQs = () => {
 							
 							<a
 								href="/get-started"
-								className="inline-flex items-center px-8 py-4 bg-white text-[#F06A6A] font-semibold rounded-2xl border-2 border-[#F06A6A] hover:bg-[#F06A6A] hover:text-white transition-all duration-300"
+								className="inline-flex items-center px-8 py-4 bg-white text-[#1f2937] font-semibold rounded-2xl border-2 border-[#1f2937] hover:bg-[#1f2937] hover:text-white transition-all duration-300"
 							>
 								Schedule a Call
 								<svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -203,7 +203,7 @@ const Features = () => {
     return (
         <SectionWrapper 
             id="features" 
-            className={`py-10 lg:py-14 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
+            className={`pt-10 lg:pt-14 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
         >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -221,21 +221,12 @@ const Features = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-20"
                 >
-                   <div className="inline-flex items-center px-4 py-2 bg-[#000000] rounded-full mb-6">
+                   <div className="inline-flex items-center px-4 py-2 bg-[#1f2937] rounded-full mb-10">
                         <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
                         <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">Our Services</span>
                     </div>
 
-                 <h2 
-                 style={{
-    fontFamily: 'Geist, Arial, sans-serif',
-    letterSpacing: '-.02em',
-    fontSize: '54px',
-    fontWeight: '540',
-    lineHeight: '1.1em',
-    color: '#141b1d'
-}}
-                 >
+                 <h2 className="text-4xl font-extrabold text-gray-800">
 		What solution do you need
 
 	</h2> 
@@ -316,20 +307,10 @@ const Features = () => {
                                     <div className="flex items-center mb-4">
                                       
                                         <div>
-                                            <h6 
-                                             style={{
-    fontFamily: 'Geist, Arial, sans-serif',
-    letterSpacing: '-.02em',
-    fontSize: '40px',
-    fontWeight: '540',
-    lineHeight: '1.1em',
-    color: '#141b1d'
-}}
-                                            
-                                            >
+                                            <h3 className="text-3xl font-bold text-gray-900">
                                                 {activeFeature.heading}
-                                            </h6>
-                                            <p className="text-[#F06A6A] font-medium">{activeFeature.subtitle}</p>
+                                            </h3>
+                                            {/* <p className="text-[#F06A6A] font-medium">{activeFeature.subtitle}</p> */}
                                         </div>
                                     </div>
                                     

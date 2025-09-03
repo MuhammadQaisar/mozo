@@ -11,7 +11,7 @@ const Brand = () => (
     <Link href="/">
         <div className="flex items-center">
             <Image
-                src="/Mozo-logo.svg"
+                src="/navbar-logo.svg"
                 width={170} // Increased width for better visibility
                 height={170} // Increased height for better visibility
                 alt="Mozo Technologies logo"
