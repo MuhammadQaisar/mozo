@@ -95,19 +95,13 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4 mt-8"
+              className="mt-8 flex justify-center md:justify-start"
             >
               <Link
                 href="/get-started"
-                className="w-full sm:w-auto bg-[#F06A6A] text-white font-semibold rounded-lg px-8 py-3 text-lg shadow-md hover:bg-red-600 transform hover:scale-105 transition-all duration-300 ease-in-out"
+                className="inline-block bg-[#1f2937] text-white font-semibold rounded-lg px-8 py-4 text-lg shadow-lg hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out"
               >
-                Get Started
-              </Link>
-              <Link
-                href="#features"
-                className="w-full sm:w-auto bg-transparent border-2 border-gray-300 text-gray-800 font-semibold rounded-lg px-8 py-3 text-lg shadow-md hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 ease-in-out"
-              >
-                Explore Services
+                Book a consultation - it's free
               </Link>
             </motion.div>
           </motion.div>
