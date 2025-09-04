@@ -24,7 +24,7 @@ const AboutPage = () => (
 
     {/* Introduction Section */}
     <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#000000] mb-12 mt-20">
+      <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#1f2937] mb-12 mt-20">
         Empowering Your Digital Dreams
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -43,7 +43,7 @@ const AboutPage = () => (
         </div>
         {/* Side Cards */}
         <div className="flex flex-col gap-8">
-          <div className="rounded-3xl bg-[#F06A6A]/10 p-6 text-[#000000] shadow">
+          <div className="rounded-3xl bg-[#F06A6A]/10 p-6 text-[#1f2937] shadow">
             <div className="flex items-center mb-2">
               <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center mr-2">
                 <span className="font-bold text-[#F06A6A]">M</span>

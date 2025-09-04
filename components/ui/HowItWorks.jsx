@@ -15,7 +15,7 @@ const HowItWorks = () => {
       number: 1,
       icon: "🔍",
       // title: 'Discovery & Strategy',
-      subtitle: 'Understanding Your Vision',
+      subtitle: 'UNDERSTANDING YOUR VISION',
       description: 'We begin with a comprehensive discovery session to understand your business goals, target audience, and project requirements. Our team conducts thorough research and creates a strategic roadmap tailored to your specific needs.',
       duration: '1-2 weeks',
       deliverables: ['Project Brief', 'Technical Specification', 'Timeline & Milestones']
@@ -24,7 +24,7 @@ const HowItWorks = () => {
       number: 2,
       icon: "⚡",
       // title: 'Design & Development',
-      subtitle: 'Bringing Ideas to Life',
+      subtitle: 'BRINGING IDEAS TO LIFE',
       description: 'Our expert team designs and develops your solution using cutting-edge technologies and industry best practices. We maintain constant communication and provide regular updates throughout the development process.',
       duration: '2-6 weeks',
       deliverables: ['UI/UX Design', 'Development', 'Quality Assurance']
@@ -33,7 +33,7 @@ const HowItWorks = () => {
       number: 3,
       icon: "🚀",
       // title: 'Launch & Optimize',
-      subtitle: 'Time to Market',
+      subtitle: 'TIME TO MARKET',
       description: 'We deploy your project with thorough testing and provide comprehensive training. Our team offers ongoing support, monitoring, and optimization to ensure peak performance and continued success.',
       duration: '1 week',
       deliverables: ['Deployment', 'Training', 'Ongoing Support']
@@ -125,12 +125,12 @@ const HowItWorks = () => {
                         <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">Our Process</span>
                     </div>
            <h2 className="text-4xl font-extrabold text-gray-800 mb-5">
-		A simple, effective process to bring your ideas to life
+		A SIMPLE, EFFECTIVE PROCESS TO BRING YOUR IDEAS TO LIFE
 
 	</h2> 
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            Our proven 3-step process ensures your project is delivered on time, within budget, and exceeds your expectations.
+            Our proven three step process ensures your project is delivered on time, within budget, and exceeds your expectations.
           </p>
 
          

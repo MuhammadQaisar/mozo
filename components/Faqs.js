@@ -36,7 +36,7 @@ const Faqs = () => {
 
   return (
     <section className="max-w-4xl mx-auto py-16">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-[#000000] mb-8">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-8">
         Frequently Asked Questions
       </h2>
       <div className="space-y-6">
@@ -46,7 +46,7 @@ const Faqs = () => {
               className="flex items-center justify-between cursor-pointer"
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
             >
-              <span className="text-[#000000] font-medium">{faq.question}</span>
+              <span className="text-[#1f2937] font-medium">{faq.question}</span>
               <span className="text-2xl font-bold text-[#F06A6A] select-none">{openIndex === idx ? "-" : "+"}</span>
             </div>
             {openIndex === idx && (

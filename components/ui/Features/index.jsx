@@ -82,14 +82,14 @@ const features = [
             "Automated Decision Making",
         ],
         icons: [pytorch, keras, spark, jupyter, numpy, kafka, openai, kaggle, python, tensorflow, pandas, cassandra],
-        heading: "Artificial Intelligence",
+        heading: "ARTIFICIAL INTELLIGENCE",
         color: "from-blue-500 to-purple-600"
     },
     {
         icon: (
             <Image src="/icons/Frame.svg" width={64} height={64} alt="Digital Marketing Icon" />
         ),
-        title: "Digital Marketing",
+        title: "DIGITAL MARKETING",
         subtitle: "Growth-Driven Marketing Solutions",
         description: "Accelerate your business growth with data-driven marketing strategies, targeted campaigns, and comprehensive analytics that deliver measurable results and maximize ROI.",
         benefits: [
@@ -99,14 +99,14 @@ const features = [
             "Email Marketing & Automation",
         ],
         icons: [semrush, Ahrefs, googleanalytics, hubspot, mailchimp, meta, googleAds, instagram],
-        heading: "Digital Marketing",
+        heading: "DIGITAL MARKETING",
         color: "from-pink-500 to-red-600"
     },
     {
         icon: (
            <Image src="/icons/cloudcomputing.svg" width={64} height={64} alt="CloudOps Icon" />
         ),
-        title: "CloudOps",
+        title: "CLOUDOPS",
         subtitle: "Cloud Infrastructure & Operations",
         description: "Scale your infrastructure seamlessly with secure, reliable, and cost-effective cloud solutions. We optimize performance, ensure high availability, and manage your cloud operations.",
         benefits: [
@@ -116,14 +116,14 @@ const features = [
             "Security & Compliance Management",
         ],
         icons: [aws, azure, terraform, docker, kubernetes, gitlab, nginx, ansible, google, digitalocean, FileZilla],
-        heading: "CloudOps",
+        heading: "CLOUDOPS",
         color: "from-cyan-500 to-blue-600"
     },
     {
         icon: (
            <Image src="/icons/web.svg" width={64} height={64} alt="Web Development Icon" />
         ),
-        title: "Web Development",
+        title: "WEB DEVELOPMENT",
         subtitle: "Modern Web Applications",
         description: "Create powerful, responsive, and scalable web applications using the latest technologies. From simple websites to complex enterprise solutions, we deliver exceptional digital experiences.",
         benefits: [
@@ -133,14 +133,14 @@ const features = [
             "API Development & Integration",
         ],
         icons: [reactjs, nextjs, tailwind, nodejs, vercel, shopify, wordpress, mongo, mysql, php, pgsql, woocommerce, typescript, java, express, dotnet, gitlab],
-        heading: "Web Development",
+        heading: "WEB DEVELOPMENT",
         color: "from-green-500 to-emerald-600"
     },
     {
         icon: (
             <Image src="/icons/uiux.svg" width={64} height={64} alt="UI/UX Icon" />
         ),
-        title: "UI/UX Design",
+        title: "UI/UX DESIGN",
         subtitle: "User-Centered Design",
         description: "Design intuitive and visually stunning user experiences that delight your customers and drive engagement. Our design process focuses on usability, accessibility, and conversion optimization.",
         benefits: [
@@ -150,14 +150,14 @@ const features = [
             "Usability & Accessibility Audits",
         ],
         icons: [figma, framer, Ae, adobexd, miro, sketch],
-        heading: "UI/UX Design",
+        heading: "UI/UX DESIGN",
         color: "from-purple-500 to-pink-600"
     },
     {
         icon: (
            <Image src="/icons/devOps.svg" width={64} height={64} alt="DevOps Icon" />
         ),
-        title: "DevOps",
+        title: "DEVOPS",
         subtitle: "Development & Operations",
         description: "Streamline your development lifecycle with robust CI/CD pipelines, automated testing, and infrastructure management. Accelerate deployment while maintaining quality and reliability.",
         benefits: [
@@ -167,7 +167,7 @@ const features = [
             "Security & Compliance Integration",
         ],
         icons: [aws, azure, docker, kubernetes, terraform, apache, grafana, prometheus, typescript, java, jenkins, gitlab, nginx, ansible],
-        heading: "DevOps & Cloud Engineering",
+        heading: "DEVOPS & CLOUD ENGINEERING",
         color: "from-orange-500 to-red-600"
     },
 ];
@@ -227,7 +227,7 @@ const Features = () => {
                     </div>
 
                  <h2 className="text-4xl font-extrabold text-gray-800">
-		What solution do you need
+		WHAT SOLUTION DO WE PROVIDE?
 
 	</h2> 
 
