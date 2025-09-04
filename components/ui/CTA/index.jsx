@@ -19,7 +19,7 @@ const CTA = () => {
                 className="relative overflow-hidden rounded-3xl shadow-2xl p-6 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-0"
                 style={{
                     background:
-                        "linear-gradient(135deg, #F06A6A 0%, #97302eff 60%, #1a1818ff 100%)",
+                        "linear-gradient(135deg, #1f2937 0%, #1f2937 50%, #1f2937 100%)",
                 }}
             >
                 {/* Content Area: Contains headline and description */}
@@ -37,7 +37,7 @@ const CTA = () => {
                 <div className="relative z-10 flex-shrink-0 -mt-2 lg:mt-0">
                     <NavLink
                         href="/get-started"
-                        className="block w-full lg:w-auto px-5 py-2 rounded-full font-bold text-base text-[#FFFFFF] bg-[#F06A6A] shadow-lg hover:bg-[#000000] hover:text-[#F06A6A] transition-all duration-300"
+                        className="block w-full lg:w-auto px-5 py-2 rounded-full font-bold text-base text-[#FFFFFF] bg-[#F06A6A] shadow-lg hover:bg-gray-200 transition-all duration-300"
                     >
                         BOOK A FREE DEMO
                     </NavLink>

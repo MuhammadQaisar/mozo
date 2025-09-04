@@ -244,48 +244,19 @@ const Features = () => {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="xl:col-span-2"
+                        className="xl:col-span-2 flex flex-col justify-center"
                     >
-                        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 gap-4">
+                        <div className="flex flex-col gap-2">
                             {features.map((item, idx) => (
                                 <motion.div
                                     key={idx}
                                     variants={cardVariants}
-                                    whileHover={{ scale: 1.05, y: -5 }}
-                                    whileTap={{ scale: 0.95 }}
                                     onClick={() => setActiveIdx(idx)}
-                                    className={`group cursor-pointer transition-all duration-300 ${
-                                        activeIdx === idx ? 'scale-105' : ''
-                                    }`}
+                                    className={`cursor-pointer rounded-lg overflow-hidden`}
                                 >
-                                    <div className={`relative h-40 rounded-2xl p-6 shadow-lg border transition-all duration-300 overflow-hidden ${
-                                        activeIdx === idx 
-                                            ? 'bg-[#000000] text-white border-[#000000] shadow-2xl' 
-                                            : 'bg-white/80 backdrop-blur-sm text-gray-800 border-gray-200 hover:border-[#F06A6A]/30 hover:shadow-xl'
-                                    }`}>
-                                        {/* Background Pattern */}
-                                        <div className={`absolute inset-0 opacity-10 ${
-                                            activeIdx === idx ? 'bg-white' : 'bg-[#F06A6A]'
-                                        } bg-grid-pattern`}></div>
-                                        
-                                        <div className="relative z-10 flex flex-col items-center text-center h-full">
-                                            <div className="mb-3 transform group-hover:scale-110 transition-transform duration-300">
-                                                {item.icon}
-                                            </div>
-                                            <h3 className="font-bold text-sm leading-tight">{item.title}</h3>
-                                        </div>
-
-                                        {/* Active Indicator */}
-                                        {activeIdx === idx && (
-                                            <motion.div
-                                                layoutId="activeIndicator"
-                                                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full"
-                                                initial={{ opacity: 0 }}
-                                                animate={{ opacity: 1 }}
-                                                transition={{ duration: 0.3 }}
-                                            />
-                                        )}
-                                    </div>
+                                    <h3 className={`font-bold text-lg py-4 transition-all duration-300 ${activeIdx === idx ? 'text-gray-900 border-l-4 border-[#F06A6A] bg-gray-100' : 'text-gray-500 hover:bg-gray-50 hover:border-l-4 hover:border-gray-200'}`}>
+                                        <span className="ml-6">{item.title}</span>
+                                    </h3>
                                 </motion.div>
                             ))}
                         </div>
