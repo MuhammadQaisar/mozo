@@ -1,17 +1,15 @@
 const ServiceIntro = () => (
-  <section className="max-w-3xl mx-auto text-center py-16">
-    <p className="text-[#F06A6A] font-semibold mb-2 tracking-wide uppercase">
-      INTRODUCING MOZO TECHNOLOGIES
+  <section className="max-w-4xl mx-auto text-center pt-20 md:pt-28 pb-12 bg-white">
+    <p className="text-sm text-gray-500 font-medium tracking-widest uppercase mb-3">
+      Our Offerings
     </p>
-    <h1 className="text-4xl md:text-5xl font-extrabold text-[#000000] mb-4">
-      OUR SERVICES
+    <h1 className="text-4xl md:text-6xl font-extrabold text-[#1f2937] mb-6 leading-tight">
+      Services Tailored for Growth
     </h1>
-    <p className="text-lg text-[#000000] mb-10">
+    <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
       Explore the array of solutions we’ve crafted with your success in mind. Our services are designed to elevate your business and propel you toward your goals. Discover how we can be your partner in growth.
     </p>
-    <h2 className="text-3xl md:text-4xl font-bold text-[#000000] mt-8">
-      Optimize your time and budget
-    </h2>
+    {/* I'm removing the "Optimize your time and budget" heading as it feels a bit redundant and the new title covers the benefit-driven aspect. */}
   </section>
 );
 

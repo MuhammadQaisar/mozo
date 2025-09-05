@@ -27,7 +27,7 @@ const teamMembers = [
 const MeetTheTeam = () => (
   <section className="max-w-7xl mx-auto px-4 py-16">
     <h2 className="text-xl font-semibold text-[#1f2937] mb-2">Our Core Team</h2>
-    <hr className="mb-8 border-[#1f2937]" />
+    <hr className="mb-8 border-gray-200" />
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {teamMembers.map((member, idx) => (
         <div

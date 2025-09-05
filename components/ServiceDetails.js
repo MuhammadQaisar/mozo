@@ -5,7 +5,7 @@ import { slugify } from "./utils";
 const ServiceDetails = () => {
 
   return (
-    <section className="w-full bg-white py-12">
+    <section className="w-full bg-white pt-0 pb-12">
       <ServiceNav />
       {services.map((service, idx) => (
         <div
