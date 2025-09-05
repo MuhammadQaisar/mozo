@@ -223,7 +223,7 @@ const Features = () => {
                 >
                    <div className="inline-flex items-center px-4 py-2 bg-[#1f2937] rounded-full mb-10">
                         <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
-                        <span className="text-sm font-medium text-[#F06A6A] uppercase tracking-wider">Our Services</span>
+                        <span className="text-sm font-medium text-white uppercase tracking-wider">Our Services</span>
                     </div>
 
                  <h2 className="text-4xl font-extrabold text-gray-800">
@@ -246,7 +246,7 @@ const Features = () => {
                         viewport={{ once: true, amount: 0.2 }}
                         className="xl:col-span-2 flex flex-col justify-center"
                     >
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-4">
                             {features.map((item, idx) => (
                                 <motion.div
                                     key={idx}
@@ -281,7 +281,7 @@ const Features = () => {
                                             <h3 className="text-3xl font-bold text-gray-900">
                                                 {activeFeature.heading}
                                             </h3>
-                                            {/* <p className="text-[#F06A6A] font-medium">{activeFeature.subtitle}</p> */}
+                                            {/* <p className="text-[#1f2937] font-medium">{activeFeature.subtitle}</p> */}
                                         </div>
                                     </div>
                                     
@@ -354,12 +354,9 @@ const Features = () => {
                                         href="#contact"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#F06A6A] to-red-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                                        className="inline-block bg-[#1f2937] text-white font-semibold rounded-lg px-8 py-4 text-lg shadow-lg hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out"
                                     >
                                         Get Started with {activeFeature.title}
-                                        <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
                                     </motion.a>
                                 </div>
                             </motion.div>

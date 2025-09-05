@@ -1,6 +1,7 @@
-import SectionWrapper from "../../SectionWrapper";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { montserrat } from "../font";
+import SectionWrapper from "../../SectionWrapper";
 
 const testimonials = [
     {
@@ -23,8 +24,6 @@ const testimonials = [
         rating: 5,
         project: "Enterprise Web App"
     },
-    
-   
     {
         logo: "/logos/muxilite.jpg",
         company: "MUXILITE",
@@ -35,59 +34,83 @@ const testimonials = [
         rating: 5,
         project: "E-commerce Platform"
     }
-    
 ];
 
 const Testimonials = () => {
-    const [activeTestimonial, setActiveTestimonial] = useState(0);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const handleNext = () => {
-        setActiveTestimonial((prev) =>
-            prev === testimonials.length - 1 ? 0 : prev + 1
-        );
+        setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
     };
 
+    const handlePrev = () => {
+        setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    };
+
+    const activeTestimonial = testimonials[activeIndex];
+
     return (
-        <SectionWrapper className={`pb-10 ${montserrat.className}`}>
-            <div className="max-w-3xl mx-auto flex flex-col items-center justify-center relative">
-                {/* Logo */}
-                <img
-                    src={testimonials[activeTestimonial].logo}
-                    alt={testimonials[activeTestimonial].company}
-                    className="h-14 mb-14 object-contain"
-                />
-                {/* Testimonial */}
-                <blockquote className="text-center text-2xl md:text-xl font-semi-bold text-[#18181e] mb-12 leading-relaxed">
-                    “{testimonials[activeTestimonial].summary}”
-                </blockquote>
-                {/* Author */}
-                <div className="flex flex-col items-center mb-12">
-                    <img
-                        src={testimonials[activeTestimonial].avatar}
-                        alt={testimonials[activeTestimonial].name}
-                        className="w-16 h-16 rounded-full object-cover mb-4"
-                    />
-                    <div className="text-[#18181e] font-semi-bold text-base">
-                        {testimonials[activeTestimonial].name} . {testimonials[activeTestimonial].title}
-                    </div>
-                </div>
-                {/* Next Button - moved to the right side */}
-                <button
-                    onClick={handleNext}
-                    className="flex items-center justify-center w-12 h-12 rounded-full bg-[#F06A6A]/10 hover:bg-[#F06A6A]/20 transition-colors shadow absolute right-0 top-1/2 -translate-y-1/2 -mr-20"
-                    aria-label="Next testimonial"
-                >
-                    <svg
-                        className="w-6 h-6 text-[#18181e]"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+        <SectionWrapper className={`py-20 md:py-28 bg-white ${montserrat.className}`}>
+            <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">What Our Clients Say</h2>
+                <p className="text-lg text-gray-600 mb-12">We are trusted by businesses of all sizes.</p>
+
+                <div className="relative">
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={activeIndex}
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -30 }}
+                            transition={{ duration: 0.5 }}
+                            className="flex flex-col items-center"
+                        >
+                            <div className="flex items-center mb-4">
+                                {Array.from({ length: 5 }).map((_, i) => (
+                                    <svg key={i} className={`w-6 h-6 ${i < activeTestimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                    </svg>
+                                ))}
+                            </div>
+
+                            <blockquote className="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed mb-8 max-w-3xl">
+                                “{activeTestimonial.summary}”
+                            </blockquote>
+
+                            <div className="flex items-center">
+                                <img
+                                    src={activeTestimonial.avatar}
+                                    alt={activeTestimonial.name}
+                                    className="w-16 h-16 rounded-full object-cover mr-4"
+                                />
+                                <div>
+                                    <div className="font-bold text-gray-900">{activeTestimonial.name}</div>
+                                    <div className="text-gray-600">{activeTestimonial.title}, {activeTestimonial.company}</div>
+                                </div>
+                                <img
+                                    src={activeTestimonial.logo}
+                                    alt={activeTestimonial.company}
+                                    className="h-10 ml-8 object-contain grayscale opacity-60"
+                                />
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
+
+                    <button
+                        onClick={handlePrev}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors -ml-16"
+                        aria-label="Previous testimonial"
                     >
-                        <path d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
+                        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button
+                        onClick={handleNext}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors -mr-16"
+                        aria-label="Next testimonial"
+                    >
+                        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
             </div>
         </SectionWrapper>
     );

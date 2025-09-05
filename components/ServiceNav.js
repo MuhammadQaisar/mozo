@@ -11,7 +11,7 @@ const ServiceNav = () => (
   <nav className="w-full flex flex-wrap justify-center gap-x-8 gap-y-4 py-8 mt-20">
     {navItems.map(item => (
       <Link key={item.label} href={item.href} passHref>
-        <span className="cursor-pointer text-[#000000] font-medium hover:text-[#F06A6A] transition-colors mt-4">
+        <span className="cursor-pointer text-[#1f2937] font-medium hover:text-[#F06A6A] transition-colors">
           {item.label}
         </span>
       </Link>

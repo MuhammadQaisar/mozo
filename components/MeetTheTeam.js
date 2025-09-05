@@ -26,13 +26,15 @@ const teamMembers = [
 
 const MeetTheTeam = () => (
   <section className="max-w-7xl mx-auto px-4 py-16">
-    <h2 className="text-xl font-semibold text-[#1f2937] mb-2">Our Core Team</h2>
-    <hr className="mb-8 border-gray-200" />
+    <div className="text-center">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-2">Our Core Team</h2>
+        <hr className="mb-12 border-gray-200 w-24 mx-auto" />
+    </div>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {teamMembers.map((member, idx) => (
         <div
           key={idx}
-          className="flex flex-col bg-[#1f2937] rounded-[2rem] overflow-hidden shadow-lg"
+          className="flex flex-col bg-[#1f2937] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
         >
           <img
             src={member.image}
@@ -41,18 +43,18 @@ const MeetTheTeam = () => (
           />
           <div className="p-6 flex flex-col flex-1">
             <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
-            <div className="flex items-center mb-2">
-              <FaLinkedin className="text-[#1A73E8] mr-2" />
+            <p className="text-base text-gray-300 mt-2 flex-1">{member.bio}</p>
+            <div className="mt-4">
               <a
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white text-sm font-medium hover:underline"
+                className="inline-flex items-center bg-[#1f2937] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#F06A6A] transition-colors"
               >
+                <FaLinkedin className="mr-2" />
                 LinkedIn
               </a>
             </div>
-            <p className="text-white text-sm mt-2">{member.bio}</p>
           </div>
         </div>
       ))}

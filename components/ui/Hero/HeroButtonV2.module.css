@@ -1,0 +1,163 @@
+/* Base styles for the animation layers */
+.white, .border, .darkBorderBg, .glow {
+  max-height: 70px; /* Adjusted to fit button height */
+  max-width: 314px; /* Adjusted to fit button width */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  border-radius: 12px;
+  filter: blur(3px);
+}
+
+/* Container for the button and animation layers */
+.poda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Crucial for absolute positioning of children */
+  height: 64px; /* Height of the button (py-4 = 16px top + 16px bottom + text height) */
+  width: 250px; /* Approximate width of the button (px-8 = 32px left + 32px right + text width) */
+  border-radius: 12px; /* Match border-radius of the animation layers */
+}
+
+/* Specific styles for .white layer */
+.white {
+  max-height: 63px;
+  max-width: 307px;
+  border-radius: 10px;
+  filter: blur(2px);
+}
+.white::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(83deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: brightness(1.4);
+  background-image: conic-gradient(
+    rgba(0, 0, 0, 0) 0%,
+    #F06A6A, /* Brand Red */
+    rgba(0, 0, 0, 0) 8%,
+    rgba(0, 0, 0, 0) 50%,
+    #1f2937, /* Brand Dark Gray */
+    rgba(0, 0, 0, 0) 58%
+  );
+  transition: all 2s;
+}
+
+/* Specific styles for .border layer */
+.border {
+  max-height: 59px;
+  max-width: 303px;
+  border-radius: 11px;
+  filter: blur(0.5px);
+}
+.border::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(70deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  filter: brightness(1.3);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(
+    #1f2937, /* Brand Dark Gray */
+    #F06A6A 5%, /* Brand Red */
+    #1f2937 14%,
+    #1f2937 50%,
+    #F06A6A 60%,
+    #1f2937 64% 
+  );
+  transition: all 2s;
+}
+
+/* Specific styles for .darkBorderBg layer */
+.darkBorderBg {
+  max-height: 65px;
+  max-width: 312px;
+}
+.darkBorderBg::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(82deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(
+    rgba(0, 0, 0, 0),
+    #1f2937, /* Brand Dark Gray */
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 0, 0) 50%,
+    #F06A6A, /* Brand Red */
+    rgba(0, 0, 0, 0) 60%
+  );
+  transition: all 2s;
+}
+
+/* Hover animations for .poda */
+.poda:hover > .darkBorderBg::before { transform: translate(-50%, -50%) rotate(262deg); }
+.poda:hover > .glow::before { transform: translate(-50%, -50%) rotate(240deg); }
+.poda:hover > .white::before { transform: translate(-50%, -50%) rotate(263deg); }
+.poda:hover > .border::before { transform: translate(-50%, -50%) rotate(250deg); }
+
+/* Focus-within animations for .poda (if needed for button focus) */
+.poda:focus-within > .darkBorderBg::before { transform: translate(-50%, -50%) rotate(442deg); transition: all 4s; }
+.poda:focus-within > .glow::before { transform: translate(-50%, -50%) rotate(420deg); transition: all 4s; }
+.poda:focus-within > .white::before { transform: translate(-50%, -50%) rotate(443deg); transition: all 4s; }
+.poda:focus-within > .border::before { transform: translate(-50%, -50%) rotate(430deg); transition: all 4s; }
+
+/* Specific styles for .glow layer */
+.glow {
+  overflow: hidden;
+  filter: blur(30px);
+  opacity: 0.4;
+  max-height: 130px;
+  max-width: 354px;
+}
+.glow::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(60deg);
+  position: absolute;
+  width: 999px;
+  height: 999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(
+    #000,
+    #F06A6A 5%,
+    #000 38%,
+    #000 50%,
+    #1f2937 60%,
+    #000 87%
+  );
+  transition: all 2s;
+}
+
+/* Keyframe animation for rotation */
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(450deg);
+  }
+}

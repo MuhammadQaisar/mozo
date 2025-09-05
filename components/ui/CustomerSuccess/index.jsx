@@ -63,11 +63,12 @@ const CustomerSuccess = () => {
                                 exit={{ opacity: 0, y: -30 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <blockquote className="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed mb-6">
+                                <blockquote className="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed mb-6 italic">
                                     “{activeStory.feedback}”
                                 </blockquote>
                                 <div className="font-bold text-gray-900">{activeStory.name}</div>
                                 <div className="text-gray-600">{activeStory.title}</div>
+                                <div className="mt-4 text-sm font-medium text-gray-500 uppercase tracking-wider">{activeStory.project}</div>
                             </motion.div>
                         </AnimatePresence>
 
@@ -75,14 +76,14 @@ const CustomerSuccess = () => {
                         <div className="flex items-center gap-4 mt-8">
                             <button
                                 onClick={handlePrev}
-                                className="p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors"
+                                className="p-4 rounded-full bg-white shadow-md hover:bg-gray-200 transition-colors"
                                 aria-label="Previous story"
                             >
                                 <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
                             </button>
                             <button
                                 onClick={handleNext}
-                                className="p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors"
+                                className="p-4 rounded-full bg-white shadow-md hover:bg-gray-200 transition-colors"
                                 aria-label="Next story"
                             >
                                 <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
@@ -103,7 +104,7 @@ const CustomerSuccess = () => {
                                         animate={{ opacity: 1, scale: 1 }}
                                         exit={{ opacity: 0, scale: 0.8 }}
                                         transition={{ duration: 0.5 }}
-                                        className="absolute inset-0 w-full h-full object-cover rounded-3xl shadow-2xl"
+                                        className="absolute inset-0 w-full h-full object-cover rounded-3xl shadow-2xl border-4 border-white"
                                     />
                                 )
                             ))}

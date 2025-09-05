@@ -134,7 +134,7 @@ const Contact = () => {
                         </div>
 
                         {/* Response Time */}
-                        <div className="bg-gradient-to-r from-[#F06A6A]/10 to-black-500/10 rounded-lg p-6 border border-[#F06A6A]/20">
+                        <div className="bg-gray-100 rounded-lg p-6 border border-gray-200">
                             <div className="flex items-center space-x-3">
                                 <div className="w-8 h-8 bg-gradient-to-r from-[#1f2937] to-black rounded-full flex items-center justify-center">
                                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

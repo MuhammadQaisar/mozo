@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
@@ -36,24 +37,41 @@ const Faqs = () => {
 
   return (
     <section className="max-w-4xl mx-auto py-16">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-8">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-[#1f2937] mb-12">
         Frequently Asked Questions
       </h2>
-      <div className="space-y-6">
+      <div className="border-t border-gray-200">
         {faqs.map((faq, idx) => (
-          <div key={idx} className="bg-[#F06A6A0D] rounded-xl p-6">
+          <div key={idx} className="border-b border-gray-200">
             <div
-              className="flex items-center justify-between cursor-pointer"
+              className="flex items-center justify-between cursor-pointer py-6"
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
             >
-              <span className="text-[#1f2937] font-medium">{faq.question}</span>
-              <span className="text-2xl font-bold text-[#F06A6A] select-none">{openIndex === idx ? "-" : "+"}</span>
+              <span className="text-lg font-medium text-[#1f2937]">{faq.question}</span>
+              <motion.div
+                animate={{ rotate: openIndex === idx ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <svg className="w-6 h-6 text-[#1f2937]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </motion.div>
             </div>
-            {openIndex === idx && (
-              <div className="mt-4 text-[#000000]">
-                {faq.answer}
-              </div>
-            )}
+            <AnimatePresence>
+              {openIndex === idx && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                >
+                  <div className="pb-6 text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>
