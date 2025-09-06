@@ -154,13 +154,11 @@ const Navbar = () => {
                         >
                             <NavLink
                                 href="/get-started"
-                                className="group relative px-6 py-2 bg-gradient-to-r from-[#F06A6A] to-red-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex items-center ml-20"
+                                className="group relative px-6 py-2 bg-[#F06A6A] text-white font-bold rounded-xl shadow-lg hover:bg-[#C04F4F] transition-all duration-300 overflow-hidden flex items-center ml-20"
                             >
                                 <span className="relative z-10 flex items-center">
                                     Get in Touch
-                                    {/* <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                    </svg> */}
+                                    
                                 </span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-[#F06A6A] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </NavLink>

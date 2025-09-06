@@ -99,7 +99,7 @@ const Hero = () => {
             >
               <Link
                 href="/get-started"
-                className="inline-block bg-[#1f2937] text-white font-semibold rounded-lg px-8 py-4 text-lg shadow-lg hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out"
+                className="inline-block bg-[#F06A6A] text-white font-semibold rounded-lg px-8 py-4 text-lg shadow-lg hover:bg-[#C04F4F] transform hover:scale-105 transition-all duration-300 ease-in-out"
               >
                 Book a consultation - it's free
               </Link>

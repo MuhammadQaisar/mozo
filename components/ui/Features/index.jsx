@@ -354,7 +354,7 @@ const Features = () => {
                                         href="#contact"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="inline-block bg-[#1f2937] text-white font-semibold rounded-lg px-8 py-4 text-lg shadow-lg hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out"
+                                        className="inline-block bg-[#C04F4F] text-white font-semibold rounded-lg px-8 py-4 text-lg shadow-lg hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out"
                                     >
                                         Get Started with {activeFeature.title}
                                     </motion.a>
