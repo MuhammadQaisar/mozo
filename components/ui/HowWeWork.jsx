@@ -95,16 +95,16 @@ const HowWeWork = () => {
                       <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#1f2937] transition-colors duration-300">
                         {step.subtitle}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed text-sm">
+                      <p className="text-gray-600 leading-relaxed text-lg">
                         {step.description}
                       </p>
                     </div>
 
                     <div className="mt-auto">
-                      <h4 className="text-xs font-semibold text-gray-800 mb-2 uppercase tracking-wider">Key Deliverables:</h4>
+                      <h4 className="text-sm font-bold text-gray-800 mb-2 uppercase tracking-wider">Key Deliverables:</h4>
                       <div className="space-y-1.5">
                         {step.deliverables.map((deliverable, idx) => (
-                          <div key={idx} className="flex items-center text-xs text-gray-600">
+                          <div key={idx} className="flex items-center text-medium text-gray-600">
                             <svg className="w-3.5 h-3.5 text-[#F06A6A] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                             </svg>

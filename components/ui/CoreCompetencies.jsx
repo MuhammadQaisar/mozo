@@ -83,10 +83,10 @@ const CoreCompetencies = () => {
 
                         <div className="relative z-10">
                             <div className="flex items-start justify-between mb-3">
-                                <span className="text-4xl font-bold opacity-40">{item.number}</span>
+                                <span className="text-5xl font-bold opacity-40">{item.number}</span>
                             </div>
                             <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                            <ul className="space-y-2 text-gray-300 flex-1 text-sm">
+                            <ul className="space-y-2 text-gray-300 flex-1 text-lg">
                                 {item.points.map((point, pIdx) => (
                                     <li key={pIdx} className="flex items-start">
                                         <span className="mr-2.5 mt-1">-</span>

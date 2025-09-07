@@ -8,17 +8,29 @@ const ContactHeader = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-center mb-16"
+        className="text-center mb-12"
     >
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1f2937] to-black">
-                Get In Touch
+        <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4">
+            <span className="block text-gray-500">
+                Get In touch
             </span>
         </h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Ready to transform your business? Let's discuss your project and create something amazing together.
         </p>
     </motion.div>
+);
+
+const ContactDetailItem = ({ icon, title, text }) => (
+    <div className="flex items-start space-x-4">
+        <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-gray-200 rounded-lg">
+            {icon}
+        </div>
+        <div>
+            <h4 className="text-lg font-semibold text-gray-900">{title}</h4>
+            <p className="text-gray-400">{text}</p>
+        </div>
+    </div>
 );
 
 const ContactInfo = () => (
@@ -38,46 +50,25 @@ const ContactInfo = () => (
 
         {/* Contact Details */}
         <div className="space-y-6">
-            <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#1f2937] to-black rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                </div>
-                <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Address</h4>
-                    <p className="text-gray-600">Sarai Kharbuza, Opposite to E-16, GT Road, Islamabad, Pakistan</p>
-                </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#1f2937] to-black rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                </div>
-                <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+92 301 0153774</p>
-                </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#1f2937] to-black rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                </div>
-                <div>
-                    <h4 className="text-lg font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">support@mozotech.com</p>
-                </div>
-            </div>
+            <ContactDetailItem
+                icon={<svg className="w-6 h-6 text-[#F06A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>}
+                title="Address"
+                text="Sarai Kharbuza, Opposite to E-16, GT Road, Islamabad, Pakistan"
+            />
+            <ContactDetailItem
+                icon={<svg className="w-6 h-6 text-[#F06A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>}
+                title="Phone"
+                text="+92 301 0153774"
+            />
+            <ContactDetailItem
+                icon={<svg className="w-6 h-6 text-[#F06A6A]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>}
+                title="Email"
+                text="support@mozotech.com"
+            />
         </div>
 
         {/* Response Time */}
-        <div className="bg-gray-100 rounded-lg p-6 border border-gray-200">
+        {/* <div className="bg-gray-100 rounded-lg p-6 border border-gray-200">
             <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gradient-to-r from-[#1f2937] to-black rounded-full flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +80,7 @@ const ContactInfo = () => (
                     <p className="text-sm text-gray-600">We typically respond within 24 hours</p>
                 </div>
             </div>
-        </div>
+        </div> */}
     </motion.div>
 );
 
@@ -99,7 +90,7 @@ const ContactForm = ({ formData, handleChange, handleSubmit, isSubmitting, submi
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100"
+        className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100"
     >
         <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name and Email Row */}
@@ -209,7 +200,7 @@ const ContactForm = ({ formData, handleChange, handleSubmit, isSubmitting, submi
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-[#1f2937] to-black text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
+                    className="w-full bg-[#F06A6A] text-white font-semibold py-4 px-8 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
                 >
                     {isSubmitting ? (
                         <>
@@ -222,9 +213,7 @@ const ContactForm = ({ formData, handleChange, handleSubmit, isSubmitting, submi
                     ) : (
                         <>
                             <span>Send Message</span>
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                            </svg>
+                            
                         </>
                     )}
                 </button>
@@ -316,10 +305,10 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className={`py-16 px-4 md:px-8 bg-gradient-to-br from-gray-50 to-white ${montserrat.className}`}>
+        <section id="contact" className={`py-12 px-4 md:px-8 bg-gray-100 rounded-xl ${montserrat.className}`}>
             <div className="max-w-7xl mx-auto">
                 <ContactHeader />
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                     <ContactInfo />
                     <ContactForm
                         formData={formData}

@@ -12,7 +12,7 @@ const TailoredSolution = () => (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {/* Startups */}
       <div className="rounded-2xl bg-white p-8 border border-gray-200 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-        <div className="w-16 h-16 rounded-full bg-[#1f2937] flex items-center justify-center mb-6">
+        <div className="w-16 h-16 rounded-full bg-[#F06A6A] flex items-center justify-center mb-6">
             <FaRocket className="text-white text-3xl" />
         </div>
         <h3 className="text-xl font-bold text-[#1f2937] mb-3">For Startups</h3>
@@ -24,7 +24,7 @@ const TailoredSolution = () => (
       </div>
       {/* SMBs */}
       <div className="rounded-2xl bg-white p-8 border border-gray-200 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-        <div className="w-16 h-16 rounded-full bg-[#1f2937] flex items-center justify-center mb-6">
+        <div className="w-16 h-16 rounded-full bg-[#F06A6A] flex items-center justify-center mb-6">
             <FaServer className="text-white text-3xl" />
         </div>
         <h3 className="text-xl font-bold text-[#1f2937] mb-3">For SMBs</h3>
@@ -36,7 +36,7 @@ const TailoredSolution = () => (
       </div>
       {/* Enterprises */}
       <div className="rounded-2xl bg-white p-8 border border-gray-200 shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-        <div className="w-16 h-16 rounded-full bg-[#1f2937] flex items-center justify-center mb-6">
+        <div className="w-16 h-16 rounded-full bg-[#F06A6A] flex items-center justify-center mb-6">
             <FaBuilding className="text-white text-3xl" />
         </div>
         <h3 className="text-xl font-bold text-[#1f2937] mb-3">For Enterprises</h3>

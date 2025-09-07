@@ -63,7 +63,7 @@ const CustomerSuccess = () => {
                                 exit={{ opacity: 0, y: -30 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <blockquote className="text-xl md:text-2xl font-medium text-gray-700 leading-relaxed mb-6 italic">
+                                <blockquote className="text-lg md:text-2xl font-sm text-gray-700 leading-relaxed mb-6 italic">
                                     “{activeStory.feedback}”
                                 </blockquote>
                                 <div className="font-bold text-gray-900">{activeStory.name}</div>
