@@ -148,19 +148,16 @@ const Navbar = () => {
 
                         {/* Enhanced CTA Button */}
                         <motion.div
-                            whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="ml-6 flex items-center"
                         >
                             <NavLink
                                 href="/get-started"
-                                className="group relative px-6 py-2 bg-[#F06A6A] text-white font-bold rounded-xl shadow-lg hover:bg-[#C04F4F] transition-all duration-300 overflow-hidden flex items-center ml-20"
+                                className="px-6 py-2 bg-[#F06A6A] text-white font-bold rounded-xl hover:bg-[#C04F4F] transition-colors duration-300 flex items-center ml-20"
                             >
-                                <span className="relative z-10 flex items-center">
+                                <span className="flex items-center">
                                     Get in Touch
-                                    
                                 </span>
-                                <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-[#F06A6A] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </NavLink>
                         </motion.div>
                     </div>

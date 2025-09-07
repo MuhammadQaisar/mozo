@@ -9,14 +9,14 @@ const testimonials = [
         company: "ALKASSIB",
         summary: "Working with Mozo was a game-changer for our business. Their expertise in AI and automation helped us streamline operations and reduce costs by 40% while improving customer satisfaction.",
         avatar: "/Alhawar.jpg",
-        name: "Alhawar",
+        name: "Mohammad Alhawar",
         title: "Operations Director",
         rating: 5,
         project: "AI Automation System"
     },
      {
         logo: "/logos/taus.jpg",
-        company: "Taus Enterprises",
+        company: "TAUS Enterprises",
         summary: "The team at Mozo Technologies delivered a robust, scalable solution that perfectly aligned with our business goals. Their attention to detail and commitment to quality is unmatched.",
         avatar: "/Tim.jpeg",
         name: "Tim",
@@ -52,7 +52,7 @@ const Testimonials = () => {
     return (
         <SectionWrapper className={`py-20 md:py-28 bg-white ${montserrat.className}`}>
             <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">What Our Clients Say</h2>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">WHAT OUR CLIENTS SAY</h2>
                 <p className="text-lg text-gray-600 mb-12">We are trusted by businesses of all sizes.</p>
 
                 <div className="relative">

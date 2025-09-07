@@ -16,8 +16,18 @@ const CTA = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative overflow-hidden rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 bg-[#374151]"
+                className="relative overflow-hidden rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 bg-[#212121]"
             >
+                {/* Background Noise and Texture */}
+                <div
+                    className="absolute inset-0 w-full h-full"
+                    style={{
+                        backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="1" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.2"/></svg>')`,
+                    }}
+                ></div>
+                {/* Accent Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#222222]/15 via-transparent to-transparent"></div>
+
                 {/* Content Area: Contains headline and description */}
                 <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
                     <h2 className="text-white text-3xl sm:text-4xl md:text-2xl font-extrabold leading-tight mb-3">
@@ -33,13 +43,12 @@ const CTA = () => {
                 <div className="relative z-10 flex-shrink-0">
                     <NavLink
                         href="/get-started"
-                        className="relative block w-full lg:w-auto px-8 py-4 font-semi-bold text-medium text-[#FFFFFF] bg-[#F06A6A] rounded-lg shadow-lg overflow-hidden group"
+                        className="block w-full lg:w-auto px-8 py-4 font-semibold text-lg text-white bg-[#F06A6A] rounded-lg shadow-lg border-2 border-[#F06A6A] hover:bg-transparent hover:text-[#F06A6A] transition-all duration-300 group"
                     >
-                        <span className="relative z-10 flex items-center justify-center whitespace-nowrap">
+                        <span className="flex items-center justify-center whitespace-nowrap">
                             Contact US
-                            <svg className="ml-6 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            <svg className="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </span>
-                        <span className="absolute inset-0 bg-white transform translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0"></span>
                     </NavLink>
                 </div>
             </motion.div>

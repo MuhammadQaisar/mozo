@@ -7,8 +7,9 @@ import CustomerSuccess from '../components/ui/CustomerSuccess';
 const ServicesPage = () => {
   return (
     <>
-      <ServiceNav />
+      
       <ServiceIntro />
+      <ServiceNav />
       <Features/>
       <CustomerSuccess />
   

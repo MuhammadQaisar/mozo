@@ -70,7 +70,7 @@ import { b } from "framer-motion/client";
 const features = [
     {
         icon: (
-           <Image src="/icons/Group.svg" width={64} height={64} alt="AI/ML Icon" />
+           <Image src="/icons/Group.svg" width={56} height={56} alt="AI/ML Icon" />
         ),
         title: "AI/ML",
         subtitle: "Artificial Intelligence & Machine Learning",
@@ -87,7 +87,7 @@ const features = [
     },
     {
         icon: (
-            <Image src="/icons/Frame.svg" width={64} height={64} alt="Digital Marketing Icon" />
+            <Image src="/icons/Frame.svg" width={56} height={56} alt="Digital Marketing Icon" />
         ),
         title: "DIGITAL MARKETING",
         subtitle: "Growth-Driven Marketing Solutions",
@@ -104,7 +104,7 @@ const features = [
     },
     {
         icon: (
-           <Image src="/icons/cloudcomputing.svg" width={64} height={64} alt="CloudOps Icon" />
+           <Image src="/icons/cloudcomputing.svg" width={56} height={56} alt="CloudOps Icon" />
         ),
         title: "CLOUDOPS",
         subtitle: "Cloud Infrastructure & Operations",
@@ -121,7 +121,7 @@ const features = [
     },
     {
         icon: (
-           <Image src="/icons/web.svg" width={64} height={64} alt="Web Development Icon" />
+           <Image src="/icons/web.svg" width={56} height={56} alt="Web Development Icon" />
         ),
         title: "WEB DEVELOPMENT",
         subtitle: "Modern Web Applications",
@@ -138,7 +138,7 @@ const features = [
     },
     {
         icon: (
-            <Image src="/icons/uiux.svg" width={64} height={64} alt="UI/UX Icon" />
+            <Image src="/icons/uiux.svg" width={56} height={56} alt="UI/UX Icon" />
         ),
         title: "UI/UX DESIGN",
         subtitle: "User-Centered Design",
@@ -155,7 +155,7 @@ const features = [
     },
     {
         icon: (
-           <Image src="/icons/devOps.svg" width={64} height={64} alt="DevOps Icon" />
+           <Image src="/icons/devOps.svg" width={56} height={56} alt="DevOps Icon" />
         ),
         title: "DEVOPS",
         subtitle: "Development & Operations",
@@ -188,13 +188,13 @@ const Features = () => {
     };
 
     const cardVariants = {
-        hidden: { opacity: 0, y: 30, scale: 0.95 },
+        hidden: { opacity: 0, y: 20, scale: 0.98 },
         visible: {
             opacity: 1,
             y: 0,
             scale: 1,
             transition: {
-                duration: 0.5,
+                duration: 0.4,
                 ease: "easeOut",
             },
         },
@@ -203,50 +203,50 @@ const Features = () => {
     return (
         <SectionWrapper 
             id="features" 
-            className={`pt-10 lg:pt-14 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
+            className={`py-8 lg:py-12 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
         >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-72 h-72 bg-[#F06A6A]/5 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-black/3 rounded-full blur-3xl"></div>
-                <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
+                <div className="absolute top-20 left-10 w-64 h-64 bg-[#F06A6A]/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-10 w-80 h-80 bg-black/3 rounded-full blur-3xl"></div>
+                <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Enhanced Section Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.8 }}
-                    className="text-center mb-20"
+                    transition={{ duration: 0.7 }}
+                    className="text-center mb-12"
                 >
-                   <div className="inline-flex items-center px-4 py-2 bg-[#1f2937] rounded-full mb-10">
-                        <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
-                        <span className="text-sm font-medium text-white uppercase tracking-wider">Our Services</span>
+                   <div className="inline-flex items-center px-3 py-1.5 bg-[#1f2937] rounded-full mb-6">
+                        <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5 animate-pulse"></span>
+                        <span className="text-xs font-medium text-white uppercase tracking-wider">Our Services</span>
                     </div>
 
-                 <h2 className="text-4xl font-extrabold text-gray-800">
+                 <h2 className="text-3xl font-extrabold text-gray-800">
 		WHAT SOLUTION DO WE PROVIDE?
 
 	</h2> 
 
-                    <p className="mt-6 text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
+                    <p className="mt-4 text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
                         From AI-powered applications to scalable cloud infrastructure, we deliver end-to-end solutions that drive innovation and growth.
                     </p>
                 </motion.div>
 
                 {/* Enhanced Service Selection and Details */}
-                <div className="grid grid-cols-1 xl:grid-cols-5 gap-8 lg:gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
                     {/* Service Cards */}
                     <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="xl:col-span-2 flex flex-col justify-center"
+                        className="lg:col-span-1 flex flex-col justify-left"
                     >
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-3">
                             {features.map((item, idx) => (
                                 <motion.div
                                     key={idx}
@@ -254,8 +254,8 @@ const Features = () => {
                                     onClick={() => setActiveIdx(idx)}
                                     className={`cursor-pointer rounded-lg overflow-hidden`}
                                 >
-                                    <h3 className={`font-bold text-lg py-4 transition-all duration-300 ${activeIdx === idx ? 'text-gray-900 border-l-4 border-[#F06A6A] bg-gray-100' : 'text-gray-500 hover:bg-gray-50 hover:border-l-4 hover:border-gray-200'}`}>
-                                        <span className="ml-6">{item.title}</span>
+                                    <h3 className={`font-bold text-base py-3 transition-all duration-300 ${activeIdx === idx ? 'text-gray-900 border-l-4 border-[#F06A6A] bg-gray-100' : 'text-gray-500 hover:bg-gray-50 hover:border-l-4 hover:border-gray-200'}`}>
+                                        <span className="ml-5">{item.title}</span>
                                     </h3>
                                 </motion.div>
                             ))}
@@ -263,37 +263,36 @@ const Features = () => {
                     </motion.div>
 
                     {/* Service Details */}
-                    <div className="xl:col-span-3">
+                    <div className="lg:col-span-4">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeIdx}
                                 initial={{ opacity: 0, x: 20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
-                                transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 lg:p-10 shadow-lg border border-gray-100 h-full"
+                                transition={{ duration: 0.4, ease: "easeOut" }}
+                                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-lg border border-gray-100 h-full"
                             >
                                 {/* Service Header */}
-                                <div className="mb-8">
+                                <div className="mb-6">
                                     <div className="flex items-center mb-4">
                                       
                                         <div>
-                                            <h3 className="text-3xl font-bold text-gray-900">
+                                            <h3 className="text-2xl font-bold text-gray-900">
                                                 {activeFeature.heading}
                                             </h3>
-                                            {/* <p className="text-[#1f2937] font-medium">{activeFeature.subtitle}</p> */}
                                         </div>
                                     </div>
                                     
-                                    <p className="text-gray-600 text-lg leading-relaxed">
+                                    <p className="text-gray-600 text-base leading-relaxed">
                                         {activeFeature.description}
                                     </p>
                                 </div>
 
                                 {/* Benefits */}
-                                <div className="mb-8">
-                                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Services:</h4>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="mb-6">
+                                    <h4 className="text-base font-semibold text-gray-900 mb-3">Key Services:</h4>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                         {activeFeature.benefits.map((benefit, idx) => (
                                             <motion.div
                                                 key={idx}
@@ -302,12 +301,12 @@ const Features = () => {
                                                 transition={{ duration: 0.3, delay: idx * 0.1 }}
                                                 className="flex items-center text-gray-700"
                                             >
-                                                <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#F06A6A] to-red-500 flex items-center justify-center mr-3 flex-shrink-0">
-                                                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                <div className="w-5 h-5 rounded-full bg-gradient-to-r from-[#F06A6A] to-red-500 flex items-center justify-center mr-2.5 flex-shrink-0">
+                                                    <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                     </svg>
                                                 </div>
-                                                <span className="font-medium">{benefit}</span>
+                                                <span className="font-medium text-sm">{benefit}</span>
                                             </motion.div>
                                         ))}
                                     </div>
@@ -316,14 +315,14 @@ const Features = () => {
                                 {/* Technology Stack */}
                                 {activeFeature.icons && activeFeature.icons.length > 0 && (
                                     <div>
-                                        <h4 className="text-lg font-semibold text-gray-900 mb-4">Technologies We Use:</h4>
-                                        <div className="flex flex-wrap gap-3">
+                                        <h4 className="text-base font-semibold text-gray-900 mb-3">Technologies We Use:</h4>
+                                        <div className="flex flex-wrap gap-2">
                                             {activeFeature.icons.map((icon, idx) => {
-                                                let iconWidth = 40;
-                                                let iconHeight = 40;
+                                                let iconWidth = 32;
+                                                let iconHeight = 32;
                                                 if (icon === semrush || icon === Ahrefs) {
-                                                    iconWidth = 48;
-                                                    iconHeight = 48;
+                                                    iconWidth = 40;
+                                                    iconHeight = 40;
                                                 }
                                                 return (
                                                     <motion.div
@@ -332,7 +331,7 @@ const Features = () => {
                                                         animate={{ opacity: 1, scale: 1 }}
                                                         transition={{ duration: 0.3, delay: idx * 0.05 }}
                                                         whileHover={{ scale: 1.1 }}
-                                                        className="p-3 bg-gray-50 rounded-xl hover:bg-white hover:shadow-md transition-all duration-300 border border-gray-100"
+                                                        className="p-2 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 border border-gray-100"
                                                     >
                                                         <Image 
                                                             src={icon} 
@@ -349,12 +348,12 @@ const Features = () => {
                                 )}
 
                                 {/* CTA */}
-                                <div className="mt-8 pt-6 border-t border-gray-100">
+                                <div className="mt-6 pt-5 border-t border-gray-100">
                                     <motion.a
                                         href="#contact"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="inline-block bg-[#C04F4F] text-white font-semibold rounded-lg px-8 py-4 text-lg shadow-lg hover:bg-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out"
+                                        className="inline-block bg-[#F06A6A] text-white font-semibold rounded-lg px-6 py-2.5 text-base shadow-lg hover:bg-[#C04F4F] transform transition-all duration-300 ease-in-out"
                                     >
                                         Get Started with {activeFeature.title}
                                     </motion.a>
@@ -382,3 +381,5 @@ const Features = () => {
 };
 
 export default Features;
+
+

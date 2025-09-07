@@ -8,7 +8,7 @@ const IntroductionSection = () => (
     </h1>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {/* Main Card */}
-      <div className="md:col-span-2 flex flex-col justify-center rounded-3xl bg-gradient-to-r from-[#1f2937] to-[#111827] p-8 text-white shadow-lg border border-[#F06A6A]">
+      <div className="md:col-span-2 flex flex-col justify-center rounded-3xl bg-gradient-to-r from-[#212121] to-[#111827] p-8 text-white shadow-lg border border-[#F06A6A]">
         <div className="flex items-center mb-4">
           <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center mr-4">
             <Image src="/Mozo-favicon.svg" alt="Mozo Logo" width={35} height={35} />
