@@ -76,7 +76,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl md:text-5xl font-extrabold mb-5 leading-tight"
+              className="text-4xl md:text-5xl font-extrabold leading-tight"
             >
               <div>Empowering Your</div>
               <div className="text-[#F06A6A] mt-5">Digital Excellence</div>

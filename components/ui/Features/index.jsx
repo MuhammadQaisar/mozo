@@ -227,7 +227,7 @@ const Features = () => {
                     </div>
 
                  <h2 className="text-3xl font-extrabold text-gray-800">
-		WHAT SOLUTION DO WE PROVIDE?
+		WHAT <span className="text-[#F06A6A]">SOLUTION</span> DO WE PROVIDE?
 
 	</h2> 
 

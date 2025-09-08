@@ -56,7 +56,7 @@ const CoreCompetencies = () => {
                 className="text-center mb-16"
             >
                 <h2 className="text-3xl font-extrabold text-gray-800 mb-4">
-                    Core Competencies
+                    Core <span className="text-[#F06A6A]">Competencies</span>
                 </h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
                     Our expertise spans across a wide range of modern technologies and methodologies.
