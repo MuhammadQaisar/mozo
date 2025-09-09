@@ -86,7 +86,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-600"
+              className="text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-600 mt-6 leading-relaxed"
             >
               Transform your business with cutting-edge digital solutions. We deliver services that drive growth and innovation, from web development to intelligent automation.
             </motion.p>
