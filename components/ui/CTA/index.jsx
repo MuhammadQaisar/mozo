@@ -43,10 +43,10 @@ const CTA = () => {
                 <div className="relative z-10 flex-shrink-0">
                     <NavLink
                         href="/get-started"
-                        className="block w-full lg:w-auto px-8 py-4 font-semibold text-lg text-white bg-[#F06A6A] rounded-lg shadow-lg border-2 border-[#F06A6A] hover:bg-transparent hover:text-[#F06A6A] transition-all duration-300 group"
+                        className="block w-full lg:w-auto px-8 py-4 font-semi-bold text-lg text-white bg-[#F06A6A] rounded-lg shadow-lg border-2 border-[#F06A6A] hover:bg-transparent hover:text-[#F06A6A] transition-all duration-300 group"
                     >
                         <span className="flex items-center justify-center whitespace-nowrap">
-                            Contact US
+                            Contact Us
                             <svg className="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </span>
                     </NavLink>

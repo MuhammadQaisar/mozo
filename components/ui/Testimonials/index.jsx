@@ -7,7 +7,7 @@ const testimonials = [
     {
         logo: "/logos/alkassib.png",
         company: "ALKASSIB",
-        summary: "Working with Mozo was a game-changer for our business. Their expertise in AI and automation helped us streamline operations and reduce costs by 40% while improving customer satisfaction.",
+        summary: "Six months ago, we were drowning in inefficient processes. Mozo's team didn't just implement AI solutions - they really understood our business and tailored everything to our specific needs",
         avatar: "/Alhawar.jpg",
         name: "Mohammad Alhawar",
         title: "Operations Director",
@@ -27,7 +27,7 @@ const testimonials = [
     {
         logo: "/logos/muxilite.jpg",
         company: "MUXILITE",
-        summary: "Mozo Technologies transformed our digital presence with their innovative approach. Their team delivered exceptional results that exceeded our expectations, boosting our conversion rates by 300%.",
+        summary: "Mozo Technologies transformed our digital presence with their innovative approach. Their team delivered exceptional results that exceeded our expectations, boosting our conversion rate.",
         avatar: "/rashida.jpeg",
         name: "Rashida",
         title: "Founder & CEO",

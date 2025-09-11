@@ -52,9 +52,9 @@ const CustomerSuccess = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
                     {/* Left Column: Feedback */}
-                    <div className="relative">
+                    <div className="relative md:col-span-3">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeIndex}
@@ -63,7 +63,7 @@ const CustomerSuccess = () => {
                                 exit={{ opacity: 0, y: -30 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <blockquote className="text-lg md:text-2xl font-sm text-gray-700 leading-relaxed mb-6 italic">
+                                <blockquote className="text-base md:text-lg font-sm text-gray-700 leading-relaxed mb-6 italic">
                                     “{activeStory.feedback}”
                                 </blockquote>
                                 <div className="font-bold text-gray-900">{activeStory.name}</div>
@@ -92,7 +92,7 @@ const CustomerSuccess = () => {
                     </div>
 
                     {/* Right Column: Image */}
-                    <div className="relative h-96">
+                    <div className="relative h-80 md:col-span-2">
                         <AnimatePresence>
                             {successStories.map((story, index) => (
                                 activeIndex === index && (

@@ -60,12 +60,12 @@ const HowWeWork = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-3 py-1.5 bg-[#1f2937] rounded-full mb-6">
+          <div className="inline-flex items-center px-3 py-2 bg-[#1f2937] rounded-full mb-8">
             <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5 animate-pulse"></span>
             <span className="text-xs font-medium text-white uppercase tracking-wider">Our Process</span>
           </div>
           <h2 className="text-3xl font-extrabold text-gray-800 mb-4">
-            A Straightforward, <span className="text-[#F06A6A]">Results-Driven </span>Process
+            A Straightforward <span className="text-[#F06A6A]">Results-Driven </span>Process
           </h2> 
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Our proven three-step process ensures your project is delivered on time and exceeds expectations.

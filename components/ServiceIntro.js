@@ -1,9 +1,9 @@
 const ServiceIntro = () => (
-  <section className="max-w-4xl mx-auto text-center pt-20 md:pt-28 pb-12 bg-gradient-to-b from-white to-gray-50">
+  <section className="max-w-4xl mx-auto text-center pt-20 md:pt-28 pb-0 bg-gradient-to-b from-white to-gray-50">
     <p className="text-sm text-gray-500 font-medium tracking-widest uppercase mb-3">
       Our Offerings
     </p>
-    <h1 className="text-4xl md:text-5xl font-extrabold text-[#1f2937] mb-6 leading-snug">
+    <h1 className="text-3xl md:text-4xl font-bold text-[#1f2937] mb-6 leading-snug uppercase">
       Services <span className="text-[#F06A6A]">Tailored</span> for Growth
     </h1>
     <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">

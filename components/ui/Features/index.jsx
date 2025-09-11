@@ -221,7 +221,7 @@ const Features = () => {
                     transition={{ duration: 0.7 }}
                     className="text-center mb-12"
                 >
-                   <div className="inline-flex items-center px-3 py-1.5 bg-[#1f2937] rounded-full mb-6">
+                   <div className="inline-flex items-center px-3 py-2 bg-[#1f2937] rounded-full mb-8">
                         <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5 animate-pulse"></span>
                         <span className="text-xs font-medium text-white uppercase tracking-wider">Our Services</span>
                     </div>
@@ -246,16 +246,16 @@ const Features = () => {
                         viewport={{ once: true, amount: 0.2 }}
                         className="lg:col-span-1 flex flex-col justify-left"
                     >
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-4">
                             {features.map((item, idx) => (
                                 <motion.div
                                     key={idx}
                                     variants={cardVariants}
                                     onClick={() => setActiveIdx(idx)}
-                                    className={`cursor-pointer rounded-lg overflow-hidden`}
+                                    className={`cursor-pointer rounded-t-lg overflow-hidden`}
                                 >
-                                    <h3 className={`font-bold text-base py-3 transition-all duration-300 ${activeIdx === idx ? 'text-gray-900 border-l-4 border-[#F06A6A] bg-gray-100' : 'text-gray-500 hover:bg-gray-50 hover:border-l-4 hover:border-gray-200'}`}>
-                                        <span className="ml-5">{item.title}</span>
+                                    <h3 className={`font-bold text-base py-3 ${activeIdx === idx ? 'text-gray-900' : 'text-gray-500 hover:bg-gray-50 hover:border-gray-200'}`}>
+                                        <span className={`ml-5 ${activeIdx === idx ? 'border-b-4 border-[#F06A6A]' : ''}`}>{item.title}</span>
                                     </h3>
                                 </motion.div>
                             ))}
@@ -271,7 +271,7 @@ const Features = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.4, ease: "easeOut" }}
-                                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-lg border border-gray-100 h-full"
+                                className="bg-gray-100 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-lg border border-gray-100 h-full"
                             >
                                 {/* Service Header */}
                                 <div className="mb-6">
