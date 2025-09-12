@@ -81,16 +81,16 @@ const Footer = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
-                    className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-20"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20"
                 >
                     {/* Company Info */}
-                    <motion.div variants={itemVariants} className="lg:col-span-1">
+                    <motion.div variants={itemVariants} className="lg:col-span-1 text-center md:text-left">
                         <Image
                             src="/footer-logo.svg"
                             alt="Mozo Technologies"
                             width={160}
                             height={80}
-                            className="mb-4"
+                            className="mb-4 mx-auto md:mx-0"
                         />
                         {/* <p>
                            <span className="font-extrabold text-gray-500">Mozo Technologies</span><span className="text-gray-400 text-md"> is a young, full-service software development company focusing on Generative AI, Web, and Mobile solutions.</span>
@@ -98,8 +98,8 @@ const Footer = () => {
                     </motion.div>
 
                     {/* Services */}
-                    <motion.div variants={itemVariants}>
-                        <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+                    <motion.div variants={itemVariants} className="text-center md:text-left">
+                        <h3 className="text-base sm:text-lg font-semibold mb-4">Our Services</h3>
                         <ul className="space-y-2">
                             {services.map((service) => (
                                 <li key={service}>
@@ -112,7 +112,7 @@ const Footer = () => {
                     </motion.div>
 
                     {/* Newsletter & Social */}
-                    <motion.div variants={itemVariants}>
+                    <motion.div variants={itemVariants} className="text-center md:text-left">
                         {/* <h3 className="text-lg font-semibold mb-4">Stay Connected</h3> */}
                         <p className="text-gray-400 text-sm mb-4">
                             Subscribe to our newsletter for the latest updates.
@@ -127,8 +127,8 @@ const Footer = () => {
                                 Subscribe
                             </button>
                         </div>
-                        <h4 className="text-md font-semibold mb-4">Follow Us</h4>
-                        <div className="flex space-x-4">
+                        <h4 className="text-sm sm:text-md font-semibold mb-4">Follow Us</h4>
+                        <div className="flex space-x-4 justify-center md:justify-start">
                             {socialLinks.map((social) => (
                                 <Link
                                     key={social.name}

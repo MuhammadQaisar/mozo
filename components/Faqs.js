@@ -36,8 +36,8 @@ const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="max-w-4xl mx-auto py-16">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-[#1f2937] mb-12">
+    <section className="max-w-4xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-[#1f2937] mb-12">
         Frequently Asked Questions
       </h2>
       <div className="border-t border-gray-200">
@@ -47,7 +47,7 @@ const Faqs = () => {
               className="flex items-center justify-between cursor-pointer py-6"
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
             >
-              <span className="text-lg font-medium text-[#1f2937]">{faq.question}</span>
+              <span className="text-base sm:text-lg font-medium text-gray-800">{faq.question}</span>
               <motion.div
                 animate={{ rotate: openIndex === idx ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
@@ -66,7 +66,7 @@ const Faqs = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="pb-6 text-gray-600 leading-relaxed">
+                  <div className="pb-6 text-gray-500 leading-relaxed text-sm sm:text-base">
                     {faq.answer}
                   </div>
                 </motion.div>
