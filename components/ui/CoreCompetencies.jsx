@@ -55,10 +55,10 @@ const CoreCompetencies = () => {
                 transition={{ duration: 0.7 }}
                 className="text-center mb-16"
             >
-                <h2 className="text-3xl font-extrabold text-gray-800 mb-4">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4">
                     Core <span className="text-[#F06A6A]">Competencies</span>
                 </h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
                     Our expertise spans across a wide range of modern technologies and methodologies.
                 </p>
             </motion.div>
@@ -83,10 +83,10 @@ const CoreCompetencies = () => {
 
                         <div className="relative z-10">
                             <div className="flex items-start justify-between mb-3">
-                                <span className="text-5xl font-bold opacity-40">{item.number}</span>
+                                <span className="text-4xl sm:text-5xl font-bold opacity-40">{item.number}</span>
                             </div>
                             <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                            <ul className="space-y-2 text-gray-300 flex-1 text-lg">
+                            <ul className="space-y-2 text-gray-300 flex-1 text-base sm:text-lg">
                                 {item.points.map((point, pIdx) => (
                                     <li key={pIdx} className="flex items-start">
                                         <span className="mr-2.5 mt-1">-</span>

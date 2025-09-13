@@ -22,12 +22,14 @@ const Hero = () => {
     { src: "/icons/mysql.svg", alt: "MySQL" }, 
     { src: "/icons/pgsql.svg", alt: "PostgreSQL" },
     { src: "/icons/jenkins.svg", alt: "Jenkins" },
+    {src:"icons/keras.svg",alt:"keras"}
   ];
 
   const sphereRef = useRef(null);
 
   useEffect(() => {
     const sphere = sphereRef.current;
+    if (!sphere || sphere.offsetWidth === 0) return;
     const icons = sphere.children;
     const radius = sphere.offsetWidth / 2.5;
     const centerX = sphere.offsetWidth / 2;
@@ -64,7 +66,7 @@ const Hero = () => {
   return (
     <section className="relative text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center md:min-h-screen mt-20 md:mt-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-20 sm:pt-32">
           {/* Left Column: Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -76,10 +78,12 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-4xl md:text-5xl font-extrabold leading-tight"
+             
             >
-              <div>Empowering Your</div>
-              <div className="text-[#F06A6A] mt-5">Digital Excellence</div>
+             <div  className="text-7xl md:text-5xl font-extrabold leading-tight">
+               <div className="text-[#1f2937]">Empowering Your</div>
+              <div className="text-[#F06A6A] mt-2 md:mt-5">Digital Excellence</div>
+             </div>
             </motion.h1>
 
             <motion.p
@@ -127,9 +131,16 @@ const Hero = () => {
       <style jsx>{`
         .sphere-container {
           position: relative;
-          width: 500px;
-          height: 500px;
+          width: 300px;
+          height: 300px;
           perspective: 1000px;
+        }
+
+        @media (min-width: 768px) {
+          .sphere-container {
+            width: 500px;
+            height: 500px;
+          }
         }
 
         .icon {

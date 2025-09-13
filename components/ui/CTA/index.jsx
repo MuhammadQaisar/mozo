@@ -30,7 +30,7 @@ const CTA = () => {
 
                 {/* Content Area: Contains headline and description */}
                 <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <h2 className="text-white text-3xl sm:text-4xl md:text-2xl font-extrabold leading-tight mb-3">
+                    <h2 className="text-white text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tight mb-3">
                         Ready to Transform Your Digital Presence?
                     </h2>
                     <p className="text-white text-lg sm:text-xl opacity-90 max-w-2xl mx-auto lg:mx-0">

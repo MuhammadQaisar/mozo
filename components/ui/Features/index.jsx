@@ -226,12 +226,12 @@ const Features = () => {
                         <span className="text-xs font-medium text-white uppercase tracking-wider">Our Services</span>
                     </div>
 
-                 <h2 className="text-3xl font-extrabold text-gray-800">
+                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800">
 		WHAT <span className="text-[#F06A6A]">SOLUTION</span> DO WE PROVIDE?
 
 	</h2> 
 
-                    <p className="mt-4 text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
+                    <p className="mt-4 text-base sm:text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
                         From AI-powered applications to scalable cloud infrastructure, we deliver end-to-end solutions that drive innovation and growth.
                     </p>
                 </motion.div>

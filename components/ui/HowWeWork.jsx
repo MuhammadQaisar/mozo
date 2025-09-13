@@ -64,10 +64,10 @@ const HowWeWork = () => {
             <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5 animate-pulse"></span>
             <span className="text-xs font-medium text-white uppercase tracking-wider">Our Process</span>
           </div>
-          <h2 className="text-3xl font-extrabold text-gray-800 mb-4">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4">
             A Straightforward <span className="text-[#F06A6A]">Results-Driven </span>Process
           </h2> 
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Our proven three-step process ensures your project is delivered on time and exceeds expectations.
           </p>
         </motion.div>
