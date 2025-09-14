@@ -1,10 +1,10 @@
 import Layout from "../components/Layout";
 import "../styles/globals.css";
-import { montserrat } from "../components/ui/font";
+import { inter, montserrat } from "../components/ui/font";
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${montserrat.className}`}>
+    <main className={`${inter.variable} ${montserrat.variable}`}>
       <Layout>
         <Component {...pageProps} />
       </Layout>

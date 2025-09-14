@@ -60,14 +60,14 @@ const HowWeWork = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center px-3 py-2 bg-[#1f2937] rounded-full mb-8">
-            <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5 animate-pulse"></span>
+          <div className="inline-flex items-center px-3 py-2 bg-neutral-800 rounded-full mb-8">
+            <span className="w-2 h-2 bg-primary rounded-full mr-2.5 animate-pulse"></span>
             <span className="text-xs font-medium text-white uppercase tracking-wider">Our Process</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mb-4">
-            A Straightforward <span className="text-[#F06A6A]">Results-Driven </span>Process
+          <h2 className="text-4xl font-extrabold text-neutral-900 mb-4">
+            A Straightforward <span className="text-primary">Results-Driven </span>Process
           </h2> 
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
             Our proven three-step process ensures your project is delivered on time and exceeds expectations.
           </p>
         </motion.div>
@@ -79,7 +79,7 @@ const HowWeWork = () => {
           viewport={{ once: true, amount: 0.2 }}
           className="relative max-w-6xl mx-auto"
         >
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-gray-200 transform -translate-y-1/2 z-0"></div>
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-neutral-200 transform -translate-y-1/2 z-0"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 relative z-10">
             {steps.map((step, index) => (
@@ -89,23 +89,23 @@ const HowWeWork = () => {
                 whileHover={{ y: -8, scale: 1.03 }}
                 className="group relative"
               >
-                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-300 h-full flex flex-col">
+                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-neutral-200 hover:shadow-xl hover:border-neutral-300 transition-all duration-300 h-full flex flex-col">
                   <div className="relative z-10">
                     <div className="mb-4">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#1f2937] transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-neutral-900 mb-2 group-hover:text-primary transition-colors duration-300">
                         {step.subtitle}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed text-lg">
+                      <p className="text-neutral-600 leading-relaxed text-lg">
                         {step.description}
                       </p>
                     </div>
 
                     <div className="mt-auto">
-                      <h4 className="text-sm font-bold text-gray-800 mb-2 uppercase tracking-wider">Key Deliverables:</h4>
+                      <h4 className="text-sm font-bold text-neutral-800 mb-2 uppercase tracking-wider">Key Deliverables:</h4>
                       <div className="space-y-1.5">
                         {step.deliverables.map((deliverable, idx) => (
-                          <div key={idx} className="flex items-center text-medium text-gray-600">
-                            <svg className="w-3.5 h-3.5 text-[#F06A6A] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <div key={idx} className="flex items-center text-medium text-neutral-600">
+                            <svg className="w-3.5 h-3.5 text-primary mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                             </svg>
                             {deliverable}

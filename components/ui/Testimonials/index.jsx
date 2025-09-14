@@ -2,6 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { montserrat } from "../font";
 import SectionWrapper from "../../SectionWrapper";
+import { Button } from "../Button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
     {
@@ -50,10 +52,10 @@ const Testimonials = () => {
     const activeTestimonial = testimonials[activeIndex];
 
     return (
-        <SectionWrapper className={`py-12 sm:py-20 md:py-28 bg-white ${montserrat.className}`}>
+        <SectionWrapper className={`py-12 sm:py-20 md:py-28 bg-neutral-100 ${montserrat.className}`}>
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                <h2 className="text-5xl md:text-4xl font-extrabold text-gray-800 mb-4">WHAT OUR <span className="text-[#F06A6A]">CLIENTS</span> SAY</h2>
-                <p className="text-medium md:text-lg text-gray-600 mb-12">We are trusted by businesses of all sizes.</p>
+                <h2 className="text-4xl font-extrabold text-neutral-900 mb-4">WHAT OUR <span className="text-primary">CLIENTS</span> SAY</h2>
+                <p className="text-lg text-neutral-600 mb-12">We are trusted by businesses of all sizes.</p>
 
                 <div className="relative">
                     <AnimatePresence mode="wait">
@@ -73,7 +75,7 @@ const Testimonials = () => {
                                 />
                             </div>
 
-                            <blockquote className="text-lg sm:text-xl font-sm text-gray-800 leading-relaxed mb-8 max-w-3xl text-center">
+                            <blockquote className="text-xl font-medium text-neutral-800 leading-relaxed mb-8 max-w-3xl text-center">
                                 “{activeTestimonial.summary}”
                             </blockquote>
 
@@ -85,8 +87,8 @@ const Testimonials = () => {
                                         className="w-16 h-16 rounded-full object-cover mb-2"
                                     />
                                     <div className="text-center">
-                                        <div className="font-medium text-gray-600 text-xs sm:text-sm">{activeTestimonial.name}</div>
-                                        <div className="text-gray-600 text-sm sm:text-base">{activeTestimonial.title}, {activeTestimonial.company}</div>
+                                        <div className="font-medium text-neutral-600 text-sm">{activeTestimonial.name}</div>
+                                        <div className="text-neutral-600 text-base">{activeTestimonial.title}, {activeTestimonial.company}</div>
                                     </div>
                                 </div>
                             </div>
@@ -94,38 +96,46 @@ const Testimonials = () => {
                     </AnimatePresence>
 
                     <div className="hidden md:block">
-                        <button
+                        <Button
+                            variant="ghost"
+                            size="icon"
                             onClick={handlePrev}
                             className="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors -ml-16"
                             aria-label="Previous testimonial"
                         >
-                            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
-                        </button>
-                        <button
+                            <ChevronLeft className="w-6 h-6 text-neutral-700" />
+                        </Button>
+                        <Button
+                            variant="ghost"
+                            size="icon"
                             onClick={handleNext}
                             className="absolute right-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors -mr-16"
                             aria-label="Next testimonial"
                         >
-                            <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                        </button>
+                            <ChevronRight className="w-6 h-6 text-neutral-700" />
+                        </Button>
                     </div>
                 </div>
 
                 <div className="md:hidden flex justify-center space-x-4 mt-8">
-                    <button
+                    <Button
+                        variant="ghost"
+                        size="icon"
                         onClick={handlePrev}
                         className="p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors"
                         aria-label="Previous testimonial"
                     >
-                        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
-                    </button>
-                    <button
+                        <ChevronLeft className="w-6 h-6 text-neutral-700" />
+                    </Button>
+                    <Button
+                        variant="ghost"
+                        size="icon"
                         onClick={handleNext}
                         className="p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors"
                         aria-label="Next testimonial"
                     >
-                        <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                    </button>
+                        <ChevronRight className="w-6 h-6 text-neutral-700" />
+                    </Button>
                 </div>
             </div>
         </SectionWrapper>
