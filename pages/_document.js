@@ -36,25 +36,16 @@ export default function Document() {
         <meta name="ICBM" content="33.6844, 73.0479" />
       </Head>
       
-<script
-  type="text/javascript"
-  dangerouslySetInnerHTML={{
-    __html: `
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/688a496248705719206466cd/1j1e2takb';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      })();
-    `
-  }}
-/>
+
 
       <body className='md:overflow-visible'>
+        
         <Main />
+        <NextScript />
+                <script>
+          {`window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}`}
+        </script>
+        <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq4b4fefeee318c33e143b888815a0ecbbd2f12b7b0abb5803a1433837c32a1cb6" defer></script>
         <NextScript />
       </body>
     </Html>

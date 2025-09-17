@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { Button } from "../Button";
 
 const Hero = () => {
   const trustedByLogos = [
@@ -65,7 +64,7 @@ const Hero = () => {
   }, [trustedByLogos.length]);
 
   return (
-    <section className="relative text-neutral-800">
+    <section className="relative text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center pt-20 sm:pt-32">
           {/* Left Column: Text Content */}
@@ -81,9 +80,9 @@ const Hero = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
              
             >
-             <div  className="text-5xl font-extrabold leading-tight">
-               <div className="text-neutral-900">Empowering Your</div>
-              <div className="text-primary mt-2 md:mt-5">Digital Excellence</div>
+             <div  className="text-7xl md:text-5xl font-extrabold leading-tight">
+               <div className="text-[#1f2937]">Empowering Your</div>
+              <div className="text-[#F06A6A] mt-2 md:mt-5">Digital Excellence</div>
              </div>
             </motion.h1>
 
@@ -91,7 +90,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-neutral-600 mt-6 leading-relaxed"
+              className="text-lg md:text-xl max-w-2xl mx-auto md:mx-0 text-gray-600 mt-6 leading-relaxed"
             >
               Transform your business with cutting-edge digital solutions. We deliver services that drive growth and innovation, from web development to intelligent automation.
             </motion.p>
@@ -102,9 +101,12 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="mt-8 flex justify-center md:justify-start"
             >
-              <Button asChild size="lg">
-                <Link href="/get-started">Book a consultation - it's free</Link>
-              </Button>
+              <Link
+                href="/get-started"
+                className="inline-block bg-[#F06A6A] text-white font-semibold rounded-lg px-8 py-4 text-lg hover:bg-[#C04F4F] transition-colors duration-300 ease-in-out"
+              >
+                Book a consultation - it's free
+              </Link>
             </motion.div>
           </motion.div>
 

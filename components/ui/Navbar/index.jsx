@@ -9,7 +9,6 @@ import { montserrat } from '../font';
 // Navigation data for the Navbar
 const navigation = [
     { title: "Home", path: "/" },
-    { title: "UI Kit", path: "/ui" }
     { title: "About", path: "/about" },
     { title: "Services", path: "/services" },
     // { title: "Blogs", path: "/blogs" },

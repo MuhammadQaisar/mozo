@@ -66,7 +66,6 @@ import cassandra from "../../../public/icons/cassandra.svg";
 import FileZilla from "../../../public/icons/FileZilla.svg";
 import Image from "next/image";
 import { b } from "framer-motion/client";
-import { Button } from "../Button";
 
 const features = [
     {
@@ -204,12 +203,12 @@ const Features = () => {
     return (
         <SectionWrapper 
             id="features" 
-            className={`py-8 lg:py-12 bg-gradient-to-br from-neutral-50 via-white to-neutral-50 relative overflow-hidden ${montserrat.className}`}
+            className={`py-8 lg:py-12 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
         >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-20 right-10 w-80 h-80 bg-secondary/5 rounded-full blur-3xl"></div>
+                <div className="absolute top-20 left-10 w-64 h-64 bg-[#F06A6A]/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-20 right-10 w-80 h-80 bg-black/3 rounded-full blur-3xl"></div>
                 <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
             </div>
 
@@ -222,17 +221,17 @@ const Features = () => {
                     transition={{ duration: 0.7 }}
                     className="text-center mb-12"
                 >
-                   <div className="inline-flex items-center px-3 py-2 bg-neutral-800 rounded-full mb-8">
-                        <span className="w-2 h-2 bg-primary rounded-full mr-2.5 animate-pulse"></span>
+                   <div className="inline-flex items-center px-3 py-2 bg-[#1f2937] rounded-full mb-8">
+                        <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5 animate-pulse"></span>
                         <span className="text-xs font-medium text-white uppercase tracking-wider">Our Services</span>
                     </div>
 
-                 <h2 className="text-4xl font-extrabold text-neutral-900">
-		WHAT <span className="text-primary">SOLUTION</span> DO WE PROVIDE?
+                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800">
+		WHAT <span className="text-[#F06A6A]">SOLUTION</span> DO WE PROVIDE?
 
 	</h2> 
 
-                    <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+                    <p className="mt-4 text-base sm:text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
                         From AI-powered applications to scalable cloud infrastructure, we deliver end-to-end solutions that drive innovation and growth.
                     </p>
                 </motion.div>
@@ -255,8 +254,8 @@ const Features = () => {
                                     onClick={() => setActiveIdx(idx)}
                                     className={`cursor-pointer rounded-t-lg overflow-hidden`}
                                 >
-                                    <h3 className={`font-bold text-base py-3 ${activeIdx === idx ? 'text-neutral-900' : 'text-neutral-500 hover:bg-neutral-100 hover:border-neutral-200'}`}>
-                                        <span className={`ml-5 ${activeIdx === idx ? 'border-b-4 border-primary' : ''}`}>{item.title}</span>
+                                    <h3 className={`font-bold text-base py-3 ${activeIdx === idx ? 'text-gray-900' : 'text-gray-500 hover:bg-gray-50 hover:border-gray-200'}`}>
+                                        <span className={`ml-5 ${activeIdx === idx ? 'border-b-4 border-[#F06A6A]' : ''}`}>{item.title}</span>
                                     </h3>
                                 </motion.div>
                             ))}
@@ -272,27 +271,27 @@ const Features = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.4, ease: "easeOut" }}
-                                className="bg-neutral-100 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-lg border border-neutral-200 h-full"
+                                className="bg-gray-100 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-lg border border-gray-100 h-full"
                             >
                                 {/* Service Header */}
                                 <div className="mb-6">
                                     <div className="flex items-center mb-4">
                                       
                                         <div>
-                                            <h3 className="text-2xl font-bold text-neutral-900">
+                                            <h3 className="text-2xl font-bold text-gray-900">
                                                 {activeFeature.heading}
                                             </h3>
                                         </div>
                                     </div>
                                     
-                                    <p className="text-neutral-600 text-lg leading-relaxed">
+                                    <p className="text-gray-600 text-lg leading-relaxed">
                                         {activeFeature.description}
                                     </p>
                                 </div>
 
                                 {/* Benefits */}
                                 <div className="mb-6">
-                                    <h4 className="text-base font-semibold text-neutral-900 mb-3">Key Services:</h4>
+                                    <h4 className="text-base font-semibold text-gray-900 mb-3">Key Services:</h4>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                         {activeFeature.benefits.map((benefit, idx) => (
                                             <motion.div
@@ -300,9 +299,9 @@ const Features = () => {
                                                 initial={{ opacity: 0, x: -10 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 transition={{ duration: 0.3, delay: idx * 0.1 }}
-                                                className="flex items-center text-neutral-700"
+                                                className="flex items-center text-gray-700"
                                             >
-                                                <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center mr-2.5 flex-shrink-0">
+                                                <div className="w-5 h-5 rounded-full bg-gradient-to-r from-[#F06A6A] to-red-500 flex items-center justify-center mr-2.5 flex-shrink-0">
                                                     <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                     </svg>
@@ -332,7 +331,7 @@ const Features = () => {
                                                         animate={{ opacity: 1, scale: 1 }}
                                                         transition={{ duration: 0.3, delay: idx * 0.05 }}
                                                         whileHover={{ scale: 1.1 }}
-                                                        className="p-2 bg-neutral-50 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 border border-neutral-100"
+                                                        className="p-2 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 border border-gray-100"
                                                     >
                                                         <Image 
                                                             src={icon} 
@@ -349,10 +348,15 @@ const Features = () => {
                                 )}
 
                                 {/* CTA */}
-                                <div className="mt-6 pt-5 border-t border-neutral-200">
-                                    <Button asChild>
-                                      <a href="#contact">Get Started with {activeFeature.title}</a>
-                                    </Button>
+                                <div className="mt-6 pt-5 border-t border-gray-100">
+                                    <motion.a
+                                        href="#contact"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        className="inline-block bg-[#F06A6A] text-white font-semibold rounded-lg px-6 py-2.5 text-base shadow-lg hover:bg-[#C04F4F] transform transition-all duration-300 ease-in-out"
+                                    >
+                                        Get Started with {activeFeature.title}
+                                    </motion.a>
                                 </div>
                             </motion.div>
                         </AnimatePresence>
@@ -377,3 +381,5 @@ const Features = () => {
 };
 
 export default Features;
+
+
