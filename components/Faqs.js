@@ -36,24 +36,25 @@ const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="max-w-4xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-[#1f2937] mb-12">
+    <section className="max-w-5xl mx-auto py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#1f2937] mb-16">
         Frequently Asked Questions
       </h2>
       <div className="border-t border-gray-200">
         {faqs.map((faq, idx) => (
-          <div key={idx} className="border-b border-gray-200">
+          <div key={idx} className={`border-b border-gray-200 transition-all duration-300 ${openIndex === idx ? 'bg-gray-50' : 'hover:bg-gray-50'}`}>
             <div
-              className="flex items-center justify-between cursor-pointer py-6"
+              className="flex items-center justify-between cursor-pointer py-8 px-6"
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
             >
-              <span className="text-base sm:text-lg font-medium text-gray-800">{faq.question}</span>
+              <span className="text-lg sm:text-xl font-medium text-gray-800">{faq.question}</span>
               <motion.div
-                animate={{ rotate: openIndex === idx ? 180 : 0 }}
+                animate={{ rotate: openIndex === idx ? 45 : 0 }}
                 transition={{ duration: 0.3 }}
+                className="ml-4"
               >
                 <svg className="w-6 h-6 text-[#1f2937]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v12m6-6H6" />
                 </svg>
               </motion.div>
             </div>
@@ -66,7 +67,7 @@ const Faqs = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <div className="pb-6 text-gray-500 leading-relaxed text-sm sm:text-base">
+                  <div className="px-6 pb-8 text-gray-600 leading-relaxed text-base sm:text-lg">
                     {faq.answer}
                   </div>
                 </motion.div>

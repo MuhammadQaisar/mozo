@@ -82,14 +82,14 @@ const features = [
             "Automated Decision Making",
         ],
         icons: [pytorch, keras, spark, jupyter, numpy, kafka, openai, kaggle, python, tensorflow, pandas, cassandra],
-        heading: "ARTIFICIAL INTELLIGENCE",
+        heading: "Artificial Intelligence & Machine Learning",
         color: "from-blue-500 to-purple-600"
     },
     {
         icon: (
             <Image src="/icons/Frame.svg" width={56} height={56} alt="Digital Marketing Icon" />
         ),
-        title: "DIGITAL MARKETING",
+        title: "Digital Marketing",
         subtitle: "Growth-Driven Marketing Solutions",
         description: "Accelerate your business growth with data-driven marketing strategies, targeted campaigns, and comprehensive analytics that deliver measurable results and maximize ROI.",
         benefits: [
@@ -99,14 +99,14 @@ const features = [
             "Email Marketing & Automation",
         ],
         icons: [semrush, Ahrefs, googleanalytics, hubspot, mailchimp, meta, googleAds, instagram],
-        heading: "DIGITAL MARKETING",
+        heading: "Digital Marketing",
         color: "from-pink-500 to-red-600"
     },
     {
         icon: (
            <Image src="/icons/cloudcomputing.svg" width={56} height={56} alt="CloudOps Icon" />
         ),
-        title: "CLOUDOPS",
+        title: "CloudOps",
         subtitle: "Cloud Infrastructure & Operations",
         description: "Scale your infrastructure seamlessly with secure, reliable, and cost-effective cloud solutions. We optimize performance, ensure high availability, and manage your cloud operations.",
         benefits: [
@@ -116,14 +116,14 @@ const features = [
             "Security & Compliance Management",
         ],
         icons: [aws, azure, terraform, docker, kubernetes, gitlab, nginx, ansible, google, digitalocean, FileZilla],
-        heading: "CLOUDOPS",
+        heading: "CloudOps",
         color: "from-cyan-500 to-blue-600"
     },
     {
         icon: (
            <Image src="/icons/web.svg" width={56} height={56} alt="Web Development Icon" />
         ),
-        title: "WEB DEVELOPMENT",
+        title: "Web Development",
         subtitle: "Modern Web Applications",
         description: "Create powerful, responsive, and scalable web applications using the latest technologies. From simple websites to complex enterprise solutions, we deliver exceptional digital experiences.",
         benefits: [
@@ -133,14 +133,14 @@ const features = [
             "API Development & Integration",
         ],
         icons: [reactjs, nextjs, tailwind, nodejs, vercel, shopify, wordpress, mongo, mysql, php, pgsql, woocommerce, typescript, java, express, dotnet, gitlab],
-        heading: "WEB DEVELOPMENT",
+        heading: "Web development",
         color: "from-green-500 to-emerald-600"
     },
     {
         icon: (
             <Image src="/icons/uiux.svg" width={56} height={56} alt="UI/UX Icon" />
         ),
-        title: "UI/UX DESIGN",
+        title: "UI/UX Design",
         subtitle: "User-Centered Design",
         description: "Design intuitive and visually stunning user experiences that delight your customers and drive engagement. Our design process focuses on usability, accessibility, and conversion optimization.",
         benefits: [
@@ -150,14 +150,14 @@ const features = [
             "Usability & Accessibility Audits",
         ],
         icons: [figma, framer, Ae, adobexd, miro, sketch],
-        heading: "UI/UX DESIGN",
+        heading: "UI/UX Design",
         color: "from-purple-500 to-pink-600"
     },
     {
         icon: (
            <Image src="/icons/devOps.svg" width={56} height={56} alt="DevOps Icon" />
         ),
-        title: "DEVOPS",
+        title: "DevOps",
         subtitle: "Development & Operations",
         description: "Streamline your development lifecycle with robust CI/CD pipelines, automated testing, and infrastructure management. Accelerate deployment while maintaining quality and reliability.",
         benefits: [
@@ -167,7 +167,7 @@ const features = [
             "Security & Compliance Integration",
         ],
         icons: [aws, azure, docker, kubernetes, terraform, apache, grafana, prometheus, typescript, java, jenkins, gitlab, nginx, ansible],
-        heading: "DEVOPS & CLOUD ENGINEERING",
+        heading: "DevOps & Cloud Engineering",
         color: "from-orange-500 to-red-600"
     },
 ];
@@ -203,7 +203,7 @@ const Features = () => {
     return (
         <SectionWrapper 
             id="features" 
-            className={`py-8 lg:py-12 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
+            className={`py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
         >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -219,25 +219,25 @@ const Features = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.7 }}
-                    className="text-center mb-12"
+                    className="text-center mb-16"
                 >
-                   <div className="inline-flex items-center px-3 py-2 bg-[#1f2937] rounded-full mb-8">
-                        <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5 animate-pulse"></span>
-                        <span className="text-xs font-medium text-white uppercase tracking-wider">Our Services</span>
+                   <div className="inline-flex items-center px-4 py-2 bg-[#1f2937] rounded-full mb-8">
+                        <span className="w-3 h-3 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
+                        <span className="text-sm font-medium text-white uppercase tracking-wider">Our Services</span>
                     </div>
 
-                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800">
-		WHAT <span className="text-[#F06A6A]">SOLUTION</span> DO WE PROVIDE?
+                 <h2 className="text-3xl sm:text-4xl md:text-4xl font-extrabold text-gray-800">
+		What <span className="text-[#F06A6A]">Solution</span> Do We Provide?
 
 	</h2> 
 
-                    <p className="mt-4 text-base sm:text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
+                    <p className="mt-6 text-lg sm:text-xl text-gray-500 max-w-4xl mx-auto leading-relaxed">
                         From AI-powered applications to scalable cloud infrastructure, we deliver end-to-end solutions that drive innovation and growth.
                     </p>
                 </motion.div>
 
                 {/* Enhanced Service Selection and Details */}
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
                     {/* Service Cards */}
                     <motion.div
                         variants={containerVariants}
@@ -252,10 +252,10 @@ const Features = () => {
                                     key={idx}
                                     variants={cardVariants}
                                     onClick={() => setActiveIdx(idx)}
-                                    className={`cursor-pointer rounded-t-lg overflow-hidden`}
+                                    className={`cursor-pointer rounded-lg overflow-hidden transition-all duration-300 ${activeIdx === idx ? 'bg-white shadow-lg' : 'hover:bg-gray-100'}`}
                                 >
-                                    <h3 className={`font-bold text-base py-3 ${activeIdx === idx ? 'text-gray-900' : 'text-gray-500 hover:bg-gray-50 hover:border-gray-200'}`}>
-                                        <span className={`ml-5 ${activeIdx === idx ? 'border-b-4 border-[#F06A6A]' : ''}`}>{item.title}</span>
+                                    <h3 className={`font-bold text-lg py-4 px-6 ${activeIdx === idx ? 'text-gray-900' : 'text-gray-500'}`}>
+                                        <span className={`relative ${activeIdx === idx ? 'after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[3px] after:bg-[#F06A6A]' : ''}`}>{item.title}</span>
                                     </h3>
                                 </motion.div>
                             ))}
@@ -271,28 +271,28 @@ const Features = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.4, ease: "easeOut" }}
-                                className="bg-gray-100 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-lg border border-gray-100 h-full"
+                                className="bg-white backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-xl border border-gray-100 h-full"
                             >
                                 {/* Service Header */}
-                                <div className="mb-6">
+                                <div className="mb-8">
                                     <div className="flex items-center mb-4">
                                       
                                         <div>
-                                            <h3 className="text-2xl font-bold text-gray-900">
+                                            <h3 className="text-3xl font-bold text-gray-900">
                                                 {activeFeature.heading}
                                             </h3>
                                         </div>
                                     </div>
                                     
-                                    <p className="text-gray-600 text-lg leading-relaxed">
+                                    <p className="text-gray-600 text-xl leading-relaxed">
                                         {activeFeature.description}
                                     </p>
                                 </div>
 
                                 {/* Benefits */}
-                                <div className="mb-6">
-                                    <h4 className="text-base font-semibold text-gray-900 mb-3">Key Services:</h4>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div className="mb-8">
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Services:</h4>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                         {activeFeature.benefits.map((benefit, idx) => (
                                             <motion.div
                                                 key={idx}
@@ -301,12 +301,12 @@ const Features = () => {
                                                 transition={{ duration: 0.3, delay: idx * 0.1 }}
                                                 className="flex items-center text-gray-700"
                                             >
-                                                <div className="w-5 h-5 rounded-full bg-gradient-to-r from-[#F06A6A] to-red-500 flex items-center justify-center mr-2.5 flex-shrink-0">
-                                                    <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#F06A6A] to-red-500 flex items-center justify-center mr-3 flex-shrink-0">
+                                                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                     </svg>
                                                 </div>
-                                                <span className="font-medium">{benefit}</span>
+                                                <span className="font-medium text-base">{benefit}</span>
                                             </motion.div>
                                         ))}
                                     </div>
@@ -315,14 +315,14 @@ const Features = () => {
                                 {/* Technology Stack */}
                                 {activeFeature.icons && activeFeature.icons.length > 0 && (
                                     <div>
-                                        {/* <h4 className="text-base font-semibold text-gray-900 mb-3">Technologies We Use:</h4> */}
-                                        <div className="flex flex-wrap gap-2">
+                                        <h4 className="text-lg font-semibold text-gray-900 mb-4">Technologies We Use:</h4>
+                                        <div className="flex flex-wrap gap-4">
                                             {activeFeature.icons.map((icon, idx) => {
-                                                let iconWidth = 32;
-                                                let iconHeight = 32;
+                                                let iconWidth = 36;
+                                                let iconHeight = 36;
                                                 if (icon === semrush || icon === Ahrefs) {
-                                                    iconWidth = 40;
-                                                    iconHeight = 40;
+                                                    iconWidth = 44;
+                                                    iconHeight = 44;
                                                 }
                                                 return (
                                                     <motion.div
@@ -330,8 +330,8 @@ const Features = () => {
                                                         initial={{ opacity: 0, scale: 0.8 }}
                                                         animate={{ opacity: 1, scale: 1 }}
                                                         transition={{ duration: 0.3, delay: idx * 0.05 }}
-                                                        whileHover={{ scale: 1.1 }}
-                                                        className="p-2 bg-gray-50 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300 border border-gray-100"
+                                                        whileHover={{ scale: 1.15, rotate: 5 }}
+                                                        className="p-3 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-gray-200"
                                                     >
                                                         <Image 
                                                             src={icon} 
@@ -348,12 +348,12 @@ const Features = () => {
                                 )}
 
                                 {/* CTA */}
-                                <div className="mt-6 pt-5 border-t border-gray-100">
+                                <div className="mt-10 pt-6 border-t border-gray-200">
                                     <motion.a
                                         href="#contact"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="inline-block bg-[#F06A6A] text-white font-semibold rounded-lg px-6 py-2.5 text-base shadow-lg hover:bg-[#C04F4F] transform transition-all duration-300 ease-in-out"
+                                        className="inline-block bg-[#F06A6A] text-white font-bold rounded-lg px-8 py-3 text-lg shadow-lg hover:bg-[#C04F4F] transform transition-all duration-300 ease-in-out"
                                     >
                                         Get Started with {activeFeature.title}
                                     </motion.a>

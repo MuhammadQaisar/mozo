@@ -52,7 +52,7 @@ const Testimonials = () => {
     return (
         <SectionWrapper className={`py-12 sm:py-20 md:py-28 bg-white ${montserrat.className}`}>
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-                <h2 className="text-5xl md:text-4xl font-extrabold text-gray-800 mb-4">WHAT OUR <span className="text-[#F06A6A]">CLIENTS</span> SAY</h2>
+                <h2 className="text-5xl md:text-4xl font-extrabold text-gray-800 mb-4">What Our <span className="text-[#F06A6A]">Clients</span> Say</h2>
                 <p className="text-medium md:text-lg text-gray-600 mb-12">We are trusted by businesses of all sizes.</p>
 
                 <div className="relative">

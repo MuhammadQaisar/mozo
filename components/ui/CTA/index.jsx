@@ -10,13 +10,13 @@ import { motion } from "framer-motion";
  */
 const CTA = () => {
     return (
-        <SectionWrapper id="cta" className="py-12 px-8 md:px-16">
+        <SectionWrapper id="cta" className="py-12">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative overflow-hidden rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 bg-[#212121]"
+                className="relative overflow-hidden shadow-2xl p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 bg-[#212121]"
             >
                 {/* Background Noise and Texture */}
                 <div
