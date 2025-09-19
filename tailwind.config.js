@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        cream: '#FDFBF5',
+      },
       screens: {
         'xs': '475px',
         'sm': '640px',

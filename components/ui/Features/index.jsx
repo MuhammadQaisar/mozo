@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SectionWrapper from "../../SectionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
-import { montserrat, inter } from "../font";
+import { montserrat, inter, poppins } from "../font";
 import python from "../../../public/icons/python.svg";
 import tensorflow from "../../../public/icons/tensorflow.svg";
 import kaggle from "../../../public/icons/kaggle.svg";
@@ -221,41 +221,41 @@ const Features = () => {
                     transition={{ duration: 0.7 }}
                     className="text-center mb-16"
                 >
-                   <div className="inline-flex items-center px-4 py-2 bg-[#1f2937] rounded-full mb-8">
-                        <span className="w-3 h-3 bg-[#F06A6A] rounded-full mr-3 animate-pulse"></span>
-                        <span className="text-sm font-medium text-white uppercase tracking-wider">Our Services</span>
-                    </div>
+                    {/* <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full mb-8">
+            <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5"></span>
+            <span className="text-sm font-medium text-gray-800 tracking-wider">Here's What We DO</span>
+          </div> */}
 
-                 <h2 className="text-3xl sm:text-4xl md:text-4xl font-extrabold text-gray-800">
+                 <h2 className={`text-3xl sm:text-4xl md:text-4xl font-extrabold text-gray-800 ${poppins.className}`}>
 		What <span className="text-[#F06A6A]">Solution</span> Do We Provide?
 
 	</h2> 
 
-                    <p className="mt-6 text-lg sm:text-xl text-gray-500 max-w-4xl mx-auto leading-relaxed">
+                    <p className="mt-6 :text-xl text-md text-gray-500 max-w-4xl mx-auto leading-relaxed">
                         From AI-powered applications to scalable cloud infrastructure, we deliver end-to-end solutions that drive innovation and growth.
                     </p>
                 </motion.div>
 
                 {/* Enhanced Service Selection and Details */}
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+                <div className="flex flex-col gap-8">
                     {/* Service Cards */}
                     <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        className="lg:col-span-1 flex flex-col justify-left"
+                        className="flex flex-row justify-center mb-0"
                     >
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-row flex-wrap gap-4 justify-center">
                             {features.map((item, idx) => (
                                 <motion.div
                                     key={idx}
                                     variants={cardVariants}
                                     onClick={() => setActiveIdx(idx)}
-                                    className={`cursor-pointer rounded-lg overflow-hidden transition-all duration-300 ${activeIdx === idx ? 'bg-white shadow-lg' : 'hover:bg-gray-100'}`}
+                                    className={`cursor-pointer rounded-lg overflow-hidden transition-all duration-300 ${activeIdx === idx ? 'bg-[#F06A6A] shadow-lg' : 'hover:bg-gray-100'}`}
                                 >
                                     <h3 className={`font-bold text-lg py-4 px-6 ${activeIdx === idx ? 'text-gray-900' : 'text-gray-500'}`}>
-                                        <span className={`relative ${activeIdx === idx ? 'after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[3px] after:bg-[#F06A6A]' : ''}`}>{item.title}</span>
+                                        <span className={`relative ${activeIdx === idx ? 'after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:w-full' : ''}`}>{item.title}</span>
                                     </h3>
                                 </motion.div>
                             ))}
@@ -263,7 +263,7 @@ const Features = () => {
                     </motion.div>
 
                     {/* Service Details */}
-                    <div className="lg:col-span-4">
+                    <div>
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeIdx}
@@ -275,24 +275,24 @@ const Features = () => {
                             >
                                 {/* Service Header */}
                                 <div className="mb-8">
-                                    <div className="flex items-center mb-4">
+                                    <div className="flex items-center mt-0">
                                       
                                         <div>
-                                            <h3 className="text-3xl font-bold text-gray-900">
+                                            <h3 className="text-2xl font-bold text-gray-900">
                                                 {activeFeature.heading}
                                             </h3>
                                         </div>
                                     </div>
                                     
-                                    <p className="text-gray-600 text-xl leading-relaxed">
+                                    <p className="text-gray-600 text-md leading-relaxed">
                                         {activeFeature.description}
                                     </p>
                                 </div>
 
                                 {/* Benefits */}
                                 <div className="mb-8">
-                                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Services:</h4>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <h4 className="text-md font-semibold text-gray-900 mb-4">Key Services:</h4>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
                                         {activeFeature.benefits.map((benefit, idx) => (
                                             <motion.div
                                                 key={idx}
@@ -301,12 +301,12 @@ const Features = () => {
                                                 transition={{ duration: 0.3, delay: idx * 0.1 }}
                                                 className="flex items-center text-gray-700"
                                             >
-                                                <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#F06A6A] to-red-500 flex items-center justify-center mr-3 flex-shrink-0">
+                                                <div className="w-4 h-4 rounded-full bg-gradient-to-r from-[#F06A6A] to-red-500 flex items-center justify-center mr-3 flex-shrink-0">
                                                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                     </svg>
                                                 </div>
-                                                <span className="font-medium text-base">{benefit}</span>
+                                                <span className="text-sm">{benefit}</span>
                                             </motion.div>
                                         ))}
                                     </div>
@@ -315,7 +315,7 @@ const Features = () => {
                                 {/* Technology Stack */}
                                 {activeFeature.icons && activeFeature.icons.length > 0 && (
                                     <div>
-                                        <h4 className="text-lg font-semibold text-gray-900 mb-4">Technologies We Use:</h4>
+                                        <h4 className="text-md font-semibold text-gray-900 mb-4">Technologies We Use:</h4>
                                         <div className="flex flex-wrap gap-4">
                                             {activeFeature.icons.map((icon, idx) => {
                                                 let iconWidth = 36;
@@ -353,7 +353,7 @@ const Features = () => {
                                         href="#contact"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
-                                        className="inline-block bg-[#F06A6A] text-white font-bold rounded-lg px-8 py-3 text-lg shadow-lg hover:bg-[#C04F4F] transform transition-all duration-300 ease-in-out"
+                                        className="inline-block bg-[#F06A6A] text-white font-bold rounded-lg px-8 py-3 text-md shadow-lg hover:bg-[#C04F4F] transform transition-all duration-300 ease-in-out"
                                     >
                                         Get Started with {activeFeature.title}
                                     </motion.a>

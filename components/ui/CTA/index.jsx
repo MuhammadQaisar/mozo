@@ -16,7 +16,7 @@ const CTA = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative overflow-hidden shadow-2xl p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 bg-[#212121]"
+                className="relative overflow-hidden shadow-2xl p-12 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 bg-[#212121]"
             >
                 {/* Background Noise and Texture */}
                 <div
@@ -30,10 +30,10 @@ const CTA = () => {
 
                 {/* Content Area: Contains headline and description */}
                 <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <h2 className="text-white text-3xl sm:text-4xl lg:text-4xl font-extrabold leading-tight mb-3">
+                    <h2 className="text-[#F06A6A] text-4xl sm:text-5xl lg:text-3xl font-extrabold leading-tight mb-4">
                         Ready to Transform Your Digital Presence?
                     </h2>
-                    <p className="text-white text-lg sm:text-xl opacity-90 max-w-2xl mx-auto lg:mx-0">
+                    <p className="text-[#F06A6A] text-2xl text-sm opacity-80 max-w-3xl mx-auto lg:mx-0">
                         Let's build something amazing together. Reach out today to
                         discuss your project and get a free consultation.
                     </p>
@@ -43,11 +43,11 @@ const CTA = () => {
                 <div className="relative z-10 flex-shrink-0">
                     <NavLink
                         href="/get-started"
-                        className="block w-full lg:w-auto px-8 py-4 font-semi-bold text-lg text-white bg-[#F06A6A] rounded-lg shadow-lg border-2 border-[#F06A6A] hover:bg-transparent hover:text-[#F06A6A] transition-all duration-300 group"
+                        className="block w-full lg:w-auto px-10 py-5 font-semi-bold text-xl text-[#F06A6A]  rounded-lg shadow-lg border-2 border-[#F06A6A] hover:bg-transparent hover:text-[#FFFFFF] transition-all duration-300 group"
                     >
                         <span className="flex items-center justify-center whitespace-nowrap">
                             Contact Us
-                            <svg className="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            <svg className="ml-3 w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </span>
                     </NavLink>
                 </div>
