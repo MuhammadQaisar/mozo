@@ -1,4 +1,5 @@
 import { FaLinkedin } from "react-icons/fa";
+import { poppins } from "./ui/font";
 
 const teamMembers = [
   {
@@ -27,7 +28,7 @@ const teamMembers = [
 const MeetTheTeam = () => (
   <section className="max-w-7xl mx-auto px-4 py-16">
     <div className="text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-2">Our Core Team</h2>
+        <h2 className={`text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-2 ${poppins.className}`}>Our Core Team</h2>
         <hr className="mb-12 border-gray-200 w-24 mx-auto" />
     </div>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -43,7 +44,7 @@ const MeetTheTeam = () => (
           />
           <div className="p-6 flex flex-col flex-1">
             <h3 className="text-2xl font-bold text-white mb-1">{member.name}</h3>
-            <p className="text-base text-gray-300 mt-2 flex-1">{member.bio}</p>
+            <p className="text-sm text-gray-300 mt-2 flex-1">{member.bio}</p>
             <div className="mt-4">
               <a
                 href={member.linkedin}

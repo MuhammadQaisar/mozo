@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SectionWrapper from "../../SectionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
-import { montserrat } from "../font";
+import { montserrat, poppins } from "../font";
 
 const successStories = [
     {
@@ -44,10 +44,10 @@ const CustomerSuccess = () => {
         <SectionWrapper className={`py-20 md:py-28 bg-gray-50 ${montserrat.className}`}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800">
+                    <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-800 ${poppins.className}`}>
                         Customer <span className="  text-[#F06A6A]">Success Stories</span>
                     </h2>
-                    <p className="mt-4 text-lg text-gray-600">
+                    <p className="mt-4 text-sm text-gray-600">
                         See how we've helped businesses like yours achieve their goals.
                     </p>
                 </div>
@@ -63,11 +63,11 @@ const CustomerSuccess = () => {
                                 exit={{ opacity: 0, y: -30 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <blockquote className="text-base md:text-lg font-sm text-gray-700 leading-relaxed mb-6 italic">
+                                <blockquote className="text-base md:text-medium font-sm text-gray-700 leading-relaxed mb-6 text-center">
                                     “{activeStory.feedback}”
                                 </blockquote>
-                                <div className="font-bold text-gray-900">{activeStory.name}</div>
-                                <div className="text-gray-600">{activeStory.title}</div>
+                                <div className="text-sm font-bold text-gray-900">{activeStory.name}</div>
+                                <div className=" text-sm text-gray-600">{activeStory.title}</div>
                                 <div className="mt-4 text-sm font-medium text-gray-500 uppercase tracking-wider">{activeStory.project}</div>
                             </motion.div>
                         </AnimatePresence>

@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import CareersHero from "../components/CareersHero";
+import { poppins } from "../components/ui/font";
 
 
 
@@ -94,17 +96,10 @@ const Careers = () => {
                 <meta name="description" content="Join our team at Mozo Technologies. Explore our open positions and apply today." />
             </Head>
             <main className="bg-gray-50 mb-5">
-               
-
-              
-
-                
+               <CareersHero />
                 {/* Job Openings Section */}
                 <section className="py-4 lg:py-8 bg-gray-50 mb-4"> {/* Reduced padding here */}
-                    <div className="block mx-auto w-fit px-3 py-1.5 bg-[#1f2937] rounded-full mb-6 mt-20">
-                        <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5 animate-pulse"></span>
-                        <span className="text-xs font-medium text-white uppercase tracking-wider">Careers</span>
-                    </div>
+                   
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -113,10 +108,10 @@ const Careers = () => {
                             transition={{ duration: 0.7 }}
                             className="text-center mb-12"
                         >
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+                            <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 ${poppins.className}`}>
                                 Explore Our <span className="text-[#F06A6A]">Open Positions</span>
                             </h2>
-                            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            <p className="text-medium text-gray-600 max-w-2xl mx-auto">
                                 Find your next career opportunity and join our growing team.
                             </p>
                         </motion.div>
@@ -131,30 +126,30 @@ const Careers = () => {
                             {jobs.map((job, idx) => (
                                 <motion.div
                                     key={job.title}
-                                    className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300"
+                                    className="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300"
                                     variants={itemVariants}
                                 >
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{job.title}</h3>
-                                        <p className="text-gray-600 text-sm mb-4">{job.description}</p>
-                                        <div className="flex items-center text-gray-600 text-sm mb-2">
-                                            <svg className="h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                            <span>{job.location}</span>
-                                        </div>
-                                        <div className="flex items-center text-gray-600 text-sm mb-4">
-                                            <svg className="h-4 w-4 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                            </svg>
-                                            <span>{job.type}</span>
+                                    <div className="p-6">
+                                        <h3 className="text-xl font-bold text-gray-800 mb-3">{job.title}</h3>
+                                        <p className="text-gray-600 text-sm mb-6 h-20 overflow-y-auto">{job.description}</p>
+                                        <div className="flex justify-between items-center">
+                                            <div className="flex items-center text-gray-500 text-sm">
+                                                <svg className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                </svg>
+                                                <span>{job.location}</span>
+                                            </div>
+                                            <div className="flex items-center text-gray-500 text-sm">
+                                                <svg className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                                </svg>
+                                                <span>{job.type}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className="mt-auto">
-                                        <Link href={`/jobs/${job.slug}`}
-                                            className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#F06A6A] hover:bg-[#C04F4F] transition-colors duration-300"
-                                        >
+                                    <div className="px-6 py-3 bg-gray-50">
+                                        <Link href={`/jobs/${job.slug}`} className="block w-full text-center py-3 px-6 bg-[#F06A6A] text-white font-semibold rounded-lg hover:bg-[#D05A5A] transition-colors duration-300">
                                             Apply Now
                                         </Link>
                                     </div>

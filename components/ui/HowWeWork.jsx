@@ -61,10 +61,11 @@ const HowWeWork = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-20"
         >
-          <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full mb-8">
-            <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5"></span>
-            <span className="text-sm font-medium text-gray-800 tracking-wider">Here's How it works</span>
-          </div>
+          {/* <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full mb-8">
+            <p className="text-sm text-gray-500 font-medium tracking-widest uppercase mb-3">
+              How We Work
+    </p>
+          </div> */}
           <h2 className={`text-3xl sm:text-4xl md:text-4xl font-extrabold text-gray-800 mb-6 ${poppins.className}`}>
             A Straightforward <span className="text-[#F06A6A]">Results-Driven </span>Process
           </h2> 
@@ -89,11 +90,11 @@ const HowWeWork = () => {
                 variants={cardVariants}
                 className="group relative"
               >
-                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-300 h-full flex flex-col group-hover:bg-gradient-to-r from-[#1f2937] to-[#F06A6A]">
+                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-300 h-full flex flex-col group-hover:bg-[#212121]">
                   <div className="relative z-10">
-                    <div className="flex items-center mb-6 group-hover:filter-none group-hover:invert">
+                    <div className="flex items-center mb-6 group-hover:brightness-0 group-hover:invert">
                         <div className="text-4xl mr-4">{step.icon}</div>
-                        <div className={`text-[#F06A6A] font-bold text-xl ${montserrat.className} group-hover:text-white`}>
+                        <div className={`text-gray-500 font-bold text-xl ${montserrat.className} group-hover:text-white`}>
                             Step {step.number}
                         </div>
                     </div>

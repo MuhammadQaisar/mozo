@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { poppins } from "../font";
 
 const Hero = () => {
   const trustedByLogos = [
@@ -80,7 +81,7 @@ const Hero = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
              
             >
-             <div  className="text-7xl md:text-5xl font-extrabold leading-tight">
+             <div className={`text-7xl md:text-5xl font-extrabold leading-tight ${poppins.className}`}>
                <div className="text-[#1f2937]">Empowering Your</div>
               <div className="text-[#F06A6A] mt-2 md:mt-5">Digital Excellence</div>
              </div>

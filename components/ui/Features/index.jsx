@@ -203,7 +203,7 @@ const Features = () => {
     return (
         <SectionWrapper 
             id="features" 
-            className={`py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
+            className={`-mt-20 py-8 lg:py-12 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
         >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -212,7 +212,7 @@ const Features = () => {
                 <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-4 lg:px-4">
                 {/* Enhanced Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -252,8 +252,7 @@ const Features = () => {
                                     key={idx}
                                     variants={cardVariants}
                                     onClick={() => setActiveIdx(idx)}
-                                    className={`cursor-pointer rounded-lg overflow-hidden transition-all duration-300 ${activeIdx === idx ? 'bg-[#F06A6A] shadow-lg' : 'hover:bg-gray-100'}`}
-                                >
+                                    className={`cursor-pointer rounded-lg overflow-hidden transition-all duration-300 ${activeIdx === idx ? 'bg-[#F06A6A] shadow-lg' : 'hover:bg-gradient-to-r hover:from-[#212121] hover:to-[#F06A6A]'}`}>
                                     <h3 className={`font-bold text-lg py-4 px-6 ${activeIdx === idx ? 'text-gray-900' : 'text-gray-500'}`}>
                                         <span className={`relative ${activeIdx === idx ? 'after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:w-full' : ''}`}>{item.title}</span>
                                     </h3>

@@ -267,24 +267,34 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        
-        // Simulate form submission
+        setSubmitStatus(null); // Reset status on new submission
+
         try {
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            setSubmitStatus("success");
-            setFormData({
-                name: "",
-                email: "",
-                company: "",
-                phone: "",
-                service: "",
-                message: ""
+            const response = await fetch('/api/submit-contact3-form', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
             });
+
+            if (response.ok) {
+                setSubmitStatus("success");
+                setFormData({
+                    name: "",
+                    email: "",
+                    company: "",
+                    phone: "",
+                    service: "",
+                    message: ""
+                });
+            } else {
+                setSubmitStatus("error");
+            }
         } catch (error) {
+            console.error("Form submission error:", error);
             setSubmitStatus("error");
         } finally {
             setIsSubmitting(false);
-            setTimeout(() => setSubmitStatus(null), 5000);
+            setTimeout(() => setSubmitStatus(null), 5000); // Clear status after 5 seconds
         }
     };
 

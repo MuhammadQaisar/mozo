@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Input from "../components/ui/Input";
+import ContactHero from "../components/ContactHero";
 import Button from "../components/ui/Button";
 import Checkbox from "../components/ui/Checkbox";
 import Link from "next/link";
@@ -59,7 +60,7 @@ export default function ContactUs() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/submit-contact2-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -86,6 +87,7 @@ export default function ContactUs() {
 
   return (
     <>
+      <ContactHero />
       <Head>
         <title>Contact Us - Mozo Technologies</title>
         <meta name="description" content="Contact Mozo Technologies for any inquiries or to discuss your project. We are here to help you with our expertise in Data & AI, Web Development, UI/UX, CloudOps, Digital Marketing, and DevOps solutions." />

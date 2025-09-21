@@ -1,23 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
-import { montserrat } from "../font";
+import { useRouter } from 'next/router';
 
-/**
- * Brand Component
- * Displays the company logo as a clickable link to the homepage.
- * Uses Next.js Image component for optimized image loading.
- */
-const Brand = () => (
-    <Link href="/">
-        <div className="flex items-center">
-            <Image
-                src="/navbar-logo.svg"
-                width={170} // Increased width for better visibility
-                height={170} // Increased height for better visibility
-                alt="Mozo Technologies logo"
-            />
-        </div>
-    </Link>
-);
+const Brand = ({ isScrolled }) => {
+    const router = useRouter();
+    const pagesWithDynamicLogo = ['/', '/about', '/services', '/careers', '/contact-us'];
+    const shouldShowFooterLogo = pagesWithDynamicLogo.includes(router.pathname) && !isScrolled;
+
+    const logoSrc = shouldShowFooterLogo ? "/footer-logo.svg" : "/navbar-logo.svg";
+
+    return (
+        <Link href="/">
+            <div className="flex items-center">
+                <Image
+                    src={logoSrc}
+                    width={170}
+                    height={170}
+                    alt="Mozo Technologies logo"
+                />
+            </div>
+        </Link>
+    );
+};
 
 export default Brand;

@@ -1,3 +1,4 @@
+import ServiceHero from '../components/ServiceHero';
 import CTA from '../components/ui/CTA';
 import ServiceNav from '../components/ServiceNav';
 import ServiceIntro from '../components/ServiceIntro';
@@ -7,8 +8,8 @@ import CustomerSuccess from '../components/ui/CustomerSuccess';
 const ServicesPage = () => {
   return (
     <>
-      
-      <ServiceIntro />
+      <ServiceHero />
+      {/* <ServiceIntro /> */}
       {/* <ServiceNav /> */}
       <Features/>
       <CustomerSuccess />

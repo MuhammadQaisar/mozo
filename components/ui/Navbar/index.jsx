@@ -102,7 +102,7 @@ const Navbar = () => {
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.2 }}
                     >
-                        <Brand className="h-12 w-auto" />
+                        <Brand className="h-12 w-auto" isScrolled={isScrolled} />
                     </motion.div>
 
                     {/* Desktop Navigation Links */}
@@ -117,9 +117,9 @@ const Navbar = () => {
                                     <Link 
                                         href={asPath === '/get-started' ? `/${item.path}` : item.path}
                                         className={`relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 group ${
-                                            (item.path.startsWith('#') && activeNavLink === item.path) || (!item.path.startsWith('#') && asPath === item.path)
-                                                ? 'text-[#F06A6A] bg-[#F06A6A]/10' 
-                                                : 'text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50'
+                                            ((item.path.startsWith('#') && activeNavLink === item.path) || (!item.path.startsWith('#') && asPath === item.path))
+                                                ? (isScrolled ? 'text-[#F06A6A] bg-[#F06A6A]/10' : 'text-white font-semibold')
+                                                : (isScrolled ? 'text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50' : 'text-white hover:text-white/80')
                                         }`}
                                         onClick={() => {
                                             if (!item.path.startsWith('#')) {
@@ -170,7 +170,7 @@ const Navbar = () => {
                             onClick={toggleMobileMenu}
                             className={`relative p-2 rounded-lg transition-all duration-300 ${
                                 isMobileMenuOpen 
-                                    ? 'text-[#F06A6A] bg-[#F06A6A]/10' 
+                                    ? 'text-[#1f2937] bg-[#F06A6A]/10' 
                                     : 'text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50'
                             }`}
                             aria-label="Toggle mobile menu"
@@ -204,7 +204,7 @@ const Navbar = () => {
                                         className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
                                             activeNavLink === item.path
                                                 ? 'text-[#F06A6A] bg-[#F06A6A]/10'
-                                                : 'text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50'
+                                                : 'text-[#F06A6A] hover:text-[#F06A6A] hover:bg-gray-50'
                                         }`}
                                         onClick={() => {
                                             setActiveNavLink(item.path);

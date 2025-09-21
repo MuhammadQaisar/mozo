@@ -45,14 +45,14 @@ const Faqs = () => {
         {faqs.map((faq, idx) => (
           <div key={idx} className={`rounded-2xl border border-gray-200 transition-all duration-300 ${openIndex === idx ? 'bg-white' : 'bg-gray-50 hover:bg-gray-100'}`}>
             <div
-              className="flex items-center justify-between cursor-pointer py-1.5 px-4"
+              className="flex items-center justify-between cursor-pointer py-4 px-6"
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
             >
               <span className=":text-xl text-sm text-gray-700">{faq.question}</span>
               <motion.div
                 animate={{ rotate: openIndex === idx ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
-                className="ml-4"
+                className="ml-4 flex-shrink-0 origin-center"
               >
                 <svg className="w-6 h-6 text-[#1f2937]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
