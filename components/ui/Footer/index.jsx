@@ -99,7 +99,7 @@ const Footer = () => {
 
                     {/* Services */}
                     <motion.div variants={itemVariants} className="text-center md:text-left">
-                        <h3 className="text-base sm:text-lg font-semibold mb-4">Our Services</h3>
+                        <h3 className="text-base sm:text-lg font-semi-bold mb-4">Our Services</h3>
                         <ul className="space-y-2">
                             {services.map((service) => (
                                 <li key={service}>
