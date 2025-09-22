@@ -74,7 +74,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className={`bg-black text-white ${montserrat.className}`}>
+        <footer className={`bg-[#0D0D0D] text-white ${montserrat.className}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <motion.div
                     variants={containerVariants}
@@ -88,9 +88,9 @@ const Footer = () => {
                         <Image
                             src="/footer-logo.svg"
                             alt="Mozo Technologies"
-                            width={160}
-                            height={80}
-                            className="mb-4 mx-auto md:mx-0"
+                            width={180}
+                            height={100}
+                            className="mt-16 mx-auto md:mx-0"
                         />
                         {/* <p>
                            <span className="font-extrabold text-gray-500">Mozo Technologies</span><span className="text-gray-400 text-md"> is a young, full-service software development company focusing on Generative AI, Web, and Mobile solutions.</span>
@@ -103,7 +103,7 @@ const Footer = () => {
                         <ul className="space-y-2">
                             {services.map((service) => (
                                 <li key={service}>
-                                    <Link href="#features" className="text-gray-400 hover:text-white transition-colors">
+                                    <Link href="#features" className="text-sm text-gray-400 hover:text-white transition-colors">
                                         {service}
                                     </Link>
                                 </li>
@@ -114,21 +114,21 @@ const Footer = () => {
                     {/* Newsletter & Social */}
                     <motion.div variants={itemVariants} className="text-center md:text-left">
                         {/* <h3 className="text-lg font-semibold mb-4">Stay Connected</h3> */}
-                        <p className="text-gray-400 text-sm mb-4">
+                        {/* <p className="text-gray-400 text-sm mb-4">
                             Subscribe to our newsletter for the latest updates.
-                        </p>
-                        <div className="flex mb-6">
+                        </p> */}
+                        <div className="flex mb-20">
                             <input
                                 type="email"
                                 placeholder="Enter your email"
-                                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#F06A6A] text-white placeholder-gray-500"
+                                className="flex-1 px-4 py-2 mr-2 rounded-md bg-gray-800 border border-gray-700 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#F06A6A] text-white placeholder-gray-500"
                             />
-                            <button className="px-4 py-2 bg-[#F06A6A] rounded-r-md hover:bg-red-500 transition-colors">
+                            <button className="px-4 py-2 bg-[#F06A6A] rounded-md hover:bg-red-500 transition-colors">
                                 Subscribe
                             </button>
                         </div>
-                        <h4 className="text-sm sm:text-md font-semibold mb-4">Follow Us</h4>
-                        <div className="flex space-x-4 justify-center md:justify-start">
+                        {/* <h4 className="text-sm sm:text-md font-semibold mb-4">Follow Us</h4> */}
+                        <div className="flex space-x-8 justify-center md:justify-end">
                             {socialLinks.map((social) => (
                                 <Link
                                     key={social.name}
@@ -140,8 +140,8 @@ const Footer = () => {
                                     <Image
                                         src={social.icon}
                                         alt={social.name}
-                                        width={40}
-                                        height={40}
+                                        width={35}
+                                        height={35}
                                     />
                                 </Link>
                             ))}

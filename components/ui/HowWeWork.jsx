@@ -90,7 +90,7 @@ const HowWeWork = () => {
                 variants={cardVariants}
                 className="group relative"
               >
-                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-300 h-full flex flex-col group-hover:bg-[#212121]">
+                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-300 h-full flex flex-col group-hover:bg-[#212121] group-hover:relative group-hover:after:absolute group-hover:after:inset-0 group-hover:after:noise-bg">
                   <div className="relative z-10">
                     <div className="flex items-center mb-6 group-hover:brightness-0 group-hover:invert">
                         <div className="text-4xl mr-4">{step.icon}</div>
