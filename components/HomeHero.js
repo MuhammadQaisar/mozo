@@ -1,124 +1,113 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
-import { poppins } from './ui/font';
+import React from 'react';
+import { poppins, montserrat } from './ui/font';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const HomeHero = () => {
-  const canvasRef = useRef(null);
+  // Array of technology names and their logos
+  const technologies = [
+    { name: 'AWS', logo: '/icons/aws.svg' },
+    { name: 'React', logo: '/icons/reactjs.svg' },
+    { name: 'Nodejs', logo: '/icons/nodejs.svg' },
+    { name: 'CI/CD', logo: '/icons/gitlab.svg' },
+    { name: 'Django', logo: '/icons/python.svg' },
+    { name: 'Shopify', logo: '/icons/shopify.svg' },
+    { name: 'Laravel', logo: '/icons/wordpress.svg' },
+  ];
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    let animationFrameId;
-
-    canvas.width = window.innerWidth;
-    canvas.height = canvas.parentElement.offsetHeight;
-
-    const particles = [];
-    const particleCount = 100;
-
-    for (let i = 0; i < particleCount; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        radius: Math.random() * 1.5 + 1,
-      });
+  // Function to generate random positions and animation delays
+  const getCardStyle = (index) => {
+    const style = {};
+    switch (index) {
+      case 0: // AWS
+        style.top = '5%';
+        style.left = '75%';
+        break;
+      case 1: // React
+        style.top = '25%';
+        style.left = '10%';
+        break;
+      case 2: // Nodejs
+        style.top = '0%';
+        style.left = '30%';
+        break;
+      case 3: // CI/CD
+        style.top = '55%';
+        style.left = '85%';
+        break;
+      case 4: // Django
+        style.top = '75%';
+        style.left = '20%';
+        break;
+      case 5: // Shopify
+        style.top = '40%';
+        style.left = '50%';
+        break;
+      case 6: // Laravel
+        style.top = '85%';
+        style.left = '65%';
+        break;
+      default:
+        break;
     }
-
-    let mouse = {
-      x: null,
-      y: null,
-      radius: 150
-    }
-
-    const handleMouseMove = (event) => {
-      mouse.x = event.clientX;
-      mouse.y = event.clientY;
-    }
-    window.addEventListener('mousemove', handleMouseMove);
-
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      for (let i = 0; i < particleCount; i++) {
-        const p = particles[i];
-
-        p.x += p.vx;
-        p.y += p.vy;
-
-        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-        ctx.fill();
-
-        for (let j = i + 1; j < particleCount; j++) {
-          const p2 = particles[j];
-          const dx = p.x - p2.x;
-          const dy = p.y - p2.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < 120) {
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance / 120})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-          }
-        }
-        
-        const dxMouse = p.x - mouse.x;
-        const dyMouse = p.y - mouse.y;
-        const distanceMouse = Math.sqrt(dxMouse*dxMouse + dyMouse*dyMouse);
-        if(distanceMouse < mouse.radius){
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(240, 106, 106, ${1 - distanceMouse/mouse.radius})`;
-            ctx.lineWidth = 1;
-            ctx.stroke();
-        }
-      }
-
-      animationFrameId = requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    const handleResize = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = canvas.parentElement.offsetHeight;
-    }
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
-  }, []);
+    
+    return style;
+  };
 
   return (
-    <section className="relative bg-gradient-to-r from-[#212121] to-[#F06A6A] py-32 md:py-48">
-      <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0 opacity-50"></canvas>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className={`text-5xl md:text-5xl font-extrabold text-[#F06A6A] ${poppins.className}`}>
-          Empowering  <span className="text-white">Your Digital Future</span>
-        </h1>
-        <p className="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-          We build innovative software solutions that drive growth and efficiency. Let's build the future together.
-        </p>
-        <div className="mt-10">
-            <Link href="/get-started" className="inline-block bg-[#F06A6A] text-white font-semibold rounded-lg px-8 py-4 text-lg hover:bg-[#C04F4F] transition-colors duration-300 ease-in-out">
-                Get Started
-            </Link>
+    <section className="bg-white py-32">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Left: Headline + copy */}
+          <div className="text-left">
+            <h1 className={`text-5xl sm:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#0b0b0b] to-[#4a4a4a] tracking-wide ${poppins.className}`}>
+              Transforming Ideas into
+              <br/>
+              <span className='inline-block mb-4'>High-Performance</span>  <span className="text-[#F06A6A]">Software Solutions</span>
+              <br/>
+             
+            </h1>
+
+            <p className={`mt-6 max-w-2xl text-gray-700 text-xl leading-relaxed ${montserrat.className}`}>
+              From concept to launch, we deliver complete software solutions that drive your business forward with cutting-edge technology and lightning-fast performance.
+            </p>
+
+            <div className="mt-12">
+              <Link
+                href="/get-started"
+                className="inline-block bg-[#F06A6A] hover:bg-[#212121] text-white font-bold rounded-lg px-8 py-4 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg transform hover:-translate-y-1"
+              >
+                Contact us
+              </Link>
+            </div>
+          </div>
+
+          {/* Right: tech badges + subtle network background */}
+          <div className="relative w-full h-80 md:h-96">
+            {/* faint network lines (SVG) */}
+            <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 800 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="#bfbfbf" strokeWidth="1" fill="none">
+                <polyline points="40,520 200,320 380,480 540,240 760,520" />
+                <polyline points="20,160 160,260 300,120 520,220 760,80" />
+                <polyline points="80,360 240,200 420,340 600,160" />
+              </g>
+            </svg>
+
+            {/* floating tech cards */}
+            <div className="absolute inset-0">
+              {technologies.map((tech, index) => (
+                <div
+                  key={tech.name}
+                  className="absolute w-20 h-20 bg-white rounded-lg shadow-lg flex items-center justify-center p-4"
+                  style={getCardStyle(index)}
+                >
+                  <Image src={tech.logo} alt={tech.name} width={100} height={100} className="grayscale hover:grayscale-0 transition-all duration-300" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

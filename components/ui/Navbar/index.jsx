@@ -18,7 +18,6 @@ const navigation = [
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
     const [activeNavLink, setActiveNavLink] = useState("");
     const { events, asPath } = useRouter();
 
@@ -37,17 +36,6 @@ const Navbar = () => {
             events.off("hashChangeStart", handleRouteChange);
         };
     }, [events]);
-
-    // Enhanced scroll effect with better performance
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            setIsScrolled(scrollPosition > 20);
-        };
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     // Enhanced intersection observer for active nav links
     useEffect(() => {
@@ -87,22 +75,16 @@ const Navbar = () => {
     return (
         <header className={montserrat.className}>
             <nav
-                className={`w-full fixed top-0 left-0 z-50 transition-all duration-500 ease-out ${
-                    isScrolled || isMobileMenuOpen 
-                        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-                        : 'bg-transparent'
-                }`}
+                className={"w-full fixed top-0 left-0 z-50 transition-all duration-500 ease-out bg-white/95 backdrop-blur-md shadow-lg"}
             >
-                <div className={`max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
-                    isScrolled ? 'py-3' : 'py-4 md:py-6'
-                }`}>
+                <div className={"max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-300 py-3"}>
                     {/* Enhanced Brand Logo */}
                     <motion.div 
                         className="flex items-center"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.2 }}
                     >
-                        <Brand className="h-12 w-auto" isScrolled={isScrolled} />
+                        <Brand className="h-12 w-auto" isScrolled={true} />
                     </motion.div>
 
                     {/* Desktop Navigation Links */}
@@ -118,8 +100,8 @@ const Navbar = () => {
                                         href={asPath === '/get-started' ? `/${item.path}` : item.path}
                                         className={`relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 group ${
                                             ((item.path.startsWith('#') && activeNavLink === item.path) || (!item.path.startsWith('#') && asPath === item.path))
-                                                ? (isScrolled ? 'text-[#F06A6A] bg-[#F06A6A]/10' : 'text-white font-semibold')
-                                                : (isScrolled ? 'text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50' : 'text-white hover:text-white/80')
+                                                ? 'text-[#F06A6A] bg-[#F06A6A]/10'
+                                                : 'text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50'
                                         }`}
                                         onClick={() => {
                                             if (!item.path.startsWith('#')) {
