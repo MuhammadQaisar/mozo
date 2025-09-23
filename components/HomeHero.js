@@ -57,12 +57,12 @@ const HomeHero = () => {
   };
 
   return (
-    <section className="bg-white py-32">
+    <section className="bg-white py-20 md:py-32">
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left: Headline + copy */}
-          <div className="text-left">
-            <h1 className={`text-5xl sm:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#0b0b0b] to-[#4a4a4a] tracking-wide ${poppins.className}`}>
+          <div className="text-center md:text-left">
+            <h1 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#0b0b0b] to-[#4a4a4a] tracking-wide ${poppins.className}`}>
               Transforming Ideas into
               <br/>
               <span className='inline-block mb-4'>High-Performance</span>  <span className="text-[#F06A6A]">Software Solutions</span>
@@ -70,7 +70,7 @@ const HomeHero = () => {
              
             </h1>
 
-            <p className={`mt-6 max-w-2xl text-gray-700 text-xl leading-relaxed ${montserrat.className}`}>
+            <p className={`mt-6 max-w-2xl text-gray-700 text-lg sm:text-xl leading-relaxed ${montserrat.className}`}>
               From concept to launch, we deliver complete software solutions that drive your business forward with cutting-edge technology and lightning-fast performance.
             </p>
 
@@ -85,7 +85,7 @@ const HomeHero = () => {
           </div>
 
           {/* Right: tech badges + subtle network background */}
-          <div className="relative w-full h-80 md:h-96">
+          <div className="relative w-full h-auto sm:h-80 md:h-96 hidden sm:block">
             {/* faint network lines (SVG) */}
             <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 800 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#bfbfbf" strokeWidth="1" fill="none">
@@ -96,11 +96,11 @@ const HomeHero = () => {
             </svg>
 
             {/* floating tech cards */}
-            <div className="absolute inset-0">
+            <div className="relative hidden sm:flex flex-wrap justify-center items-center gap-4 sm:absolute sm:inset-0">
               {technologies.map((tech, index) => (
                 <div
                   key={tech.name}
-                  className="absolute w-20 h-20 bg-white rounded-lg shadow-lg flex items-center justify-center p-4"
+                  className="relative w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-lg shadow-lg flex items-center justify-center p-4 sm:absolute"
                   style={getCardStyle(index)}
                 >
                   <Image src={tech.logo} alt={tech.name} width={100} height={100} className="grayscale hover:grayscale-0 transition-all duration-300" />

@@ -98,7 +98,7 @@ const Careers = () => {
             <main className="bg-gray-50 mb-5">
                <CareersHero />
                 {/* Job Openings Section */}
-                <section className="py-4 lg:py-8 bg-gray-50 mb-4"> {/* Reduced padding here */}
+                <section className="pt-0 pb-4 lg:pb-8 bg-gray-50"> {/* Reduced padding here */}
                    
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div

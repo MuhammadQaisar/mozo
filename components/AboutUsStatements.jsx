@@ -5,7 +5,7 @@ import { poppins } from './ui/font';
 
 const AboutUsStatements = () => {
   return (
-    <SectionWrapper className="bg-white py-16 lg:py-24">
+    <SectionWrapper className="bg-white py-8 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-gray-700">
         {/* First Row: About Us Description */}
         <div className="mb-8"> {/* Added mb-8 for spacing below this row */}

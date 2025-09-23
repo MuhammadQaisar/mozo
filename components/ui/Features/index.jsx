@@ -253,7 +253,7 @@ const Features = () => {
                                     variants={cardVariants}
                                     onClick={() => setActiveIdx(idx)}
                                     className={`cursor-pointer rounded-lg overflow-hidden transition-all duration-300 ${activeIdx === idx ? 'bg-[#F06A6A] shadow-lg' : 'hover:bg-gradient-to-r hover:from-[#212121] hover:to-[#F06A6A]'}`}>
-                                    <h3 className={`font-bold text-lg py-4 px-6 ${activeIdx === idx ? 'text-gray-900' : 'text-gray-500'}`}>
+                                    <h3 className={`font-bold text-sm py-2 px-3 sm:py-4 sm:px-6 sm:text-lg ${activeIdx === idx ? 'text-gray-900' : 'text-gray-500'}`}>
                                         <span className={`relative ${activeIdx === idx ? 'after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:w-full' : ''}`}>{item.title}</span>
                                     </h3>
                                 </motion.div>

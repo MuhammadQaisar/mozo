@@ -158,7 +158,7 @@ export default function ContactUs() {
           }}
         />
       </Head>
-      <div className="min-h-screen bg-white py-8 px-2 sm:px-4 font-[Montserrat] pt-20">
+      <div className="min-h-screen bg-white py-8 px-2 sm:px-4 font-[Montserrat] pt-10">
         <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-4 sm:p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {/* Left: Form */}
           <form onSubmit={handleSubmit} className="space-y-6 font-[Montserrat]">
