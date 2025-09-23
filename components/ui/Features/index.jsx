@@ -203,7 +203,7 @@ const Features = () => {
     return (
         <SectionWrapper 
             id="features" 
-            className={`-mt-20 py-8 lg:py-12 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
+            className={`mt-0 md:-mt-20 py-8 lg:py-12 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden ${montserrat.className}`}
         >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -226,7 +226,7 @@ const Features = () => {
             <span className="text-sm font-medium text-gray-800 tracking-wider">Here's What We DO</span>
           </div> */}
 
-                 <h2 className={`text-3xl sm:text-4xl md:text-4xl font-extrabold text-gray-800 ${poppins.className}`}>
+                 <h2 className={`text-2xl md:text-4xl font-extrabold text-gray-800 ${poppins.className}`}>
 		What <span className="text-[#F06A6A]">Solution</span> Do We Provide?
 
 	</h2> 

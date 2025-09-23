@@ -57,11 +57,11 @@ const HomeHero = () => {
   };
 
   return (
-        <section className="bg-white pb-0 pt-0 md:py-20 mt-10">
+        <section className="bg-white pb-0 pt-10 md:py-20 mt-10">
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left: Headline + copy */}
-          <div className="text-left">
+          <div className="text-center sm:text-left">
             <h1 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#1f2937] to-[#4a4a4a] tracking-wide ${poppins.className}`}>
               Transforming Ideas into
               <br/>
@@ -85,7 +85,7 @@ const HomeHero = () => {
           </div>
 
           {/* Right: tech badges + subtle network background */}
-          <div className="relative w-full h-80 md:h-96">
+          <div className="relative w-full h-80 md:h-96 hidden md:block">
             {/* faint network lines (SVG) */}
             <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 800 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#bfbfbf" strokeWidth="1" fill="none">

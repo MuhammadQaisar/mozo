@@ -50,9 +50,9 @@ const Testimonials = () => {
     const activeTestimonial = testimonials[activeIndex];
 
     return (
-        <SectionWrapper className={`py-6 sm:py-20 md:py-28 bg-white ${montserrat.className}`}>
+        <SectionWrapper className={`pt-10 sm:py-20 md:py-28 bg-white ${montserrat.className}`}>
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-4 lg:px-4">
-                <h2 className={`text-5xl md:text-4xl font-extrabold text-gray-800 mb-6 ${poppins.className}`}>What Our <span className="text-[#F06A6A]">Clients</span> feedback</h2>
+                <h2 className={`text-4xl md:text-4xl font-extrabold text-gray-800 mb-6 ${poppins.className}`}>What Our <span className="text-[#F06A6A]">Clients</span> feedback</h2>
                 {/* <p className="text-medium md:text-md text-gray-600 mb-12">We are trusted by businesses of all sizes .</p> */}
 
                 <div className="relative">
@@ -73,7 +73,7 @@ const Testimonials = () => {
                                 />
                             </div>
 
-                            <blockquote className=":text-xl text-md  text-gray-800 leading-relaxed mb-8 max-w-3xl text-center">
+                            <blockquote className="md:text-xl text-base text-gray-800 leading-relaxed mb-8 max-w-3xl text-center">
                                 “{activeTestimonial.summary}”
                             </blockquote>
 
@@ -96,14 +96,14 @@ const Testimonials = () => {
                     <div className="hidden md:block">
                         <button
                             onClick={handlePrev}
-                            className="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors -ml-16"
+                            className="absolute left-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors -ml-8 lg:-ml-16"
                             aria-label="Previous testimonial"
                         >
                             <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" /></svg>
                         </button>
                         <button
                             onClick={handleNext}
-                            className="absolute right-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors -mr-16"
+                            className="absolute right-0 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors -mr-8 lg:-mr-16"
                             aria-label="Next testimonial"
                         >
                             <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
@@ -111,7 +111,7 @@ const Testimonials = () => {
                     </div>
                 </div>
 
-                <div className="md:hidden flex justify-center space-x-4 mt-8">
+                <div className="md:hidden flex justify-center space-x-4 mt-8 z-10">
                     <button
                         onClick={handlePrev}
                         className="p-3 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors"
