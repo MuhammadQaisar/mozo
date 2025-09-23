@@ -57,15 +57,15 @@ const HomeHero = () => {
   };
 
   return (
-    <section className="bg-white py-20 md:py-32">
+        <section className="bg-white pb-0 pt-0 md:py-20 mt-10">
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left: Headline + copy */}
-          <div className="text-center md:text-left">
-            <h1 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#0b0b0b] to-[#4a4a4a] tracking-wide ${poppins.className}`}>
+          <div className="text-left">
+            <h1 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#1f2937] to-[#4a4a4a] tracking-wide ${poppins.className}`}>
               Transforming Ideas into
               <br/>
-              <span className='inline-block mb-4'>High-Performance</span>  <span className="text-[#F06A6A]">Software Solutions</span>
+              <span className="text-[#F06A6A]">High-Performance Software</span>
               <br/>
              
             </h1>
@@ -74,7 +74,7 @@ const HomeHero = () => {
               From concept to launch, we deliver complete software solutions that drive your business forward with cutting-edge technology and lightning-fast performance.
             </p>
 
-            <div className="mt-12">
+            <div className="mt-6">
               <Link
                 href="/get-started"
                 className="inline-block bg-[#F06A6A] hover:bg-[#212121] text-white font-bold rounded-lg px-8 py-4 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg transform hover:-translate-y-1"
@@ -85,7 +85,7 @@ const HomeHero = () => {
           </div>
 
           {/* Right: tech badges + subtle network background */}
-          <div className="relative w-full h-auto sm:h-80 md:h-96 hidden sm:block">
+          <div className="relative w-full h-80 md:h-96">
             {/* faint network lines (SVG) */}
             <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 800 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
               <g stroke="#bfbfbf" strokeWidth="1" fill="none">
