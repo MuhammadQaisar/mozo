@@ -4,10 +4,10 @@ import { montserrat } from "../components/ui/font";
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${montserrat.className}`}>
+    <div className={`${montserrat.className}`}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </main>
+    </div>
   );
 }

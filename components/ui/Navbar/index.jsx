@@ -75,7 +75,7 @@ const Navbar = () => {
     return (
         <header className={montserrat.className}>
             <nav
-                className={"w-full fixed top-0 left-0 z-50 transition-all duration-500 ease-out bg-white/95 backdrop-blur-md shadow-lg"}
+                className={"w-full fixed top-0 left-0 z-50 transition-all duration-500 ease-out bg-white/95 backdrop-blur-md border-b border-gray-200"}
             >
                 <div className={"max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-300 py-3"}>
                     {/* Enhanced Brand Logo */}
@@ -136,7 +136,7 @@ const Navbar = () => {
                         >
                             <NavLink
                                 href="/get-started"
-                                className="px-6 py-2 bg-[#F06A6A] text-white font-bold rounded-xl hover:bg-[#C04F4F] transition-colors duration-300 flex items-center ml-20"
+                                className="px-6 py-2 bg-[#000000]/80 text-white font-bold rounded-md hover:bg-[#C04F4F] transition-colors duration-300 flex items-center ml-20"
                             >
                                 <span className="flex items-center">
                                     Get in Touch
@@ -207,9 +207,10 @@ const Navbar = () => {
                                     onClick={() => {
                                         setIsMobileMenuOpen(false);
                                         document.body.classList.remove("overflow-hidden");
+                                        
                                     }}
                                 >
-                                    Get Started Today
+                                    Get in Touch
                                 </NavLink>
                             </div>
                         </div>

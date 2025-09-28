@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { poppins } from "./ui/font";
+import { montserrat, poppins } from "./ui/font";
 
 const faqs = [
   {
@@ -38,17 +38,17 @@ const Faqs = () => {
 
   return (
     <section className="max-w-5xl mx-auto py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
-      <h2 className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#1f2937] mb-16 ${poppins.className}`}>
+      <h2 className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#1f2937] mb-16 ${montserrat.className}`}>
         Frequently Asked Questions
       </h2>
       <div className="space-y-2">
         {faqs.map((faq, idx) => (
-          <div key={idx} className={`rounded-2xl border border-gray-200 transition-all duration-300 ${openIndex === idx ? 'bg-white' : 'bg-gray-50 hover:bg-gray-100'}`}>
+          <div key={idx} className={`rounded-lg border border-gray-200 transition-all duration-300 ${openIndex === idx ? 'bg-white' : 'bg-gray-50 hover:bg-gray-100'}`}>
             <div
-              className="flex items-center justify-between cursor-pointer py-4 px-6"
+              className="flex items-center justify-between cursor-pointer py-4 px-3"
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
             >
-              <span className=":text-xl text-sm text-gray-700">{faq.question}</span>
+              <span className=":text-xl text-md font-medium text-gray-700">{faq.question}</span>
               <motion.div
                 animate={{ rotate: openIndex === idx ? 180 : 0 }}
                 transition={{ duration: 0.3 }}

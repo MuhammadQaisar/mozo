@@ -219,15 +219,15 @@ const Features = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.7 }}
-                    className="text-center mb-16"
+                    className="text-center mb-16 "
                 >
                     {/* <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full mb-8">
             <span className="w-2 h-2 bg-[#F06A6A] rounded-full mr-2.5"></span>
             <span className="text-sm font-medium text-gray-800 tracking-wider">Here's What We DO</span>
           </div> */}
 
-                 <h2 className={`text-2xl md:text-4xl font-extrabold text-gray-800 ${poppins.className}`}>
-		What <span className="text-[#F06A6A]">Solution</span> Do We Provide?
+                 <h2 className={`text-2xl md:text-4xl font-extrabold text-gray-800 ${montserrat.className}`}>
+		How We <span className="text-[#F06A6A]">Help</span> You
 
 	</h2> 
 
@@ -252,9 +252,9 @@ const Features = () => {
                                     key={idx}
                                     variants={cardVariants}
                                     onClick={() => setActiveIdx(idx)}
-                                    className={`cursor-pointer rounded-lg overflow-hidden transition-all duration-300 ${activeIdx === idx ? 'bg-[#F06A6A] shadow-lg' : 'hover:bg-gradient-to-r hover:from-[#212121] hover:to-[#F06A6A]'}`}>
+                                    className={`cursor-pointer overflow-hidden transition-all duration-300 ${activeIdx === idx ? '' : 'hover:border-[#000000]'}`}>
                                     <h3 className={`font-bold text-sm py-2 px-3 sm:py-4 sm:px-6 sm:text-lg ${activeIdx === idx ? 'text-gray-900' : 'text-gray-500'}`}>
-                                        <span className={`relative ${activeIdx === idx ? 'after:content-[""] after:absolute after:left-0 after:bottom-[-4px] after:w-full' : ''}`}>{item.title}</span>
+                                        <span className={`relative inline-block ${activeIdx === idx ? 'border-b-4 border-[#000000]' : 'hover:border-b-4 hover:border-[#000000]'}`}>{item.title}</span>
                                     </h3>
                                 </motion.div>
                             ))}
@@ -270,10 +270,10 @@ const Features = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.4, ease: "easeOut" }}
-                                className="bg-white backdrop-blur-sm rounded-2xl p-8 lg:p-12 shadow-xl border border-gray-100 h-full"
+                                className="bg-cyan backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-gray-100 h-full border border-gray-300"
                             >
                                 {/* Service Header */}
-                                <div className="mb-8">
+                                <div className="mb-8 border-b border-gray-200 pb-6">
                                     <div className="flex items-center mt-0">
                                       
                                         <div>
@@ -300,7 +300,7 @@ const Features = () => {
                                                 transition={{ duration: 0.3, delay: idx * 0.1 }}
                                                 className="flex items-center text-gray-700"
                                             >
-                                                <div className="w-4 h-4 rounded-full bg-gradient-to-r from-[#F06A6A] to-red-500 flex items-center justify-center mr-3 flex-shrink-0">
+                                                <div className="w-4 h-4 rounded-full bg-[#000000] flex items-center justify-center mr-3 flex-shrink-0">
                                                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                                     </svg>

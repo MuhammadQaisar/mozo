@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <Head>
+                
                 <title>Mozo Technologies</title>
                 <meta name="description" content="Mozo Technologies empowers businesses worldwide with cutting‑edge IT services in Data & AI, Web Development, UI/UX, CloudOps, Digital Marketing and DevOps." />
                 <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -92,11 +93,11 @@ const Layout = ({ children }) => {
                     }}
                 />
             </Head>
-            <div className={`${montserrat.className}`} style={{ WebkitTapHighlightColor: "transparent" }}>
+            <main className={`${montserrat.className}`} style={{ WebkitTapHighlightColor: "transparent" }}>
                 <Navbar />
-                <main>{children}</main>
+                {children}
                 <Footer />
-            </div>
+            </main>
         </>
     )
 }

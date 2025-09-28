@@ -50,6 +50,15 @@ const Footer = () => {
         "DevOps"
     ];
 
+    const technologies = [
+        "React",
+        "Python",
+        "Figma",
+        "AWS",
+        "Docker",
+        "Node.js"
+    ];
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -81,7 +90,7 @@ const Footer = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20"
+                    className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-40 items-start"
                 >
                     {/* Company Info */}
                     <motion.div variants={itemVariants} className="lg:col-span-1 text-center md:text-left">
@@ -90,34 +99,13 @@ const Footer = () => {
                             alt="Mozo Technologies"
                             width={180}
                             height={100}
-                            className="mt-16 mx-auto md:mx-0"
+                            className="mx-auto md:mx-0"
                         />
-                        {/* <p>
-                           <span className="font-extrabold text-gray-500">Mozo Technologies</span><span className="text-gray-400 text-md"> is a young, full-service software development company focusing on Generative AI, Web, and Mobile solutions.</span>
-                        </p> */}
-                    </motion.div>
-
-                    {/* Services */}
-                    <motion.div variants={itemVariants} className="text-center md:text-left">
-                        <h3 className="text-base sm:text-lg font-semi-bold mb-4">Our Services</h3>
-                        <ul className="space-y-2">
-                            {services.map((service) => (
-                                <li key={service}>
-                                    <Link href="#features" className="text-sm text-gray-400 hover:text-white transition-colors">
-                                        {service}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </motion.div>
-
-                    {/* Newsletter & Social */}
-                    <motion.div variants={itemVariants} className="text-center md:text-left">
-                        {/* <h3 className="text-lg font-semibold mb-4">Stay Connected</h3> */}
-                        {/* <p className="text-gray-400 text-sm mb-4">
-                            Subscribe to our newsletter for the latest updates.
-                        </p> */}
-                        <div className="flex mb-20">
+                        <p className="text-gray-400 text-sm mt-6 text-justify">
+                        Empowering businesses with innovative software solutions, we turn ideas into reality through cutting-edge technology and expert development.
+                        </p>
+                    
+                        <div className="flex mt-8 space-x-2">
                             <input
                                 type="email"
                                 placeholder="Enter your email"
@@ -127,8 +115,8 @@ const Footer = () => {
                                 Subscribe
                             </button>
                         </div>
-                        {/* <h4 className="text-sm sm:text-md font-semibold mb-4">Follow Us</h4> */}
-                        <div className="flex space-x-8 justify-center md:justify-end">
+            
+                        <div className="flex space-x-8 justify-center md:justify-start mt-8">
                             {socialLinks.map((social) => (
                                 <Link
                                     key={social.name}
@@ -147,6 +135,49 @@ const Footer = () => {
                             ))}
                         </div>
                     </motion.div>
+
+                    {/* Links Wrapper */}
+                    <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-8">
+                        {/* Quick Links */}
+                        <motion.div variants={itemVariants} className="text-center md:text-left">
+                            <h3 className="text-base sm:text-lg font-semi-bold mb-4">Quick Links</h3>
+                            <ul className="space-y-2">
+                                {navigationLinks.map((link) => (
+                                    <li key={link.title}>
+                                        <Link href={link.path} className="text-sm text-gray-400 hover:text-white transition-colors">
+                                            {link.title}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+
+                        {/* Services */}
+                        <motion.div variants={itemVariants} className="text-center md:text-left">
+                            <h3 className="text-base sm:text-lg font-semi-bold mb-4">Our Services</h3>
+                            <ul className="space-y-2">
+                                {services.map((service) => (
+                                    <li key={service}>
+                                        <Link href="#features" className="text-sm text-gray-400 hover:text-white transition-colors">
+                                            {service}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+
+                        {/* Technologies */}
+                        <motion.div variants={itemVariants} className="text-center md:text-left">
+                            <h3 className="text-base sm:text-lg font-semi-bold mb-4">Technologies</h3>
+                            <ul className="space-y-2">
+                                {technologies.map((tech) => (
+                                    <li key={tech} className="text-sm text-gray-400">
+                                        {tech}
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    </div>
                 </motion.div>
 
                 {/* Bottom Bar */}
@@ -155,7 +186,7 @@ const Footer = () => {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+                    className="border-t border-gray-500 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
                 >
                     <p className="text-gray-500 text-sm text-center md:text-left">
                         &copy; {currentYear} Mozo Technologies. All rights reserved.

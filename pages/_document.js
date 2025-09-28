@@ -41,10 +41,11 @@ export default function Document() {
       <body className='md:overflow-visible'>
         
         <Main />
-        <NextScript />
-                <script>
-          {`window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}`}
-        </script>
+        <script
+            dangerouslySetInnerHTML={{
+              __html: `window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}`,
+            }}
+          />
         <script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq4b4fefeee318c33e143b888815a0ecbbd2f12b7b0abb5803a1433837c32a1cb6" defer></script>
         <NextScript />
       </body>

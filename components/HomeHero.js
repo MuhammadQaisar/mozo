@@ -1,11 +1,13 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { poppins, montserrat } from './ui/font';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const HomeHero = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   // Array of technology names and their logos
   const technologies = [
     { name: 'AWS', logo: '/icons/aws.svg' },
@@ -30,7 +32,7 @@ const HomeHero = () => {
         style.left = '10%';
         break;
       case 2: // Nodejs
-        style.top = '0%';
+        style.top = '-10%';
         style.left = '30%';
         break;
       case 3: // CI/CD
@@ -57,50 +59,50 @@ const HomeHero = () => {
   };
 
   return (
-        <section className="bg-white pb-0 pt-10 md:py-20 mt-10">
+        <section
+          className="pb-0 pt-10 md:py-20 mt-20"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
       <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           {/* Left: Headline + copy */}
           <div className="text-center sm:text-left">
-            <h1 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#1f2937] to-[#4a4a4a] tracking-wide ${poppins.className}`}>
+            <h1 className={`text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-[#1f2937] tracking-wide ${montserrat.className}`}>
               Transforming Ideas into
               <br/>
-              <span className="text-[#F06A6A]">High-Performance Software</span>
+              <span className="text-[#F06A6A] capitalized">High-Performance software</span>
               <br/>
              
             </h1>
 
-            <p className={`mt-6 max-w-2xl text-gray-700 text-lg sm:text-xl leading-relaxed ${montserrat.className}`}>
+           
+
+            <p className={`mt-6 max-w-2xl text-gray-700 :text-xl text-md leading-relaxed ${montserrat.className}`}>
               From concept to launch, we deliver complete software solutions that drive your business forward with cutting-edge technology and lightning-fast performance.
             </p>
 
             <div className="mt-6">
               <Link
                 href="/get-started"
-                className="inline-block bg-[#F06A6A] hover:bg-[#212121] text-white font-bold rounded-lg px-8 py-4 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                className="inline-block border-2 border-[#F06A6A] hover:bg-[#F06A6A] hover:text-white hover:border-[#F06A6A] text-[#F06A6A] 1f2937] font-bold rounded-lg px-8 py-4 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg transform hover:-translate-y-1"
               >
-                Contact us
+                Getting Started With Us
               </Link>
             </div>
           </div>
 
           {/* Right: tech badges + subtle network background */}
-          <div className="relative w-full h-80 md:h-96 hidden md:block">
+          <div className="relative w-full h-80 md:h-96 hidden md:block overflow-visible">
             {/* faint network lines (SVG) */}
-            <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 800 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-              <g stroke="#bfbfbf" strokeWidth="1" fill="none">
-                <polyline points="40,520 200,320 380,480 540,240 760,520" />
-                <polyline points="20,160 160,260 300,120 520,220 760,80" />
-                <polyline points="80,360 240,200 420,340 600,160" />
-              </g>
-            </svg>
+           
 
             {/* floating tech cards */}
             <div className="relative hidden sm:flex flex-wrap justify-center items-center gap-4 sm:absolute sm:inset-0">
               {technologies.map((tech, index) => (
                 <div
                   key={tech.name}
-                  className="relative w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-lg shadow-lg flex items-center justify-center p-4 sm:absolute"
+                  className="relative w-20 h-20 sm:w-20 sm:h-20 bg-white rounded-lg flex items-center justify-center p-4 sm:absolute border-2 border-gray-200 shadow-lg"
                   style={getCardStyle(index)}
                 >
                   <Image src={tech.logo} alt={tech.name} width={100} height={100} className="grayscale hover:grayscale-0 transition-all duration-300" />

@@ -121,7 +121,7 @@ export default function ContactUs() {
                 "contactPoint": [
                   {
                     "@type": "ContactPoint",
-                    "telephone": "+1-555-000-0000",
+                    "telephone": "+923010153774",
                     "contactType": "customer service",
                     "email": "team@mozotechnologies.com",
                     "availableLanguage": "English",

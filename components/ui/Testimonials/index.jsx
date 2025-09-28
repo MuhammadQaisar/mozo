@@ -5,14 +5,15 @@ import SectionWrapper from "../../SectionWrapper";
 
 const testimonials = [
     {
-        logo: "/logos/alkassib.png",
-        company: "ALKASSIB",
-        summary: "Six months ago, we were drowning in inefficient processes. Mozo's team didn't just implement AI solutions - they really understood our business and tailored everything to our specific needs",
-        avatar: "/Alhawar.jpg",
-        name: "Mohammad Alhawar",
-        title: "Operations Director",
+         logo: "/logos/muxilite.jpg",
+        company: "MUXILITE",
+        summary: "Mozo Technologies transformed our digital presence with their innovative approach. Their team delivered exceptional results that exceeded our expectations, boosting our conversion rate.",
+        avatar: "/rashida.jpeg",
+        name: "Rashida",
+        title: "Founder & CEO",
         rating: 5,
-        project: "AI Automation System"
+        project: "E-commerce Platform"
+
     },
      {
         logo: "/logos/taus.jpg",
@@ -25,14 +26,15 @@ const testimonials = [
         project: "Enterprise Web App"
     },
     {
-        logo: "/logos/muxilite.jpg",
-        company: "MUXILITE",
-        summary: "Mozo Technologies transformed our digital presence with their innovative approach. Their team delivered exceptional results that exceeded our expectations, boosting our conversion rate.",
-        avatar: "/rashida.jpeg",
-        name: "Rashida",
-        title: "Founder & CEO",
+    
+        logo: "/logos/alkassib.png",
+        company: "ALKASSIB",
+        summary: "Six months ago, we were drowning in inefficient processes. Mozo's team didn't just implement AI solutions - they really understood our business and tailored everything to our specific needs",
+        avatar: "/Alhawar.jpg",
+        name: "Mohammad Alhawar",
+        title: "Operations Director",
         rating: 5,
-        project: "E-commerce Platform"
+        project: "AI Automation System"
     }
 ];
 
@@ -52,7 +54,7 @@ const Testimonials = () => {
     return (
         <SectionWrapper className={`pt-10 sm:py-20 md:py-28 bg-white ${montserrat.className}`}>
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-4 lg:px-4">
-                <h2 className={`text-4xl md:text-4xl font-extrabold text-gray-800 mb-6 ${poppins.className}`}>What Our <span className="text-[#F06A6A]">Clients</span> feedback</h2>
+                <h2 className={`text-4xl md:text-4xl font-extrabold text-gray-800 mb-6 ${montserrat.className}`}>What Our <span className="text-[#F06A6A]">Clients</span> feedback</h2>
                 {/* <p className="text-medium md:text-md text-gray-600 mb-12">We are trusted by businesses of all sizes .</p> */}
 
                 <div className="relative">
@@ -73,7 +75,7 @@ const Testimonials = () => {
                                 />
                             </div>
 
-                            <blockquote className="md:text-xl text-base text-gray-800 leading-relaxed mb-8 max-w-3xl text-center">
+                            <blockquote className="text-base md:text-sm text-gray-800 leading-relaxed mb-8 max-w-3xl text-center">
                                 “{activeTestimonial.summary}”
                             </blockquote>
 
