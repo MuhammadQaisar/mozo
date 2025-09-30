@@ -231,7 +231,7 @@ const Features = () => {
 
 	</h2> 
 
-                    <p className="mt-6 :text-xl text-md text-gray-500 max-w-4xl mx-auto leading-relaxed">
+                    <p className="mt-6 :text-xl text-md text-gray-500 max-w-xl mx-auto leading-relaxed">
                         From AI-powered applications to scalable cloud infrastructure, we deliver end-to-end solutions that drive innovation and growth.
                     </p>
                 </motion.div>

@@ -7,21 +7,21 @@ const HowWeWork = () => {
   const steps = [
     {
       number: 1,
-      icon: <Image src="/spark-svgrepo-com.svg" width={48} height={48} alt="Spark Icon" />,
+      icon: <Image src="/spark-svgrepo-com.svg" width={40} height={40} alt="Spark Icon" />,
       subtitle: 'Discover Your Vision',
       description: 'We begin with a comprehensive discovery session to understand your business goals, target audience, and project requirements.',
       deliverables: ['Project Brief', 'Technical Specification', 'Timeline & Milestones']
     },
     {
       number: 2,
-      icon: <Image src="/plug-outlet-1-svgrepo-com.svg" width={48} height={48} alt="Plug Icon" />,
+      icon: <Image src="/plug-outlet-1-svgrepo-com.svg" width={40} height={40} alt="Plug Icon" />,
       subtitle: 'Bringing Ideas To Life',
       description: 'Our expert team designs and develops your solution using cutting-edge technologies and industry best practices.',
       deliverables: ['UI/UX Design', 'Development', 'Quality Assurance']
     },
     {
       number: 3,
-      icon: <Image src="/market-svgrepo-com.svg" width={48} height={48} alt="Market Icon" />,
+      icon: <Image src="/market-svgrepo-com.svg" width={40} height={40} alt="Market Icon" />,
       subtitle: 'Time To Market',
       description: 'We deploy your project with thorough testing and provide comprehensive training and ongoing support.',
       deliverables: ['Deployment', 'Training', 'Ongoing Support']
@@ -69,7 +69,7 @@ const HowWeWork = () => {
           <h2 className={`text-3xl sm:text-4xl md:text-4xl font-extrabold text-gray-800 mb-6 ${montserrat.className}`}>
             How We <span className="text-[#F06A6A]">Work </span>Together
           </h2> 
-          <p className=":text-xl text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className=":text-xl text-md text-gray-600 max-w-xl mx-auto leading-relaxed">
             Our proven three-step process ensures your project is delivered on time and exceeds expectations.
           </p>
         </motion.div>
@@ -83,7 +83,7 @@ const HowWeWork = () => {
         >
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gray-100 transform -translate-y-1/2 z-0"></div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-5 relative z-10">
             {steps.map((step, index) => (
               <motion.div
                 key={index}
@@ -96,9 +96,9 @@ const HowWeWork = () => {
                   <div className="relative z-10">
                     <div className="flex items-center mb-6">
                         <div className="text-4xl mr-4">{step.icon}</div>
-                        <div className={`text-gray-500 font-bold text-xl ${montserrat.className}`}>
+                        <div className={`text-gray-400 font-normal text-lg ${montserrat.className}`}>
                             Step {step.number}
-                            <h3 className="text-lg font-bold text-gray-900 mb-4 transition-colors duration-300">
+                            <h3 className="text-lg font-bold text-gray-900 mb-1 transition-colors duration-300">
                         {step.subtitle}
                       </h3>
                         </div>
@@ -115,7 +115,7 @@ const HowWeWork = () => {
                       <div className="space-y-2">
                         {step.deliverables.map((deliverable, idx) => (
                           <div key={idx} className="flex items-center text-sm text-gray-600">
-                            <svg className="w-4 h-4 text-[#000000] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <svg className="w-4 h-4 text-[#1f2937] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.06l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
                             </svg>
                             {deliverable}

@@ -16,7 +16,7 @@ const CTA = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative overflow-hidden shadow-2xl p-12 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 bg-gradient-to-br from-[#F06A6A] to-[#C04F4F]"
+                className="relative overflow-hidden p-12 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-6 bg-[#000000]/80"
             >
                 {/* Background Noise and Texture */}
                 {/* <div
@@ -30,7 +30,7 @@ const CTA = () => {
 
                 {/* Content Area: Contains headline and description */}
                 <div className="relative z-10 flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <h2 className="text-gray-300 text-4xl sm:text-5xl lg:text-3xl font-bold leading-tight mb-4">
+                    <h2 className="text-gray-300 text-4xl sm:text-5xl lg:text-2xl font-bold leading-tight mb-2">
                         Ready to Transform Your Digital Presence?
                     </h2>
                     <p className="text-gray-300 text-2xl text-sm max-w-3xl mx-auto lg:mx-0">
@@ -43,7 +43,7 @@ const CTA = () => {
                 <div className="relative z-10 flex-shrink-0">
                     <NavLink
                         href="/get-started"
-                        className="block w-full lg:w-auto px-10 py-3 font-semi-bold text-xl text-gray-300  rounded-lg shadow-lg border-2 border-[#FFFFFF] hover:bg-transparent hover:text-[#FFFFFF] transition-all duration-300 group"
+                        className="block w-full lg:w-auto px-10 py-3 font-semi-bold text-lg text-gray-300  rounded-lg shadow-lg bg-[#F06A6A] hover:text-[#FFFFFF] transition-all duration-300 group"
                     >
                         <span className="flex items-center justify-center whitespace-nowrap">
                             Contact Us

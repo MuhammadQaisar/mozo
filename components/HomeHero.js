@@ -85,7 +85,7 @@ const HomeHero = () => {
             <div className="mt-6">
               <Link
                 href="/get-started"
-                className="inline-block border-2 border-[#F06A6A] hover:bg-[#F06A6A] hover:text-white hover:border-[#F06A6A] text-[#F06A6A] 1f2937] font-bold rounded-lg px-8 py-4 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                className="inline-block bg-[#F06A6A] hover:bg-[#F06A6A] hover:text-white hover:border-[#F06A6A] text-[#FFFFFF] font-bold rounded-lg px-8 py-4 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg transform hover:-translate-y-1"
               >
                 Getting Started With Us
               </Link>
