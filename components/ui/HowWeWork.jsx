@@ -79,7 +79,7 @@ const HowWeWork = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          className="relative max-w-9xl mx-auto px-4 sm:px-6 lg:px-8"
         >
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gray-100 transform -translate-y-1/2 z-0"></div>
 
@@ -92,7 +92,7 @@ const HowWeWork = () => {
                 transition={{ duration: 0.3 }}
                 className="relative group"
               >
-                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-300 transition-all duration-300 h-full flex flex-col group-hover:border-gray-200">
+                <div className="bg-[#F0F0F0] backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-300 transition-all duration-300 h-full flex flex-col group-hover:border-gray-200">
                   <div className="relative z-10">
                     <div className="flex items-center mb-6">
                         <div className="text-4xl mr-4">{step.icon}</div>

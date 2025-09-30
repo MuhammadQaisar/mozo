@@ -270,7 +270,7 @@ const Features = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.4, ease: "easeOut" }}
-                                className="bg-cyan backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-gray-100 h-full border border-gray-300"
+                                className="bg-[#F0F0F0] backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-gray-100 h-full border border-gray-300"
                             >
                                 {/* Service Header */}
                                 <div className="mb-8 border-b border-gray-200 pb-6">

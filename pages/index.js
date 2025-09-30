@@ -93,7 +93,7 @@ export default function Home() {
         <Features />
         
       {/* </GradientWrapper> */}
-        <CTA />
+        {/* <CTA /> */}
       <HowItWorks />
       <Faqs/>
       <Contact />
