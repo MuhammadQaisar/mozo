@@ -92,7 +92,7 @@ const HowWeWork = () => {
                 transition={{ duration: 0.3 }}
                 className="relative group"
               >
-                <div className="bg-[#F0F0F0] backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-gray-300 transition-all duration-300 h-full flex flex-col group-hover:border-gray-200">
+                <div className="bg-[#F0F0F0] backdrop-blur-sm rounded-lg p-8 shadow-lg border border-gray-300 transition-all duration-300 h-full flex flex-col group-hover:border-gray-200">
                   <div className="relative z-10">
                     <div className="flex items-center mb-6">
                         <div className="text-4xl mr-4">{step.icon}</div>
