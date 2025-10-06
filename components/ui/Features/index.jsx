@@ -227,7 +227,7 @@ const Features = () => {
           </div> */}
 
                  <h2 className={`text-2xl md:text-4xl font-extrabold text-gray-800 ${montserrat.className}`}>
-		How We <span className="text-[#F06A6A]">Help</span> You
+		Our <span className="text-[#F06A6A]">Offerings</span>
 
 	</h2> 
 
@@ -270,7 +270,7 @@ const Features = () => {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.4, ease: "easeOut" }}
-                                className="bg-[#F0F0F0] backdrop-blur-sm rounded-2xl p-8 lg:p-12 border border-gray-100 h-full border border-gray-300"
+                                className="bg-[#F0F0F0] backdrop-blur-sm rounded-2xl p-8 lg:p-12 border-2 border-gray-100 h-full border border-gray-300"
                             >
                                 {/* Service Header */}
                                 <div className="mb-8 border-b border-gray-200 pb-6">

@@ -7,21 +7,21 @@ const HowWeWork = () => {
   const steps = [
     {
       number: 1,
-      icon: <Image src="/spark-svgrepo-com.svg" width={40} height={40} alt="Spark Icon" />,
+      icon: <Image src="/spark-svgrepo-com.svg" width={30} height={30} alt="Spark Icon" />,
       subtitle: 'Discover Your Vision',
       description: 'We begin with a comprehensive discovery session to understand your business goals, target audience, and project requirements.',
       deliverables: ['Project Brief', 'Technical Specification', 'Timeline & Milestones']
     },
     {
       number: 2,
-      icon: <Image src="/plug-outlet-1-svgrepo-com.svg" width={40} height={40} alt="Plug Icon" />,
+      icon: <Image src="/plug-outlet-1-svgrepo-com.svg" width={30} height={30} alt="Plug Icon" />,
       subtitle: 'Bringing Ideas To Life',
       description: 'Our expert team designs and develops your solution using cutting-edge technologies and industry best practices.',
       deliverables: ['UI/UX Design', 'Development', 'Quality Assurance']
     },
     {
       number: 3,
-      icon: <Image src="/market-svgrepo-com.svg" width={40} height={40} alt="Market Icon" />,
+      icon: <Image src="/market-svgrepo-com.svg" width={30} height={30} alt="Market Icon" />,
       subtitle: 'Time To Market',
       description: 'We deploy your project with thorough testing and provide comprehensive training and ongoing support.',
       deliverables: ['Deployment', 'Training', 'Ongoing Support']
@@ -92,18 +92,18 @@ const HowWeWork = () => {
                 transition={{ duration: 0.3 }}
                 className="relative group"
               >
-                <div className="bg-[#F0F0F0] backdrop-blur-sm rounded-lg p-8 shadow-lg border border-gray-300 transition-all duration-300 h-full flex flex-col group-hover:border-gray-200">
+                <div className="bg-[#F0F0F0] backdrop-blur-sm rounded-3xl p-8 shadow-lg border-2 border-gray-300 transition-all duration-300 h-full flex flex-col group-hover:border-2 border-gray-200">
                   <div className="relative z-10">
-                    <div className="flex items-center mb-6">
-                        <div className="text-4xl mr-4">{step.icon}</div>
-                        <div className={`text-gray-400 font-normal text-lg ${montserrat.className}`}>
+                    <div className="flex items-center m-2">
+                        <div className="text-2xl mr-4 flex-shrink-0">{step.icon}</div>
+                        <div className={`text-gray-400 font-normal text-base ${montserrat.className}`}>
                             Step {step.number}
-                            <h3 className="text-lg font-bold text-gray-900 mb-1 transition-colors duration-300">
+                            <h3 className="text-sm mb-6 font-bold text-gray-900 transition-colors duration-300">
                         {step.subtitle}
                       </h3>
                         </div>
                     </div>
-                    <div className="mb-6">
+                    <div className="m-1">
                       
                       <p className="text-gray-600 leading-relaxed text-sm">
                         {step.description}
