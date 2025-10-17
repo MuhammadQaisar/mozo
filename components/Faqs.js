@@ -57,16 +57,14 @@ const Faqs = () => {
           <div
             key={idx}
             className={`rounded-lg border-2 border-gray-300 transition-all duration-300 ${
-              openIndex === idx
-                ? "bg-[#E6EDE8]"
-                : "bg-[#F0F5F2] hover:bg-[#E6EDE8]"
+              openIndex === idx ? "bg-[#FFFFFF]" : "bg-[#FFFFFF]"
             }`}
           >
             <div
-              className="flex items-center justify-between cursor-pointer py-5 px-3"
+              className="flex items-center justify-between cursor-pointer py-4 px-3"
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
             >
-              <span className=":text-xl text-md font-medium text-gray-700">
+              <span className=":text-xl text-md font-bold text-gray-700">
                 {faq.question}
               </span>
               <motion.div

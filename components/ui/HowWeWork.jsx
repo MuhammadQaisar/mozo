@@ -92,25 +92,25 @@ const HowWeWork = () => {
                 transition={{ duration: 0.3 }}
                 className="relative group"
               >
-                <div className="bg-[#F0F0F0] backdrop-blur-sm rounded-3xl p-8 shadow-lg border-2 border-gray-300 transition-all duration-300 h-full flex flex-col group-hover:border-2 border-gray-200">
+                <div className="bg-[#FFFFFF] backdrop-blur-sm rounded-3xl p-8 shadow-lg border-2 border-gray-300 transition-all duration-300 h-full flex flex-col group-hover:border-2 border-gray-200">
                   <div className="relative z-10">
                     <div className="flex items-center m-2">
                         <div className="text-2xl mr-4 flex-shrink-0">{step.icon}</div>
                         <div className={`text-gray-400 font-normal text-base ${montserrat.className}`}>
-                            Step {step.number}
+                            {/* Step {step.number} */}
                             <h3 className="text-sm mb-6 font-bold text-gray-900 transition-colors duration-300">
                         {step.subtitle}
                       </h3>
                         </div>
                     </div>
-                    <div className="m-1">
+                    <div className="ml-4">
                       
                       <p className="text-gray-600 leading-relaxed text-sm">
                         {step.description}
                       </p>
                     </div>
 
-                    <div className="mt-auto">
+                    <div className="mt-4 ml-4">
                       <h4 className="text-sm font-bold text-gray-800 mb-4 tracking-wider">Key Deliverables:</h4>
                       <div className="space-y-2">
                         {step.deliverables.map((deliverable, idx) => (
