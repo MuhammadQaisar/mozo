@@ -98,7 +98,7 @@ const HowWeWork = () => {
                         <div className="text-2xl mr-4 flex-shrink-0">{step.icon}</div>
                         <div className={`text-gray-400 font-normal text-base ${montserrat.className}`}>
                             {/* Step {step.number} */}
-                            <h3 className="text-sm mb-6 font-bold text-gray-900 transition-colors duration-300">
+                            <h3 className="text-md mb-2 font-bold text-gray-900 transition-colors duration-300">
                         {step.subtitle}
                       </h3>
                         </div>

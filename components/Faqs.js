@@ -64,7 +64,7 @@ const Faqs = () => {
               className="flex items-center justify-between cursor-pointer py-4 px-3"
               onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
             >
-              <span className=":text-xl text-md font-bold text-gray-700">
+              <span className=":text-xl text-lg font-bold text-gray-800">
                 {faq.question}
               </span>
               <motion.div
