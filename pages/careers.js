@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import CareersHero from "../components/CareersHero";
-import { poppins } from "../components/ui/font";
+import { poppins, urbanist } from "../components/ui/font";
 
 
 
@@ -108,7 +108,7 @@ const Careers = () => {
                             transition={{ duration: 0.7 }}
                             className="text-center mb-12"
                         >
-                            <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 ${poppins.className}`}>
+                            <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 ${urbanist.className}`}>
                                 Explore Our <span className="text-[#F06A6A]">Open Positions</span>
                             </h2>
                             <p className="text-medium text-gray-600 max-w-2xl mx-auto">
