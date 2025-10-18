@@ -1,7 +1,7 @@
 import { useState } from "react";
 import SectionWrapper from "../../SectionWrapper";
 import { motion, AnimatePresence } from "framer-motion";
-import { montserrat, poppins } from "../font";
+import { urbanist, poppins } from "../font";
 
 const successStories = [
     {
@@ -41,13 +41,13 @@ const CustomerSuccess = () => {
     const activeStory = successStories[activeIndex];
 
     return (
-        <SectionWrapper className={`py-20 md:py-28 bg-gray-50 ${montserrat.className}`}>
+        <SectionWrapper className={`py-20 md:py-28 bg-gray-50 ${urbanist.className}`}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-800 ${poppins.className}`}>
+                    <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-800 ${urbanist.className}`}>
                         Customer <span className="  text-[#F06A6A]">Success Stories</span>
                     </h2>
-                    <p className="mt-4 text-sm text-gray-600">
+                    <p className={'mt-4 text-md text-gray-600  ${urbanist.className}'}>
                         See how we've helped businesses like yours achieve their goals.
                     </p>
                 </div>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { montserrat, poppins } from "./ui/font";
+import { urbanist } from "./ui/font";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -45,65 +46,83 @@ const faqs = [
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section className="max-w-4xl mx-auto py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
-      <h2
-        className={`text-3xl sm:text-4xl md:text-2xl font-extrabold text-center text-[#1f2937] mb-16 ${montserrat.className}`}
-      >
-        Frequently Asked Questions
-      </h2>
-      <div className="space-y-2">
-        {faqs.map((faq, idx) => (
-          <div
-            key={idx}
-            className={`rounded-lg border-2 border-gray-300 transition-all duration-300 ${
-              openIndex === idx ? "bg-[#FFFFFF]" : "bg-[#FFFFFF]"
-            }`}
+    <section className={`py-20 lg:py-28 bg-gray-50 ${urbanist.className}`}>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2
+            className={`text-3xl sm:text-4xl md:text-4xl font-bold text-gray-900 ${urbanist.className}`}
           >
-            <div
-              className="flex items-center justify-between cursor-pointer py-4 px-3"
-              onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+            Frequently Asked Questions
+          </h2>
+          <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Have questions? We've got answers. If you can't find what you're
+            looking for, feel free to contact us.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, idx) => (
+            <motion.div
+              key={idx}
+              className={`bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 ${
+                openIndex === idx ? "shadow-lg" : ""
+              }`}
+              initial={false}
             >
-              <span className=":text-xl text-lg font-bold text-gray-800">
-                {faq.question}
-              </span>
-              <motion.div
-                animate={{ rotate: openIndex === idx ? 180 : 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="ml-4 flex-shrink-0 origin-center"
+              <motion.button
+                onClick={() => toggleFAQ(idx)}
+                className="w-full flex items-center justify-between text-left py-5 px-6 cursor-pointer"
+                whileHover={{ backgroundColor: "#f9fafb" }}
               >
-                <svg
-                  className="w-4 h-4 text-[#1f2937]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="4"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </motion.div>
-            </div>
-            <AnimatePresence>
-              {openIndex === idx && (
+                <span className={`text-md font-semibold text-[#1f2937] ${urbanist.className}`}>
+                  {faq.question}
+                </span>
                 <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
+                  className="w-6 h-6 flex items-center justify-center flex-shrink-0"
+                  animate={{ rotate: openIndex === idx ? 180 : 0 }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden"
                 >
-                  <div className="px-6 pb-8 text-gray-600 leading-relaxed :text-lg text-sm">
-                    {faq.answer}
-                  </div>
+                  <svg
+                    className="w-6 h-6 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
                 </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        ))}
+              </motion.button>
+              <AnimatePresence>
+                {openIndex === idx && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-6 text-gray-600 leading-relaxed text-base">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
+        </div>
+
+     
       </div>
     </section>
   );

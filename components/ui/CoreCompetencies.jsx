@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { montserrat } from './font';
+import { urbanist } from './font';
 import React from "react";
 
 const CoreCompetencies = () => {
@@ -47,7 +47,7 @@ const CoreCompetencies = () => {
       };
 
     return (
-        <div className={`py-16 lg:py-20 ${montserrat.className}`}>
+        <div className={`py-16 lg:py-20 ${urbanist.className}`}>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

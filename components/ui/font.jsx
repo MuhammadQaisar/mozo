@@ -1,10 +1,4 @@
-import { Montserrat, Inter, Poppins } from 'next/font/google'
-
-export const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  display: 'swap',
-})
+import { Inter, Poppins, Urbanist } from 'next/font/google'
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -15,5 +9,11 @@ export const inter = Inter({
 export const poppins = Poppins({
   subsets: ['latin'],
   weight: ['800'],
+  display: 'swap',
+})
+
+export const urbanist = Urbanist({
+  subsets: ['latin'],
+  weight: ['400', '600'],
   display: 'swap',
 })

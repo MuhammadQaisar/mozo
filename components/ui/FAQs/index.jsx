@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SectionWrapper from "../../SectionWrapper";
-import { montserrat } from "../font";
+import { urbanist } from "../font";
 
 /**
  * Enhanced FAQs Component
@@ -99,7 +99,7 @@ const FAQs = () => {
     : faqs.filter(faq => faq.category === selectedCategory);
 
 	return (
-		<SectionWrapper id="faqs" className={`py-20 lg:py-28 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden ${montserrat.className}`}>
+		<SectionWrapper id="faqs" className={`py-20 lg:py-28 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden ${urbanist.className}`}>
 			{/* Background Elements */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<div className="absolute top-20 right-10 w-72 h-72 bg-[#F06A6A]/5 rounded-full blur-3xl"></div>

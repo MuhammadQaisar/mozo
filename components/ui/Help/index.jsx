@@ -1,5 +1,6 @@
 import Image from "next/image"
 import SectionWrapper from "../../SectionWrapper";
+import { urbanist } from "../font";
 
 const Help = () => {
     return (
@@ -7,7 +8,7 @@ const Help = () => {
             <div className="flex flex-col lg:flex-row items-stretch">
                 {/* Left: Form */}
                 <div className="flex-1">
-                    <h2 className="text-3xl md:text-4xl font-bold font-[Montserrat] mb-4 text-gray-900">
+                    <h2 className={`text-3xl md:text-4xl font-bold ${urbanist.className} mb-4 text-gray-900`}>
                         Tell Us How We Can <span className="text-[#F06A6A]">Help?</span>
                     </h2>
                     <p className="text-gray-700 text-lg mb-8">

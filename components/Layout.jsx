@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Footer from "./ui/Footer"
 import Navbar from "./ui/Navbar"
-import { montserrat } from "./ui/font"
+import { urbanist } from "./ui/font"
 
 import Help from "./ui/Help"
 
@@ -93,7 +93,7 @@ const Layout = ({ children }) => {
                     }}
                 />
             </Head>
-            <main className={`${montserrat.className}`} style={{ WebkitTapHighlightColor: "transparent" }}>
+            <main className={`${urbanist.className}`} style={{ WebkitTapHighlightColor: "transparent" }}>
                 <Navbar />
                 {children}
                 <Footer />

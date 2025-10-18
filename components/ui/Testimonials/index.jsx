@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { montserrat, poppins } from "../font";
+import { urbanist, poppins } from "../font";
 import SectionWrapper from "../../SectionWrapper";
 
 const testimonials = [
@@ -52,9 +52,9 @@ const Testimonials = () => {
     const activeTestimonial = testimonials[activeIndex];
 
     return (
-        <SectionWrapper className={`pt-10 sm:py-20 md:py-28 bg-white ${montserrat.className}`}>
+        <SectionWrapper className={`pt-10 sm:py-20 md:py-28 bg-white ${urbanist.className}`}>
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-4 lg:px-4">
-                <h2 className={`text-4xl md:text-4xl font-extrabold text-gray-800 mb-6 ${montserrat.className}`}>What Our <span className="text-[#F06A6A]">Clients</span> feedback</h2>
+                <h2 className={`text-4xl md:text-4xl font-extrabold text-gray-800 mb-6 ${urbanist.className}`}>What Our <span className="text-[#F06A6A]">Clients</span> feedback</h2>
                 {/* <p className="text-medium md:text-md text-gray-600 mb-12">We are trusted by businesses of all sizes .</p> */}
 
                 <div className="relative">

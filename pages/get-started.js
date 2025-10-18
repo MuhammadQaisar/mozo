@@ -5,6 +5,7 @@ import Button from "../components/ui/Button";
 import Checkbox from "../components/ui/Checkbox";
 import Link from "next/link";
 import { FaComments, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaTwitter } from "react-icons/fa";
+import { urbanist } from "../components/ui/font";
 
 /**
  * GetStarted component renders a contact form for service requests.
@@ -156,11 +157,11 @@ export default function ContactUs() {
           }}
         />
       </Head>
-      <div className="min-h-screen bg-white py-8 px-2 sm:px-4 font-[Montserrat] pt-20">
+      <div className={`min-h-screen bg-white py-8 px-2 sm:px-4 ${urbanist.className} pt-20`}>
         <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-4 sm:p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {/* Left: Form */}
-          <form onSubmit={handleSubmit} className="space-y-6 font-[Montserrat]">
-            <h1 className="text-3xl sm:text-4xl font-extrabold mb-3 font-montserrat tracking-tight text-[#18181e]">
+          <form onSubmit={handleSubmit} className={`space-y-6 ${urbanist.className}`}>
+            <h1 className={`text-3xl sm:text-4xl font-extrabold mb-3 tracking-tight text-[#18181e] ${urbanist.className}`}>
               <span className="block text-[#F06A6A] text-base font-semibold mb-1 uppercase tracking-widest">
                 Get in Touch
               </span>
@@ -180,7 +181,7 @@ export default function ContactUs() {
                   aria-label="First name"
                   type="text"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 font-[Montserrat]"
+                  className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
                 />
               </div>
               <div>
@@ -192,7 +193,7 @@ export default function ContactUs() {
                   aria-label="Last name"
                   type="text"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 font-[Montserrat]"
+                  className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
                 />
               </div>
             </div>
@@ -205,7 +206,7 @@ export default function ContactUs() {
                 aria-label="Email"
                 type="email"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 font-[Montserrat]"
+                className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
               />
             </div>
             <div>
@@ -217,7 +218,7 @@ export default function ContactUs() {
                 aria-label="Phone number"
                 type="tel"
                 placeholder="+1 (555) 000-0000"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 font-[Montserrat]"
+                className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
               />
             </div>
             <div>
@@ -228,7 +229,7 @@ export default function ContactUs() {
                 onChange={handleInputChange}
                 aria-label="Message"
                 required
-                className="w-full h-28 px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 resize-none font-[Montserrat]"
+                className={`w-full h-28 px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 resize-none ${urbanist.className}`}
               />
             </div>
             <div>
@@ -241,7 +242,7 @@ export default function ContactUs() {
                       checked={formData.services.includes(item)}
                       onChange={e => handleServiceChange(item, e.target.checked)}
                     />
-                    <label htmlFor={`service-${idx}`} className="text-sm text-gray-700 font-[Montserrat]">{item}</label>
+                    <label htmlFor={`service-${idx}`} className={`text-sm text-gray-700 ${urbanist.className}`}>{item}</label>
                   </li>
                 ))}
               </ul>
@@ -259,13 +260,13 @@ export default function ContactUs() {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full mt-2 bg-gradient-to-r from-[#F06A6A] to-[#e65c5c] text-white font-semibold rounded-md py-3 text-base shadow-md hover:from-[#e65c5c] hover:to-[#F06A6A] transition-all duration-200 disabled:opacity-60 font-[Montserrat]"
+              className={`w-full mt-2 bg-gradient-to-r from-[#F06A6A] to-[#e65c5c] text-white font-semibold rounded-md py-3 text-base shadow-md hover:from-[#e65c5c] hover:to-[#F06A6A] transition-all duration-200 disabled:opacity-60 ${urbanist.className}`}
             >
               {isSubmitting ? 'Sending...' : 'Send message'}
             </Button>
           </form>
           {/* Right: Contact Info */}
-          <div className="flex flex-col gap-8 justify-center md:pl-8 font-[Montserrat]">
+          <div className={`flex flex-col gap-8 justify-center md:pl-8 ${urbanist.className}`}>
             <div>
               <h3 className="text-lg font-extrabold text-[#F06A6A] mb-2 tracking-wide flex items-center gap-2">
                 <FaComments className="text-[#F06A6A] text-xl" />

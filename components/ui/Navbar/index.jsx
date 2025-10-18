@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Brand from '../Brand';
 import NavLink from '../NavLink';
-import { montserrat } from '../font';
+import { urbanist } from '../font';
 
 // Navigation data for the Navbar
 const navigation = [
@@ -73,7 +73,7 @@ const Navbar = () => {
     };
 
     return (
-        <header className={montserrat.className}>
+        <header className={urbanist.className}>
             <nav
                 className={"w-full fixed top-0 left-0 z-50 transition-all duration-500 ease-out bg-white/95 backdrop-blur-md border-b border-gray-200"}
             >
@@ -136,7 +136,7 @@ const Navbar = () => {
                         >
                             <NavLink
                                 href="/get-started"
-                                className="px-6 py-2 bg-[#000000]/80 text-white font-bold rounded-md hover:bg-[#C04F4F] transition-colors duration-300 flex items-center ml-20"
+                                className="px-6 py-2 bg-[#05243D] text-white font-bold rounded-md hover:bg-[#C04F4F] transition-colors duration-300 flex items-center ml-20"
                             >
                                 <span className="flex items-center">
                                     Get in Touch
