@@ -70,11 +70,12 @@ import FileZilla from "../../../public/icons/FileZilla.svg";
 import web from "../../../public/icons/web-dev.svg";
 import cloud from "../../../public/icons/cloud-Ops.svg";
 import digitalmarketing from "../../../public/icons/digital-marketing.svg";
+import ai from "../../../public/icons/ai.svg";
 
 // Reworked features array so each tech icon includes a label (used for pill badges)
 const features = [
   {
-    icon: "/icons/AI.svg",
+    icon: "/icons/ai.svg",
     title: "AI & ML Development",
     description:
       "Harness the power of artificial intelligence and machine learning to automate processes, gain insights from data, and create intelligent solutions that adapt and learn.",
