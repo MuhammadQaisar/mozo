@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { jobs } from "../careers";
+import { getAllJobs, getJobBySlug } from "../../lib/strapi";
 
 const JobPage = ({ job }) => {
     if (!job) {
@@ -9,26 +9,26 @@ const JobPage = ({ job }) => {
     return (
         <>
             <Head>
-                <title>{job.title} | Mozo Technologies</title>
+                <title>{job.attributes.title} | Mozo Technologies</title>
             </Head>
             <main className="bg-gray-50 mt-20">
                 <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
                     <div className="lg:grid lg:grid-cols-3 lg:gap-8">
                         <div className="lg:col-span-2">
                             <h1 className="text-4xl font-bold text-[#1f2937] sm:text-4xl">
-                                {job.title}
+                                {job.attributes.title}
                             </h1>
                             <div className="mt-8">
                                 <h2 className="text-2xl font-bold text-gray-900">Job Description</h2>
-                                <p className="mt-4 text-lg text-gray-600">{job.description}</p>
+                                <p className="mt-4 text-lg text-gray-600">{job.attributes.description}</p>
                             </div>
                             <div className="mt-8">
                                 <h2 className="text-2xl font-bold text-gray-900">Qualifications</h2>
-                                <p className="mt-4 text-lg text-gray-600">{job.qualifications}</p>
+                                <p className="mt-4 text-lg text-gray-600">{job.attributes.qualifications}</p>
                             </div>
                             <div className="mt-8">
                                 <h2 className="text-2xl font-bold text-gray-900">Education</h2>
-                                <p className="mt-4 text-lg text-gray-600">{job.education}</p>
+                                <p className="mt-4 text-lg text-gray-600">{job.attributes.education}</p>
                             </div>
                         </div>
                         <div className="mt-12 lg:mt-0">
@@ -125,15 +125,16 @@ const JobPage = ({ job }) => {
 };
 
 export async function getStaticPaths() {
+    const jobs = await getAllJobs();
     const paths = jobs.map((job) => ({
-        params: { slug: job.slug },
+        params: { slug: job.attributes.slug },
     }));
 
     return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-    const job = jobs.find((job) => job.slug === params.slug);
+    const job = await getJobBySlug(params.slug);
 
     return {
         props: {
