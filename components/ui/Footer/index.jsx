@@ -37,9 +37,9 @@ const Footer = () => {
     ];
 
     const contactInfo = {
-        address: "123 Tech Street, Silicon Valley, CA 94105",
-        phone: "+1 (123) 456-7890",
-        email: "hello@mozotech.com",
+        address: "Sarai Kharbuza, Opposite to E-16, GT Road, Islamabad, Pakistan",
+        phone: "+92 (346) 194-2812",
+        email: "team@mozotechnologies.com",
     };
 
     return (
@@ -106,15 +106,15 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold text-white mb-6">Get in Touch</h3>
                         <div className="space-y-4 text-sm">
                             <p className="flex items-start">
-                                <span className="w-5 h-5 mr-3 mt-1 flex-shrink-0"><Image src="/icons/address.svg" width={20} height={20} alt="address"/></span>
+                                <span className="w-5 h-5 mr-3 mt-1 flex-shrink-0"><Image src="/address-svgrepo-com.svg" width={20} height={20} alt="address"/></span>
                                 {contactInfo.address}
                             </p>
                             <p className="flex items-center">
-                                <span className="w-5 h-5 mr-3 flex-shrink-0"><Image src="/icons/phone.svg" width={20} height={20} alt="phone"/></span>
+                                <span className="w-5 h-5 mr-3 flex-shrink-0"><Image src="/telephone-svgrepo-com.svg" width={20} height={20} alt="phone"/></span>
                                 {contactInfo.phone}
                             </p>
                             <p className="flex items-center">
-                                <span className="w-5 h-5 mr-3 flex-shrink-0"><Image src="/icons/email.svg" width={20} height={20} alt="email"/></span>
+                                <span className="w-5 h-5 mr-3 flex-shrink-0"><Image src="/email-9-svgrepo-com.svg" width={20} height={20} alt="email"/></span>
                                 {contactInfo.email}
                             </p>
                         </div>

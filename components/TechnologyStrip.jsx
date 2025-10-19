@@ -65,35 +65,31 @@ const TechnologyStrip = () => {
   const displayedTechnologies = showAll ? allTechnologies : allTechnologies.slice(0, INITIAL_VISIBLE_LOGOS);
 
   return (
-    <SectionWrapper className="bg-white py-16 lg:py-24">
+    <SectionWrapper className="bg-gray-50 py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-12">Technologies We Use</h2>
-        <div className="grid grid-cols-7">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center text-[#1f2937] mb-12">Technologies We Use</h2>
+        <div className="grid grid-cols-4 md:grid-cols-7 gap-8">
           {displayedTechnologies.map((tech, idx) => (
             <div
               key={idx}
-              className="py-4 flex items-center justify-center"
+              className="py-4 flex items-center justify-center transform transition-transform duration-300 hover:scale-110"
             >
               <Image
                 src={tech.icon}
                 alt={tech.name}
                 width={48}
                 height={48}
-                className="object-contain h-12 w-12 filter grayscale"
+                className="object-contain h-12 w-12"
               />
             </div>
           ))}
         </div>
         {!showAll && allTechnologies.length > INITIAL_VISIBLE_LOGOS && (
-          <div className="text-center mt-8">
+          <div className="text-center mt-12">
             <button
               onClick={() => setShowAll(true)}
-              className="text-[#1f2937] text-sm text--600 transition-colors inline-flex items-center"
+              className="text-white bg-[#1f2937] hover:bg-[#F06A6A] transition-colors duration-300 font-semibold py-3 px-8 rounded-lg inline-flex items-center"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                <path fillRule="evenodd" d="M3.293 15.707a1 1 0 010-1.414L7.586 10 3.293 5.707a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clipRule="evenodd" />
-              </svg>
               Explore more
             </button>
           </div>

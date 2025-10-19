@@ -8,15 +8,6 @@ import Link from "next/link";
 import { FaComments, FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaTwitter } from "react-icons/fa";
 import { urbanist } from "../components/ui/font";
 
-/**
- * GetStarted component renders a contact form for service requests.
- * 
- * Manages form state for user inputs including full name, email, message, 
- * and selected services. Handles form submission with async API call,
- * including loading and error states.
- * 
- * @returns {JSX.Element} A fully interactive contact form with service selection
- */
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -159,175 +150,152 @@ export default function ContactUs() {
           }}
         />
       </Head>
-      <div className={`min-h-screen bg-white py-8 px-2 sm:px-4 ${urbanist.className} pt-10`}>
-        <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-4 sm:p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          {/* Left: Form */}
-          <form onSubmit={handleSubmit} className={`space-y-6 ${urbanist.className}`}>
-            <h1 className={`text-3xl sm:text-4xl font-extrabold mb-3 tracking-tight text-[#18181e] ${urbanist.className}`}>
-              <span className="block text-[#F06A6A] text-base font-semibold mb-1 uppercase tracking-widest">
-                Get in Touch
-              </span>
-              Contact Our Team
+      <div className={`min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8 ${urbanist.className}`}>
+        <div className="max-w-4xl mx-auto">
+          {/* Contact Info */}
+          <div className="text-center mb-16">
+            <h1 className={`text-4xl md:text-5xl font-extrabold text-[#1f2937] mb-4 ${urbanist.className}`}>
+              Get in <span className="text-[#F06A6A]">Touch</span>
             </h1>
-            <p className="text-gray-600 mb-6 text-base leading-relaxed">
-              Got any questions about the product or scaling on our platform? We’re here to help.<br />
-              Chat to our friendly team 24/7 and get onboard in less than 5 minutes.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Have a question or a project in mind? We'd love to hear from you. Reach out to us using the contact details below or fill out the form.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-center">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+              <FaEnvelope className="text-4xl text-[#F06A6A] mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <a href="mailto:team@mozotechnologies.com" className="text-lg text-gray-600 hover:text-[#F06A6A]">team@mozotechnologies.com</a>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+              <FaPhoneAlt className="text-4xl text-[#F06A6A] mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
+              <a href="tel:+923010153774" className="text-lg text-gray-600 hover:text-[#F06A6A]">+92 301 0153774</a>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+              <FaMapMarkerAlt className="text-4xl text-[#F06A6A] mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
+              <p className="text-lg text-gray-600">Sarai Kharbuza, Opposite to E-16, GT Road, Islamabad, Pakistan.</p>
+            </div>
+          </div>
+
+          {/* Map */}
+          <div className="mb-16">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.634833333333!2d72.982433315209!3d33.6923999807035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df9542eaaaaaab%3A0x63a8a4a6e4db5c3b!2sSarai%20Kharbuza%2C%20Islamabad%2C%20Islamabad%20Capital%20Territory%2C%20Pakistan!5e0!3m2!1sen!2s!4v16788863 Sarai Kharbuza, Opposite to E-16, GT Road, Islamabad, Pakistan00000"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          {/* Form */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <form onSubmit={handleSubmit} className={`space-y-6 ${urbanist.className}`}>
+              <h2 className={`text-3xl font-extrabold mb-6 text-center text-[#18181e] ${urbanist.className}`}>
+                Send Us a Message
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">First name</label>
+                  <Input
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    aria-label="First name"
+                    type="text"
+                    required
+                    className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Last name</label>
+                  <Input
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    aria-label="Last name"
+                    type="text"
+                    required
+                    className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
+                  />
+                </div>
+              </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">First name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
                 <Input
-                  name="firstName"
-                  value={formData.firstName}
+                  name="email"
+                  value={formData.email}
                   onChange={handleInputChange}
-                  aria-label="First name"
-                  type="text"
+                  aria-label="Email"
+                  type="email"
                   required
-                  className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Last name</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Phone number</label>
                 <Input
-                  name="lastName"
-                  value={formData.lastName}
+                  name="phone"
+                  value={formData.phone}
                   onChange={handleInputChange}
-                  aria-label="Last name"
-                  type="text"
-                  required
-                  className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
+                  aria-label="Phone number"
+                  type="tel"
+                  placeholder="+1 (555) 000-0000"
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
                 />
               </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <Input
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                aria-label="Email"
-                type="email"
-                required
-                className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Phone number</label>
-              <Input
-                name="phone"
-                value={formData.phone}
-                onChange={handleInputChange}
-                aria-label="Phone number"
-                type="tel"
-                placeholder="+1 (555) 000-0000"
-                className={`w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 ${urbanist.className}`}
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleInputChange}
-                aria-label="Message"
-                required
-                className={`w-full h-28 px-3 py-2 border border-gray-300 rounded-md focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 resize-none ${urbanist.className}`}
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Services</label>
-              <ul className="flex flex-wrap gap-x-8 gap-y-3 mt-2">
-                {servicesItems.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2">
-                    <Checkbox
-                      id={`service-${idx}`}
-                      checked={formData.services.includes(item)}
-                      onChange={e => handleServiceChange(item, e.target.checked)}
-                    />
-                    <label htmlFor={`service-${idx}`} className={`text-sm text-gray-700 ${urbanist.className}`}>{item}</label>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {submitStatus === 'success' && (
-              <div className="p-3 bg-green-100 border border-green-400 text-green-700 rounded text-sm">
-                Thank you! Your message has been sent successfully.
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  aria-label="Message"
+                  required
+                  className={`w-full h-32 px-4 py-3 border border-gray-300 rounded-lg focus:ring-[#F06A6A] focus:border-[#F06A6A] bg-white text-gray-800 resize-none ${urbanist.className}`}
+                />
               </div>
-            )}
-            {submitStatus === 'error' && (
-              <div className="p-3 bg-red-100 border border-red-400 text-red-700 rounded text-sm">
-                Sorry, there was an error sending your message. Please try again.
+              <div>
+                <label className="block text-lg font-medium text-gray-800 mb-4">I'm interested in...</label>
+                <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {servicesItems.map((item, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <Checkbox
+                        id={`service-${idx}`}
+                        checked={formData.services.includes(item)}
+                        onChange={e => handleServiceChange(item, e.target.checked)}
+                      />
+                      <label htmlFor={`service-${idx}`} className={`ml-3 text-gray-700 ${urbanist.className}`}>{item}</label>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            )}
-            <Button
-              type="submit"
-              disabled={isSubmitting}
-              className={`w-full mt-2 bg-gradient-to-r from-[#000000] to-[#000000] text-white font-semibold rounded-md py-3 text-base shadow-md hover:from-[#e65c5c] hover:to-[#F06A6A] transition-all duration-200 disabled:opacity-60 ${urbanist.className}`}
-            >
-              {isSubmitting ? 'Sending...' : 'Send message'}
-            </Button>
-          </form>
-          {/* Right: Contact Info */}
-          <div className={`flex flex-col gap-8 justify-center md:pl-8 ${urbanist.className}`}>
-            <div>
-              <h3 className="text-lg font-extrabold text-[#1f2937] mb-2 tracking-wide flex items-center gap-2">
-                <FaComments className="text-[#1f2937] text-xl" />
-                Chat with us
-              </h3>
-              <p className="text-gray-700 text-base mb-2 font-medium">Speak to our friendly team via live chat.</p>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#"  className="flex items-center gap-2 text-[#1f2937] hover:underline font-semibold text-base">
-                    <FaComments className="text-[#1f2937]" />
-                    Start a live chat
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:team@mozotechnologies.com" className="flex items-center gap-2 text-[#1f2937] hover:underline font-semibold text-base">
-                    <FaEnvelope className="text-[#1f2937]" />
-                    Shoot us an email
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex items-center gap-2 text-[#1f2937] hover:underline font-semibold text-base">
-                    <FaTwitter className="text-[#1f2937]" />
-                    Message us on LinkedIn
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-extrabold text-[#1f2937] mb-2 tracking-wide flex items-center gap-2">
-                <FaPhoneAlt className="text-[#1f2937] text-xl" />
-                Call us
-              </h3>
-              <p className="text-gray-700 text-base mb-2 font-medium">Call our team Mon-Fri from 8am to 5pm.</p>
-              <a href="tel:+15550000000" className="flex items-center gap-2 text-[#1f2937] hover:underline font-semibold text-base">
-                <FaPhoneAlt className="text-[#1f2937]" />
-                +92 3010153774
-              </a>
-            </div>
-            <div>
-              <h3 className="text-lg font-extrabold text-[#1f2937] mb-2 tracking-wide flex items-center gap-2">
-                <FaMapMarkerAlt className="text-[#1f2937] text-xl" />
-                Visit us
-              </h3>
-              <p className="text-gray-700 text-base mb-2 font-medium">Chat to us in person at our Islamabad HQ.</p>
-              <a href="#" className="flex items-center gap-2 text-[#1f2937] hover:underline font-semibold text-base">
-                <FaMapMarkerAlt className="text-[#1f2937]" />
-                Sarai Kharbuza, Opposite to E-16, GT Road, Islamabad, Pakistan.
-              </a>
-            </div>
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center">
+                  Thank you! Your message has been sent successfully.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg text-center">
+                  Sorry, there was an error sending your message. Please try again.
+                </div>
+              )}
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full mt-4 bg-[#1f2937] text-white font-bold rounded-lg py-4 text-lg shadow-lg hover:bg-[#F06A6A] transition-all duration-300 disabled:opacity-50 ${urbanist.className}`}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </Button>
+            </form>
           </div>
         </div>
       </div>
     </>
   );
 }
-/**
- * Renders the Get Started page with a form for submitting service requests.
- * Allows users to input their details, select services, and submit a form.
- * Handles form submission state with success and error messaging.
- * 
- * @returns {JSX.Element} A fully interactive form component for service requests
- */

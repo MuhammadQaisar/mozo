@@ -39,7 +39,7 @@ const MeetTheTeam = () => (
       {teamMembers.map((member, idx) => (
         <div
           key={idx}
-          className="flex flex-col bg-[#1f2937] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+          className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
         >
           <img
             src={member.image}
@@ -47,16 +47,16 @@ const MeetTheTeam = () => (
             className="w-full h-80 object-cover"
           />
           <div className="p-6 flex flex-col flex-1">
-            <h3 className="text-2xl font-bold text-white mb-1">
+            <h3 className="text-2xl font-bold text-gray-900 mb-1">
               {member.name}
             </h3>
-            <p className="text-sm text-gray-300 mt-2 flex-1">{member.bio}</p>
+            <p className="text-sm text-gray-600 mt-2 flex-1">{member.bio}</p>
             <div className="mt-4">
               <a
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-[#1f2937] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#F06A6A] transition-colors"
+                className="inline-flex items-center bg-[#F06A6A] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#D05A5A] transition-colors"
               >
                 <FaLinkedin className="mr-2" />
                 LinkedIn

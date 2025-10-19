@@ -1,18 +1,16 @@
 import AboutHero from '../components/AboutHero';
-import TailoredSolution from '../components/TailoredSolution';
+import AboutUsStatements from '../components/AboutUsStatements';
+import TechnologyStrip from '../components/TechnologyStrip';
 import MeetTheTeam from '../components/MeetTheTeam';
 import Faqs from '../components/Faqs';
-
-import AboutUsStatements from '../components/AboutUsStatements';
-
-import TechnologyStrip from '../components/TechnologyStrip';
+import WhyChooseUs from '../components/WhyChooseUs';
 
 const AboutPage = () => (
   <>
     <AboutHero />
     <AboutUsStatements />
+    <WhyChooseUs />
     <TechnologyStrip />
-    {/* <TailoredSolution /> */}
     <MeetTheTeam />
     <Faqs />
   </>

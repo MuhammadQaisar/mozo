@@ -26,7 +26,7 @@ const HomeHero = () => {
           className={`text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#05243D] to-[#68A063] tracking-wide animate-fade-in-down ${urbanist.className}`}
         >
           Transforming Ideas into{" "}
-          <span className="text-[#68A063]">High-Performance</span> Software
+          <span className="text-[#F06A6A]">High-Performance</span> Software
         </h1>
 
         {/* Sub-headline */}
@@ -42,7 +42,7 @@ const HomeHero = () => {
         <div className="mt-10 animate-fade-in-up">
           <Link
             href="/get-started"
-            className="inline-block bg-[#68A063] hover:bg-opacity-90 text-white font-bold rounded-lg px-10 py-4 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="inline-block bg-[#05243D] hover:bg-opacity-90 text-white font-bold rounded-lg px-10 py-4 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             Get Started With Us
           </Link>

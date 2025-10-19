@@ -382,7 +382,7 @@ const Features = () => {
                   href="#contact"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.96 }}
-                  className="inline-flex items-center gap-2 mt-8 bg-[#F06A6A] text-white font-bold rounded-lg px-6 py-3 text-lg shadow-md transform transition-all duration-300 ease-in-out"
+                  className="inline-flex items-center gap-2 mt-8 bg-[#05243D] text-white font-bold rounded-lg px-6 py-3 text-lg shadow-md transform transition-all duration-300 ease-in-out"
                 >
                   Learn More
                   <svg
