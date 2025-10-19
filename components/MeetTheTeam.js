@@ -4,21 +4,21 @@ import { poppins, urbanist } from "./ui/font";
 const teamMembers = [
   {
     name: "Muhammad Qaisar",
-    role: "Co-Founder",
+    role: "Software Engineer",
     image: "/Qaisar.jpg", // Use your dummy image path
     linkedin: "https://www.linkedin.com/in/muhammad-qaisar863/",
     bio: "I have worked in a range of capacities across dynamic roles helping tech start ups visualize and attain their goals. My background has revolved around devOps, fullstack software development and project management. Currently, I am leading software design and development of niche software applications as a co-founder at Mozo Technologies.",
   },
   {
     name: "Danial Gohar",
-    role: "Co-Founder",
+    role: "CEO - Founder",
     image: "/danial-gohar.jpg",
     linkedin: "https://www.linkedin.com/in/itsdanialgohar/",
-    bio: "I am a results-driven professional with a solid background in supporting and maintaining production environments, troubleshooting incidents, and optimizing system performance. With demonstrated experience in implementing DevOps practices, continuous integration, and automation, I continually seek to enhance operational efficiency.",
+    bio: "With over 7 years of experience in the tech industry, I have helped startups and established businesses successfully launch products, conduct in-depth market research, and scale their operations effectively. My work focuses on optimizing business processes and workflows to drive efficiency and sustainable growth. As a founder and CEO, I’m passionate about turning ideas into impactful solutions that create measurable value.",
   },
   {
     name: "Faheem Ahmed",
-    role: "Co-Founder",
+    role: "Mobile App Developer",
     image: "/faheem_jan.jpg",
     linkedin: "https://www.linkedin.com/in/fisforfaheem/",
     bio: "To briefly describe myself I would say that I am a workaholic. I am energetic and collaborate well with others.I have a passion for perfection and I seek it in every aspect of my life let it be work or anything else. I am good with authority and have no problems complying with rules and regulations",
@@ -50,6 +50,7 @@ const MeetTheTeam = () => (
             <h3 className="text-2xl font-bold text-gray-900 mb-1">
               {member.name}
             </h3>
+            <p className="text-md font-medium text-gray-500 mb-2">{member.role}</p>
             <p className="text-sm text-gray-600 mt-2 flex-1">{member.bio}</p>
             <div className="mt-4">
               <a
