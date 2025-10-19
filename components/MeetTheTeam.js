@@ -6,22 +6,22 @@ const teamMembers = [
     name: "Muhammad Qaisar",
     role: "Co-Founder",
     image: "/Qaisar.jpg", // Use your dummy image path
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/muhammad-qaisar863/",
     bio: "I have worked in a range of capacities across dynamic roles helping tech start ups visualize and attain their goals. My background has revolved around devOps, fullstack software development and project management. Currently, I am leading software design and development of niche software applications as a co-founder at Mozo Technologies.",
   },
   {
     name: "Danial Gohar",
     role: "Co-Founder",
     image: "/danial-gohar.jpg",
-    linkedin: "#",
-    bio: "I have worked in a range of capacities across dynamic roles helping tech start ups visualize and attain their goals. My background has revolved around devOps, fullstack software development and project management. Currently, I am leading software design and development of niche software applications as a co-founder at  Mozo Technologies.",
+    linkedin: "https://www.linkedin.com/in/itsdanialgohar/",
+    bio: "I am a results-driven professional with a solid background in supporting and maintaining production environments, troubleshooting incidents, and optimizing system performance. With demonstrated experience in implementing DevOps practices, continuous integration, and automation, I continually seek to enhance operational efficiency.",
   },
   {
     name: "Faheem Ahmed",
     role: "Co-Founder",
     image: "/faheem_jan.jpg",
-    linkedin: "#",
-    bio: "I have worked in a range of capacities across dynamic roles helping tech start ups visualize and attain their goals. My background has revolved around devOps, fullstack software development and project management. Currently, I am leading software design and development of niche software applications as a co-founder at  Mozo Technologies.",
+    linkedin: "https://www.linkedin.com/in/fisforfaheem/",
+    bio: "To briefly describe myself I would say that I am a workaholic. I am energetic and collaborate well with others.I have a passion for perfection and I seek it in every aspect of my life let it be work or anything else. I am good with authority and have no problems complying with rules and regulations",
   },
 ];
 
