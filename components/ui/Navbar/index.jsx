@@ -150,7 +150,7 @@ const Navbar = () => {
             >
               <NavLink
                 href="/get-started"
-                className="px-6 py-2 bg-[#05243D] text-white font-bold rounded-md hover:bg-[#] transition-colors duration-300 flex items-center ml-2"
+                className="px-6 py-2 bg-[#05243D] text-white font-bold rounded-md hover:bg-[#] transition-colors duration-300 flex items-center ml-20"
               >
                 <span className="flex items-center">Get in Touch</span>
               </NavLink>
