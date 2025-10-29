@@ -23,11 +23,10 @@ const HomeHero = () => {
       <div className="relative max-w-7xl mt-18 mx-auto px-6 lg:px-8 text-center">
         {/* Headline */}
         <h1
-          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#05243D] to-[#68A063] tracking-wide animate-fade-in-down ${urbanist.className}`}
+          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-[#05243D] tracking-wide animate-fade-in-down ${urbanist.className}`}
         >
           <span className="block mb-2">Transforming Ideas into</span>
-          <span className="text-[#F06A6A] block">High Performance Software</span>
-          
+          <span className="block">High Performance Software</span>
         </h1>
 
         {/* Sub-headline */}
