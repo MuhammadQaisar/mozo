@@ -23,7 +23,7 @@ const HomeHero = () => {
       <div className="relative max-w-7xl mt-18 mx-auto px-6 lg:px-8 text-center">
         {/* Headline */}
         <h1
-          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-[#05243D] tracking-wide animate-fade-in-down ${urbanist.className}`}
+          className={`text-4xl sm:text-7xl md:text-6xl font-extrabold leading-tight text-[#05243D] tracking-wide animate-fade-in-down ${urbanist.className}`}
         >
           <span className="block mb-2">Transforming Ideas into</span>
           <span className="block">High Performance Software</span>
@@ -49,7 +49,7 @@ const HomeHero = () => {
         </div>
 
         {/* Technology Logos */}
-        <div className="mt-20">
+        <div className="mt-12">
           <p
             className={`text-sm font-semibold text-white uppercase tracking-wider bg-[#05243D] inline-block px-2 py-1 rounded ${urbanist.className}`}
           >
