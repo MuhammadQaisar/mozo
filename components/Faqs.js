@@ -79,7 +79,9 @@ const Faqs = () => {
                 className="w-full flex items-center justify-between text-left py-5 px-6 cursor-pointer"
                 whileHover={{ backgroundColor: "#f9fafb" }}
               >
-                <span className={`text-md font-semibold text-[#1f2937] ${urbanist.className}`}>
+                <span
+                  className={`text-md font-semibold text-[#1f2937] ${urbanist.className}`}
+                >
                   {faq.question}
                 </span>
                 <motion.div
@@ -88,7 +90,7 @@ const Faqs = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
                   <svg
-                    className="w-6 h-6 text-gray-500"
+                    className="w-5 h-5 text-gray-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -121,8 +123,6 @@ const Faqs = () => {
             </motion.div>
           ))}
         </div>
-
-     
       </div>
     </section>
   );
