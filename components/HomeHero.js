@@ -31,7 +31,7 @@ const HomeHero = () => {
 
         {/* Sub-headline */}
         <p
-          className={`mt-6 max-w-3xl mx-auto text-gray-600 text-lg md:text-xl leading-relaxed animate-fade-in-up ${urbanist.className}`}
+          className={`mt-6 max-w-3xl mx-auto text-gray-600 text-md md:text-xl leading-relaxed animate-fade-in-up ${urbanist.className}`}
         >
           From concept to launch, we deliver complete software solutions that
           drive your business forward with cutting-edge technology and
@@ -49,7 +49,7 @@ const HomeHero = () => {
         </div>
 
         {/* Technology Logos */}
-        <div className="mt-12">
+        <div className="mt-14">
           <p
             className={`text-sm font-semibold text-white uppercase tracking-wider bg-[#05243D] inline-block px-2 py-1 rounded ${urbanist.className}`}
           >
