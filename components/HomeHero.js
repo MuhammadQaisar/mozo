@@ -39,14 +39,6 @@ const HomeHero = () => {
         </p>
 
         {/* Call to Action Button */}
-        <div className="mt-10 animate-fade-in-up">
-          <Link
-            href="/get-started"
-            className="inline-block border-2 border[#05243D] hover:bg-opacity-90 text-[#05243D] font-bold rounded-lg px-10 py-4 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-          >
-            Get Started With Us
-          </Link>
-        </div>
 
         {/* Technology Logos */}
         <div className="mt-14">
@@ -71,6 +63,14 @@ const HomeHero = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="mt-10 animate-fade-in-up">
+          <Link
+            href="/get-started"
+            className="inline-block border-2 border[#05243D] hover:bg-opacity-90 text-[#05243D] font-bold rounded-lg px-10 py-4 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            Get Started With Us
+          </Link>
         </div>
       </div>
     </SectionWrapper>
