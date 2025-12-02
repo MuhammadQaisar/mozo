@@ -3,7 +3,7 @@ import { urbanist } from "./ui/font";
 
 const IntroductionSection = () => {
   return (
-    <section className="pb-16 bg-white">
+    <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2

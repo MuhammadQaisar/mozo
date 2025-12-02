@@ -5,7 +5,7 @@ import GradientWrapper from "./GradientWrapper";
 
 const AboutHero = () => {
   return (
-    <section className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="relative pt-16 md:pt-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-4xl mx-auto text-center">
         <p className="text-sm font-semibold text-gray-700 uppercase mb-2">
           About Us
