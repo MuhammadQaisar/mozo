@@ -241,7 +241,7 @@ const Features = () => {
   return (
     <SectionWrapper
       id="features"
-      className={`py-20 lg:py-28 bg-gray-50 ${urbanist.className}`}
+      className={`pb-20 lg:pb-28 bg-gray-50 ${urbanist.className}`}
     >
       <div className="max-w-8xl mx-auto px-2 sm:px-4 lg:px-6">
         <div className="text-center mb-16">

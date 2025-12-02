@@ -1,11 +1,12 @@
 import { FaLinkedin } from "react-icons/fa";
-import { poppins, urbanist } from "./ui/font";
+import { urbanist } from "./ui/font";
+import Image from "next/image";
 
 const teamMembers = [
   {
     name: "Muhammad Qaisar",
     role: "Software Engineer",
-    image: "/Qaisar.jpg", // Use your dummy image path
+    image: "/Qaisar.jpg",
     linkedin: "https://www.linkedin.com/in/muhammad-qaisar863/",
     bio: "I have worked in a range of capacities across dynamic roles helping tech start ups visualize and attain their goals. My background has revolved around devOps, fullstack software development and project management. Currently, I am leading software design and development of niche software applications as a co-founder at Mozo Technologies.",
   },
@@ -26,46 +27,63 @@ const teamMembers = [
 ];
 
 const MeetTheTeam = () => (
-  <section className="max-w-7xl mx-auto px-4 py-16">
-    <div className="text-center">
-      <h2
-        className={`text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-2 ${urbanist.className}`}
-      >
-        Our Core Team
-      </h2>
-      <hr className="mb-12 border-gray-200 w-24 mx-auto" />
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {teamMembers.map((member, idx) => (
-        <div
-          key={idx}
-          className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+  <section className="bg-white py-20 lg:py-28">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-16">
+        <h2
+          className={`text-4xl md:text-5xl font-extrabold text-gray-900 ${urbanist.className}`}
         >
-          <img
-            src={member.image}
-            alt={member.name}
-            className="w-full h-80 object-cover"
-          />
-          <div className="p-6 flex flex-col flex-1">
-            <h3 className="text-2xl font-bold text-gray-900 mb-1">
-              {member.name}
-            </h3>
-            <p className="text-md font-medium text-gray-500 mb-2">{member.role}</p>
-            <p className="text-sm text-gray-600 mt-2 flex-1">{member.bio}</p>
-            <div className="mt-4">
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-[#F06A6A] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#D05A5A] transition-colors"
+          Our Core Team
+        </h2>
+        <p
+          className={`mt-4 text-lg text-gray-600 max-w-2xl mx-auto ${urbanist.className}`}
+        >
+          The driving force behind our innovation and success.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {teamMembers.map((member, idx) => (
+          <div
+            key={idx}
+            className="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out flex flex-col"
+          >
+            <div className="relative w-full h-72">
+              <Image
+                src={member.image}
+                alt={member.name}
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+            <div className="p-6 flex flex-col flex-1">
+              <h3
+                className={`text-2xl font-bold text-gray-900 mb-1 ${urbanist.className}`}
               >
-                <FaLinkedin className="mr-2" />
-                LinkedIn
-              </a>
+                {member.name}
+              </h3>
+              <p className="text-blue-600 font-semibold text-md mb-4">
+                {member.role}
+              </p>
+              <p
+                className={`text-base text-gray-700 leading-relaxed flex-1 ${urbanist.className}`}
+              >
+                {member.bio}
+              </p>
+              <div className="mt-6">
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-[#1f2937] text-white px-5 py-3 rounded-lg text-base font-semibold transition-colors duration-300"
+                >
+                  <FaLinkedin className="mr-2 text-xl" />
+                  LinkedIn
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   </section>
 );

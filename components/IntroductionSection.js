@@ -3,7 +3,7 @@ import { urbanist } from "./ui/font";
 
 const IntroductionSection = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="pb-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2
@@ -11,7 +11,9 @@ const IntroductionSection = () => {
           >
             Who We Are
           </h2>
-          <p className={`mt-4 max-w-2xl mx-auto text-xl text-gray-500 ${urbanist.className}`}>
+          <p
+            className={`mt-4 max-w-2xl mx-auto text-lg text-gray-800 ${urbanist.className}`}
+          >
             Mozo Technologies is a team of passionate and experienced software
             engineers, designers, and project managers dedicated to helping
             businesses succeed in the digital world. We are committed to
