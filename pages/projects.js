@@ -76,7 +76,7 @@ const ProjectsPage = () => {
               onClick={() => setActiveCategory(category)}
               className={`px-4 py-2 rounded-full font-medium transition-colors duration-300 ${
                 activeCategory === category
-                  ? 'bg-[#F06A6A] text-white'
+                  ? 'bg-[#05243D] text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >

@@ -68,7 +68,7 @@ const Footer = () => {
             >
               <Link href="/">
                 <Image
-                  src="/footernew.svg"
+                  src="/flogo.png"
                   alt="Mozo Technologies"
                   width={200}
                   height={70}
