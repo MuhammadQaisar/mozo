@@ -11,6 +11,7 @@ const navigation = [
   { title: "Home", path: "/" },
   { title: "About", path: "/about" },
   { title: "Services", path: "/services" },
+  { title: "Projects", path: "/projects" },
   // { title: "Blogs", path: "/blogs" },
   { title: "Careers", path: "/careers" },
   { title: "Contact", path: "/contact-us" },
@@ -50,7 +51,7 @@ const Navbar = () => {
       {
         rootMargin: "-20% 0px -80% 0px",
         threshold: 0,
-      }
+      },
     );
 
     // Only observe sections for hash links
@@ -110,34 +111,38 @@ const Navbar = () => {
                     href={
                       asPath === "/get-started" ? `/${item.path}` : item.path
                     }
-                    className={`relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 group ${
-                      (item.path.startsWith("#") &&
-                        activeNavLink === item.path) ||
-                      (!item.path.startsWith("#") && asPath === item.path)
-                        ? "text-[#F06A6A] bg-[#F06A6A]/10"
-                        : "text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50"
-                    }`}
-                    onClick={() => {
-                      if (!item.path.startsWith("#")) {
-                        // For direct page links, set activeNavLink based on current path
-                        setActiveNavLink(item.path);
-                      } else {
-                        // For hash links, keep existing behavior
-                        setActiveNavLink(item.path);
-                      }
-                    }}
+                    legacyBehavior
                   >
-                    {item.title}
-                    {/* Active indicator */}
-                    {activeNavLink === item.path && (
-                      <motion.div
-                        layoutId="activeTab"
-                        className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[#F06A6A] rounded-full"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.3 }}
-                      />
-                    )}
+                    <a
+                      className={`relative px-4 py-2 rounded-lg font-normal text-md transition-all duration-300 group ${
+                        (item.path.startsWith("#") &&
+                          activeNavLink === item.path) ||
+                        (!item.path.startsWith("#") && asPath === item.path)
+                          ? "text-[#F06A6A] bg-[#F06A6A]/10"
+                          : "text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50"
+                      }`}
+                      onClick={() => {
+                        if (!item.path.startsWith("#")) {
+                          // For direct page links, set activeNavLink based on current path
+                          setActiveNavLink(item.path);
+                        } else {
+                          // For hash links, keep existing behavior
+                          setActiveNavLink(item.path);
+                        }
+                      }}
+                    >
+                      {item.title}
+                      {/* Active indicator */}
+                      {activeNavLink === item.path && (
+                        <motion.div
+                          layoutId="activeTab"
+                          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[#F06A6A] rounded-full"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.3 }}
+                        />
+                      )}
+                    </a>
                   </Link>
                 </motion.li>
               ))}
@@ -205,18 +210,22 @@ const Navbar = () => {
                     href={
                       asPath === "/get-started" ? `/${item.path}` : item.path
                     }
-                    className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                      activeNavLink === item.path
-                        ? "text-[#F06A6A] bg-[#F06A6A]/10"
-                        : "text-[#F06A6A] hover:text-[#F06A6A] hover:bg-gray-50"
-                    }`}
-                    onClick={() => {
-                      setActiveNavLink(item.path);
-                      setIsMobileMenuOpen(false);
-                      document.body.classList.remove("overflow-hidden");
-                    }}
+                    legacyBehavior
                   >
-                    {item.title}
+                    <a
+                      className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                        activeNavLink === item.path
+                          ? "text-[#F06A6A] bg-[#F06A6A]/10"
+                          : "text-[#F06A6A] hover:text-[#F06A6A] hover:bg-gray-50"
+                      }`}
+                      onClick={() => {
+                        setActiveNavLink(item.path);
+                        setIsMobileMenuOpen(false);
+                        document.body.classList.remove("overflow-hidden");
+                      }}
+                    >
+                      {item.title}
+                    </a>
                   </Link>
                 </div>
               ))}

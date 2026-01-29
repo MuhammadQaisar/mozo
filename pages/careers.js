@@ -49,12 +49,17 @@ const Careers = ({ jobs }) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.7 }}
-                            className="text-center mb-12"
+                            className="flex flex-col md:flex-row items-center text-center md:text-left justify-between mb-12"
                         >
-                            <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 ${urbanist.className}`}>
-                                Explore Our <span className="text-[#F06A6A]">Open Positions</span>
-                            </h2>
-                            <p className="text-medium text-gray-600 max-w-2xl mx-auto">
+                            <div className="flex-1">
+                                <p className="inline-block text-xl mb-6 font-normal border border-gray-500 px-4 py-2 rounded-full text-gray-500 ">
+                                    Join our team
+                                </p>
+                                <h2 className={`text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 ${urbanist.className}`}>
+                                    Be a part of Mozo Technologies - a space of innovation <span className="text-[#F06A6A]"></span>
+                                </h2>
+                            </div>
+                            <p className="text-medium text-gray-600 max-w-2xl flex-1">
                                 Find your next career opportunity and join our growing team.
                             </p>
                         </motion.div>
@@ -152,12 +157,17 @@ const Careers = ({ jobs }) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.3 }}
                             transition={{ duration: 0.7 }}
-                            className="text-center mb-12"
+                            className="flex flex-col md:flex-row items-center text-center md:text-left justify-between mb-12"
                         >
-                            <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 ${urbanist.className}`}>
-                                Why Join <span className="text-[#F06A6A]">Our Team?</span>
-                            </h2>
-                            <p className="text-medium text-gray-600 max-w-2xl mx-auto">
+                            <div className="flex-1">
+                                <p className="inline-block mb-6 text-xl font-normal border border-gray-500 px-4 py-2 rounded-full text-gray-500 ">
+                                    Benefits
+                                </p>
+                                <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 ${urbanist.className}`}>
+                                    Why Join <span className="text-[#F06A6A]">Our Team?</span>
+                                </h2>
+                            </div>
+                            <p className="text-medium text-gray-600 max-w-2xl flex-1">
                                 We are a team of passionate individuals who are dedicated to making a difference.
                             </p>
                         </motion.div>

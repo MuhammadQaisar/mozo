@@ -75,7 +75,7 @@ import ai from "../../../public/icons/ai.svg";
 // Reworked features array so each tech icon includes a label (used for pill badges)
 const features = [
   {
-    icon: "/icons/ai.svg",
+    icon: "/icons/ai1.svg",
     title: "AI & ML Development",
     description:
       "Harness the power of artificial intelligence and machine learning to automate processes, gain insights from data, and create intelligent solutions that adapt and learn.",
@@ -249,7 +249,7 @@ const Features = () => {
             className={`text-3xl md:text-4xl font-extrabold text-gray-900 ${urbanist.className}`}
           >
             Custom Software{" "}
-            <span className="text-[#F06A6A]"> Develoment Services</span>
+            <span className="text-[#ffbb00]"> Develoment Services</span>
           </h2>
           <p className="mt-6 text-lg md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             We provide a comprehensive suite of services to transform your ideas
@@ -270,14 +270,14 @@ const Features = () => {
                     whileHover={{ y: -6 }}
                     className={`p-4 rounded-2xl cursor-pointer transition-all duration-300 ease-in-out transform ${
                       isActive
-                        ? "bg-[#0a3550] text-white shadow-2xl border-2 border-[#F06A6A]"
+                        ? "bg-[#05243D] text-white shadow-2xl border-3 border-[#05243D]"
                         : "bg-white border border-gray-200 hover:shadow-lg"
                     }`}
                   >
                     <div className="flex flex-col items-center text-center">
                       <div
                         className={`flex-shrink-0 p-3 rounded-full ${
-                          isActive ? "bg-white" : "bg-gray-100"
+                          isActive ? "" : ""
                         }`}
                       >
                         <Image
@@ -317,26 +317,16 @@ const Features = () => {
                 <p className="mt-4 text-md text-gray-600 leading-relaxed">
                   {activeFeature.description}
                 </p>
-                <div className="w-24 h-1 bg-gray-200 my-6 rounded-full" />
+                <div className="w-24 bg-gray-0 my-6 rounded-full" />
 
                 <ul className="space-y-3 mb-6">
                   {activeFeature.details.points.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-4 h-4 bg-[#1f2937] text-white rounded-full flex items-center justify-center mt-1">
-                        <svg
-                          className="w-2 h-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M5 13l4 4L19 7"
-                          ></path>
-                        </svg>
-                      </div>
+                      <img
+                        src="/tick.svg"
+                        alt="Check Icon"
+                        className="w-4 h-4 mt-0 flex-shrink-0"
+                      />
                       <span className="text-gray-700 text-sm">{point}</span>
                     </li>
                   ))}

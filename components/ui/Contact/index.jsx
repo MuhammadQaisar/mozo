@@ -14,7 +14,7 @@ const ContactHeader = () => (
     <h2
       className={`text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-4 ${urbanist.className}`}
     >
-      Get In <span className="text-[#F06A6A]">Touch</span>
+      Get In <span className="text-[#ffbb00]">Touch</span>
     </h2>
     <p className="text-medium text-gray-600 max-w-3xl mx-auto">
       Ready to transform your business? Let's discuss your project and create

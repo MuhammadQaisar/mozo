@@ -24,12 +24,12 @@ const WhyChooseUs = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2
-          className={`text-4xl md:text-4xl font-extrabold text-gray-900 ${urbanist.className}`}
+          className={`text-4xl md:text-4xl text-left font-extrabold text-gray-900 ${urbanist.className}`}
         >
           Why Choose <span className="text-[bulb-light-on-svgrepo-com]">Us?</span>
         </h2>
         <p
-          className={`mt-4 text-lg text-gray-600 max-w-3xl mx-auto ${urbanist.className}`}
+          className={`mt-4 text-lg text-gray-600 text-left max-w-3xl mx-2 ${urbanist.className}`}
         >
           We are committed to delivering excellence and driving success for our clients through our expertise, dedication, and innovative approach.
         </p>
@@ -40,10 +40,10 @@ const WhyChooseUs = () => (
             key={index} 
             className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out"
           >
-            <div className="flex items-center justify-center h-20 w-20 rounded-full mb-6">
+            {/* <div className="flex items-center justify-center h-20 w-20 rounded-full mb-6">
               {feature.icon}
-            </div>
-            <h3 className={`text-2xl font-bold text-gray-900 mb-4 ${urbanist.className}`}>
+            </div> */}
+            <h3 className="inline-block mb-4 text-xl font-normal border border-gray-500 px-4 py-2 rounded-full text-gray-500">
               {feature.title}
             </h3>
             <p className={`text-base text-gray-700 leading-relaxed ${urbanist.className}`}>

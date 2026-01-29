@@ -31,7 +31,7 @@ const HomeHero = () => {
 
         {/* Sub-headline */}
         <p
-          className={`mt-6 max-w-3xl mx-auto text-gray-600 text-md md:text-xl leading-relaxed animate-fade-in-up ${urbanist.className}`}
+          className={`mt-6 max-w-3xl mx-auto text-gray-600 text-md md:text-lg leading-relaxed animate-fade-in-up ${urbanist.className}`}
         >
           From concept to launch, we deliver complete software solutions that
           drive your business forward with cutting-edge technology and
@@ -42,11 +42,11 @@ const HomeHero = () => {
 
         {/* Technology Logos */}
         <div className="mt-14">
-          <p
+          {/* <p
             className={`text-sm font-semibold text-white uppercase tracking-wider bg-[#05243D] inline-block px-2 py-1 rounded ${urbanist.className}`}
           >
             Enabling Technologies
-          </p>
+          </p> */}
           <div className="mt-12 flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {technologies.map((tech, index) => (
               <div
@@ -67,7 +67,7 @@ const HomeHero = () => {
         <div className="mt-10 animate-fade-in-up">
           <Link
             href="/get-started"
-            className="inline-block border-2 border[#05243D] hover:bg-opacity-90 text-[#05243D] font-bold rounded-lg px-10 py-4 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            className="inline-block border-1 border[#05243D] bg-[#ffbb00] hover:bg-opacity-90 text-[#05243D] font-bold rounded-lg px-10 py-4 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
             Get Started With Us
           </Link>

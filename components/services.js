@@ -91,4 +91,17 @@ export const services = [
     ],
     icon: "📢",
   },
+  {
+    title: "Discovery Call",
+    description:
+      "Schedule a complimentary discovery call with us to discuss your project ideas and challenges. We'll help you explore the possibilities and outline a strategic approach for your digital success.",
+    items: [
+      "Initial consultation",
+      "Project scope analysis",
+      "Goal identification",
+      "Strategic recommendations",
+      "Q&A session",
+    ],
+    icon: "📞",
+  },
 ];

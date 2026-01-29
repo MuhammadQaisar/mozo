@@ -57,7 +57,7 @@ const Faqs = () => {
           <h2
             className={`text-3xl sm:text-4xl md:text-4xl font-bold text-gray-900 ${urbanist.className}`}
           >
-            Frequently Asked Questions
+            FAQ'<span className="text-[#ffbb00]">s</span>
           </h2>
           <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Have questions? We've got answers. If you can't find what you're
@@ -80,7 +80,7 @@ const Faqs = () => {
                 whileHover={{ backgroundColor: "#f9fafb" }}
               >
                 <span
-                  className={`text-md font-semibold text-[#1f2937] ${urbanist.className}`}
+                  className={`text-lg font-bold text-[#1f2937] ${urbanist.className}`}
                 >
                   {faq.question}
                 </span>

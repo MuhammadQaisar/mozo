@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['islootech.com'],
+    domains: ['islootech.com', 'via.placeholder.com'],
   },
   eslint: {
     ignoreDuringBuilds: true,

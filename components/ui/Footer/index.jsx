@@ -68,10 +68,10 @@ const Footer = () => {
             >
               <Link href="/">
                 <Image
-                  src="/footer-logo.svg"
+                  src="/footernew.svg"
                   alt="Mozo Technologies"
-                  width={160}
-                  height={40}
+                  width={200}
+                  height={70}
                 />
               </Link>
               <p className="mt-6 text-sm leading-relaxed">
@@ -86,11 +86,11 @@ const Footer = () => {
                                         href={social.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="p-2 bg-gray-800 rounded-full hover:bg-[#F06A6A] transition-colors"
+                                        className="p-2 rounded-full hover:bg-[#ffbb00] transition-colors"
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.9 }}
                                     >
-                                        <Image src={social.icon} alt={social.name} width={20} height={20} className={social.name === 'LinkedIn' ? '' : 'filter brightness-0 invert'}/>
+                                        <Image src={social.icon} alt={social.name} width={30} height={30} className={social.name === 'LinkedIn' ? '' : 'filter brightness-0 invert'}/>
                                     </motion.a>
                                 ))}
                             </div>

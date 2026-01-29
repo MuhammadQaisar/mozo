@@ -4,7 +4,7 @@ import { slugify } from './utils';
 
 const navItems = services.map(service => ({
   label: service.title,
-  href: `#${slugify(service.title)}`
+  href: `/services/${slugify(service.title)}`
 }));
 
 const ServiceNav = () => (

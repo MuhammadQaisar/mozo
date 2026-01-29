@@ -1,19 +1,11 @@
-import ServiceHero from '../components/ServiceHero';
-import CTA from '../components/ui/CTA';
-import ServiceNav from '../components/ServiceNav';
-import ServiceIntro from '../components/ServiceIntro';
-import Features from '../components/ui/Features';
-import CustomerSuccess from '../components/ui/CustomerSuccess';
+import ServiceHero from "../components/ServiceHero";
+import Features from "../components/ui/Features";
 
 const ServicesPage = () => {
   return (
     <>
       <ServiceHero />
-      {/* <ServiceIntro /> */}
-      {/* <ServiceNav /> */}
-      <Features/>
-      <CustomerSuccess />
-  
+      <Features />
     </>
   );
 };

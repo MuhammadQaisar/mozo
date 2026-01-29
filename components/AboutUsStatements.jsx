@@ -10,23 +10,12 @@ const AboutUsStatements = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Vision Card */}
           <div className="bg-white p-10 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2">
-            <div className="flex justify-center mb-6">
-              <div className="">
-                <Image
-                  src="/bulb-light-on-svgrepo-com.svg"
-                  alt="Vision Icon"
-                  width="90"
-                  height="90"
-                  className="text-blue-600"
-                />
-              </div>
-            </div>
-            <h2
-              className={`text-3xl font-extrabold text-gray-900 mb-4 text-center ${urbanist.className}`}
-            >
+            <h2 className="inline-block mb-4 text-xl font-normal border border-gray-500 px-4 py-2 rounded-full text-gray-500">
               Our Vision
             </h2>
-            <p className={`text-lg leading-relaxed text-gray-600 text-center ${urbanist.className}`}>
+            <p
+              className={`text-lg leading-relaxed text-gray-600 text-justify ${urbanist.className}`}
+            >
               To be a global leader in technological innovation, transforming
               industries and enriching lives by creating intelligent,
               user-friendly, and sustainable software solutions. We envision a
@@ -37,26 +26,16 @@ const AboutUsStatements = () => {
 
           {/* Mission Card */}
           <div className="bg-white p-10 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-2">
-            <div className="flex justify-center mb-6">
-              <div className="">
-                <Image
-                  src="/dart-mission-goal-success-svgrepo-com.svg"
-                  alt="Mission Icon"
-                  width="70"
-                  height="70"
-                  className="text-green-600"
-                />
-              </div>
-            </div>
-            <h2
-              className={`text-3xl font-extrabold text-gray-900 mb-4 text-center ${urbanist.className}`}
-            >
+            <h2 className="inline-block mb-4 text-xl font-normal border border-gray-500 px-4 py-2 rounded-full text-gray-500">
               Our Mission
             </h2>
-            <p className={`text-lg leading-relaxed text-gray-600 text-center ${urbanist.className}`}>
-              To deliver unparalleled software engineering services that
-              empower businesses to achieve their strategic objectives. We
-              build long-lasting partnerships based on trust and transparency,
+
+            <p
+              className={`text-lg leading-relaxed text-gray-600 text-justify ${urbanist.className}`}
+            >
+              To deliver unparalleled software engineering services that empower
+              businesses to achieve their strategic objectives. We build
+              long-lasting partnerships based on trust and transparency,
               providing innovative and scalable solutions that exceed
               expectations and drive measurable value for our clients.
             </p>

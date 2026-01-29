@@ -43,9 +43,7 @@ const HowWeWork = () => {
   ];
 
   return (
-    <div
-      className={`w-full py-20 lg:py-28 bg-[#05243D] ${urbanist.className}`}
-    >
+    <div className={`w-full py-20 lg:py-28 bg-[#05243D] ${urbanist.className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
@@ -73,7 +71,7 @@ const HowWeWork = () => {
                 </span>
               </div>
               <div>
-                <h3 className="text-[#F06A6A] text-xl font-semibold mb-2">
+                <h3 className="text-[#ffbb00] text-xl font-semibold mb-2">
                   {step.title}
                 </h3>
                 <p className="text-white text-lg opacity-90 max-w-2xl">
