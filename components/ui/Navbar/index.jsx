@@ -118,8 +118,8 @@ const Navbar = () => {
                         (item.path.startsWith("#") &&
                           activeNavLink === item.path) ||
                         (!item.path.startsWith("#") && asPath === item.path)
-                          ? "text-[#F06A6A] bg-[#F06A6A]/10"
-                          : "text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50"
+                          ? "text-[#ffbb00] bg-[#F06A6A]/10"
+                          : "text-gray-700 hover:text-[#05243D] hover:bg-gray-50"
                       }`}
                       onClick={() => {
                         if (!item.path.startsWith("#")) {
@@ -136,7 +136,7 @@ const Navbar = () => {
                       {activeNavLink === item.path && (
                         <motion.div
                           layoutId="activeTab"
-                          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[#F06A6A] rounded-full"
+                          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-[#] rounded-full"
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ duration: 0.3 }}
@@ -215,8 +215,8 @@ const Navbar = () => {
                     <a
                       className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
                         activeNavLink === item.path
-                          ? "text-[#F06A6A] bg-[#F06A6A]/10"
-                          : "text-[#F06A6A] hover:text-[#F06A6A] hover:bg-gray-50"
+                          ? "text-[#05243D] bg-[#F06A6A]/10"
+                          : "text-[#05243D] hover:text-[#F06A6A] hover:bg-gray-50"
                       }`}
                       onClick={() => {
                         setActiveNavLink(item.path);
@@ -234,7 +234,7 @@ const Navbar = () => {
               <div className="pt-4">
                 <NavLink
                   href="/get-started"
-                  className="block w-full px-6 py-4 bg-gradient-to-r from-[#F06A6A] to-red-500 text-white font-semibold rounded-xl shadow-lg text-center transition-all duration-300 hover:shadow-xl"
+                  className="block w-full px-6 py-4 bg-[#ffbb00] text-[#05243D] font-semibold rounded-xl shadow-lg text-center transition-all duration-300 hover:shadow-xl"
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     document.body.classList.remove("overflow-hidden");

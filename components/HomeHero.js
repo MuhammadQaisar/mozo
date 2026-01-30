@@ -42,11 +42,11 @@ const HomeHero = () => {
 
         {/* Technology Logos */}
         <div className="mt-14">
-          {/* <p
+          <p
             className={`text-sm font-semibold text-white uppercase tracking-wider bg-[#05243D] inline-block px-2 py-1 rounded ${urbanist.className}`}
           >
             Enabling Technologies
-          </p> */}
+          </p>
           <div className="mt-12 flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {technologies.map((tech, index) => (
               <div

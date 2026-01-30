@@ -164,7 +164,7 @@ const Careers = ({ jobs }) => {
                                     Benefits
                                 </p>
                                 <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 ${urbanist.className}`}>
-                                    Why Join <span className="text-[#F06A6A]">Our Team?</span>
+                                    Why Join <span className="text-[#ffbb00]">Our Team?</span>
                                 </h2>
                             </div>
                             <p className="text-medium text-gray-600 max-w-2xl flex-1">

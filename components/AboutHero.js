@@ -9,22 +9,22 @@ const AboutHero = () => {
   return (
     <SectionWrapper>
       <GradientWrapper>
-        <div className="max-w-6xl mx-auto  text-left px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 flex items-center gap-6">
-            <p className="inline-block text-xl font-normal border border-gray-500 px-4 py-2 rounded-full text-gray-500 ">
+        <div className="max-w-6xl mx-auto text-left px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex flex-col sm:flex-row items-center gap-6">
+            <p className="inline-block text-lg sm:text-xl font-normal border border-gray-500 px-4 py-2 rounded-full text-gray-500">
               About Us
             </p>
             <h1
-              className={`text-4xl md:text-6xl ml-18 font-extrabold text-gray-900 text-center animate-fade-in-up ${urbanist.className}`}
+              className={`text-3xl sm:text-4xl md:text-6xl font-extrabold text-gray-900 text-center sm:text-left animate-fade-in-up ${urbanist.className}`}
               style={{ animationDelay: "0.2s" }}
             >
               Transform Your Visionary
               <br />
-               Ideas Into Digital Realities
+              Ideas Into Digital Realities
             </h1>
           </div>
-          <div className="flex flex-col md:flex-row gap-10 items-center">
-            <div className="flex justify-center">
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="w-full md:w-1/2 flex justify-center">
               <div
                 className="rounded-lg overflow-hidden shadow-lg animate-fade-in-up"
                 style={{ animationDelay: "0.3s" }}
@@ -34,6 +34,7 @@ const AboutHero = () => {
                   width={800}
                   height={800}
                   alt="About Mozo"
+                  className="w-full h-auto"
                 />
               </div>
             </div>
@@ -50,17 +51,17 @@ const AboutHero = () => {
                 operations to drive efficiency and foster growth for our clients
                 worldwide.
               </p>
-              <div className="mt-8 flex gap-8 bg-gray-100 p-9 rounded-2xl justify-between animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-                <div>
-                  <h3 className="text-4xl font-bold text-gray-700">50+</h3>
+              <div className="mt-6 flex flex-col sm:flex-row gap-6 bg-gray-100 p-6 rounded-2xl justify-between animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+                <div className="text-center sm:text-left">
+                  <h3 className="text-3xl sm:text-4xl font-bold text-gray-700">50+</h3>
                   <p className="text-gray-600">Projects Completed</p>
                 </div>
-                <div>
-                  <h3 className="text-4xl font-bold text-gray-700">99%</h3>
+                <div className="text-center sm:text-left">
+                  <h3 className="text-3xl sm:text-4xl font-bold text-gray-700">99%</h3>
                   <p className="text-gray-600">Client Satisfaction</p>
                 </div>
-                <div>
-                  <h3 className="text-4xl font-bold text-gray-700">10+</h3>
+                <div className="text-center sm:text-left">
+                  <h3 className="text-3xl sm:text-4xl font-bold text-gray-700">10+</h3>
                   <p className="text-gray-600">Years of Experience</p>
                 </div>
               </div>

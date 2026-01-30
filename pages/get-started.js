@@ -60,7 +60,7 @@ export default function ContactUs() {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('/api/submit-form', {
+      const response = await fetch('/api/submit-contact-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -162,7 +162,7 @@ export default function ContactUs() {
           {/* Left: Form */}
           <form onSubmit={handleSubmit} className={`space-y-6 ${urbanist.className}`}>
             <h1 className={`text-3xl sm:text-4xl font-extrabold mb-3 tracking-tight text-[#18181e] ${urbanist.className}`}>
-              <span className="block text-[#F06A6A] text-base font-semibold mb-1 uppercase tracking-widest">
+              <span className="block text-[#ffbb00] text-base font-semibold mb-1 uppercase tracking-widest">
                 Get in Touch
               </span>
               Contact Our Team
@@ -260,7 +260,7 @@ export default function ContactUs() {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full mt-2 bg-gradient-to-r from-[#F06A6A] to-[#e65c5c] text-white font-semibold rounded-md py-3 text-base shadow-md hover:from-[#e65c5c] hover:to-[#F06A6A] transition-all duration-200 disabled:opacity-60 ${urbanist.className}`}
+              className={`w-full mt-2 bg-gradient-to-r from-[#05243D] to-[#05243D] text-white font-semibold rounded-md py-3 text-base shadow-md hover:from-[#e65c5c] hover:to-[#F06A6A] transition-all duration-200 disabled:opacity-60 ${urbanist.className}`}
             >
               {isSubmitting ? 'Sending...' : 'Send message'}
             </Button>
@@ -268,51 +268,51 @@ export default function ContactUs() {
           {/* Right: Contact Info */}
           <div className={`flex flex-col gap-8 justify-center md:pl-8 ${urbanist.className}`}>
             <div>
-              <h3 className="text-lg font-extrabold text-[#F06A6A] mb-2 tracking-wide flex items-center gap-2">
-                <FaComments className="text-[#F06A6A] text-xl" />
+              <h3 className="text-lg font-extrabold text-[#05243D] mb-2 tracking-wide flex items-center gap-2">
+                <FaComments className="text-[#05243D] text-xl" />
                 Chat with us
               </h3>
               <p className="text-gray-700 text-base mb-2 font-medium">Speak to our friendly team via live chat.</p>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="flex items-center gap-2 text-[#F06A6A] hover:underline font-semibold text-base">
-                    <FaComments className="text-[#F06A6A]" />
+                  <a href="#" className="flex items-center gap-2 text-[#05243D] hover:underline font-semibold text-base">
+                    <FaComments className="text-[#05243D]" />
                     Start a live chat
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:team@mozotechnologies.com" className="flex items-center gap-2 text-[#F06A6A] hover:underline font-semibold text-base">
-                    <FaEnvelope className="text-[#F06A6A]" />
+                  <a href="mailto:team@mozotechnologies.com" className="flex items-center gap-2 text-[#05243D] hover:underline font-semibold text-base">
+                    <FaEnvelope className="text-[#05243D]" />
                     Shoot us an email
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="flex items-center gap-2 text-[#F06A6A] hover:underline font-semibold text-base">
-                    <FaTwitter className="text-[#F06A6A]" />
+                  <a href="#" className="flex items-center gap-2 text-[#05243D] hover:underline font-semibold text-base">
+                    <FaTwitter className="text-[#05243D]" />
                     Message us on X
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-extrabold text-[#F06A6A] mb-2 tracking-wide flex items-center gap-2">
-                <FaPhoneAlt className="text-[#F06A6A] text-xl" />
+              <h3 className="text-lg font-extrabold text-[#05243D] mb-2 tracking-wide flex items-center gap-2">
+                <FaPhoneAlt className="text-[#05243D] text-xl" />
                 Call us
               </h3>
               <p className="text-gray-700 text-base mb-2 font-medium">Call our team Mon-Fri from 8am to 5pm.</p>
-              <a href="tel:+15550000000" className="flex items-center gap-2 text-[#F06A6A] hover:underline font-semibold text-base">
-                <FaPhoneAlt className="text-[#F06A6A]" />
+              <a href="tel:+15550000000" className="flex items-center gap-2 text-[#05243D] hover:underline font-semibold text-base">
+                <FaPhoneAlt className="text-[#05243D]" />
                 +1 (555) 000-0000
               </a>
             </div>
             <div>
-              <h3 className="text-lg font-extrabold text-[#F06A6A] mb-2 tracking-wide flex items-center gap-2">
-                <FaMapMarkerAlt className="text-[#F06A6A] text-xl" />
+              <h3 className="text-lg font-extrabold text-[#05243D] mb-2 tracking-wide flex items-center gap-2">
+                <FaMapMarkerAlt className="text-[#05243D] text-xl" />
                 Visit us
               </h3>
               <p className="text-gray-700 text-base mb-2 font-medium">Chat to us in person at our Islamabad HQ.</p>
-              <a href="#" className="flex items-center gap-2 text-[#F06A6A] hover:underline font-semibold text-base">
-                <FaMapMarkerAlt className="text-[#F06A6A]" />
+              <a href="#" className="flex items-center gap-2 text-[#05243D] hover:underline font-semibold text-base">
+                <FaMapMarkerAlt className="text-[#05243D]" />
                 Sarai Kharbuza, Opposite to E-16, GT Road, Islamabad, Pakistan.
               </a>
             </div>
