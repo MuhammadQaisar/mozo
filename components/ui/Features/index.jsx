@@ -249,7 +249,7 @@ const Features = () => {
             className={`text-3xl md:text-4xl font-extrabold text-gray-900 ${urbanist.className}`}
           >
             Custom Software{" "}
-            <span className="text-[#ffbb00]"> Develoment Services</span>
+            <span className="text-[#f06a6a]"> Development Services</span>
           </h2>
           <p className="mt-6 text-lg md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             We provide a comprehensive suite of services to transform your ideas
@@ -268,17 +268,15 @@ const Features = () => {
                     key={index}
                     onClick={() => setActiveFeature(feature)}
                     whileHover={{ y: -6 }}
-                    className={`p-4 rounded-2xl cursor-pointer transition-all duration-300 ease-in-out transform ${
-                      isActive
+                    className={`p-4 rounded-2xl cursor-pointer transition-all duration-300 ease-in-out transform ${isActive
                         ? "bg-[#05243D] text-white shadow-2xl border-3 border-[#05243D]"
                         : "bg-white border border-gray-200 hover:shadow-lg"
-                    }`}
+                      }`}
                   >
                     <div className="flex flex-col items-center text-center">
                       <div
-                        className={`flex-shrink-0 p-3 rounded-full ${
-                          isActive ? "" : ""
-                        }`}
+                        className={`flex-shrink-0 p-3 rounded-full ${isActive ? "" : ""
+                          }`}
                       >
                         <Image
                           src={feature.icon}
@@ -288,9 +286,8 @@ const Features = () => {
                         />
                       </div>
                       <h3
-                        className={`text-lg font-bold mt-4 ${
-                          isActive ? "text-white" : "text-gray-900"
-                        }`}
+                        className={`text-lg font-bold mt-4 ${isActive ? "text-white" : "text-gray-900"
+                          }`}
                       >
                         {feature.title}
                       </h3>

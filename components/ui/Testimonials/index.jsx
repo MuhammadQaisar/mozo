@@ -5,7 +5,7 @@ import SectionWrapper from "../../SectionWrapper";
 
 const testimonials = [
     {
-         logo: "/logos/muxilite.jpg",
+        logo: "/logos/muxilite.jpg",
         company: "MUXILITE",
         summary: "Mozo Technologies transformed our digital presence with their innovative approach. Their team delivered exceptional results that exceeded our expectations, boosting our conversion rate.",
         avatar: "/rashida.jpeg",
@@ -15,7 +15,7 @@ const testimonials = [
         project: "E-commerce Platform"
 
     },
-     {
+    {
         logo: "/logos/taus.jpg",
         company: "TAUS Enterprises",
         summary: "The team at Mozo Technologies delivered a robust, scalable solution that perfectly aligned with our business goals. Their attention to detail and commitment to quality is unmatched.",
@@ -26,7 +26,7 @@ const testimonials = [
         project: "Enterprise Web App"
     },
     {
-    
+
         logo: "/logos/alkassib.png",
         company: "ALKASSIB",
         summary: "Six months ago, we were drowning in inefficient processes. Mozo's team didn't just implement AI solutions - they really understood our business and tailored everything to our specific needs",
@@ -54,7 +54,7 @@ const Testimonials = () => {
     return (
         <SectionWrapper className={`pt-10 sm:py-20 md:py-28 bg-white ${urbanist.className}`}>
             <div className="max-w-4xl mx-auto text-center px-4 sm:px-4 lg:px-4">
-                <h2 className={`text-4xl md:text-4xl font-extrabold text-gray-800 mb-6 ${urbanist.className}`}>What Our <span className="text-[#ffbb00]">Clients</span> feedback</h2>
+                <h2 className={`text-4xl md:text-4xl font-extrabold text-gray-800 mb-6 ${urbanist.className}`}>What Our <span className="text-[#f06a6a]">Clients</span> feedback</h2>
                 {/* <p className="text-medium md:text-md text-gray-600 mb-12">We are trusted by businesses of all sizes .</p> */}
 
                 <div className="relative">

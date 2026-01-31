@@ -71,7 +71,7 @@ const HowWeWork = () => {
                 </span>
               </div>
               <div>
-                <h3 className="text-[#ffbb00] text-xl font-semibold mb-2">
+                <h3 className="text-[#f06a6a] text-xl font-semibold mb-2">
                   {step.title}
                 </h3>
                 <p className="text-white text-lg opacity-90 max-w-2xl">

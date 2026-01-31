@@ -79,21 +79,21 @@ const Footer = () => {
                 turn ideas into reality through cutting-edge technology and
                 expert development.
               </p>
-<div className="mt-8 flex space-x-4">
-                                {socialLinks.map((social) => (
-                                    <motion.a
-                                        key={social.name}
-                                        href={social.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="p-2 rounded-full hover:bg-[#ffbb00] transition-colors"
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.9 }}
-                                    >
-                                        <Image src={social.icon} alt={social.name} width={30} height={30} className={social.name === 'LinkedIn' ? '' : 'filter brightness-0 invert'}/>
-                                    </motion.a>
-                                ))}
-                            </div>
+              <div className="mt-8 flex space-x-4">
+                {socialLinks.map((social) => (
+                  <motion.a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 rounded-full hover:bg-[#f06a6a] transition-colors"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <Image src={social.icon} alt={social.name} width={30} height={30} className={social.name === 'LinkedIn' ? '' : 'filter brightness-0 invert'} />
+                  </motion.a>
+                ))}
+              </div>
             </motion.div>
           </div>
 

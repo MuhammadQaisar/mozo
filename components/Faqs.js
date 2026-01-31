@@ -57,7 +57,7 @@ const Faqs = () => {
           <h2
             className={`text-3xl sm:text-4xl md:text-4xl font-bold text-gray-900 ${urbanist.className}`}
           >
-            FAQ'<span className="text-[#ffbb00]">s</span>
+            FAQ'<span className="text-[#f06a6a]">s</span>
           </h2>
           <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Have questions? We've got answers. If you can't find what you're
@@ -69,9 +69,8 @@ const Faqs = () => {
           {faqs.map((faq, idx) => (
             <motion.div
               key={idx}
-              className={`bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 ${
-                openIndex === idx ? "shadow-lg" : ""
-              }`}
+              className={`bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 ${openIndex === idx ? "shadow-lg" : ""
+                }`}
               initial={false}
             >
               <motion.button

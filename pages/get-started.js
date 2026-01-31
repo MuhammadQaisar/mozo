@@ -48,7 +48,7 @@ export default function ContactUs() {
   const handleServiceChange = (service, checked) => {
     setFormData(prev => ({
       ...prev,
-      services: checked 
+      services: checked
         ? [...prev.services, service]
         : prev.services.filter(s => s !== service)
     }));
@@ -92,20 +92,20 @@ export default function ContactUs() {
         <meta name="description" content="Contact Mozo Technologies for any inquiries or to discuss your project. We are here to help you with our expertise in Data & AI, Web Development, UI/UX, CloudOps, Digital Marketing, and DevOps solutions." />
         <meta name="keywords" content="contact Mozo Technologies, IT consultation, get started, business transformation, technology consultation, IT services quote, project consultation" />
         <meta name='robots' content='index, follow' />
-        
+
         {/* Open Graph for Contact Page */}
         <meta property="og:title" content="Contact Us - Mozo Technologies" />
         <meta property="og:description" content="Contact Mozo Technologies for any inquiries or to discuss your project. We are here to help you with our expertise in Data & AI, Web Development, UI/UX, CloudOps, Digital Marketing, and DevOps solutions." />
         <meta property="og:url" content="https://mozotechnologies.com/contact-us" />
         <meta property="og:type" content="website" />
-        
+
         {/* Twitter Card for Contact Page */}
         <meta name="twitter:title" content="Contact Us - Mozo Technologies" />
         <meta name="twitter:description" content="Contact Mozo Technologies for any inquiries or to discuss your project. We are here to help you with our expertise in Data & AI, Web Development, UI/UX, CloudOps, Digital Marketing, and DevOps solutions." />
-        
+
         {/* Canonical URL */}
         <link rel="canonical" href="https://mozotechnologies.com/contact-us" />
-        
+
         {/* Structured Data for Contact Page */}
         <script
           type="application/ld+json"
@@ -162,7 +162,7 @@ export default function ContactUs() {
           {/* Left: Form */}
           <form onSubmit={handleSubmit} className={`space-y-6 ${urbanist.className}`}>
             <h1 className={`text-3xl sm:text-4xl font-extrabold mb-3 tracking-tight text-[#18181e] ${urbanist.className}`}>
-              <span className="block text-[#ffbb00] text-base font-semibold mb-1 uppercase tracking-widest">
+              <span className="block text-[#f06a6a] text-base font-semibold mb-1 uppercase tracking-widest">
                 Get in Touch
               </span>
               Contact Our Team

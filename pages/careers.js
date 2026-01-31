@@ -40,7 +40,7 @@ const Careers = ({ jobs }) => {
                 <meta name="description" content="Join our team at Mozo Technologies. Explore our open positions and apply today." />
             </Head>
             <main className="bg-gray-50 mb-5">
-               <CareersHero />
+                <CareersHero />
                 {/* Job Openings Section */}
                 <section className="pt-0 pb-4 lg:pb-8 bg-gray-50">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,7 +73,7 @@ const Careers = ({ jobs }) => {
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                             />
-                            <select 
+                            <select
                                 className="w-full md:w-1/4 lg:w-1/6 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F06A6A]"
                                 value={locationFilter}
                                 onChange={(e) => setLocationFilter(e.target.value)}
@@ -81,7 +81,7 @@ const Careers = ({ jobs }) => {
                                 <option>All Locations</option>
                                 <option>Remote</option>
                             </select>
-                            <select 
+                            <select
                                 className="w-full md:w-1/4 lg:w-1/6 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F06A6A]"
                                 value={typeFilter}
                                 onChange={(e) => setTypeFilter(e.target.value)}
@@ -164,7 +164,7 @@ const Careers = ({ jobs }) => {
                                     Benefits
                                 </p>
                                 <h2 className={`text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 ${urbanist.className}`}>
-                                    Why Join <span className="text-[#ffbb00]">Our Team?</span>
+                                    Why Join <span className="text-[#f06a6a]">Our Team?</span>
                                 </h2>
                             </div>
                             <p className="text-medium text-gray-600 max-w-2xl flex-1">
@@ -194,7 +194,7 @@ const Careers = ({ jobs }) => {
                     </div>
                 </section>
 
-                
+
 
             </main>
         </>

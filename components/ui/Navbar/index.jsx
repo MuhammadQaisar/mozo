@@ -114,13 +114,12 @@ const Navbar = () => {
                     legacyBehavior
                   >
                     <a
-                      className={`relative px-4 py-2 rounded-lg font-normal text-md transition-all duration-300 group ${
-                        (item.path.startsWith("#") &&
+                      className={`relative px-4 py-2 rounded-lg font-normal text-md transition-all duration-300 group ${(item.path.startsWith("#") &&
                           activeNavLink === item.path) ||
-                        (!item.path.startsWith("#") && asPath === item.path)
-                          ? "text-[#ffbb00] bg-[#F06A6A]/10"
+                          (!item.path.startsWith("#") && asPath === item.path)
+                          ? "text-[#f06a6a] bg-[#F06A6A]/10"
                           : "text-gray-700 hover:text-[#05243D] hover:bg-gray-50"
-                      }`}
+                        }`}
                       onClick={() => {
                         if (!item.path.startsWith("#")) {
                           // For direct page links, set activeNavLink based on current path
@@ -167,11 +166,10 @@ const Navbar = () => {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={toggleMobileMenu}
-              className={`relative p-2 rounded-lg transition-all duration-300 ${
-                isMobileMenuOpen
+              className={`relative p-2 rounded-lg transition-all duration-300 ${isMobileMenuOpen
                   ? "text-[#1f2937] bg-[#F06A6A]/10"
                   : "text-gray-700 hover:text-[#F06A6A] hover:bg-gray-50"
-              }`}
+                }`}
               aria-label="Toggle mobile menu"
             >
               <div className="w-6 h-6 relative">
@@ -213,11 +211,10 @@ const Navbar = () => {
                     legacyBehavior
                   >
                     <a
-                      className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                        activeNavLink === item.path
+                      className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${activeNavLink === item.path
                           ? "text-[#05243D] bg-[#F06A6A]/10"
                           : "text-[#05243D] hover:text-[#F06A6A] hover:bg-gray-50"
-                      }`}
+                        }`}
                       onClick={() => {
                         setActiveNavLink(item.path);
                         setIsMobileMenuOpen(false);
@@ -234,7 +231,7 @@ const Navbar = () => {
               <div className="pt-4">
                 <NavLink
                   href="/get-started"
-                  className="block w-full px-6 py-4 bg-[#ffbb00] text-[#05243D] font-semibold rounded-xl shadow-lg text-center transition-all duration-300 hover:shadow-xl"
+                  className="block w-full px-6 py-4 bg-[#f06a6a] text-white font-semibold rounded-xl shadow-lg text-center transition-all duration-300 hover:shadow-xl"
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     document.body.classList.remove("overflow-hidden");
