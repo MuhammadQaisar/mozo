@@ -14,7 +14,7 @@ const Brand = ({ isScrolled }) => {
   const shouldShowFooterLogo =
     pagesWithDynamicLogo.includes(router.pathname) && !isScrolled;
 
-  const logoSrc = shouldShowFooterLogo ? "/footer-logo.svg" : "/new3logo.png";
+  const logoSrc = shouldShowFooterLogo ? "/footer-logo.svg" : "/Mozo-logo.svg";
 
   return (
     <Link href="/">
