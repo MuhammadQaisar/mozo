@@ -1,19 +1,21 @@
 import { MongoClient } from 'mongodb';
 import nodemailer from 'nodemailer';
 
-// MongoDB connection URI from environment variables
-const uri = process.env.MONGODB_URI;
+// TODO: Replace hardcoded credentials with environment variables for security
+// MongoDB connection URI
+const uri = "mongodb+srv://qaisar:Irha123@mozo-technologies.ynfl6o0.mongodb.net/";
 const dbName = "mozo_technologies";
 const collectionName = "contact_submissions";
 
+// TODO: Replace hardcoded credentials with environment variables for security
 // Nodemailer transporter setup
 const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT,
-    secure: process.env.SMTP_SECURE === 'true',
+    host: 'smtp.ethereal.email',
+    port: 587,
+    secure: false, // Use 'true' if your SMTP server uses SSL/TLS, 'false' otherwise
     auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: 'maddison53@ethereal.email',
+        pass: 'jn7jnAPss4f63QBp6D' // Replace with your actual password or app password
     },
     tls: {
         rejectUnauthorized: false
@@ -56,8 +58,8 @@ export default async function handler(req, res) {
     // --- 3. Send Email --- 
     try {
         const mailOptions = {
-            from: `"Mozo Technologies" <${process.env.SMTP_FROM}>`,
-            to: process.env.SMTP_TO,
+            from: '"Mozo Technologies" <noreply@mozo.com>',
+            to: 'muhammadqaisar863@gmail.com',
             subject: 'New "Get Started" Form Submission',
             html: `
                 <h1>New Form Submission</h1>
@@ -78,9 +80,9 @@ export default async function handler(req, res) {
             console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
         }
 
-        return res.status(200).json({ success: true, message: 'Form submitted successfully!' });
+        return res.status(200).json({ success: true, message: 'Form submitted successfully!', previewURL: nodemailer.getTestMessageUrl(info) });
     } catch (error) {
         console.error('Error sending email:', error);
-        return res.status(500).json({ success: false, message: 'Failed to send email notification.' });
+        res.status(200).json({ success: true, message: 'Form submitted, but failed to send email notification.', emailError: error.message }); // Added email error message
     }
 }
