@@ -269,8 +269,8 @@ const Features = () => {
                     onClick={() => setActiveFeature(feature)}
                     whileHover={{ y: -6 }}
                     className={`p-4 rounded-2xl cursor-pointer transition-all duration-300 ease-in-out transform ${isActive
-                        ? "bg-[#05243D] text-white shadow-2xl border-3 border-[#05243D]"
-                        : "bg-white border border-gray-200 hover:shadow-lg"
+                      ? "bg-[#05243D] text-white shadow-2xl border-3 border-[#05243D]"
+                      : "bg-white border border-gray-200 hover:shadow-lg"
                       }`}
                   >
                     <div className="flex flex-col items-center text-center">
@@ -280,9 +280,14 @@ const Features = () => {
                       >
                         <Image
                           src={feature.icon}
-                          width={40}
-                          height={40}
+                          width={60} // Increased size
+                          height={60} // Increased size
                           alt={`${feature.title} icon`}
+                          style={{
+                            filter: isActive
+                              ? "none"
+                              : "brightness(0) saturate(100%) invert(13%) sepia(30%) saturate(4973%) hue-rotate(192deg) brightness(93%) contrast(99%)", // Dark Navy filter
+                          }}
                         />
                       </div>
                       <h3
